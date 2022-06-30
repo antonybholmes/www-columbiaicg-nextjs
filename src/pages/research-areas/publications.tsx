@@ -591,8 +591,6 @@ type Params = {
 export async function getStaticProps({ params }: Params) {
   const pubs = getPublicationsBySlug("all")
 
-  console.log('wwww', pubs.length)
-
   return {
     props: {
       pubs:pubs,

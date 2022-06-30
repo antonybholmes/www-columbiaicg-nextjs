@@ -1,11 +1,12 @@
-import React from "react"
+import React, { ReactNode } from "react"
 import ColorLink from "./colorlink"
 
 type WhiteLinkProps = {
   to: string
+  children?: ReactNode
 }
 
-const WhiteLink: React.FC<WhiteLinkProps> = ({ to, children }) => (
+const WhiteLink = ({ to, children }: WhiteLinkProps) => (
   <ColorLink color="white" to={to}>
     {children}
   </ColorLink>

@@ -1,9 +1,7 @@
-import useSiteMetadata from "./sitemetadata"
+import { SITE_TITLE } from "../constants"
 
 const useCopyright = () => {
-  const { copyright } = useSiteMetadata()
-
-  return `\u00a9 ${new Date().getFullYear()} ${copyright}`
+  return `\u00a9 ${new Date().getFullYear()} ${SITE_TITLE}`
 }
 
 export default useCopyright

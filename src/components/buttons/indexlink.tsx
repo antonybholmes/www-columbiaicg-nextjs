@@ -1,23 +1,30 @@
-import React, { useState, useRef } from "react"
+import React, { useState, useRef, ReactNode } from "react"
 import ColorLink from "./colorlink"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { gsap } from "gsap"
 import Row from "../row"
 
-type IndexLinkProps = {
+
+import {
+  faChevronRight
+} from "@fortawesome/free-solid-svg-icons"
+
+
+type LinkProps = {
   to: string
   color: string
   onClick?: any
   className?: string
+  children?: ReactNode
 }
 
-const IndexLink: React.FC<IndexLinkProps> = ({
+const IndexLink  = ({
   to,
   color,
   onClick,
   className,
   children,
-}) => {
+}: LinkProps) => {
   const [hover, setHover] = useState(false)
 
   const iconEl = useRef(null)
@@ -72,7 +79,7 @@ const IndexLink: React.FC<IndexLinkProps> = ({
       </ColorLink>
 
       <div ref={iconEl} className="ml-2">
-        <FontAwesomeIcon icon="chevron-right" className={`${chevronColor}`} />
+        <FontAwesomeIcon icon={faChevronRight} className={`${chevronColor}`} />
       </div>
     </Row>
   )

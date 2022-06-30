@@ -1,4 +1,4 @@
-import React from "react"
+import React, { ReactNode } from "react"
 import BaseLink from "./baselink"
 
 type LinkProps = {
@@ -12,21 +12,23 @@ type LinkProps = {
   aria?: string
   className?: string
   activeClassName?: string
+  children?: ReactNode
 }
 
-const ColorLink: React.FC<LinkProps> = ({
+
+const ColorLink = ({
   to,
-  color,
-  color2,
-  underlineColor,
-  underline,
-  target,
-  aria,
+  color = "",
+  color2 = "",
+  underlineColor = "",
+  underline = true,
+  target = "_blank",
+  aria = "",
   onClick,
   className,
   activeClassName,
   children,
-}) => {
+} : LinkProps) => {
   if (color2 === "") {
     color2 = color
   }
@@ -134,15 +136,6 @@ const ColorLink: React.FC<LinkProps> = ({
   )
 }
 
-ColorLink.defaultProps = {
-  color: "",
-  color2: "",
-  underlineColor: "",
-  className: "",
-  activeClassName: "",
-  underline: true,
-  target: "_blank",
-  aria: "",
-}
+
 
 export default ColorLink

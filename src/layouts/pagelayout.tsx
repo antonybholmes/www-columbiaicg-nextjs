@@ -10,9 +10,10 @@ import Breadcrumb from "../components/breadcrumb"
 import Container from "../components/container"
 import HideSmall from "../components/hidesmall"
 import SEO from "../components/seo"
+import Layout from "./layout"
 
 type LayoutProps = {
-  title?: string
+  title: string
   path?: string
   nav?: string
   crumbs?: [string, string][]
@@ -25,14 +26,14 @@ const PageLayout  = ({
   title,
   path,
   nav,
-  crumbs,
+  crumbs = [],
   crumbLocation,
   index,
   children,
 } : LayoutProps) => {
   return (
-    <>
-      <SEO title={title} path={path} index={index} />
+    <Layout title={title} path={path}>
+    
 
       {crumbLocation === "top" && crumbs !== null && crumbs.length > 0 && (
         <HideSmall>
@@ -57,7 +58,7 @@ const PageLayout  = ({
           />
         </Container>
       )}
-    </>
+    </Layout>
   )
 }
 
