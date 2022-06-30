@@ -1,0 +1,16 @@
+id	id
+32603407	Single-cell analysis of germinal center B cells informs on lymphoma cell-of-origin and outcome
+30205047	MEF2B instructs germinal center development and acts as an oncogene in B cell lymphomagenesis
+27166359	FBXO11 inactivation leads to abnormal germinal-center formation and lymphoproliferative disease
+25712152	Germinal centres and B cell lymphomagenesis
+26620759	The FOXO1 transcription factor instructs the germinal center dark zone program
+24843176	MicroRNA 28 controls cell proliferation and is down-regulated in B-cell lymphomas
+23297232	t-RNA-derived microRNA modulates proliferation and DNA damage response and is down-regulated in B cell lymphoma
+23974956	MEF2B mutations lead to deregulated expression of the oncogene BCL6 in diffuse large B cell lymphoma
+22500840	Role of BCL6 in normal and transformed germinal center B cells
+23166356	BCL6 positevely regulates AID and germinal center gene expression via repression of miR-155
+19965633	Integrated biochemical and computational approach identifies BCL6 direct target genes controlling multiple pathways in normal germinal-center B cells
+19446474	Identification of the human mature B cell miRNome
+19194469	Toward a systems biology approach to investigate cellular networks in normal and malignant B cells
+15778709	Reverse engineering of regulatory networks in human B cells
+15331443	Tracking CD40 signaling during germinal center development

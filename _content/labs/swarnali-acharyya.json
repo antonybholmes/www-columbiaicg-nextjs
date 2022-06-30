@@ -1,0 +1,27 @@
+{
+  "labId": "swarnali-acharyya",
+  "name": "Swarnali Acharyya",
+  "groups": [
+    {
+      "name": "Faculty",
+      "peopleList": ["swarnali-acharyya"]
+    },
+    {
+      "name": "Research Staff",
+      "peopleList": [
+        "anup-biswas",
+        "courtney-coker",
+        "seoyoung-han",
+        "wanchao-ma"
+      ]
+    },
+    {
+      "name": "Students",
+      "peopleList": ["yifan-tai", "tim-zhong"]
+    },
+    {
+      "name": "Past Members",
+      "peopleList": ["rohaan-hegde", "ahmad-rushdi-shakri"]
+    }
+  ]
+}

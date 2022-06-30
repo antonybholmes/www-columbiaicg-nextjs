@@ -1,0 +1,99 @@
+{
+  "person": "ahmad-rushdi-shakri",
+  "publications": [
+    {
+      "pmid": "32730698",
+      "pmcid": "PMC7520359",
+      "doi": "10.1002/cam4.3242",
+      "title": "Aberrant Zip14 expression in muscle is associated with cachexia in a Bard1-deficient mouse model of breast cancer metastasis",
+      "abstract": "Nearly 80% of advanced cancer patients are afflicted with cachexia, a debilitating syndrome characterized by extensive loss of muscle mass and function. Cachectic cancer patients have a reduced tolerance to antineoplastic therapies and often succumb to premature death from the wasting of respiratory and cardiac muscles. Since there are no available treatments for cachexia, it is imperative to understand the mechanisms that drive cachexia in order to devise effective strategies to treat it. Although 25% of metastatic breast cancer patients develop symptoms of muscle wasting, mechanistic studies of breast cancer cachexia have been hampered by a lack of experimental models. Using tumor cells deficient for BARD1, a subunit of the BRCA1/BARD1 tumor suppressor complex, we have developed a new orthotopic model of triple-negative breast cancer that spontaneously metastasizes to the lung and leads to systemic muscle deterioration. We show that expression of the metal-ion transporter, Zip14, is markedly upregulated in cachectic muscles from these mice and is associated with elevated intramuscular zinc and iron levels. Aberrant Zip14 expression and altered metal-ion homeostasis could therefore represent an underlying mechanism of cachexia development in human patients with triple-negative breast cancer. Our study provides a unique model for studying breast cancer cachexia and identifies a potential therapeutic target for its treatment.",
+      "authorList": [
+        "Shakri AR",
+        "James Zhong T",
+        "Ma W",
+        "Coker C",
+        "Hegde R",
+        "Scholze H",
+        "Chin V",
+        "Szabolcs M",
+        "Hibshoosh H",
+        "Tanji K",
+        "Baer R",
+        "Kumar Biswas A",
+        "Acharyya S"
+      ],
+      "authors": "Shakri AR, James Zhong T, Ma W, Coker C, Hegde R, Scholze H, Chin V, Szabolcs M, Hibshoosh H, Tanji K, Baer R, Kumar Biswas A, Acharyya S",
+      "journal": "Cancer Med",
+      "year": 2020,
+      "month": 9,
+      "day": -1,
+      "volume": "9",
+      "issue": "18",
+      "pages": "6766-6775",
+      "tagList": ["article", "columbia", "icg", "first-author"],
+      "url": "",
+      "labs": [],
+      "peopleList": [
+        "ahmad-rushdi-shakri",
+        "wanchao-ma",
+        "courtney-coker",
+        "rohaan-hegde",
+        "richard-baer",
+        "swarnali-acharyya"
+      ],
+      "isbn": ""
+    },
+    {
+      "pmid": "31861290",
+      "pmcid": "PMC7016633",
+      "doi": "10.3390/cancers12010003",
+      "title": "Upregulation of ZIP14 and Altered Zinc Homeostasis in Muscles in Pancreatic Cancer Cachexia",
+      "abstract": "Pancreatic ductal adenocarcinoma (PDAC) is a lethal cancer type in which the mortality rate approaches the incidence rate. More than 85% of PDAC patients experience a profound loss of muscle mass and function, known as cachexia. PDAC patients with this condition suffer from decreased tolerance to anti-cancer therapies and often succumb to premature death due to respiratory and cardiac muscle wasting. Yet, there are no approved therapies available to alleviate cachexia. We previously found that upregulation of the metal ion transporter, Zip14, and altered zinc homeostasis are critical mediators of cachexia in metastatic colon, lung, and breast cancer models. Here, we show that a similar mechanism is likely driving the development of cachexia in PDAC. In two independent experimental metastasis models generated from the murine PDAC cell lines, Pan02 and FC1242, we observed aberrant Zip14 expression and increased zinc ion levels in cachectic muscles. Moreover, in advanced PDAC patients, high levels of ZIP14 in muscles correlated with the presence of cachexia. These studies underscore the importance of altered ZIP14 function in PDAC-associated cachexia development and highlight a potential therapeutic opportunity for improving the quality of life and prolonging survival in PDAC patients.",
+      "authorList": [
+        "Shakri AR",
+        "Zhong TJ",
+        "Ma W",
+        "Coker C",
+        "Kim S",
+        "Calluori S",
+        "Scholze H",
+        "Szabolcs M",
+        "Caffrey T",
+        "Grandgenett PM",
+        "Hollingsworth MA",
+        "Tanji K",
+        "Kluger MD",
+        "Miller G",
+        "Biswas AK",
+        "Acharyya S"
+      ],
+      "authors": "Shakri AR, Zhong TJ, Ma W, Coker C, Kim S, Calluori S, Scholze H, Szabolcs M, Caffrey T, Grandgenett PM, Hollingsworth MA, Tanji K, Kluger MD, Miller G, Biswas AK, Acharyya S",
+      "journal": "Cancers (Basel)",
+      "year": 2019,
+      "month": 12,
+      "day": 18,
+      "volume": "12",
+      "issue": "1",
+      "pages": "",
+      "tagList": [
+        "article",
+        "columbia",
+        "icg",
+        "selected",
+        "selected::swarnali-acharyya",
+        "first-author"
+      ],
+      "url": "",
+      "labs": [],
+      "peopleList": [
+        "ahmad-rushdi-shakri",
+        "tim-zhong",
+        "wanchao-ma",
+        "courtney-coker",
+        "anup-biswas",
+        "swarnali-acharyya"
+      ],
+      "isbn": ""
+    }
+  ]
+}

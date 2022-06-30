@@ -1,0 +1,32 @@
+{
+  "labId": "wei-gu",
+  "name": "Wei Gu",
+  "groups": [
+    {
+      "name": "Faculty",
+      "peopleList": ["wei-gu"]
+    },
+    {
+      "name": "Research Staff",
+      "peopleList": [
+        "delin-chen",
+        "ying-jin",
+        "ning-kon",
+        "huan-li",
+        "yanging-liu",
+        "zhenyi-su",
+        "zhangchuan-xia",
+        "xin-yang",
+        "jingjie-yi"
+      ]
+    },
+    {
+      "name": "Graduate Students",
+      "peopleList": []
+    },
+    {
+      "name": "Students",
+      "peopleList": []
+    }
+  ]
+}

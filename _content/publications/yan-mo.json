@@ -1,0 +1,34 @@
+{
+  "person": "yan-mo",
+  "publications": [
+    {
+      "pmid": "31209047",
+      "pmcid": "PMC6613284",
+      "doi": "10.1073/pnas.1903847116",
+      "title": "Pak2 kinase promotes cellular senescence and organismal aging",
+      "abstract": "Cellular senescence defines an irreversible cell growth arrest state linked to loss of tissue function and aging in mammals. This transition from proliferation to senescence is typically characterized by increased expression of the cell-cycle inhibitor p16INK4a and formation of senescence-associated heterochromatin foci (SAHF). SAHF formation depends on HIRA-mediated nucleosome assembly of histone H3.3, which is regulated by the serine/threonine protein kinase Pak2. However, it is unknown if Pak2 contributes to cellular senescence. Here, we show that depletion of Pak2 delayed oncogene-induced senescence in IMR90 human fibroblasts and oxidative stress-induced senescence of mouse embryonic fibroblasts (MEFs), whereas overexpression of Pak2 accelerated senescence of IMR90 cells. Importantly, depletion of Pak2 in BubR1 progeroid mice attenuated the onset of aging-associated phenotypes and extended life span. Pak2 is required for expression of genes involved in cellular senescence and regulated the deposition of newly synthesized H3.3 onto chromatin in senescent cells. Together, our results demonstrate that Pak2 is an important regulator of cellular senescence and organismal aging, in part through the regulation of gene expression and H3.3 nucleosome assembly.",
+      "authorList": [
+        "Lee JS",
+        "Mo Y",
+        "Gan H",
+        "Burgess RJ",
+        "Baker DJ",
+        "van Deursen JM",
+        "Zhang Z"
+      ],
+      "authors": "Lee JS, Mo Y, Gan H, Burgess RJ, Baker DJ, van Deursen JM, Zhang Z",
+      "journal": "Proc Natl Acad Sci USA",
+      "year": 2019,
+      "month": 7,
+      "day": 2,
+      "volume": "116",
+      "issue": "27",
+      "pages": "13311-13319",
+      "tagList": ["article", "columbia", "icg", "first-author"],
+      "url": "",
+      "labs": [],
+      "peopleList": ["yan-mo", "zhiguo-zhang"],
+      "isbn": ""
+    }
+  ]
+}

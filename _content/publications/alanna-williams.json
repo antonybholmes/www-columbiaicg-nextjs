@@ -1,0 +1,54 @@
+{
+  "person": "alanna-williams",
+  "publications": [
+    {
+      "pmid": "29625057",
+      "pmcid": "PMC5890941",
+      "doi": "10.1016/j.cell.2018.03.017",
+      "title": "Tumor Evolution and Drug Response in Patient-Derived Organoid Models of Bladder Cancer",
+      "abstract": "Bladder cancer is the fifth most prevalent cancer in the U.S., yet is understudied, and few laboratory models exist that reflect the biology of the human disease. Here, we describe a biobank of patient-derived organoid lines that recapitulates the histopathological and molecular diversity of human bladder cancer. Organoid lines can be established efficiently from patient biopsies acquired before and after disease recurrence and are interconvertible with orthotopic xenografts. Notably, organoid lines often retain parental tumor heterogeneity and exhibit a spectrum of genomic changes that are consistent with tumor evolution in culture. Analyses of drug response using bladder tumor organoids show partial correlations with mutational profiles, as well as changes associated with treatment resistance, and specific responses can be validated using xenografts in\u00a0vivo. Our studies indicate that patient-derived bladder tumor organoids represent a faithful model system for studying tumor evolution and treatment response in the context of precision cancer medicine.",
+      "authorList": [
+        "Lee SH",
+        "Hu W",
+        "Matulay JT",
+        "Silva MV",
+        "Owczarek TB",
+        "Kim K",
+        "Chua CW",
+        "Barlow LJ",
+        "Kandoth C",
+        "Williams AB",
+        "Bergren SK",
+        "Pietzak EJ",
+        "Anderson CB",
+        "Benson MC",
+        "Coleman JA",
+        "Taylor BS",
+        "Abate-Shen C",
+        "McKiernan JM",
+        "Al-Ahmadie H",
+        "Solit DB",
+        "Shen MM"
+      ],
+      "journal": "Cell",
+      "year": 2018,
+      "month": 4,
+      "day": 5,
+      "volume": "173",
+      "issue": "2",
+      "pages": "515-528",
+      "tagList": [
+        "article",
+        "selected",
+        "selected::cory-abate-shen",
+        "selected::michael-shen",
+        "first-author"
+      ],
+      "url": "",
+      "labs": ["cory-abate-shen", "michael-shen"],
+      "peopleList": ["cory-abate-shen", "alanna-williams", "michael-shen"],
+      "isbn": "",
+      "authors": "Lee SH, Hu W, Matulay JT, Silva MV, Owczarek TB, Kim K, Chua CW, Barlow LJ, Kandoth C, Williams AB, Bergren SK, Pietzak EJ, Anderson CB, Benson MC, Coleman JA, Taylor BS, Abate-Shen C, McKiernan JM, Al-Ahmadie H, Solit DB, Shen MM"
+    }
+  ]
+}

@@ -1,0 +1,107 @@
+{
+  "person": "stefanie-meyer",
+  "publications": [
+    {
+      "pmid": "31519498",
+      "pmcid": "PMC7362711",
+      "doi": "10.1016/j.immuni.2019.08.006",
+      "title": "Unique and Shared Epigenetic Programs of the CREBBP and EP300 Acetyltransferases in Germinal Center B Cells Reveal Targetable Dependencies in Lymphoma",
+      "abstract": "Inactivating mutations of the CREBBP and EP300 acetyltransferases are among the most common genetic alterations in diffuse large B cell lymphoma (DLBCL) and follicular lymphoma (FL). Here, we examined the relationship between these two enzymes in germinal center (GC) B cells, the normal counterpart of FL and DLBCL, and in lymphomagenesis by using conditional GC-directed deletion mouse models targeting Crebbp or Ep300. We found that CREBBP and EP300 modulate common as well as distinct transcriptional programs implicated in separate anatomic and functional GC compartments. Consistently, deletion of Ep300 but not Crebbp impaired the fitness of GC B cells in\u00a0vivo. Combined loss of Crebbp and Ep300 completely abrogated GC formation, suggesting that these proteins partially compensate for each other through common transcriptional targets. This synthetic lethal interaction was retained in CREBBP-mutant DLBCL cells and could be pharmacologically targeted with selective small molecule inhibitors of CREBBP and EP300 function. These data provide proof-of-principle for the clinical development of EP300-specific inhibitors in FL and DLBCL.",
+      "authorList": [
+        "Meyer SN",
+        "Scuoppo C",
+        "Vlasevska S",
+        "Bal E",
+        "Holmes AB",
+        "Holloman M",
+        "Garcia-Ibanez L",
+        "Nataraj S",
+        "Duval R",
+        "Vantrimpont T",
+        "Basso K",
+        "Brooks N",
+        "Dalla-Favera R",
+        "Pasqualucci L"
+      ],
+      "authors": "Meyer SN, Scuoppo C, Vlasevska S, Bal E, Holmes AB, Holloman M, Garcia-Ibanez L, Nataraj S, Duval R, Vantrimpont T, Basso K, Brooks N, Dalla-Favera R, Pasqualucci L",
+      "journal": "Immunity",
+      "year": 2019,
+      "month": 9,
+      "day": 17,
+      "volume": "51",
+      "issue": "3",
+      "pages": "535-547",
+      "tagList": [
+        "article",
+        "columbia",
+        "icg",
+        "selected",
+        "selected::laura-pasqualucci",
+        "first-author"
+      ],
+      "url": "",
+      "labs": [],
+      "peopleList": [
+        "stefanie-meyer",
+        "claudio-scuoppo",
+        "sofija-vlasevska",
+        "elodie-bal",
+        "antony-holmes",
+        "katia-basso",
+        "riccardo-dalla-favera",
+        "laura-pasqualucci"
+      ],
+      "isbn": ""
+    },
+    {
+      "pmid": "28069569",
+      "pmcid": "PMC5386396",
+      "doi": "10.1158/2159-8290.CD-16-1417",
+      "title": "The CREBBP Acetyltransferase Is a Haploinsufficient Tumor Suppressor in B-cell Lymphoma",
+      "abstract": "Inactivating mutations of the CREBBP acetyltransferase are highly frequent in diffuse large B-cell lymphoma (DLBCL) and follicular lymphoma (FL), the two most common germinal center (GC)-derived cancers. However, the role of CREBBP inactivation in lymphomagenesis remains unclear. Here, we show that CREBBP regulates enhancer/super-enhancer networks with central roles in GC/post-GC cell fate decisions, including genes involved in signal transduction by the B-cell receptor and CD40 receptor, transcriptional control of GC and plasma cell development, and antigen presentation. Consistently, Crebbp-deficient B cells exhibit enhanced response to mitogenic stimuli and perturbed plasma cell differentiation. Although GC-specific loss of Crebbp was insufficient to initiate malignant transformation, compound Crebbp-haploinsufficient/BCL2-transgenic mice, mimicking the genetics of FL and DLBCL, develop clonal lymphomas recapitulating the features of the human diseases. These findings establish CREBBP as a haploinsufficient tumor-suppressor gene in GC B cells and provide insights into the mechanisms by which its loss contributes to lymphomagenesis.Significance: Loss-of-function mutations of CREBBP are common and early lesions in FL and DLBCL, suggesting a prominent role in lymphoma initiation. Our studies identify the cellular program by which reduced CREBBP dosage facilitates malignant transformation, and have direct implications for targeted lymphoma therapy based on drugs affecting CREBBP-mediated chromatin acetylation. Cancer Discov; 7(3); 322-37. \u00a92017 AACR.This article is highlighted in the In This Issue feature, p. 235.",
+      "authorList": [
+        "Zhang J",
+        "Vlasevska S",
+        "Wells VA",
+        "Nataraj S",
+        "Holmes AB",
+        "Duval R",
+        "Meyer SN",
+        "Mo T",
+        "Basso K",
+        "Brindle PK",
+        "Hussein S",
+        "Dalla-Favera R",
+        "Pasqualucci L"
+      ],
+      "authors": "Zhang J, Vlasevska S, Wells VA, Nataraj S, Holmes AB, Duval R, Meyer SN, Mo T, Basso K, Brindle PK, Hussein S, Dalla-Favera R, Pasqualucci L",
+      "journal": "Cancer Discov",
+      "year": 2017,
+      "month": 3,
+      "day": -1,
+      "volume": "7",
+      "issue": "3",
+      "pages": "322-337",
+      "tagList": [
+        "article",
+        "columbia",
+        "icg",
+        "selected",
+        "selected::laura-pasqualucci",
+        "first-author"
+      ],
+      "url": "",
+      "labs": [],
+      "peopleList": [
+        "sofija-vlasevska",
+        "antony-holmes",
+        "stefanie-meyer",
+        "tongwei-mo",
+        "katia-basso",
+        "riccardo-dalla-favera",
+        "laura-pasqualucci"
+      ],
+      "isbn": ""
+    }
+  ]
+}

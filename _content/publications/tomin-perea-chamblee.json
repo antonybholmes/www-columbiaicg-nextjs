@@ -1,0 +1,38 @@
+{
+  "person": "tomin-perea-chamblee",
+  "publications": [
+    {
+      "pmid": "32332164",
+      "pmcid": "PMC7229667",
+      "doi": "10.1073/pnas.1922622117",
+      "title": "Pan-cancer analysis identifies mutations in SUGP1 that recapitulate mutant SF3B1 splicing dysregulation",
+      "abstract": "The gene encoding the core spliceosomal protein SF3B1 is the most frequently mutated gene encoding a splicing factor in a variety of hematologic malignancies and solid tumors. SF3B1 mutations induce use of cryptic 3' splice sites (3'ss), and these splicing errors contribute to tumorigenesis. However, it is unclear how widespread this type of cryptic 3'ss usage is in cancers and what is the full spectrum of genetic mutations that cause such missplicing. To address this issue, we performed an unbiased pan-cancer analysis to identify genetic alterations that lead to the same aberrant splicing as observed with SF3B1 mutations. This analysis identified multiple mutations in another spliceosomal gene, SUGP1, that correlated with significant usage of cryptic 3'ss known to be utilized in mutant SF3B1 expressing cells. Remarkably, this is consistent with recent biochemical studies that identified a defective interaction between mutant SF3B1 and SUGP1 as the molecular defect responsible for cryptic 3'ss usage. Experimental validation revealed that five different SUGP1 mutations completely or partially recapitulated the 3'ss defects. Our analysis suggests that SUGP1 mutations in cancers can induce missplicing identical or similar to that observed in mutant SF3B1 cancers.",
+      "authorList": [
+        "Liu Z",
+        "Zhang J",
+        "Sun Y",
+        "Perea-Chamblee TE",
+        "Manley JL",
+        "Rabadan R"
+      ],
+      "journal": "Proc Natl Acad Sci USA",
+      "year": 2020,
+      "month": 5,
+      "day": 12,
+      "volume": "117",
+      "issue": "19",
+      "pages": "10305-10312",
+      "tagList": [
+        "article",
+        "selected",
+        "selected::raul-rabadan",
+        "first-author"
+      ],
+      "url": "",
+      "labs": ["raul-rabadan"],
+      "peopleList": ["raul-rabadan", "zhaoqi-liu", "tomin-perea-chamblee"],
+      "isbn": "",
+      "authors": "Liu Z, Zhang J, Sun Y, Perea-Chamblee TE, Manley JL, Rabadan R"
+    }
+  ]
+}

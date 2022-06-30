@@ -1,0 +1,91 @@
+{
+  "person": "olivia-cupo",
+  "publications": [
+    {
+      "pmid": "33536256",
+      "pmcid": "",
+      "doi": "10.4049/jimmunol.2000967",
+      "title": "FATC Domain Deletion Compromises ATM Protein Stability, Blocks Lymphocyte Development, and Promotes Lymphomagenesis",
+      "abstract": "Ataxia-telangiectasia mutated (ATM) kinase is a master regulator of the DNA damage response, and loss of ATM leads to primary immunodeficiency and greatly increased risk for lymphoid malignancies. The FATC domain is conserved in phosphatidylinositol-3-kinase-related protein kinases (PIKKs). Truncation mutation in the FATC domain (R3047X) selectively compromised reactive oxygen species-induced ATM activation in cell-free assays. In this article, we show that in mouse models, knock-in ATM-R3057X mutation (Atm\u2060 \nRX\n \u2060, corresponding to R3047X in human ATM) severely compromises ATM protein stability and causes T cell developmental defects, B cell Ig class-switch recombination defects, and infertility resembling ATM-null. The residual ATM-R3057X protein retains minimal yet functional measurable DNA damage-induced checkpoint activation and significantly delays lymphomagenesis in Atm\u2060 \nRX/RX\n \u2060 mice compared with Atm\u2060 \n-/-\n \u2060. Together, these results support a physiological role of the FATC domain in ATM protein stability and show that the presence of minimal residual ATM-R3057X protein can prevent growth retardation and delay tumorigenesis without restoring lymphocyte development and fertility.",
+      "authorList": [
+        "Milanovic M",
+        "Shao Z",
+        "Estes VM",
+        "Wang XS",
+        "Menolfi D",
+        "Lin X",
+        "Lee BJ",
+        "Xu J",
+        "Cupo OM",
+        "Wang D",
+        "Zha S"
+      ],
+      "authors": "Milanovic M, Shao Z, Estes VM, Wang XS, Menolfi D, Lin X, Lee BJ, Xu J, Cupo OM, Wang D, Zha S",
+      "journal": "J Immunol",
+      "year": 2021,
+      "month": 3,
+      "day": 15,
+      "volume": "206",
+      "issue": "6",
+      "pages": "1228-1239",
+      "tagList": ["article", "columbia", "icg", "first-author"],
+      "url": "",
+      "labs": [],
+      "peopleList": [
+        "maja-milanovic",
+        "zhengping-shao",
+        "xiobin-wang",
+        "demis-menolfi",
+        "xiaohui-lin",
+        "brian-lee",
+        "olivia-cupo",
+        "di-wang",
+        "shan-zha"
+      ],
+      "isbn": ""
+    },
+    {
+      "pmid": "32989150",
+      "pmcid": "PMC7568320",
+      "doi": "10.1073/pnas.2010972117",
+      "title": "CtIP-mediated DNA resection is dispensable for IgH class switch recombination by alternative end-joining",
+      "abstract": "To generate antibodies with different effector functions, B cells undergo Immunoglobulin Heavy Chain (IgH) class switch recombination (CSR). The ligation step of CSR is usually mediated by the classical nonhomologous end-joining (cNHEJ) pathway. In cNHEJ-deficient cells, a remarkable \u223c25% of CSR can be achieved by the alternative end-joining (Alt-EJ) pathway that preferentially uses microhomology (MH) at the junctions. While A-EJ-mediated repair of endonuclease-generated breaks requires DNA end resection, we show that CtIP-mediated DNA end resection is dispensable for A-EJ-mediated CSR using cNHEJ-deficient B cells. High-throughput sequencing analyses revealed that loss of ATM/ATR phosphorylation of CtIP at T855 or ATM kinase inhibition suppresses resection without altering the MH pattern of the A-EJ-mediated switch junctions. Moreover, we found that ATM kinase promotes Alt-EJ-mediated CSR by suppressing interchromosomal translocations independent of end resection. Finally, temporal analyses reveal that MHs are enriched in early internal deletions even in cNHEJ-proficient B cells. Thus, we propose that repetitive IgH switch regions represent favored substrates for MH-mediated end-joining contributing to the robustness and resection independence of A-EJ-mediated CSR.",
+      "authorList": [
+        "Wang XS",
+        "Zhao J",
+        "Wu-Baer F",
+        "Shao Z",
+        "Lee BJ",
+        "Cupo OM",
+        "Rabadan R",
+        "Gautier J",
+        "Baer R",
+        "Zha S"
+      ],
+      "authors": "Wang XS, Zhao J, Wu-Baer F, Shao Z, Lee BJ, Cupo OM, Rabadan R, Gautier J, Baer R, Zha S",
+      "journal": "Proc Natl Acad Sci USA",
+      "year": 2020,
+      "month": 10,
+      "day": 13,
+      "volume": "117",
+      "issue": "41",
+      "pages": "25700-25711",
+      "tagList": ["article", "columbia", "icg", "first-author"],
+      "url": "",
+      "labs": [],
+      "peopleList": [
+        "xiobin-wang",
+        "junfei-zhao",
+        "foon-wu-baer",
+        "zhengping-shao",
+        "brian-lee",
+        "olivia-cupo",
+        "raul-rabadan",
+        "jean-gautier",
+        "richard-baer",
+        "shan-zha"
+      ],
+      "isbn": ""
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+id	pub
+0	"Transcriptional regulatory networks of tumor-associated macrophages that drive malignancy in mesenchymal glioblastoma. Genome Biology, 2020, doi:10.1186/s13059-020-02140-x."
+32532977	"ARS2/MAGL signaling in glioblastoma stem cells promotes self-renewal and M2-like polarization of tumor-associated macrophages. Nature Communications, 11: 2978, 2020"
+32640193	" Proline hydroxylation primes protein kinases for autophosphorylation and activation. Molecular Cell, 79: 1-14, 2020."
+32413119	"Clinical, molecular and radiomic profile of glioma with FGFR3-TACC3 fusions. Neuro-Oncology, 2020 May 15, doi: 10.1093/neuonc/noaa121."
+31044160	"The combination of neoantigen quality and T lymphocyte infiltrates identify glioblastomas with the longest survival. Communications Biology, 2:135, 2019."
+30531922	"The molecular landscape of glioma in patients with Neurofibromatosis 1, Nature Medicine, 25:176-187, 2019 [see also RESEARCH WATCH “Unique Molecular Landscapes Distinguish Low- and High-Grade NF1 Gliomas” Cancer Discovery, 9:165-165, 2019; ARTICLE IN BRIEF “Researchers Chart Genetic Landscape Gliomas in Neurofibromatosis Type 1” NeurologyToday, 19:26-27, 2019]."
+30262818	"Pharmacogenomic landscape of patient-derived tumor cells informs precision oncology therapy. Nature Genetics, 50:1399-1411, 2018."
+29323298	"A metabolic function of FGFR3-TACC3 gene fusions in cancer, Nature, 553:222-227, 2018 [see also RESEARCH WATCH “FGFR3–TACC3 Activates Mitochondrial Respiration via PIN4 Phosphorylation” Cancer Discovery Published Online First January 12, 2018 doi: 10.1158/2159-8290.CD-RW2018-008; RESEARCH HIGHLIGHTS “Fusion Power” Nature Reviews Cancer Published online January 25, 2018 doi:10.1038/nrc.2018.2; NATURE.COM/PATHOLOGY “Gene fusions in cancer metabolism” Laboratory Investigation 98:271, 2018]."
+28976058	"Diffuse gliomas with FGFR3-TACC3 fusion have characteristic histopathological and molecular features. Brain Pathology 28:674-683, 2018."
+27270107	"Clonal Evolution of Glioblastoma under Therapy. Nature Genetics, 48:768-776, 2016."
+26824661	"Molecular Profiling Reveals Biologically Discrete Subsets and Pathways of Progression in Diffuse Glioma. Cell, 164:550-563, 2016 [see also NEWS IN BRIEF Cancer Discovery, 6:334-335, 2016, PREVIEW “Fall of the Optical Wall: Freedom from the Tyranny of the Microscope Improves Glioma Risk Stratification” Cancer Cell, 29:137-138, 2016]."
+25609060	"Detection, characterization and inhibition of FGFR-TACC fusions in IDH wild type glioma. Clin Cancer Res. 21:3307-3317, 2015. [see also CCR Translations in Clinical Cancer Research (21:3105-3107, 2015)]."
+23917401	"The integrated landscape of driver genomic alterations in glioblastoma. Nature Genetics, 45:1141-1149, 2013 [see also Nat Genet. NEWS and VIEWS 2013;45:1105-7. Genomics informs glioblastoma biology. Nature Reviews Clinical Oncology RESEARCH HIGHLIGHTS. 10:547, 2013 Glioblastoma landscape revealed; Cancer Discovery RESEARCH WATCH. 3:OF19, 2013. Driver alterations in glioblastoma suggest new therapeutic targets; Nature Reviews Neurology NEWS and VIEWS. 9:612-613, 2013]."
+22837387	Transforming Fusions of FGFR and TACC Genes in Human Glioblastoma Science 
+20032975	A transcriptional module synergistically initiates and maintains mesenchymal transformation in the brain

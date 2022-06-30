@@ -1,0 +1,22 @@
+{
+  "labId": "richard-baer",
+  "name": "Richard Baer",
+  "groups": [
+    {
+      "name": "Faculty",
+      "peopleList": ["richard-baer"]
+    },
+    {
+      "name": "Research Staff",
+      "peopleList": ["madeline-wong", "foon-wu-baer"]
+    },
+    {
+      "name": "Graduate Students",
+      "peopleList": []
+    },
+    {
+      "name": "Students",
+      "peopleList": []
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+type	name	title	email
+Research Staff	Jaime Kim	Lab Manager	jyk2129@cumc.columbia.edu
+Research Staff	Stephanie Afari	Research Technician	sna2131@cumc.columbia.edu
+Research Staff	Timur Mukhammadov	Research Technician	tm3106@cumc.columbia.edu
+Research Staff	Matteo Di Bernardo	Research Assistant	md3498@cumc.columbia.edu
+Research Staff	Juan Arriaga, PhD	Postdoctoral Research Associate	ja3003@cumc.columbia.edu
+Research Staff	Arianna Giacobbe, PhD	Postdoctoral Research Associate	ga2424@cumc.columbia.edu
+Research Staff	Alexandros Papachristodoulou, PhD	Postdoctoral Research Associate	ap3712@cumc.columbia.edu
+Research Staff	Francisca Nunes de Almeida, PhD	Postdoctoral Research Associate	fg2497@cumc.columbia.edu
+Research Staff	Soonbum Park, PhD	Postdoctoral Research Associate	sp3873@cumc.columbia.edu
+Graduate Students	Christopher L. Cardona	Graduate Student	clc2236@cumc.columbia.edu
+Graduate Students	Prithi Chakrapani	Undergraduate Student	pc2859@cumc.columbia.edu
+Students	Elvis Alexis Maliza	Undergraduate Student	eam2277@cumc.columbia.edu

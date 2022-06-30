@@ -1,0 +1,32 @@
+{
+  "labId": "zhiguo-zhang",
+  "name": "Zhiguo Zhang",
+  "groups": [
+    {
+      "name": "Faculty",
+      "peopleList": ["zhiguo-zhang"]
+    },
+    {
+      "name": "Research Staff",
+      "peopleList": [
+        "liang-cheng",
+        "shoufu-duan",
+        "xu-hua",
+        "zhiming-li",
+        "yan-mo",
+        "albert-serra-cardona",
+        "xiaowei-xu",
+        "xu-zhang",
+        "hui-zhou"
+      ]
+    },
+    {
+      "name": "Graduate Students",
+      "peopleList": []
+    },
+    {
+      "name": "Students",
+      "peopleList": []
+    }
+  ]
+}

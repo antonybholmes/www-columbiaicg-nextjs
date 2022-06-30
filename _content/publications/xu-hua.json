@@ -1,0 +1,158 @@
+{
+  "person": "xu-hua",
+  "publications": [
+    {
+      "pmid": "33911256",
+      "pmcid": "",
+      "doi": "10.1038/s41596-021-00520-6",
+      "title": "Efficient and strand-specific profiling of replicating chromatin with enrichment and sequencing of protein-associated nascent DNA in mammalian cells",
+      "abstract": "Faithful duplication of both genetic and epigenetic information is essential for all eukaryotic cells. DNA replication initiates from replication origins and proceeds bidirectionally but asymmetrically, with the leading strand being synthesized continuously and the lagging strand discontinuously as Okazaki fragments by distinct DNA polymerases. Unraveling the underlying mechanisms of chromatin replication at both strands is crucial to better understand DNA replication and its coupled processes, including nucleosome assembly, sister chromatid cohesion and DNA mismatch repair. Here we describe the enrichment and sequencing of protein-associated nascent DNA (eSPAN) method to analyze the enrichment of proteins of interest, including histones and their modifications at replicating chromatin in a strand-specific manner in mammalian cells. Briefly, cells are pulsed with the thymidine analog bromodeoxyuridine to label newly synthesized DNA. After cell permeabilization, the target proteins are sequentially bound by antibodies and protein A-fused transposase, which digests and tags genomic DNA of interest once activated by magnesium. The strand specificity is preserved through oligo-replacement. Finally, the resulting double-strand DNA is denatured and immunoprecipitated with antibodies against bromodeoxyuridine to enrich nascent DNA associated with proteins of interest. After PCR amplification and next-generation sequencing, the mapped reads are used to calculate the relative enrichment of the target proteins around replication origins. Compared with alternative methods, the eSPAN protocol is simple, cost-effective and sensitive, even in a relatively small number of mammalian cells. The whole procedures from cell collection to generation of sequencing-ready libraries can be completed in 2 days.",
+      "authorList": ["Li Z", "Hua X", "Serra-Cardona A", "Xu X", "Zhang Z"],
+      "authors": "Li Z, Hua X, Serra-Cardona A, Xu X, Zhang Z",
+      "journal": "Nat Protoc",
+      "year": 2021,
+      "month": 5,
+      "day": -1,
+      "volume": "16",
+      "issue": "5",
+      "pages": "2698-2721",
+      "tagList": ["article", "columbia", "icg", "first-author"],
+      "url": "",
+      "labs": [],
+      "peopleList": [
+        "zhiming-li",
+        "xu-hua",
+        "albert-serra-cardona",
+        "xiaowei-xu",
+        "zhiguo-zhang"
+      ],
+      "isbn": ""
+    },
+    {
+      "pmid": "32923642",
+      "pmcid": "PMC7449674",
+      "doi": "10.1126/sciadv.abb5820",
+      "title": "DNA polymerase \u03b1 interacts with H3-H4 and facilitates the transfer of parental histones to lagging strands",
+      "abstract": "How parental histones, the carriers of epigenetic modifications, are deposited onto replicating DNA remains poorly understood. Here, we describe the eSPAN method (enrichment and sequencing of protein-associated nascent DNA) in mouse embryonic stem (ES) cells and use it to detect histone deposition onto replicating DNA strands with a relatively small number of cells. We show that DNA polymerase \u03b1 (Pol \u03b1), which synthesizes short primers for DNA synthesis, binds histone H3-H4 preferentially. A Pol \u03b1 mutant defective in histone binding in vitro impairs the transfer of parental H3-H4 to lagging strands in both yeast and mouse ES cells. Last, dysregulation of both coding genes and noncoding endogenous retroviruses is detected in mutant ES cells defective in parental histone transfer. Together, we report an efficient eSPAN method for analysis of DNA replication-linked processes in mouse ES cells and reveal the mechanism of Pol \u03b1 in parental histone transfer.",
+      "authorList": [
+        "Li Z",
+        "Hua X",
+        "Serra-Cardona A",
+        "Xu X",
+        "Gan S",
+        "Zhou H",
+        "Yang WS",
+        "Chen CL",
+        "Xu RM",
+        "Zhang Z"
+      ],
+      "authors": "Li Z, Hua X, Serra-Cardona A, Xu X, Gan S, Zhou H, Yang WS, Chen CL, Xu RM, Zhang Z",
+      "journal": "Sci Adv",
+      "year": 2020,
+      "month": 8,
+      "day": -1,
+      "volume": "6",
+      "issue": "35",
+      "pages": "eabb5820",
+      "tagList": [
+        "article",
+        "columbia",
+        "icg",
+        "selected",
+        "selected::zhiguo-zhang",
+        "first-author"
+      ],
+      "url": "",
+      "labs": [],
+      "peopleList": [
+        "zhiming-li",
+        "xu-hua",
+        "albert-serra-cardona",
+        "xiaowei-xu",
+        "hui-zhou",
+        "zhiguo-zhang"
+      ],
+      "isbn": ""
+    },
+    {
+      "pmid": "31586391",
+      "pmcid": "PMC6868363",
+      "doi": "10.1093/nar/gkz858",
+      "title": "Chromatin Assembly Factor 1 (CAF-1) facilitates the establishment of facultative heterochromatin during pluripotency exit",
+      "abstract": "Establishment and subsequent maintenance of distinct chromatin domains during embryonic stem cell (ESC) differentiation are crucial for lineage specification and cell fate determination. Here we show that the histone chaperone Chromatin Assembly Factor 1 (CAF-1), which is recruited to DNA replication forks through its interaction with proliferating cell nuclear antigen (PCNA) for nucleosome assembly, participates in the establishment of H3K27me3-mediated silencing during differentiation. Deletion of CAF-1 p150 subunit impairs the silencing of many genes including Oct4,\u00a0Sox2 and Nanog as well as the establishment of H3K27me3 at these gene promoters during ESC differentiation. Mutations of PCNA residues involved in recruiting CAF-1 to the chromatin also result in defects in differentiation in vitro and impair early embryonic development as p150 deletion. Together, these results reveal that the CAF-1-PCNA nucleosome assembly pathway plays an important role in the establishment of H3K27me3-mediated silencing during cell fate determination.",
+      "authorList": [
+        "Cheng L",
+        "Zhang X",
+        "Wang Y",
+        "Gan H",
+        "Xu X",
+        "Lv X",
+        "Hua X",
+        "Que J",
+        "Ordog T",
+        "Zhang Z"
+      ],
+      "authors": "Cheng L, Zhang X, Wang Y, Gan H, Xu X, Lv X, Hua X, Que J, Ordog T, Zhang Z",
+      "journal": "Nucleic Acids Res",
+      "year": 2019,
+      "month": 12,
+      "day": 2,
+      "volume": "47",
+      "issue": "21",
+      "pages": "11114-11131",
+      "tagList": ["article", "columbia", "icg", "first-author"],
+      "url": "",
+      "labs": [],
+      "peopleList": [
+        "liang-cheng",
+        "xu-zhang",
+        "xiaowei-xu",
+        "xu-hua",
+        "zhiguo-zhang"
+      ],
+      "isbn": ""
+    },
+    {
+      "pmid": "30244834",
+      "pmcid": "PMC6193272",
+      "doi": "10.1016/j.molcel.2018.09.001",
+      "title": "The Mcm2-Ctf4-Pol\u03b1 Axis Facilitates Parental Histone H3-H4 Transfer to Lagging Strands",
+      "abstract": "Although essential for epigenetic inheritance, the transfer of parental histone (H3-H4)2 tetramers that contain epigenetic modifications to replicating DNA strands is poorly understood. Here, we show that the Mcm2-Ctf4-Pol\u03b1 axis facilitates the transfer of parental (H3-H4)2 tetramers to lagging-strand DNA at replication forks. Mutating the conserved histone-binding domain of the Mcm2 subunit of the CMG (Cdc45-MCM-GINS) DNA helicase, which translocates along the leading-strand template, results in a marked enrichment of parental (H3-H4)2 on leading strand, due to the impairment of the transfer of parental (H3-H4)2 to lagging strands. Similar effects are observed in Ctf4 and Pol\u03b1 primase mutants that disrupt the connection of the CMG helicase to Pol\u03b1 that resides on lagging-strand template. Our results support a model whereby parental (H3-H4)2 complexes displaced from nucleosomes by DNA unwinding at replication forks are transferred by the CMG-Ctf4-Pol\u03b1 complex to lagging-strand DNA for nucleosome assembly at the original location.",
+      "authorList": [
+        "Gan H",
+        "Serra-Cardona A",
+        "Hua X",
+        "Zhou H",
+        "Labib K",
+        "Yu C",
+        "Zhang Z"
+      ],
+      "authors": "Gan H, Serra-Cardona A, Hua X, Zhou H, Labib K, Yu C, Zhang Z",
+      "journal": "Mol Cell",
+      "year": 2018,
+      "month": 10,
+      "day": 4,
+      "volume": "72",
+      "issue": "1",
+      "pages": "140-151",
+      "tagList": [
+        "article",
+        "columbia",
+        "icg",
+        "selected",
+        "selected::zhiguo-zhang",
+        "first-author"
+      ],
+      "url": "",
+      "labs": [],
+      "peopleList": [
+        "albert-serra-cardona",
+        "xu-hua",
+        "hui-zhou",
+        "chuanjiang-yu",
+        "zhiguo-zhang"
+      ],
+      "isbn": ""
+    }
+  ]
+}

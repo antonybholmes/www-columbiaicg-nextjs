@@ -1,0 +1,57 @@
+{
+  "person": "simona-migliozzi",
+  "publications": [
+    {
+      "pmid": "33681822",
+      "pmcid": "PMC7935068",
+      "doi": "10.1038/s43018-020-00159-4",
+      "title": "Pathway-based classification of glioblastoma uncovers a mitochondrial subtype with therapeutic vulnerabilities",
+      "abstract": "The transcriptomic classification of glioblastoma (GBM) has failed to predict survival and therapeutic vulnerabilities. A computational approach for unbiased identification of core biological traits of single cells and bulk tumors uncovered four tumor cell states and GBM subtypes distributed along neurodevelopmental and metabolic axes, classified as proliferative/progenitor, neuronal, mitochondrial and glycolytic/plurimetabolic. Each subtype was enriched with biologically coherent multiomic features. Mitochondrial GBM was associated with the most favorable clinical outcome. It relied exclusively on oxidative phosphorylation for energy production, whereas the glycolytic/plurimetabolic subtype was sustained by aerobic glycolysis and amino acid and lipid metabolism. Deletion of the glucose-proton symporter SLC45A1 was the truncal alteration most significantly associated with mitochondrial GBM, and the reintroduction of SLC45A1 in mitochondrial glioma cells induced acidification and loss of fitness. Mitochondrial, but not glycolytic/plurimetabolic, GBM exhibited marked vulnerability to inhibitors of oxidative phosphorylation. The pathway-based classification of GBM informs survival and enables precision targeting of cancer metabolism.",
+      "authorList": [
+        "Garofano L",
+        "Migliozzi S",
+        "Oh YT",
+        "D'Angelo F",
+        "Najac RD",
+        "Ko A",
+        "Frangaj B",
+        "Caruso FP",
+        "Yu K",
+        "Yuan J",
+        "Zhao W",
+        "Di Stefano AL",
+        "Bielle F",
+        "Jiang T",
+        "Sims P",
+        "Suv\u00e0 ML",
+        "Tang F",
+        "Su XD",
+        "Ceccarelli M",
+        "Sanson M",
+        "Lasorella A",
+        "Iavarone A"
+      ],
+      "authors": "Garofano L, Migliozzi S, Oh YT, D'Angelo F, Najac RD, Ko A, Frangaj B, Caruso FP, Yu K, Yuan J, Zhao W, Di Stefano AL, Bielle F, Jiang T, Sims P, Suv\u00e0 ML, Tang F, Su XD, Ceccarelli M, Sanson M, Lasorella A, Iavarone A",
+      "journal": "Nat Cancer",
+      "year": 2021,
+      "month": 2,
+      "day": -1,
+      "volume": "2",
+      "issue": "2",
+      "pages": "141-156",
+      "tagList": ["article", "columbia", "icg", "first-author"],
+      "url": "",
+      "labs": [],
+      "peopleList": [
+        "luciano-garofano",
+        "simona-migliozzi",
+        "fulvio-dangelo",
+        "ryan-najac",
+        "brulinda-frangaj",
+        "anna-lasorella",
+        "antonio-iavarone"
+      ],
+      "isbn": ""
+    }
+  ]
+}

@@ -1,0 +1,36 @@
+{
+  "person": "juan-angel-patino-galindo",
+  "publications": [
+    {
+      "pmid": "31474372",
+      "pmcid": "PMC6736651",
+      "doi": "10.1016/j.cell.2019.08.005",
+      "title": "A Structure-Informed Atlas of Human-Virus Interactions",
+      "abstract": "While knowledge of protein-protein interactions (PPIs) is critical for understanding virus-host relationships, limitations on the scalability of high-throughput methods have hampered their identification beyond a number of well-studied viruses. Here, we implement an in silico computational framework (pathogen host interactome prediction using structure similarity [P-HIPSTer]) that employs structural information to predict \u223c282,000 pan viral-human PPIs with an experimental validation rate of \u223c76%. In addition to rediscovering known biology, P-HIPSTer has yielded a series of new findings: the discovery of shared and unique machinery employed across human-infecting viruses, a likely role for ZIKV-ESR1 interactions in modulating viral replication, the identification of PPIs that discriminate between human papilloma viruses (HPVs) with high and low oncogenic potential, and a structure-enabled history of evolutionary selective pressure imposed on the human proteome. Further, P-HIPSTer enables discovery of previously unappreciated cellular circuits that act on human-infecting viruses and provides insight into experimentally intractable viruses.",
+      "authorList": [
+        "Lasso G",
+        "Mayer SV",
+        "Winkelmann ER",
+        "Chu T",
+        "Elliot O",
+        "Patino-Galindo JA",
+        "Park K",
+        "Rabadan R",
+        "Honig B",
+        "Shapira SD"
+      ],
+      "journal": "Cell",
+      "year": 2019,
+      "month": 9,
+      "day": 5,
+      "volume": "178",
+      "issue": "6",
+      "pages": "1526-1541",
+      "tagList": ["article", "columbia"],
+      "url": "",
+      "labs": ["raul-rabadan"],
+      "peopleList": ["juan-angel-patino-galindo", "raul-rabadan"],
+      "isbn": ""
+    }
+  ]
+}

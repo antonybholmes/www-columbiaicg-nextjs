@@ -1,0 +1,57 @@
+{
+  "person": "tim-zhong",
+  "publications": [
+    {
+      "pmid": "31861290",
+      "pmcid": "PMC7016633",
+      "doi": "10.3390/cancers12010003",
+      "title": "Upregulation of ZIP14 and Altered Zinc Homeostasis in Muscles in Pancreatic Cancer Cachexia",
+      "abstract": "Pancreatic ductal adenocarcinoma (PDAC) is a lethal cancer type in which the mortality rate approaches the incidence rate. More than 85% of PDAC patients experience a profound loss of muscle mass and function, known as cachexia. PDAC patients with this condition suffer from decreased tolerance to anti-cancer therapies and often succumb to premature death due to respiratory and cardiac muscle wasting. Yet, there are no approved therapies available to alleviate cachexia. We previously found that upregulation of the metal ion transporter, Zip14, and altered zinc homeostasis are critical mediators of cachexia in metastatic colon, lung, and breast cancer models. Here, we show that a similar mechanism is likely driving the development of cachexia in PDAC. In two independent experimental metastasis models generated from the murine PDAC cell lines, Pan02 and FC1242, we observed aberrant Zip14 expression and increased zinc ion levels in cachectic muscles. Moreover, in advanced PDAC patients, high levels of ZIP14 in muscles correlated with the presence of cachexia. These studies underscore the importance of altered ZIP14 function in PDAC-associated cachexia development and highlight a potential therapeutic opportunity for improving the quality of life and prolonging survival in PDAC patients.",
+      "authorList": [
+        "Shakri AR",
+        "Zhong TJ",
+        "Ma W",
+        "Coker C",
+        "Kim S",
+        "Calluori S",
+        "Scholze H",
+        "Szabolcs M",
+        "Caffrey T",
+        "Grandgenett PM",
+        "Hollingsworth MA",
+        "Tanji K",
+        "Kluger MD",
+        "Miller G",
+        "Biswas AK",
+        "Acharyya S"
+      ],
+      "authors": "Shakri AR, Zhong TJ, Ma W, Coker C, Kim S, Calluori S, Scholze H, Szabolcs M, Caffrey T, Grandgenett PM, Hollingsworth MA, Tanji K, Kluger MD, Miller G, Biswas AK, Acharyya S",
+      "journal": "Cancers (Basel)",
+      "year": 2019,
+      "month": 12,
+      "day": 18,
+      "volume": "12",
+      "issue": "1",
+      "pages": "",
+      "tagList": [
+        "article",
+        "columbia",
+        "icg",
+        "selected",
+        "selected::swarnali-acharyya",
+        "first-author"
+      ],
+      "url": "",
+      "labs": [],
+      "peopleList": [
+        "ahmad-rushdi-shakri",
+        "tim-zhong",
+        "wanchao-ma",
+        "courtney-coker",
+        "anup-biswas",
+        "swarnali-acharyya"
+      ],
+      "isbn": ""
+    }
+  ]
+}

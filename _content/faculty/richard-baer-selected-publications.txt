@@ -1,0 +1,16 @@
+id	
+2303035	The tal gene undergoes chromosome translocation in T cell leukemia and potentially encodes a helix-loop-helix protein.  EMBO J.  9: 415-424. PMCID: PMC551682
+2209547	Site-specific recombination of the tal-1 gene is a common occurrence in human T cell leukemia.  EMBO J.  9: 3343-3351.
+1763056	" TAL2, a helix-loop-helix gene activated by the (7;9)(q34;q32) translocation in human T cell leukemia.  Proc. Natl. Acad. Sci. USA  88: 11416-11420. PMCID: PMC53146"
+8142619	"TAL1, TAL2, and LYL1: A family of basic helix loop helix proteins implicated in T cell acute leukemia.  Semin. Cancer Biol. 4: 341 347."
+8944023	Identification of a RING protein that can interact in vivo with the BRCA1 gene product.  Nature Genetics 14: 430-440.
+9738006	"The carboxy-terminal (BRCT) domains of BRCA1 interact in vivo with CtIP, a protein implicated in the CtBP pathway of transcriptional repression.  J. Biol. Chem. 273: 25388-25392."
+11790560	The BRCA1/BARD1 heterodimer: a tumor suppressor complex with ubiquitin E3 ligase activity.  Curr. Opin. Genet. Dev. 12: 86-91.
+12890688	The BRCA1/BARD1 heterodimer assembles polyubiquitin chains through an unconventional linkage involving lysine residue K6 of ubiquitin.  J. Biol. Chem. 278: 34743-34746.
+17848578	Structural requirements for the BARD1 tumor suppressor in chromosomal stability and homology-directed DNA repair.  J. Biol. Chem. 282: 34325-34333. PMID: 17848578
+18443292	The basal-like mammary carcinomas induced by Brca1 or Bard1 inactivation implicate the BRCA1/BARD1 heterodimer in tumor suppression.  Proc. Natl. Acad. Sci. USA 105: 7040-7045 (PMCID: PMC2365565).
+22034435	"BRCA1 tumor suppression depends on BRCT phosphoprotein binding, but not its E3 ligase activity.  Science 334: 525-528 (PMCID: PMC3904783)."
+23712259	The interaction between CtIP and BRCA1 is not essential for resection-mediated DNA repair or tumor suppression.  J. Cell Biol. 201: 693-707 (PMCID: PMC3664708).
+28263958	Genomic instability during reprogramming by nuclear transfer is DNA replication dependent.  Nature Cell Biol. 19: 282-291 (PMCID: PMC5613662).
+30244837	The BRCT domains of the BRCA1 and BARD1 tumor suppressors differentially regulate homology-directed repair and stalled fork protection.  Mol. Cell 72: 127-139 (PMCID: PMC6347115).
+31097467	CtIP is essential for early B cell proliferation and development in mice.  J. Exp. Med. 216: 1648-1663  (PMCID: PMC6605744).

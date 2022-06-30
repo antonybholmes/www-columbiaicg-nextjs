@@ -1,0 +1,23 @@
+{
+  "labId": "jean-gautier",
+  "name": "Jean Gautier",
+  "groups": [
+    {
+      "name": "Faculty",
+      "peopleList": ["jean-gautier"]
+    },
+    {
+      "name": "Research Staff",
+      "peopleList": [
+        "tomas-aparicio",
+        "jaewon-min",
+        "jorge-reyes",
+        "gaganpreet-sidhu"
+      ]
+    },
+    {
+      "name": "Students",
+      "peopleList": ["andrew-liebau", "jennifer-a-zagelbaum"]
+    }
+  ]
+}

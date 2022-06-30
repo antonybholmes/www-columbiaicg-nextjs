@@ -1,0 +1,33 @@
+{
+  "labId": "adolfo-ferrando",
+  "name": "Adolfo Ferrando",
+  "groups": [
+    {
+      "name": "Faculty",
+      "peopleList": ["adolfo-ferrando", "teresa-palomero"]
+    },
+    {
+      "name": "Research Staff",
+      "peopleList": [
+        "robert-albero",
+        "laura-belver-miguel",
+        "mayukh-biswas",
+        "jessie-a-brown",
+        "anisha-cooke",
+        "francesca-gianni",
+        "clara-reglero-gomez",
+        "thomas-gunning",
+        "angela-kemfack",
+        "anouchka-laurent",
+        "adam-mackey",
+        "silvia-alvarez-nanez",
+        "marissa-rashkovan",
+        "jose-rodriguez-cortes"
+      ]
+    },
+    {
+      "name": "Students",
+      "peopleList": ["caral-bertulfo", "stuart-aidan-quinn", "bobby-shih"]
+    }
+  ]
+}

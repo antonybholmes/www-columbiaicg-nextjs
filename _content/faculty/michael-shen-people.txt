@@ -1,0 +1,12 @@
+type	name	title	email		
+Research Staff	Teresa Esteves Rosa	Lab Manager/Grants Manager	Te2168@cumc.columbia.edu	212-851-4571	Room 208B
+Research Staff	Shouhong Xuan	Associate Research Scientist	Sx17@cumc.columbia.edu		
+Research Staff	Francesco Cambuli	Postdoctoral Research Scientist	Sl3961@cumc.columbia.edu		
+Research Staff	Bo Li	Associate Research Scientist	Bl2535@cumc.columbia.edu		
+Research Staff	Jia Li	Postoctoral Research Scientist	Jl4764@cumc.columbia.edu		
+Research Staff	Maho Shibata	Associate Research Scientist	Ms4445@cumc.columbia.edu		
+Graduate Students	Napon Chirathivat	Graduate Student	Nc2654@cumc.columbia.edu		
+Graduate Students	Laura Crowley	Graduate Student	Lc3125@cumc.columbia.edu		
+Graduate Students	Amy Huang	Graduate Student	h.xiauya@cumc.columbia.edu		
+Graduate Students	Eva Leung	Graduate Student	Eyl2127@cumc.columbia.edu		
+Research Staff	Alanna Williams	Technician	Abw2144@cumc.columbia.edu		

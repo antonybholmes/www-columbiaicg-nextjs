@@ -1,0 +1,45 @@
+{
+  "person": "seoyoung-han",
+  "publications": [
+    {
+      "pmid": "31811117",
+      "pmcid": "PMC6897967",
+      "doi": "10.1038/s12276-019-0351-y",
+      "title": "Secretome analysis of patient-derived GBM tumor spheres identifies midkine as a potent therapeutic target",
+      "abstract": "Glioblastoma (GBM) is the most lethal primary brain tumor with few treatment options. The survival of glioma-initiating cells (GICs) is one of the major factors contributing to treatment failure. GICs frequently produce and respond to their own growth factors that support cell proliferation and survival. In this study, we aimed to identify critical autocrine factors mediating GIC survival and to evaluate the anti-GBM effect of antagonizing these factors. Proteomic analysis was performed using conditioned media from two different patient-derived GBM tumor spheres under a growth factor-depleted status. Then, the antitumor effects of inhibiting an identified autocrine factor were evaluated by bioinformatic analysis and molecular validation. Proteins secreted by sphere-forming GICs promote cell proliferation/survival and detoxify reactive oxygen species (ROS). Among these proteins, we focused on midkine (MDK) as a clinically significant and pathologically relevant autocrine factor. Antagonizing MDK reduced the survival of GBM tumor spheres through the promotion of cell cycle arrest and the consequent apoptotic cell death caused by oxidative stress-induced DNA damage. We also identified PCBP4, a novel molecular predictor of resistance to anti-MDK treatment. Collectively, our results indicate that MDK inhibition is an important therapeutic option by suppressing GIC survival through the induction of ROS-mediated cell cycle arrest and apoptosis.",
+      "authorList": [
+        "Han S",
+        "Shin H",
+        "Lee JK",
+        "Liu Z",
+        "Rabadan R",
+        "Lee J",
+        "Shin J",
+        "Lee C",
+        "Yang H",
+        "Kim D",
+        "Kim SH",
+        "Kim J",
+        "Oh JW",
+        "Kong DS",
+        "Lee JI",
+        "Seol HJ",
+        "Choi JW",
+        "Kang HJ",
+        "Nam DH"
+      ],
+      "journal": "Exp Mol Med",
+      "year": 2019,
+      "month": 12,
+      "day": 6,
+      "volume": "51",
+      "issue": "12",
+      "pages": "1-11",
+      "tagList": ["article", "columbia"],
+      "url": "",
+      "labs": ["raul-rabadan"],
+      "peopleList": ["raul-rabadan", "seoyoung-han", "zhaoqi-liu", "jaime-kim"],
+      "isbn": ""
+    }
+  ]
+}

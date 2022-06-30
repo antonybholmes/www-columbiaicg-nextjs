@@ -1,0 +1,16 @@
+id	
+0	Genomic Characterization of HIV-Associated Plasmablastic Lymphoma Identifies Pervasive Mutations in the JAKSTAT Pathway.
+0	 Understanding Coronavirus (Understanding Life) Raul Rabadan. Cambridge University Press 2020 ISBN-13: 978-1108826716.
+32332164	Pan-cancer analysis identifies mutations in SUGP1 that recapitulate mutant SF3B1 splicing dysregulation.
+32188705	 Mutations in the RNA splicing factor SF3B1 promote tumorigenesis through MYC stabilization.
+30742119	 Immune and genomic correlates of response to anti-PD-1 immunotherapy in glioblastoma.
+29440233	 Comprehensive characterisation of compartment-specific long non-coding RNAs associated with pancreatic ductal adenocarcinoma.
+0	 Geometry and topology of genomic data. A.J. Blumberg and R. Rabadan. Chapter 64 in J.E. Goodman, J. O'Rourke, and C.D. Toth, editors. Handbook of Discrete and Computational Geometry, 2nd edition, CRC Press, Boca Raton, FL, 2017, pp. 1735-1773.
+28459448	 Single-cell topological RNA-seq analysis reveals insights into cellular differentiation and development.
+28263318	 Spatiotemporal genomic architecture informs precision oncology in glioblastoma.
+27270107	 Clonal evolution of glioblastoma under therapy.
+25957685	 RNA Exosome-Regulated Long Non-Coding RNA Transcription Controls Super-Enhancer Activity.
+25926297	 Genetic similarity between cancers and comorbid Mendelian diseases identifies candidate driver genes.
+23377281	 Activating mutations in the NT5C2 nucleotidase gene drive chemotherapy resistance in relapsed ALL.
+22837387	 Transforming Fusions of FGFR and TACC Genes in Human Glioblastoma.
+19474418	 Geographic Dependence, Surveillance, and Origins of the 2009 Influenza A (H1N1) Virus.

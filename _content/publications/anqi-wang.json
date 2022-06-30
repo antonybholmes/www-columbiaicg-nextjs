@@ -1,0 +1,38 @@
+{
+  "person": "anqi-wang",
+  "publications": [
+    {
+      "pmid": "26449386",
+      "pmcid": "PMC4849362",
+      "doi": "10.1093/jnci/djv251",
+      "title": "Economic and Survival Implications of Use of Electric Power Morcellation for Hysterectomy for Presumed Benign Gynecologic Disease",
+      "abstract": "Electric power morcellation during laparoscopic hysterectomy allows some women to undergo minimally invasive surgery but may disrupt underlying occult malignancies and increase the risk of tumor dissemination.",
+      "authorList": [
+        "Wright JD",
+        "Cui RR",
+        "Wang A",
+        "Chen L",
+        "Tergas AI",
+        "Burke WM",
+        "Ananth CV",
+        "Hou JY",
+        "Neugut AI",
+        "Temkin SM",
+        "Wang YC",
+        "Hershman DL"
+      ],
+      "journal": "J Natl Cancer Inst",
+      "year": 2015,
+      "month": 11,
+      "day": -1,
+      "volume": "107",
+      "issue": "11",
+      "pages": "",
+      "tagList": ["article", "columbia"],
+      "url": "",
+      "labs": [],
+      "peopleList": ["anqi-wang"],
+      "isbn": ""
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+id	
+32640193	"Proline hydroxylation primes protein kinases for autophosphorylation and activation. Molecular Cell, 79: 1-14, 2020."
+30531922	"The molecular landscape of glioma in patients with Neurofibromatosis 1, Nature Medicine"
+29915258	"A recurrent point mutation in PRKCA is a hallmark of Chordoid Gliomas Nature Communications, 9:2371, 2018."
+29323298	 A metabolic function of FGFR3-TACC3 gene fusions in cancer
+29510988	" A Cross-cohort analysis identifies a TEAD4-MYCN positive-feedback loop as the core regulatory element of high-risk neuroblastoma. Cancer Discovery, 8:582-599, 2018."
+28003334	"Huwe1 is a critical colonic tumor suppressor gene that prevents MYC signaling, DNA damage accumulation and tumour initiation. EMBO Mol Med. 9(2):181-197, 2017."
+26735018	An ID2-dependent-mechanism for VHL inactivation in cancer
+27668798	"The ubiquitin ligase HUWE1 regulates hematopoietic stem cell maintenance and lymphoid commitment. Nat. Immunol. 17(11):1312-132, 2016."
+23917401	The integrated landscape of driver genomic alterations in glioblastoma. Nature Genetics
+22837387	"Transforming Fusions of FGFR and TACC Genes in Human Glioblastoma Science 337:1231-1235, 2012."
+23241957	"The Id-RAP1 axis is essential for glioma maintenance and residency of glioma cells in the perivascular niche. J. Clin. Invest., 123:405-417, 2013."
+22522171	"Id proteins synchronize stemness and anchorage to the niche of neural stem cells. Nat. Cell. Biol. 14:477-487, 2012 (see also News and Views Nat Cell Biol. 2012, 14:450-452, Research Highlights Nat Rev Mol Cell Biol. 2012 13:278)"
+0	"Regulation of neural stem cells, neurogenesis and cortical lamination by Huwe1 ubiquitin ligase, a new tumor suppressor gene for malignant brain tumors. Developmental Cell, 17:210-221, 2009."
+18488021	"The HECT-domain ubiquitin ligase Huwe1 controls neural differentiation and proliferation by destabilizing the N-Myc oncoprotein. Nature Cell Biology, 10:643-653, 2008."

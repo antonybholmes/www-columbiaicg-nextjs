@@ -1,0 +1,31 @@
+{
+  "labId": "raul-rabadan",
+  "name": "Raul Rabadan",
+  "groups": [
+    {
+      "name": "Faculty",
+      "peopleList": ["raul-rabadan"]
+    },
+    {
+      "name": "Research Staff",
+      "peopleList": [
+        "luis-aparicio",
+        "francesco-brundu",
+        "mathieu-carriere",
+        "oliver-elliott",
+        "ioan-filip",
+        "zhaoqi-liu",
+        "juan-angel-patino-galindo",
+        "tomin-perea-chamblee",
+        "paula-ralph-birkett",
+        "anqi-wang",
+        "zixuan-wang",
+        "junfei-zhao"
+      ]
+    },
+    {
+      "name": "Students",
+      "peopleList": ["karen-gomez", "renwei-li", "rong-ma"]
+    }
+  ]
+}

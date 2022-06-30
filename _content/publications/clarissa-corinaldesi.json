@@ -1,0 +1,54 @@
+{
+  "person": "clarissa-corinaldesi",
+  "publications": [
+    {
+      "pmid": "32603407",
+      "pmcid": "PMC7537389",
+      "doi": "10.1084/jem.20200483",
+      "title": "Single-cell analysis of germinal-center B cells informs on lymphoma cell of origin and outcome",
+      "abstract": "In response to T cell-dependent antigens, mature B cells are stimulated to form germinal centers (GCs), the sites of B cell affinity maturation and the cell of origin (COO) of most B cell lymphomas. To explore the dynamics of GC B cell development beyond the known dark zone and light zone compartments, we performed single-cell (sc) transcriptomic analysis on human GC B cells and identified multiple functionally linked subpopulations, including the distinct precursors of memory B cells and plasma cells. The gene expression signatures associated with these GC subpopulations were effective in providing a sc-COO for \u223c80% of diffuse large B cell lymphomas (DLBCLs) and identified novel prognostic subgroups of DLBCL.",
+      "authorList": [
+        "Holmes AB",
+        "Corinaldesi C",
+        "Shen Q",
+        "Kumar R",
+        "Compagno N",
+        "Wang Z",
+        "Nitzan M",
+        "Grunstein E",
+        "Pasqualucci L",
+        "Dalla-Favera R",
+        "Basso K"
+      ],
+      "authors": "Holmes AB, Corinaldesi C, Shen Q, Kumar R, Compagno N, Wang Z, Nitzan M, Grunstein E, Pasqualucci L, Dalla-Favera R, Basso K",
+      "journal": "J Exp Med",
+      "year": 2020,
+      "month": 10,
+      "day": 5,
+      "volume": "217",
+      "issue": "10",
+      "pages": "",
+      "tagList": [
+        "article",
+        "columbia",
+        "icg",
+        "selected",
+        "selected::katia-basso",
+        "selected::riccardo-dalla-favera",
+        "first-author"
+      ],
+      "url": "",
+      "labs": [],
+      "peopleList": [
+        "antony-holmes",
+        "clarissa-corinaldesi",
+        "qiong-shen",
+        "zixuan-wang",
+        "laura-pasqualucci",
+        "riccardo-dalla-favera",
+        "katia-basso"
+      ],
+      "isbn": ""
+    }
+  ]
+}

@@ -1,0 +1,43 @@
+{
+  "person": "maho-shibata",
+  "publications": [
+    {
+      "pmid": "25241035",
+      "pmcid": "PMC4183706",
+      "doi": "10.1038/ncb3047",
+      "title": "Single luminal epithelial progenitors can generate prostate organoids in culture",
+      "abstract": "The intrinsic ability to exhibit self-organizing morphogenetic properties in ex vivo culture may represent a general property of tissue stem cells. Here we show that single luminal stem/progenitor cells can generate prostate organoids in a three-dimensional culture system in the absence of stroma. Organoids generated from CARNs (castration-resistant Nkx3.1-expressing cells) or normal prostate epithelia exhibit tissue architecture containing luminal and basal cells, undergo long-term expansion in culture and exhibit functional androgen receptor signalling. Lineage-tracing demonstrates that luminal cells are favoured for organoid formation and generate basal cells in culture. Furthermore, tumour organoids can initiate from CARNs after oncogenic transformation and from mouse models of prostate cancer, and can facilitate analyses of drug response. Finally, we provide evidence supporting the feasibility of organoid studies of human prostate tissue. Our studies underscore the progenitor properties of luminal cells, and identify in vitro approaches for studying prostate biology. ",
+      "authorList": [
+        "Chua CW",
+        "Shibata M",
+        "Lei M",
+        "Toivanen R",
+        "Barlow LJ",
+        "Bergren SK",
+        "Badani KK",
+        "McKiernan JM",
+        "Benson MC",
+        "Hibshoosh H",
+        "Shen MM"
+      ],
+      "journal": "Nat Cell Biol",
+      "year": 2014,
+      "month": 10,
+      "day": -1,
+      "volume": "16",
+      "issue": "10",
+      "pages": "951-61, 1-4",
+      "tagList": [
+        "article",
+        "selected",
+        "selected::michael-shen",
+        "first-author"
+      ],
+      "url": "",
+      "labs": ["michael-shen"],
+      "peopleList": ["michael-shen", "maho-shibata"],
+      "isbn": "",
+      "authors": "Chua CW, Shibata M, Lei M, Toivanen R, Barlow LJ, Bergren SK, Badani KK, McKiernan JM, Benson MC, Hibshoosh H, Shen MM"
+    }
+  ]
+}

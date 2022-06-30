@@ -1,0 +1,16 @@
+id	
+31408617	Shen MM. A positive step toward understanding double-negative metastatic prostate cancer. Cancer Cell. 2019 Aug 12;36(2):117-119. doi: 10.1016/j.ccell.2019.07.006.PMID:31408617
+30348836	Shen MM, Rubin MA. Prostate Cancer Research at the Crossroads. Cold Spring Harb Perspect Med. 2019 Jul 1;9(7):a036277. doi: 10.1101/cshperspect.a036277.PMID:30348836
+30291148	Li JJ,Shen MM. Prostate Stem Cells and Cancer Stem Cells. Cold Spring Harb Perspect Med. 2019 Jun 3;9(6):a030395. doi: 10.1101/cshperspect.a030395.PMID:30291148
+29625057	Tumor evolution and drug response in patient-derived organoid models of bladder cancer.Cell173: 515-528.
+29334357	Differential requirements of androgen receptor in luminal progenitors during prostate regeneration and tumor initiation.eLife7: e28768.
+28429718	A computational systems approach identifies synergistic specification genes that facilitate lineage conversion to prostate tissue. Nat. Comm. 8: 14662.
+28411207	Transdifferentiation as a mechanism of treatment resistance in a mouse model of castration-resistant prostate cancer. Discov.7: 736-749. (*co-corresponding author)
+27117783	Basal progenitors contribute to repair of the prostate epithelium following induced luminal anoikis.Stem Cell Rep.6: 660-667.
+26506127	Cell types or origin for prostate cancer. Curr Opin Cell Biol. 2015 Dec;37:35-41. doi: 10.1016/j.ceb.2015.10.002. Epub 2015 Nov 11.PMID:26506127
+25830892	Shen MM. Cancer: The complex seeds of metastasis. Nature. 2015 Apr 16;520(7547):298-9. doi: 10.1038/nature14377. Epub 2015 Apr 1.PMID:25830892
+25241035	Single luminal epithelial progenitors can generate prostate organoids in culture. Nat. Cell Biol. 16: 951-961.
+25176651	Luminal cells are favored as the cell of origin for prostate cancer.Cell Rep.8: 1339-1346.
+23434823	Lineage analysis of basal epithelial cells reveals their unexpected plasticity and supports a cell of origin model for prostate cancer heterogeneity.Nat. Cell Biol.15: 274-283.
+20346354	Chu, J., andShen, M. M.(2010). Functional redundancy ofEGF-CFCgenes in epiblast and extraembryonic patterning during early mouse embryogenesis.Dev. Biol.342: 63-73.
+19741607	A luminal epithelial stem cell that is a cell of origin for prostate cancer.Nature461: 495-500.

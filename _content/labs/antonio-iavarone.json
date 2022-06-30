@@ -1,0 +1,32 @@
+{
+  "labId": "antonio-iavarone",
+  "name": "Antonio Iavarone",
+  "groups": [
+    {
+      "name": "Faculty",
+      "peopleList": ["antonio-iavarone", "anna-lasorella"]
+    },
+    {
+      "name": "Research Staff",
+      "peopleList": [
+        "fulvio-dangelo",
+        "brulinda-frangaj",
+        "qiwen-gan",
+        "luciano-garofano",
+        "mohammad-hasanain",
+        "simona-migliozzi",
+        "ryan-najac",
+        "michael-oh",
+        "danika-sommer"
+      ]
+    },
+    {
+      "name": "Graduate Students",
+      "peopleList": []
+    },
+    {
+      "name": "Students",
+      "peopleList": []
+    }
+  ]
+}

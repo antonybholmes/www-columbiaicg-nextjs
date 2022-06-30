@@ -1,0 +1,36 @@
+const useTopJournals = (publications: Array<any>) => {
+  const countMap = new Map<string, number>()
+
+  for (let pub of publications) {
+    if (!countMap.has(pub.journal)) {
+      countMap.set(pub.journal, 0)
+    }
+
+    countMap.set(pub.journal, countMap.get(pub.journal) + 1)
+  }
+
+  const pubMap = new Map<number, Array<string>>()
+
+  for (let e of Array.from(countMap.entries())) {
+    if (!pubMap.has(e[1])) {
+      pubMap.set(e[1], [])
+    }
+
+    pubMap.get(e[1]).push(e[0])
+  }
+
+  const ret: Array<any> = []
+
+  // sort by count descending then alphabetical if counts the same
+  for (let c of Array.from(pubMap.keys())
+    .sort((a, b) => a - b)
+    .reverse()) {
+    for (let journal of pubMap.get(c).sort()) {
+      ret.push([journal, c])
+    }
+  }
+
+  return ret
+}
+
+export default useTopJournals

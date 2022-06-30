@@ -1,0 +1,26 @@
+{
+  "labId": "shan-zha",
+  "name": "Shan Zha",
+  "groups": [
+    {
+      "name": "Faculty",
+      "peopleList": ["shan-zha"]
+    },
+    {
+      "name": "Research Staff",
+      "peopleList": [
+        "olivia-cupo",
+        "brian-lee",
+        "xiaohui-lin",
+        "demis-menolfi",
+        "maja-milanovic",
+        "zhengping-shao",
+        "yimeng-zhu"
+      ]
+    },
+    {
+      "name": "Students",
+      "peopleList": ["xiobin-wang"]
+    }
+  ]
+}

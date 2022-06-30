@@ -1,0 +1,47 @@
+{
+  "person": "rohaan-hegde",
+  "publications": [
+    {
+      "pmid": "32730698",
+      "pmcid": "PMC7520359",
+      "doi": "10.1002/cam4.3242",
+      "title": "Aberrant Zip14 expression in muscle is associated with cachexia in a Bard1-deficient mouse model of breast cancer metastasis",
+      "abstract": "Nearly 80% of advanced cancer patients are afflicted with cachexia, a debilitating syndrome characterized by extensive loss of muscle mass and function. Cachectic cancer patients have a reduced tolerance to antineoplastic therapies and often succumb to premature death from the wasting of respiratory and cardiac muscles. Since there are no available treatments for cachexia, it is imperative to understand the mechanisms that drive cachexia in order to devise effective strategies to treat it. Although 25% of metastatic breast cancer patients develop symptoms of muscle wasting, mechanistic studies of breast cancer cachexia have been hampered by a lack of experimental models. Using tumor cells deficient for BARD1, a subunit of the BRCA1/BARD1 tumor suppressor complex, we have developed a new orthotopic model of triple-negative breast cancer that spontaneously metastasizes to the lung and leads to systemic muscle deterioration. We show that expression of the metal-ion transporter, Zip14, is markedly upregulated in cachectic muscles from these mice and is associated with elevated intramuscular zinc and iron levels. Aberrant Zip14 expression and altered metal-ion homeostasis could therefore represent an underlying mechanism of cachexia development in human patients with triple-negative breast cancer. Our study provides a unique model for studying breast cancer cachexia and identifies a potential therapeutic target for its treatment.",
+      "authorList": [
+        "Shakri AR",
+        "James Zhong T",
+        "Ma W",
+        "Coker C",
+        "Hegde R",
+        "Scholze H",
+        "Chin V",
+        "Szabolcs M",
+        "Hibshoosh H",
+        "Tanji K",
+        "Baer R",
+        "Kumar Biswas A",
+        "Acharyya S"
+      ],
+      "authors": "Shakri AR, James Zhong T, Ma W, Coker C, Hegde R, Scholze H, Chin V, Szabolcs M, Hibshoosh H, Tanji K, Baer R, Kumar Biswas A, Acharyya S",
+      "journal": "Cancer Med",
+      "year": 2020,
+      "month": 9,
+      "day": -1,
+      "volume": "9",
+      "issue": "18",
+      "pages": "6766-6775",
+      "tagList": ["article", "columbia", "icg", "first-author"],
+      "url": "",
+      "labs": [],
+      "peopleList": [
+        "ahmad-rushdi-shakri",
+        "wanchao-ma",
+        "courtney-coker",
+        "rohaan-hegde",
+        "richard-baer",
+        "swarnali-acharyya"
+      ],
+      "isbn": ""
+    }
+  ]
+}

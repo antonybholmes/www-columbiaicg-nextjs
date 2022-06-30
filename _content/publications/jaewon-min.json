@@ -1,0 +1,47 @@
+{
+  "person": "jaewon-min",
+  "publications": [
+    {
+      "pmid": "30692261",
+      "pmcid": "PMC6377499",
+      "doi": "10.1073/pnas.1821022116",
+      "title": "Ferroptosis as a target for protection against cardiomyopathy",
+      "abstract": "Heart disease is the leading cause of death worldwide. A key pathogenic factor in the development of lethal heart failure is loss of terminally differentiated cardiomyocytes. However, mechanisms of cardiomyocyte death remain unclear. Here, we discovered and demonstrated that ferroptosis, a programmed iron-dependent cell death, as a mechanism in murine models of doxorubicin (DOX)- and ischemia/reperfusion (I/R)-induced cardiomyopathy. In canonical apoptosis and/or necroptosis-defective Ripk3-/-, Mlkl-/-, or Fadd-/-Mlkl-/- mice, DOX-treated cardiomyocytes showed features of typical ferroptotic cell death. Consistently, compared with dexrazoxane, the only FDA-approved drug for treating DOX-induced cardiotoxicity, inhibition of ferroptosis by ferrostatin-1 significantly reduced DOX cardiomyopathy. RNA-sequencing results revealed that heme oxygenase-1 (Hmox1) was significantly up-regulated in DOX-treated murine hearts. Administering DOX to mice induced cardiomyopathy with a rapid, systemic accumulation of nonheme iron via heme degradation by Nrf2-mediated up-regulation of Hmox1, which effect was abolished in Nrf2-deficent mice. Conversely, zinc protoporphyrin IX, an Hmox1 antagonist, protected the DOX-treated mice, suggesting free iron released on heme degradation is necessary and sufficient to induce cardiac injury. Given that ferroptosis is driven by damage to lipid membranes, we further investigated and found that excess free iron accumulated in mitochondria and caused lipid peroxidation on its membrane. Mitochondria-targeted antioxidant MitoTEMPO significantly rescued DOX cardiomyopathy, supporting oxidative damage of mitochondria as a major mechanism in ferroptosis-induced heart damage. Importantly, ferrostatin-1 and iron chelation also ameliorated heart failure induced by both acute and chronic I/R in mice. These findings highlight that targeting ferroptosis serves as a cardioprotective strategy for cardiomyopathy prevention.",
+      "authorList": [
+        "Fang X",
+        "Wang H",
+        "Han D",
+        "Xie E",
+        "Yang X",
+        "Wei J",
+        "Gu S",
+        "Gao F",
+        "Zhu N",
+        "Yin X",
+        "Cheng Q",
+        "Zhang P",
+        "Dai W",
+        "Chen J",
+        "Yang F",
+        "Yang HT",
+        "Linkermann A",
+        "Gu W",
+        "Min J",
+        "Wang F"
+      ],
+      "authors": "Fang X, Wang H, Han D, Xie E, Yang X, Wei J, Gu S, Gao F, Zhu N, Yin X, Cheng Q, Zhang P, Dai W, Chen J, Yang F, Yang HT, Linkermann A, Gu W, Min J, Wang F",
+      "journal": "Proc Natl Acad Sci USA",
+      "year": 2019,
+      "month": 2,
+      "day": 12,
+      "volume": "116",
+      "issue": "7",
+      "pages": "2672-2680",
+      "tagList": ["article", "columbia", "icg"],
+      "url": "",
+      "labs": [],
+      "peopleList": ["xin-yang", "wei-gu", "jaewon-min"],
+      "isbn": ""
+    }
+  ]
+}

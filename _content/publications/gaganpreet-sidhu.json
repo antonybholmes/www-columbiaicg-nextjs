@@ -1,0 +1,54 @@
+{
+  "person": "gaganpreet-sidhu",
+  "publications": [
+    {
+      "pmid": "28122517",
+      "pmcid": "PMC5267385",
+      "doi": "10.1186/s12864-017-3486-z",
+      "title": "Evolution of meiotic recombination genes in maize and teosinte",
+      "abstract": "Meiotic recombination is a major source of genetic variation in eukaryotes. The role of recombination in evolution is recognized but little is known about how evolutionary forces affect the recombination pathway itself. Although the recombination pathway is fundamentally conserved across different species, genetic variation in recombination components and outcomes has been observed. Theoretical predictions and empirical studies suggest that changes in the recombination pathway are likely to provide adaptive abilities to populations experiencing directional or strong selection pressures, such as those occurring during species domestication. We hypothesized that adaptive changes in recombination may be associated with adaptive evolution patterns of genes involved in meiotic recombination.",
+      "authorList": ["Sidhu GK", "Warzecha T", "Pawlowski WP"],
+      "journal": "BMC Genomics",
+      "year": 2017,
+      "month": 1,
+      "day": 25,
+      "volume": "18",
+      "issue": "1",
+      "pages": "106",
+      "tagList": ["article", "columbia", "icg"],
+      "url": "",
+      "labs": [],
+      "peopleList": ["gaganpreet-sidhu"],
+      "isbn": ""
+    },
+    {
+      "pmid": "25232038",
+      "pmcid": "PMC4191769",
+      "doi": "10.1073/pnas.1416241111",
+      "title": "Silencing of a metaphase I-specific gene results in a phenotype similar to that of the Pairing homeologous 1 (Ph1) gene mutations",
+      "abstract": "Although studied extensively since 1958, the molecular mode of action of the Pairing homeologous 1 (Ph1) gene is still unknown. In polyploid wheat, the diploid-like chromosome pairing is principally controlled by the Ph1 gene via preventing homeologous chromosome pairing (HECP). Here, we report a candidate Ph1 gene (C-Ph1) present in the Ph1 locus, transient as well as stable silencing of which resulted in a phenotype characteristic of the Ph1 gene mutants, including HECP, multivalent formation, and disrupted chromosome alignment on the metaphase I (MI) plate. Despite a highly conserved DNA sequence, the C-Ph1 gene homeologues showed a dramatically different structure and expression pattern, with only the 5B copy showing MI-specific expression, further supporting our claim for the Ph1 gene. In agreement with the previous reports about the Ph1 gene, the predicted protein of the 5A copy of the C-Ph1 gene is truncated, and thus perhaps less effective. The 5D copy is expressed around the onset of meiosis; thus, it may function during the earlier stages of chromosome pairing. Along with alternate splicing, the predicted protein of the 5B copy is different from the protein of the other two copies because of an insertion. These structural and expression differences among the homeologues concurred with the previous observations about Ph1 gene function. Stable RNAi silencing of the wheat gene in Arabidopsis showed multivalents and centromere clustering during meiosis I. ",
+      "authorList": [
+        "Bhullar R",
+        "Nagarajan R",
+        "Bennypaul H",
+        "Sidhu GK",
+        "Sidhu G",
+        "Rustgi S",
+        "von Wettstein D",
+        "Gill KS"
+      ],
+      "journal": "Proc Natl Acad Sci USA",
+      "year": 2014,
+      "month": 9,
+      "day": 30,
+      "volume": "111",
+      "issue": "39",
+      "pages": "14187-92",
+      "tagList": ["article", "columbia"],
+      "url": "",
+      "labs": [],
+      "peopleList": ["gaganpreet-sidhu"],
+      "isbn": ""
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "labId": "cory-abate-shen",
+  "name": "Cory Abate-Shen",
+  "groups": [
+    {
+      "name": "Faculty",
+      "peopleList": ["cory-abate-shen"]
+    },
+    {
+      "name": "Research Staff",
+      "peopleList": [
+        "stephanie-afari",
+        "francisca-nunes-de-almeida",
+        "juan-arriaga",
+        "matteo-di-bernardo",
+        "arianna-giacobbe",
+        "jaime-kim",
+        "timur-mukhammadov",
+        "alexandros-papachristodoulou",
+        "soonbum-park"
+      ]
+    },
+    {
+      "name": "Students",
+      "peopleList": [
+        "christopher-l-cardona",
+        "prithi-chakrapani",
+        "elvis-alexis-maliza"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,38 @@
+{
+  "person": "andrew-liebau",
+  "publications": [
+    {
+      "pmid": "33404608",
+      "pmcid": "PMC7791342",
+      "doi": "10.1083/jcb.201807163",
+      "title": "The UVSSA complex alleviates MYC-driven transcription stress",
+      "abstract": "Cancer cells develop strong genetic dependencies, enabling survival under oncogenic stress. MYC is a key oncogene activated across most cancers, and identifying associated synthetic lethality or sickness can provide important clues about its activity and potential therapeutic strategies. On the basis of previously conducted genome-wide screenings in MCF10A cells expressing MYC fused to an estrogen receptor fragment, we identified UVSSA, a gene involved in transcription-coupled repair, whose knockdown or knockout decreased cell viability when combined with MYC expression. Synthetic sick interactions between MYC expression and UVSSA down-regulation correlated with ATM/CHK2 activation, suggesting increased genome instability. We show that the synthetic sick interaction is diminished by attenuating RNA polymerase II (RNAPII) activity; yet, it is independent of UV-induced damage repair, suggesting that UVSSA has a critical function in regulating RNAPII in the absence of exogenous DNA damage. Supporting this hypothesis, RNAPII ChIP-seq revealed that MYC-dependent increases in RNAPII promoter occupancy are reduced or abrogated by UVSSA knockdown, suggesting that UVSSA influences RNAPII dynamics during MYC-dependent transcription. Taken together, our data show that the UVSSA complex has a significant function in supporting MYC-dependent RNAPII dynamics and maintaining cell survival during MYC addiction. While the role of UVSSA in regulating RNAPII has been documented thus far only in the context of UV-induced DNA damage repair, we propose that its activity is also required to cope with transcriptional changes induced by oncogene activation.",
+      "authorList": [
+        "Sato M",
+        "Liebau AW",
+        "Liu Z",
+        "Liu L",
+        "Rabadan R",
+        "Gautier J"
+      ],
+      "authors": "Sato M, Liebau AW, Liu Z, Liu L, Rabadan R, Gautier J",
+      "journal": "J Cell Biol",
+      "year": 2021,
+      "month": 2,
+      "day": 1,
+      "volume": "220",
+      "issue": "2",
+      "pages": "",
+      "tagList": ["article", "columbia", "icg", "first-author"],
+      "url": "",
+      "labs": [],
+      "peopleList": [
+        "andrew-liebau",
+        "zhaoqi-liu",
+        "raul-rabadan",
+        "jean-gautier"
+      ],
+      "isbn": ""
+    }
+  ]
+}

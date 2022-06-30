@@ -1,0 +1,60 @@
+{
+  "person": "seetha-srinivasan",
+  "publications": [
+    {
+      "pmid": "23643534",
+      "pmcid": "PMC3822004",
+      "doi": "10.1016/j.celrep.2013.04.002",
+      "title": "Cdc45 is a critical effector of myc-dependent DNA replication stress",
+      "abstract": "c-Myc oncogenic activity is thought to be mediated in part by its ability to generate DNA replication stress and subsequent genomic instability when deregulated. Previous studies have demonstrated a nontranscriptional role for c-Myc in regulating DNA replication. Here, we analyze the mechanisms by which c-Myc deregulation generates DNA replication stress. We find that overexpression of c-Myc alters the spatiotemporal program of replication initiation by increasing the density of early-replicating origins. We further show that c-Myc deregulation results in\u00a0elevated replication-fork stalling or collapse and subsequent DNA damage. Notably, these phenotypes are independent of RNA transcription. Finally, we demonstrate that overexpression of Cdc45 recapitulates all c-Myc-induced replication and damage phenotypes and that Cdc45 and GINS function downstream of Myc.",
+      "authorList": [
+        "Srinivasan SV",
+        "Dominguez-Sola D",
+        "Wang LC",
+        "Hyrien O",
+        "Gautier J"
+      ],
+      "authors": "Srinivasan SV, Dominguez-Sola D, Wang LC, Hyrien O, Gautier J",
+      "journal": "Cell Rep",
+      "year": 2013,
+      "month": 5,
+      "day": 30,
+      "volume": "3",
+      "issue": "5",
+      "pages": "1629-39",
+      "tagList": [
+        "article",
+        "columbia",
+        "icg",
+        "selected",
+        "selected::jean-gautier",
+        "first-author"
+      ],
+      "url": "",
+      "labs": [],
+      "peopleList": ["seetha-srinivasan", "jean-gautier"],
+      "isbn": ""
+    },
+    {
+      "pmid": "21870289",
+      "pmcid": "",
+      "doi": "10.1007/978-1-61779-273-1_10",
+      "title": "Study of cell cycle checkpoints using Xenopus cell-free extracts",
+      "abstract": "Cell cycle checkpoints are involved in the coordinated response to DNA damage and thus play a key role in maintaining genome integrity. Several model systems have been developed to study the mechanisms and complexity of checkpoint function. Here we describe the application of cell-free extracts derived from Xenopus eggs as a model system to investigate DNA replication, damage, and checkpoint activation. We outline the preparation of cell-free extracts, DNA substrates and their subsequent use in assays aimed at understanding cell cycle checkpoints, and related processes. Several advances made over the years have enabled the continued use of the Xenopus system to answer a variety of questions in DNA replication, repair and checkpoint signaling. It is anticipated that the versatile Xenopus system is amenable to future modification as well to continue studies attempting to understand these important physiological processes.",
+      "authorList": ["Srinivasan SV", "Gautier J"],
+      "authors": "Srinivasan SV, Gautier J",
+      "journal": "Methods Mol Biol",
+      "year": 2011,
+      "month": -1,
+      "day": -1,
+      "volume": "782",
+      "issue": "",
+      "pages": "119-58",
+      "tagList": ["article", "columbia", "icg", "first-author"],
+      "url": "",
+      "labs": [],
+      "peopleList": ["seetha-srinivasan", "jean-gautier"],
+      "isbn": ""
+    }
+  ]
+}

@@ -1,0 +1,42 @@
+{
+  "person": "shouhong-xuan",
+  "publications": [
+    {
+      "pmid": "29334357",
+      "pmcid": "PMC5807048",
+      "doi": "10.7554/eLife.28768",
+      "title": "Differential requirements of androgen receptor in luminal progenitors during prostate regeneration and tumor initiation",
+      "abstract": "Master regulatory genes of tissue specification play key roles in stem/progenitor cells and are often important in cancer. In the prostate, androgen receptor (AR) is a master regulator essential for development and tumorigenesis, but its specific functions in prostate stem/progenitor cells have not been elucidated. We have investigated AR function in CARNs (CAstration-Resistant Nkx3.1-expressing cells), a luminal stem/progenitor cell that functions in prostate regeneration. Using genetically--engineered mouse models and novel prostate epithelial cell lines, we find that progenitor properties of CARNs are largely unaffected by AR deletion, apart from decreased proliferation in vivo. Furthermore, AR loss suppresses tumor formation after deletion of the Pten tumor suppressor in CARNs; however, combined Pten deletion and activation of oncogenic Kras in AR-deleted CARNs result in tumors with focal neuroendocrine differentiation. Our findings show that AR modulates specific progenitor properties of CARNs, including their ability to serve as a cell of origin for prostate cancer.",
+      "authorList": [
+        "Chua CW",
+        "Epsi NJ",
+        "Leung EY",
+        "Xuan S",
+        "Lei M",
+        "Li BI",
+        "Bergren SK",
+        "Hibshoosh H",
+        "Mitrofanova A",
+        "Shen MM"
+      ],
+      "journal": "Elife",
+      "year": 2018,
+      "month": 1,
+      "day": 15,
+      "volume": "7",
+      "issue": "",
+      "pages": "",
+      "tagList": [
+        "article",
+        "selected",
+        "selected::michael-shen",
+        "first-author"
+      ],
+      "url": "",
+      "labs": ["michael-shen"],
+      "peopleList": ["michael-shen", "eva-leung", "shouhong-xuan", "bo-li"],
+      "isbn": "",
+      "authors": "Chua CW, Epsi NJ, Leung EY, Xuan S, Lei M, Li BI, Bergren SK, Hibshoosh H, Mitrofanova A, Shen MM"
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+id	id
+33341431
+31861620
+28427863
+31723131	"eIF4A-dependent translational control of central carbon metabolism in pancreatic ductal adenocarcinoma. Nature Communications. 2019; 10, 5151"
+27477511	NRF2 Promotes Tumor Maintenance by Modulating mRNA Translation in Pancreatic Cancer. Cell. 2016;166(4):963-76. 
+25557080	Organoid models of human and mouse ductal pancreatic cancer. Cell. 2015;160(1-2):324-38.
+22561347	TRADD contributes to tumour suppression by regulating ULF-dependent p19Arf ubiquitylation. Nat Cell Biol. 2012;14(6):625-33. 
+18719121	Beyond tumor necrosis factor receptor: TRADD signaling in toll-like receptors. Proc Natl Acad Sci USA. 2008;105(34):12429-34. 
+31492749	Identification of resistance pathways specific to malignancy using organoid models of pancreatic cancer. Clinical Cancer research. 2019 
+31527169	Bioactivation of napabucasin triggers reactive oxygen species-mediated killing of cancer cells. Clinical Cancer Research. 2019; 25(23);7162-7174
+28918937	Selective targeting of the Warburge ffect and precision medicine from metabolic control analysis. Cell Metabolism. 2017. Cell metabolism. 2017; 26(4):648-659 
+28232471	Distinct populations of inflammatory fibroblasts and myofibroblasts in pancreatic cancer. J Exp Med. 2017.  2017; 214(3):579-596
+26541605	Vitamin C selectively kills KRAS and BRAF mutant colorectal cancer cells by targeting GAPDH. Science. 2015;350(6266):1391-6. 
+25882048	Idh1 protects murine hepatocytes from endotoxin-induced oxidative stress by regulating the intracellular NADP(+)/NADPH ratio. Cell Death Differ. 2015;22(11):1837-45. 
+22925884

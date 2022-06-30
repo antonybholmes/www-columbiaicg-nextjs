@@ -1,0 +1,37 @@
+{
+  "person": "laura-crowley",
+  "publications": [
+    {
+      "pmid": "29703888",
+      "pmcid": "PMC5923257",
+      "doi": "10.1038/s41467-018-04102-1",
+      "title": "Manipulation of insulin signaling phenocopies evolution of a host-associated polyphenism",
+      "abstract": "Plasticity, the capacity of an organism to respond to its environment, is thought to evolve through changes in development altering the integration of environmental cues. In polyphenism, a discontinuous plastic response produces two or more phenotypic morphs. Here we describe evolutionary change in wing polyphenism and its underlying developmental regulation in natural populations of the red-shouldered soapberry bug, Jadera haematoloma (Insecta: Hemiptera: Rhopalidae) that have adapted to a novel host plant. We find differences in the fecundity of morphs in both sexes and in adult expression of insulin signaling components in the gonads. Further, the plastic response of ancestral-state bugs can be shifted to resemble the reaction norm of derived bugs by the introduction of exogenous insulin or RNA interference targeting the insulin signaling component encoded by FoxO. These results suggest that insulin signaling may be one pathway involved in the evolution of this polyphenism, allowing adaptation to a novel nutritional environment.",
+      "authorList": [
+        "Fawcett MM",
+        "Parks MC",
+        "Tibbetts AE",
+        "Swart JS",
+        "Richards EM",
+        "Vanegas JC",
+        "Cenzer M",
+        "Crowley L",
+        "Simmons WR",
+        "Hou WS",
+        "Angelini DR"
+      ],
+      "journal": "Nat Commun",
+      "year": 2018,
+      "month": 4,
+      "day": 27,
+      "volume": "9",
+      "issue": "1",
+      "pages": "1699",
+      "tagList": ["article", "columbia"],
+      "url": "",
+      "labs": [],
+      "peopleList": ["laura-crowley"],
+      "isbn": ""
+    }
+  ]
+}

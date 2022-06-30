@@ -1,0 +1,18 @@
+{
+  "labId": "christine-chio",
+  "name": "Christine Chio",
+  "groups": [
+    {
+      "name": "Faculty",
+      "peopleList": ["christine-chio"]
+    },
+    {
+      "name": "Research Staff",
+      "peopleList": ["ipsita-pal", "marina-ayres-pereira", "belen-sundberg"]
+    },
+    {
+      "name": "Students",
+      "peopleList": ["jordan-lu", "michael-mendelsohn"]
+    }
+  ]
+}

@@ -1,0 +1,40 @@
+{
+  "person": "renwei-li",
+  "publications": [
+    {
+      "pmid": "27345151",
+      "pmcid": "",
+      "doi": "10.1016/j.molcel.2016.05.027",
+      "title": "Autophagy Regulates Chromatin Ubiquitination in DNA Damage Response through Elimination of SQSTM1/p62",
+      "abstract": "Autophagy is an intracellular degradation system that delivers cytoplasmic constituents to the lysosome, and loss of autophagy has been linked to increased genome instability. Here, we report that loss of autophagy is coupled to reduced histone H2A ubiquitination after DNA damage. p62/SQSTM1, which accumulates in autophagy-defective cells, directly binds to and inhibits nuclear RNF168, an E3 ligase essential for histone H2A ubiquitination and DNA damage responses. As a result, DNA repair proteins such as BRCA1, RAP80, and Rad51 cannot be recruited to the sites of DNA double-strand breaks (DSBs), which impairs DSB repair. Moreover, nuclear-localized p62 increased the sensitivity of tumor cells to radiation both in\u00a0vitro and in\u00a0vivo, and this required its interaction with RNF168. Our findings indicate that autophagy-deficiency-induced p62 accumulation results in inhibition of histone ubiquitination and highlight the complex relationship between autophagy and the DNA damage response.",
+      "authorList": [
+        "Wang Y",
+        "Zhang N",
+        "Zhang L",
+        "Li R",
+        "Fu W",
+        "Ma K",
+        "Li X",
+        "Wang L",
+        "Wang J",
+        "Zhang H",
+        "Gu W",
+        "Zhu WG",
+        "Zhao Y"
+      ],
+      "authors": "Wang Y, Zhang N, Zhang L, Li R, Fu W, Ma K, Li X, Wang L, Wang J, Zhang H, Gu W, Zhu WG, Zhao Y",
+      "journal": "Mol Cell",
+      "year": 2016,
+      "month": 7,
+      "day": 7,
+      "volume": "63",
+      "issue": "1",
+      "pages": "34-48",
+      "tagList": ["article", "columbia", "icg"],
+      "url": "",
+      "labs": [],
+      "peopleList": ["renwei-li", "wei-gu"],
+      "isbn": ""
+    }
+  ]
+}

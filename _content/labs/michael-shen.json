@@ -1,0 +1,31 @@
+{
+  "labId": "michael-shen",
+  "name": "Michael Shen",
+  "groups": [
+    {
+      "name": "Faculty",
+      "peopleList": ["michael-shen"]
+    },
+    {
+      "name": "Research Staff",
+      "peopleList": [
+        "francesco-cambuli",
+        "bo-li",
+        "jia-li",
+        "teresa-esteves-rosa",
+        "maho-shibata",
+        "alanna-williams",
+        "shouhong-xuan"
+      ]
+    },
+    {
+      "name": "Students",
+      "peopleList": [
+        "napon-chirathivat",
+        "laura-crowley",
+        "amy-huang",
+        "eva-leung"
+      ]
+    }
+  ]
+}

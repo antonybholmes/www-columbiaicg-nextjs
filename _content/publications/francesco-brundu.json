@@ -1,0 +1,66 @@
+{
+  "person": "francesco-brundu",
+  "publications": [
+    {
+      "pmid": "31519704",
+      "pmcid": "PMC6891196",
+      "doi": "10.1158/2159-8290.CD-19-0471",
+      "title": "GATA3-Controlled Nucleosome Eviction Drives MYC Enhancer Activity in T-cell Development and Leukemia",
+      "abstract": "Long-range enhancers govern the temporal and spatial control of gene expression; however, the mechanisms that regulate enhancer activity during normal and malignant development remain poorly understood. Here, we demonstrate a role for aberrant chromatin accessibility in the regulation of MYC expression in T-cell lymphoblastic leukemia (T-ALL). Central to this process, the NOTCH1-MYC enhancer (N-Me), a long-range T cell-specific MYC enhancer, shows dynamic changes in chromatin accessibility during T-cell specification and maturation and an aberrant high degree of chromatin accessibility in mouse and human T-ALL cells. Mechanistically, we demonstrate that GATA3-driven nucleosome eviction dynamically modulates N-Me enhancer activity and is strictly required for NOTCH1-induced T-ALL initiation and maintenance. These results directly implicate aberrant regulation of chromatin accessibility at oncogenic enhancers as a mechanism of leukemic transformation. SIGNIFICANCE: MYC is a major effector of NOTCH1 oncogenic programs in T-ALL. Here, we show a major role for GATA3-mediated enhancer nucleosome eviction as a driver of MYC expression and leukemic transformation. These results support the role of aberrant chromatin accessibility and consequent oncogenic MYC enhancer activation in NOTCH1-induced T-ALL.This article is highlighted in the In This Issue feature, p. 1631.",
+      "authorList": [
+        "Belver L",
+        "Yang AY",
+        "Albero R",
+        "Herranz D",
+        "Brundu FG",
+        "Quinn SA",
+        "P\u00e9rez-Dur\u00e1n P",
+        "\u00c1lvarez S",
+        "Gianni F",
+        "Rashkovan M",
+        "Gurung D",
+        "Rocha PP",
+        "Raviram R",
+        "Reglero C",
+        "Cort\u00e9s JR",
+        "Cooke AJ",
+        "Wendorff AA",
+        "Cord\u00f3 V",
+        "Meijerink JP",
+        "Rabadan R",
+        "Ferrando AA"
+      ],
+      "authors": "Belver L, Yang AY, Albero R, Herranz D, Brundu FG, Quinn SA, P\u00e9rez-Dur\u00e1n P, \u00c1lvarez S, Gianni F, Rashkovan M, Gurung D, Rocha PP, Raviram R, Reglero C, Cort\u00e9s JR, Cooke AJ, Wendorff AA, Cord\u00f3 V, Meijerink JP, Rabadan R, Ferrando AA",
+      "journal": "Cancer Discov",
+      "year": 2019,
+      "month": 12,
+      "day": -1,
+      "volume": "9",
+      "issue": "12",
+      "pages": "1774-1791",
+      "tagList": [
+        "article",
+        "columbia",
+        "icg",
+        "selected",
+        "selected::adolfo-ferrando",
+        "first-author"
+      ],
+      "url": "",
+      "labs": [],
+      "peopleList": [
+        "laura-belver-miguel",
+        "robert-albero",
+        "francesco-brundu",
+        "stuart-aidan-quinn",
+        "francesca-gianni",
+        "marissa-rashkovan",
+        "anisha-cooke",
+        "agnieszka-wendorff",
+        "raul-rabadan",
+        "adolfo-ferrando"
+      ],
+      "isbn": ""
+    }
+  ]
+}

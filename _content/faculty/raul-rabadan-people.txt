@@ -1,0 +1,16 @@
+type	name	title	email
+Research Staff	Zhaoqi Liu	Associate Research Scientist	Zl2495@cumc.columbia.edu
+Research Staff	Junfei Zhao	Associate Research Scientist	Jz2835@cumc.columbia.edu
+Research Staff	Ioan Filip	Associate Research Scientist	if2179@cumc.columbia.edu
+Research Staff	Luis Aparicio	Postdoctoral Researcher	La2666@cumc.columbia.edu
+Research Staff	Juan Angel Patino-Galindo	Postdoctoral Researcher	Jp3770@cumc.columbia.edu
+Research Staff	Francesco Brundu	Postdoctoral Researcher	Fb2505@cumc.columbia.edu
+Research Staff	Mathieu Carriere	Postdoctoral Researcher	Mc4660@cumc.columbia.edu
+Research Staff	Anqi Wang	Postdoctoral Researcher	Aw3291@cumc.columbia.edu
+Graduate Students	Karen Gomez	Doctoral Student	Kg2726@cumc.columbia.edu
+Graduate Students	Rong Ma	Masters Student	Rm3707@cumc.columbia.edu
+Graduate Students	Renwei Li	Masters Student	Rl3088@cumc.columbia.edu
+Research Staff	Oliver Elliott	Programmer	Oe2118@cumc.columbia.edu
+Research Staff	Paula Ralph-Birkett	Administrative Manager	pr2470@cumc.columbia.edu
+Research Staff	Zixuan Wang	Data Analyst	Zw2664@cumc.columbia.edu
+Research Staff	Tomin Perea-Chamblee	Data Analyst	Tep2116@cumc.columbia.edu

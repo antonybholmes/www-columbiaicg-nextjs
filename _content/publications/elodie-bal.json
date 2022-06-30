@@ -1,0 +1,57 @@
+{
+  "person": "elodie-bal",
+  "publications": [
+    {
+      "pmid": "31519498",
+      "pmcid": "PMC7362711",
+      "doi": "10.1016/j.immuni.2019.08.006",
+      "title": "Unique and Shared Epigenetic Programs of the CREBBP and EP300 Acetyltransferases in Germinal Center B Cells Reveal Targetable Dependencies in Lymphoma",
+      "abstract": "Inactivating mutations of the CREBBP and EP300 acetyltransferases are among the most common genetic alterations in diffuse large B cell lymphoma (DLBCL) and follicular lymphoma (FL). Here, we examined the relationship between these two enzymes in germinal center (GC) B cells, the normal counterpart of FL and DLBCL, and in lymphomagenesis by using conditional GC-directed deletion mouse models targeting Crebbp or Ep300. We found that CREBBP and EP300 modulate common as well as distinct transcriptional programs implicated in separate anatomic and functional GC compartments. Consistently, deletion of Ep300 but not Crebbp impaired the fitness of GC B cells in\u00a0vivo. Combined loss of Crebbp and Ep300 completely abrogated GC formation, suggesting that these proteins partially compensate for each other through common transcriptional targets. This synthetic lethal interaction was retained in CREBBP-mutant DLBCL cells and could be pharmacologically targeted with selective small molecule inhibitors of CREBBP and EP300 function. These data provide proof-of-principle for the clinical development of EP300-specific inhibitors in FL and DLBCL.",
+      "authorList": [
+        "Meyer SN",
+        "Scuoppo C",
+        "Vlasevska S",
+        "Bal E",
+        "Holmes AB",
+        "Holloman M",
+        "Garcia-Ibanez L",
+        "Nataraj S",
+        "Duval R",
+        "Vantrimpont T",
+        "Basso K",
+        "Brooks N",
+        "Dalla-Favera R",
+        "Pasqualucci L"
+      ],
+      "authors": "Meyer SN, Scuoppo C, Vlasevska S, Bal E, Holmes AB, Holloman M, Garcia-Ibanez L, Nataraj S, Duval R, Vantrimpont T, Basso K, Brooks N, Dalla-Favera R, Pasqualucci L",
+      "journal": "Immunity",
+      "year": 2019,
+      "month": 9,
+      "day": 17,
+      "volume": "51",
+      "issue": "3",
+      "pages": "535-547",
+      "tagList": [
+        "article",
+        "columbia",
+        "icg",
+        "selected",
+        "selected::laura-pasqualucci",
+        "first-author"
+      ],
+      "url": "",
+      "labs": [],
+      "peopleList": [
+        "stefanie-meyer",
+        "claudio-scuoppo",
+        "sofija-vlasevska",
+        "elodie-bal",
+        "antony-holmes",
+        "katia-basso",
+        "riccardo-dalla-favera",
+        "laura-pasqualucci"
+      ],
+      "isbn": ""
+    }
+  ]
+}

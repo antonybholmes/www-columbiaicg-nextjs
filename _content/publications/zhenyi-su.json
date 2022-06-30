@@ -1,0 +1,35 @@
+{
+  "person": "zhenyi-su",
+  "publications": [
+    {
+      "pmid": "33542218",
+      "pmcid": "PMC7862295",
+      "doi": "10.1038/s41419-021-03427-y",
+      "title": "ABIN-1 is a key regulator in RIPK1-dependent apoptosis (RDA) and necroptosis, and ABIN-1 deficiency potentiates necroptosis-based cancer therapy in colorectal cancer",
+      "abstract": "ABIN-1, also called TNIP1, is an ubiquitin-binding protein that serves an important role in suppressing RIPK1-independent apoptosis, necroptosis, and NF-\u03baB activation. However, the involvement of ABIN-1 in the regulation of RIPK1-dependent apoptosis (RDA) is unknown. In this study, we found that poly(I:C)\u2009+\u2009TAK1 inhibitor 5Z-7-oxozeaenol (P5) concurrently induces RDA and necroptosis in Abin-1-/-, but not in Abin-1+/+ mouse embryonic fibroblasts (MEFs). Upon P5 stimulation, cells initially die by necroptosis and subsequently by RDA. Furthermore, we explored the therapeutic effect of ABIN-1 deficiency in necroptosis-based cancer therapy in colorectal cancer (CRC). We found that poly(I:C)\u2009+\u20095Z-7-oxozeaenol\u2009+\u2009IDN-6556 (P5I) yields a robust pro-necroptosis response, and ABIN-1 deficiency additionally enhances this P5I-induced necroptosis. Moreover, phase I/II cIAP inhibitor birinapant with clinical caspase inhibitor IDN-6556 (BI) alone and 5-fluorouracil with IDN-6556 (FI) alone are sufficient to induce necroptotic cell death in CRC cells by promoting auto-secretion of tumor necrosis factor (TNF); ABIN-1 deficiency amplifies the BI- or FI-induced necroptosis. Two independent xenograft experiments using HT-29 or COLO205 cells show that both BI and P5I remarkably inhibit tumor growth via necroptosis activation. For poly(I:C)-induced cell death, the sensitizing effect of ABIN-1 deficiency on cell death may be attributed to increased expression of TLR3. In TNF-induced necroptosis, ABIN-1 deficiency increases TNF-induced RIPK1 polyubiquitination by reducing the recruitment of ubiquitin-editing enzyme A20 to the TNFR1 signaling complex and induces more TNF secretion in CRC cells upon pro-necroptosis stimulation. With this combined data, ABIN-1 deficiency promotes greater sensitization of CRC cells to necroptosis.",
+      "authorList": [
+        "Cai J",
+        "Hu D",
+        "Sakya J",
+        "Sun T",
+        "Wang D",
+        "Wang L",
+        "Mao X",
+        "Su Z"
+      ],
+      "authors": "Cai J, Hu D, Sakya J, Sun T, Wang D, Wang L, Mao X, Su Z",
+      "journal": "Cell Death Dis",
+      "year": 2021,
+      "month": 2,
+      "day": 1,
+      "volume": "12",
+      "issue": "2",
+      "pages": "140",
+      "tagList": ["article", "columbia", "icg"],
+      "url": "",
+      "labs": [],
+      "peopleList": ["di-wang", "zhenyi-su"],
+      "isbn": ""
+    }
+  ]
+}

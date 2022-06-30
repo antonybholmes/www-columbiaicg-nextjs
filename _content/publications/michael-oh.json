@@ -1,0 +1,44 @@
+{
+  "person": "michael-oh",
+  "publications": [
+    {
+      "pmid": "30898893",
+      "pmcid": "PMC6504209",
+      "doi": "10.1084/jem.20172170",
+      "title": "PIP4K2A as a negative regulator of PI3K in PTEN-deficient glioblastoma",
+      "abstract": "Glioblastoma (GBM) is the most malignant brain tumor with profound genomic alterations. Tumor suppressor genes regulate multiple signaling networks that restrict cellular proliferation and present barriers to malignant transformation. While bona fide tumor suppressors such as PTEN and TP53 often undergo inactivation due to mutations, there are several genes for which genomic deletion is the primary route for tumor progression. To functionally identify putative tumor suppressors in GBM, we employed in vivo RNAi screening using patient-derived xenograft models. Here, we identified PIP4K2A, whose functional role and clinical relevance remain unexplored in GBM. We discovered that PIP4K2A negatively regulates phosphoinositide 3-kinase (PI3K) signaling via p85/p110 component degradation in PTEN-deficient GBMs and specifically targets p85 for proteasome-mediated degradation. Overexpression of PIP4K2A suppressed cellular and clonogenic growth in vitro and impeded tumor growth in vivo. Our results unravel a novel tumor-suppressive role of PIP4K2A for the first time and support the feasibility of combining oncogenomics with in vivo RNAi screen.",
+      "authorList": [
+        "Shin YJ",
+        "Sa JK",
+        "Lee Y",
+        "Kim D",
+        "Chang N",
+        "Cho HJ",
+        "Son M",
+        "Oh MYT",
+        "Shin K",
+        "Lee JK",
+        "Park J",
+        "Jo YK",
+        "Kim M",
+        "Paddison PJ",
+        "Tergaonkar V",
+        "Lee J",
+        "Nam DH"
+      ],
+      "authors": "Shin YJ, Sa JK, Lee Y, Kim D, Chang N, Cho HJ, Son M, Oh MYT, Shin K, Lee JK, Park J, Jo YK, Kim M, Paddison PJ, Tergaonkar V, Lee J, Nam DH",
+      "journal": "J Exp Med",
+      "year": 2019,
+      "month": 5,
+      "day": 6,
+      "volume": "216",
+      "issue": "5",
+      "pages": "1120-1134",
+      "tagList": ["article", "columbia", "icg"],
+      "url": "",
+      "labs": [],
+      "peopleList": ["michael-oh"],
+      "isbn": ""
+    }
+  ]
+}

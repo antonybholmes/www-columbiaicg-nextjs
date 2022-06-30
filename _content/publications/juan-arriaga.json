@@ -1,0 +1,49 @@
+{
+  "person": "juan-arriaga",
+  "publications": [
+    {
+      "pmid": "30518758",
+      "pmcid": "PMC6281610",
+      "doi": "10.1038/s41467-018-07511-4",
+      "title": "NSD2 is a conserved driver of metastatic prostate cancer progression",
+      "abstract": "Deciphering cell-intrinsic mechanisms of metastasis progression in vivo is essential to identify novel therapeutic approaches. Here we elucidate cell-intrinsic drivers of metastatic prostate cancer progression through analyses of genetically engineered mouse models (GEMM) and correlative studies of human prostate cancer. Expression profiling of lineage-marked cells from mouse primary tumors and metastases defines a signature of de novo metastatic progression. Cross-species master regulator analyses comparing this mouse signature with a comparable human signature identifies conserved drivers of metastatic progression with demonstrable clinical and functional relevance. In particular, nuclear receptor binding SET Domain Protein 2 (NSD2) is robustly expressed in lethal prostate cancer in humans, while its silencing inhibits metastasis of mouse allografts in vivo. We propose that cross-species analysis can elucidate mechanisms of metastasis progression, thus providing potential additional therapeutic opportunities for treatment of lethal prostate cancer.",
+      "authorList": [
+        "Aytes A",
+        "Giacobbe A",
+        "Mitrofanova A",
+        "Ruggero K",
+        "Cyrta J",
+        "Arriaga J",
+        "Palomero L",
+        "Farran-Matas S",
+        "Rubin MA",
+        "Shen MM",
+        "Califano A",
+        "Abate-Shen C"
+      ],
+      "journal": "Nat Commun",
+      "year": 2018,
+      "month": 12,
+      "day": 5,
+      "volume": "9",
+      "issue": "1",
+      "pages": "5201",
+      "tagList": [
+        "article",
+        "selected",
+        "selected::cory-abate-shen",
+        "first-author"
+      ],
+      "url": "",
+      "labs": ["cory-abate-shen", "michael-shen"],
+      "peopleList": [
+        "cory-abate-shen",
+        "arianna-giacobbe",
+        "juan-arriaga",
+        "michael-shen"
+      ],
+      "isbn": "",
+      "authors": "Aytes A, Giacobbe A, Mitrofanova A, Ruggero K, Cyrta J, Arriaga J, Palomero L, Farran-Matas S, Rubin MA, Shen MM, Califano A, Abate-Shen C"
+    }
+  ]
+}

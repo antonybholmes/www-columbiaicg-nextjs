@@ -1,0 +1,33 @@
+{
+  "person": "marina-ayres-pereira",
+  "publications": [
+    {
+      "pmid": "31861620",
+      "pmcid": "PMC7016631",
+      "doi": "10.3390/genes11010006",
+      "title": "Metastasis in Pancreatic Ductal Adenocarcinoma: Current Standing and Methodologies",
+      "abstract": "Pancreatic ductal adenocarcinoma is an extremely aggressive disease with a high metastatic potential. Most patients are diagnosed with metastatic disease, at which the five-year survival rate is only 3%. A better understanding of the mechanisms that drive metastasis is imperative for the development of better therapeutic interventions. Here, we take the reader through our current knowledge of the parameters that support metastatic progression in pancreatic ductal adenocarcinoma, and the experimental models that are at our disposal to study this process. We also describe the advantages and limitations of these models to study the different aspects of metastatic dissemination.",
+      "authorList": ["Ayres Pereira M", "Chio IIC"],
+      "authors": "Ayres Pereira M, Chio IIC",
+      "journal": "Genes (Basel)",
+      "year": 2019,
+      "month": 12,
+      "day": 19,
+      "volume": "11",
+      "issue": "1",
+      "pages": "",
+      "tagList": [
+        "article",
+        "columbia",
+        "icg",
+        "selected",
+        "selected::christine-chio",
+        "first-author"
+      ],
+      "url": "",
+      "labs": [],
+      "peopleList": ["marina-ayres-pereira", "christine-chio"],
+      "isbn": ""
+    }
+  ]
+}
