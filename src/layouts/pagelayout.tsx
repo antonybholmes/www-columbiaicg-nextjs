@@ -14,6 +14,7 @@ import Layout from "./layout"
 type LayoutProps = {
   title: string
   path?: string
+  nav?: string
   crumbs?: [string, string][]
   crumbLocation?: string
   index?: boolean
@@ -24,6 +25,7 @@ type LayoutProps = {
 const PageLayout  = ({
   title,
   path,
+  nav="",
   crumbs = [],
   crumbLocation = "top",
   index = true,

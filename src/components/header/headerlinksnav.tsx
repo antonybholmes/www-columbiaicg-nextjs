@@ -26,8 +26,8 @@ const HeaderLink = ({ link, title, index }:HeaderLinkProps) => {
       key={index}
       className={`inline`}
     >
-      <BaseLink to={link.link} className={`relative inline-block py-2 border-t-4 border-b-4 border-solid border-transparent font-semibold text-lg px-3 lg:px-4 xl:px-6 ${
-        link.name === title ? "bg-columbia-tertiary-blue border-columbia-tertiary-blue text-white" : "hover:border-b-slate-400 hover:bg-slate-200 trans-ani"
+      <BaseLink to={link.link} className={`relative inline-block py-2 border-t-4 border-b-4 border-solid border-transparent font-semibold px-3 lg:px-4 xl:px-6 ${
+        link.name === title ? "bg-columbia-tertiary-blue border-columbia-tertiary-blue text-white" : "hover:border-b-gray-300 hover:bg-gray-200 trans-ani"
       }`}>{link.name}</BaseLink>
     </li>
   )
@@ -81,7 +81,7 @@ const HeaderLinksNav = ({
   return (
     <nav aria-label="Navigation" className={`relative bg-white`}>
       <Container
-        className={`h-full trans-ani bg-slate-100 ${
+        className={`h-full trans-ani bg-gray-100 ${
           showSearch ? "opacity-0" : "opacity-100"
         }`}
       >
@@ -131,7 +131,7 @@ const HeaderLinksNav = ({
                         className={`text-lg trans-ani ${
                           showSearch
                             ? "text-default-blue"
-                            : "text-gray-400 hover:text-default-blue"
+                            : "text-gray-300 hover:text-default-blue"
                         }`}
                       />
                     </Row>
@@ -166,7 +166,7 @@ const HeaderLinksNav = ({
                 <Row>
                   <FontAwesomeIcon
                     icon={faTimes}
-                    className={`trans-ani text-2xl text-gray-500 hover:text-gray-700`}
+                    className={`trans-ani text-2xl text-gray-400 hover:text-gray-600`}
                   />
                 </Row>
               </button>

@@ -1,4 +1,4 @@
-import React from "react"
+import { ReactNode } from "react"
 import ColorLink from "./colorlink"
 
 type LinkProps = {
@@ -6,15 +6,16 @@ type LinkProps = {
   underline?: boolean
   className?: string
   activeClassName?: string
+  children?: ReactNode
 }
 
-const BlueLink: React.FC<LinkProps> = ({
+const BlueLink = ({
   to,
-  underline,
+  underline = true,
   className,
   activeClassName,
   children,
-}) => (
+}:LinkProps) => (
   <ColorLink
     color="blue"
     to={to}
@@ -25,11 +26,5 @@ const BlueLink: React.FC<LinkProps> = ({
     {children}
   </ColorLink>
 )
-
-BlueLink.defaultProps = {
-  underline: true,
-  className: "",
-  activeClassName: "",
-}
 
 export default BlueLink

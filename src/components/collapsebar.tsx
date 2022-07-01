@@ -2,20 +2,20 @@ import React, { useState } from "react"
 import ExpandArrow from "./buttons/expandarrow"
 
 type CollapseBarProps = {
-  title: string
+  title?: string
   isExpanded: boolean
   onClick: any
   isSmall?: boolean
   className?: string
 }
 
-const CollapseBar: React.FC<CollapseBarProps> = ({
-  title,
+const CollapseBar  = ({
+  title = "",
   isExpanded,
   onClick,
-  isSmall,
+  isSmall = false,
   className,
-}) => {
+}:CollapseBarProps) => {
   const [hover, setHover] = useState(false)
 
   const onMouseEnter = (e: any) => {
@@ -55,11 +55,6 @@ const CollapseBar: React.FC<CollapseBarProps> = ({
       <ExpandArrow isExpanded={isExpanded} hover={hover} />
     </button>
   )
-}
-
-CollapseBar.defaultProps = {
-  isSmall: false,
-  className: "",
 }
 
 export default CollapseBar

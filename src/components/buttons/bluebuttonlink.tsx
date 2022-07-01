@@ -1,17 +1,18 @@
-import React from "react"
+import React, { ReactNode } from "react"
 import { BLUE_BUTTON_CLASSES, BUTTON_CLASSES } from "./bluebutton"
 import ColorLink from "./colorlink"
 
 type BlueButtonProps = {
   to: string
   className?: string
+  children?: ReactNode
 }
 
-const BlueButtonLink: React.FC<BlueButtonProps> = ({
+const BlueButtonLink  = ({
   to,
   className,
   children,
-}) => (
+}:BlueButtonProps) => (
   <ColorLink
     to={to}
     // className="border-b-4 border-solid border-blue-600 bg-default-blue text-white hover:bg-blue-600 trans-ani px-8 py-4 rounded-md uppercase"
@@ -22,10 +23,6 @@ const BlueButtonLink: React.FC<BlueButtonProps> = ({
     {children}
   </ColorLink>
 )
-
-BlueButtonLink.defaultProps = {
-  className: "",
-}
 
 export default BlueButtonLink
 

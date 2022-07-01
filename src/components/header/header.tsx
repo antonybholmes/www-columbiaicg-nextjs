@@ -421,7 +421,7 @@ const Header = ({
           {/* {!showLogo && <Breadcrumb crumbs={crumbs} />} */}
 
           {!showLogo && (
-            <Container className="ml-16 bg-slate-100">
+            <Container className="ml-16 ">
               <Row className="">
                 <HeaderLinks location={location} />
 

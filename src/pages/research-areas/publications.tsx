@@ -207,7 +207,7 @@ type Props = {
   pubs: any[]
 }
 
-const Post = ({ pubs }: Props) => {
+const Page = ({ pubs }: Props) => {
 
   const person = null
 
@@ -580,7 +580,7 @@ const Post = ({ pubs }: Props) => {
   )
 }
 
-export default Post
+export default Page
 
 type Params = {
   params: {
