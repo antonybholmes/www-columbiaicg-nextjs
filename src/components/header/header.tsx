@@ -125,7 +125,7 @@ type HeaderLinksProps = {
   location: any
 }
 
-const HeaderLinks: React.FC<HeaderLinksProps> = ({ location }) => {
+const HeaderLinks = ({ location }: HeaderLinksProps) => {
   const [selectedTarget, setSelectedTarget] = useState(null)
 
   //const [path, setPath] = useState(location.pathname)
@@ -354,7 +354,7 @@ type HeaderProps = {
   onMenuButtonClick?: any
   animateHeader?: boolean
   showLogo?: boolean
-  crumbs?: Array<[string, string]>
+  crumbs?: [string, string][]
   menuVisible?: boolean
 }
 
@@ -395,11 +395,11 @@ const Header = ({
         <div className="bg-white">
           {showLogo && (
             <Container>
-              <Row className="items-center justify-between">
+              <Row className="items-center justify-between my-2">
                 <BaseLink to="/" className="mr-8">
                 <img
               src={"/assets/images/svg/icg.svg"}
-              className="w-72 ml-4"
+              className="w-80"
               alt="Institute for Cancer Genetics logo"
             />
                 </BaseLink>
@@ -421,7 +421,7 @@ const Header = ({
           {/* {!showLogo && <Breadcrumb crumbs={crumbs} />} */}
 
           {!showLogo && (
-            <Container className="bg-white">
+            <Container className="ml-16 bg-slate-100">
               <Row className="">
                 <HeaderLinks location={location} />
 

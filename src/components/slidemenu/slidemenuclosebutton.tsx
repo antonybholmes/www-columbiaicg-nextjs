@@ -1,6 +1,7 @@
 import React, { useState } from "react"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import Row from "../row"
+import { faTimes } from "@fortawesome/free-solid-svg-icons"
 
 type SlideMenuCloseButtonProps = {
   onClick: any
@@ -28,7 +29,7 @@ const SlideMenuCloseButton: React.FC<SlideMenuCloseButtonProps> = ({
       className={`p-2 trans-ani ${hover ? "text-gray-800" : "text-gray-400"}`}
     >
       <Row isCentered={true}>
-        <FontAwesomeIcon icon="times" size="lg" />
+        <FontAwesomeIcon icon={faTimes} size="lg" />
       </Row>
     </button>
   )

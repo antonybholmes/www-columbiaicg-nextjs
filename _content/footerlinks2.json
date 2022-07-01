@@ -1,0 +1,30 @@
+[
+  {
+    "name": "Columbia",
+    "link": "https://www.columbia.edu/"
+  },
+  {
+    "name": "CUIMC",
+    "link": "https://www.cuimc.columbia.edu/"
+  },
+  {
+    "name": "Genetics & Development",
+    "link": "https://www.genetics.cumc.columbia.edu/"
+  },
+  {
+    "name": "Microbiology & Immunology",
+    "link": "https://microbiology.columbia.edu/"
+  },
+  {
+    "name": "Pathology & Cell Biology",
+    "link": "https://www.pathology.columbia.edu/"
+  },
+  {
+    "name": "Pharmacology",
+    "link": "https://www.pharmacology.cuimc.columbia.edu/"
+  },
+  {
+    "name": "Systems Biology",
+    "link": "https://systemsbiology.columbia.edu/"
+  }
+]

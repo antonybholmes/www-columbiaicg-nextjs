@@ -1,6 +1,7 @@
 import React from "react"
 import IconLink from "./iconlink"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { faPhone } from "@fortawesome/free-solid-svg-icons"
 
 type PhoneLinkProps = {
   name?: string
@@ -22,7 +23,7 @@ const PhoneLink: React.FC<PhoneLinkProps> = ({
   <IconLink
     name={name}
     to={`tel:${phone}`}
-    icon={<FontAwesomeIcon icon="phone" className={`${iconSize}`} />}
+    icon={<FontAwesomeIcon icon={faPhone} className={`${iconSize}`} />}
     content={phone}
     color={color}
     hoverColor={hoverColor}

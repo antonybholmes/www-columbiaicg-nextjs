@@ -5,6 +5,7 @@ import HideSmall from "./hidesmall"
 import Row from "./row"
 import ColorLink from "./buttons/colorlink"
 import BaseLink from "./buttons/baselink"
+import { faHome } from "@fortawesome/free-solid-svg-icons"
 
 type DividerProps = {
   color?: string
@@ -14,14 +15,14 @@ type DividerProps = {
 const Divider = ({ color, opacity }:DividerProps) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
-    viewBox="0 0 8 20"
+    viewBox="0 0 12 20"
     preserveAspectRatio="xMinYMin"
-    className="h-4 mx-4"
+    className="h-4 mx-3"
   >
     <g id="arrowGroup">
       <path
         id="arrow"
-        d="M 1 1 L 7 10 L 1 19"
+        d="M 1,1 L 10,10 L 1,19"
         style={{
           fill: "none",
           stroke: color,
@@ -41,7 +42,7 @@ Divider.defaultProps = {
 }
 
 type BreadcrumbProps = {
-  crumbs?: Array<any>
+  crumbs?: [string, string][]
   color?: string
   color2?: string
   opacity?: number
@@ -51,7 +52,7 @@ type BreadcrumbProps = {
 }
 
 const Breadcrumb: React.FC<BreadcrumbProps> = ({
-  crumbs,
+  crumbs = [],
   color,
   color2,
   content,
@@ -87,7 +88,7 @@ const Breadcrumb: React.FC<BreadcrumbProps> = ({
     ret.push(
       <li key={`crumb-0`}>
         <BaseLink to="/">
-          <FontAwesomeIcon icon="home" className={cls} size="lg" />
+          <FontAwesomeIcon icon={faHome} className={cls} size="lg" />
         </BaseLink>
       </li>
     )

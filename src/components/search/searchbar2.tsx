@@ -2,6 +2,7 @@ import React, { useState, useEffect, useRef } from "react"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import Row from "../row"
 import BlueButton from "../buttons/bluebutton"
+import { faSearch } from "@fortawesome/free-solid-svg-icons"
 
 const H = "h-10"
 
@@ -130,7 +131,7 @@ const SearchBar2: React.FC<SearchBarProps> = ({
         className={`w-full px-4 h-full py-2 rounded-full trans-ani bg-cuimc-light-gray`}
       >
         <div className="cursor-pointer mr-2" onClick={handleOnClick}>
-          <FontAwesomeIcon icon="search" className={`text-gray-500`} />
+          <FontAwesomeIcon icon={faSearch} className={`text-gray-500`} />
         </div>
         <div className="w-full ">
           <input

@@ -1,0 +1,14 @@
+[
+  {
+    "id": "cancer-biology",
+    "name": "Cancer Biology",
+    "faculty": [],
+    "peopleList": []
+  },
+  {
+    "id": "data-science",
+    "name": "Data Science",
+    "faculty": [],
+    "peopleList": []
+  }
+]

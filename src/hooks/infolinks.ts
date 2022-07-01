@@ -1,5 +1,7 @@
+import links from '../../_content/infolinks.json'
+
 const useInfoLinks = () => {
-  return []
+  return links
 }
 
 export default useInfoLinks

@@ -3,6 +3,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { gsap } from "gsap"
 import Row from "../row"
 import RightDiv from "../rightdiv"
+import { faSearch } from "@fortawesome/free-solid-svg-icons"
 
 type SearchBarType = {
   onChange: any
@@ -11,12 +12,12 @@ type SearchBarType = {
   className?: string
 }
 
-const MenuSearchBar: React.FC<SearchBarType> = ({
+const MenuSearchBar = ({
   onChange,
-  placeholder,
-  text,
+  placeholder = "Search items...",
+  text = "",
   className,
-}) => {
+}: SearchBarType) => {
   const [hover, setHover] = useState(false)
   const [expanded, setExpanded] = useState(false)
 
@@ -105,7 +106,7 @@ const MenuSearchBar: React.FC<SearchBarType> = ({
           ref={inputEl}
         />
         <FontAwesomeIcon
-          icon="search"
+          icon={faSearch}
           className={`cursor-pointer ${
             expanded || hover ? "text-blue-500" : "text-gray-400"
           } trans-ani mx-2 text-lg`}
@@ -123,9 +124,6 @@ const MenuSearchBar: React.FC<SearchBarType> = ({
   )
 }
 
-MenuSearchBar.defaultProps = {
-  placeholder: "Search items...",
-  text: "",
-}
+
 
 export default MenuSearchBar

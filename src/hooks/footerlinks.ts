@@ -1,5 +1,7 @@
+import links from '../../_content/footerlinks.json'
+
 const useFooterLinks = () => {
-  return []
+  return links
 }
 
 export default useFooterLinks

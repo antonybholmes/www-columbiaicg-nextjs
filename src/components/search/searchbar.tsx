@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useRef } from "react"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import Row from "../row"
+import { faSearch } from "@fortawesome/free-solid-svg-icons"
 
 type SearchButtonProps = {
   globalHover: boolean
@@ -34,7 +35,7 @@ const SearchButton: React.FC<SearchButtonProps> = ({
       }`}
       onClick={onClick}
     >
-      <FontAwesomeIcon icon="search" className={`text-lg`} />
+      <FontAwesomeIcon icon={faSearch} className={`text-lg`} />
     </button>
   )
 }

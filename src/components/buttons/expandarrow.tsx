@@ -1,6 +1,7 @@
 import React, { useState, useRef, useEffect } from "react"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { gsap } from "gsap"
+import { faChevronDown } from "@fortawesome/free-solid-svg-icons"
 
 type ButtonProps = {
   isExpanded: boolean
@@ -45,7 +46,7 @@ const ExpandArrow: React.FC<ButtonProps> = ({ isExpanded, hover }) => {
         className="w-full h-full flex flex-row items-center justify-center"
       >
         <FontAwesomeIcon
-          icon="chevron-down" //{isExpanded ? "chevron-up" : "chevron-down"}
+          icon={faChevronDown} //{isExpanded ? "chevron-up" : "chevron-down"}
           className={`trans-ani text-sm ${
             hover || _hover ? "text-black" : "text-gray-300"
           }`}

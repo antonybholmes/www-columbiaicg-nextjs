@@ -10,6 +10,7 @@ import { gsap } from "gsap"
 import SearchBar4 from "../search/searchbar4"
 import HideSmall from "../hidesmall"
 import BaseLink from "../buttons/baselink"
+import { faSearch, faTimes } from "@fortawesome/free-solid-svg-icons"
 
 const H = "h-20"
 
@@ -19,15 +20,15 @@ type HeaderLinkProps = {
   index: number
 }
 
-const HeaderLink: React.FC<HeaderLinkProps> = ({ link, title, index }) => {
+const HeaderLink = ({ link, title, index }:HeaderLinkProps) => {
   return (
     <li
       key={index}
-      className={`relative inline ${index > 0 ? "ml-3 lg:ml-4 xl:ml-6" : ""} ${
-        link.name === title ? "text-columbia-secondary-blue" : "header-link"
-      }`}
+      className={`inline`}
     >
-      <BaseLink to={link.link}>{link.name}</BaseLink>
+      <BaseLink to={link.link} className={`relative inline-block py-2 border-t-4 border-b-4 border-solid border-transparent font-semibold text-lg px-3 lg:px-4 xl:px-6 ${
+        link.name === title ? "bg-columbia-tertiary-blue border-columbia-tertiary-blue text-white" : "hover:border-b-slate-400 hover:bg-slate-200 trans-ani"
+      }`}>{link.name}</BaseLink>
     </li>
   )
 }
@@ -38,21 +39,17 @@ type HeaderLinksNavProps = {
   search?: string
   placeholder?: string
   showLogo?: boolean
-  crumbs?: Array<[string, string]>
+  crumbs?: [string, string][]
 }
 
-//  style={{
-//  background:
-//  "linear-gradient(180deg, rgba(29, 79, 145, 1) 0%, rgba(99, 179, 237, 0.8) 100%)"}}
-
-const HeaderLinksNav: React.FC<HeaderLinksNavProps> = ({
+const HeaderLinksNav = ({
   title,
   onSearch,
-  search,
-  placeholder,
-  showLogo,
-  crumbs,
-}) => {
+  search = "",
+  placeholder = "Search...",
+  showLogo = true,
+  crumbs = [],
+} : HeaderLinksNavProps) => {
   const [showSearch, setShowSearch] = useState(false)
   const menuEl = useRef(null)
   const links = useHeaderLinks()
@@ -82,9 +79,9 @@ const HeaderLinksNav: React.FC<HeaderLinksNavProps> = ({
   }
 
   return (
-    <nav aria-label="Navigation" className={`relative py-4 bg-white`}>
+    <nav aria-label="Navigation" className={`relative bg-white`}>
       <Container
-        className={`h-full trans-ani ${
+        className={`h-full trans-ani bg-slate-100 ${
           showSearch ? "opacity-0" : "opacity-100"
         }`}
       >
@@ -122,7 +119,7 @@ const HeaderLinksNav: React.FC<HeaderLinksNavProps> = ({
                 </ul>
               </Row>
 
-              {onSearch !== null && (
+              {onSearch  && (
                 <HideSmall size="xl" className="row justify-end w-8 ml-8">
                   <button
                     onClick={() => setShowSearch(!showSearch)}
@@ -130,7 +127,7 @@ const HeaderLinksNav: React.FC<HeaderLinksNavProps> = ({
                   >
                     <Row>
                       <FontAwesomeIcon
-                        icon="search"
+                        icon={faSearch}
                         className={`text-lg trans-ani ${
                           showSearch
                             ? "text-default-blue"
@@ -168,7 +165,7 @@ const HeaderLinksNav: React.FC<HeaderLinksNavProps> = ({
               <button onClick={() => setShowSearch(false)}>
                 <Row>
                   <FontAwesomeIcon
-                    icon="times"
+                    icon={faTimes}
                     className={`trans-ani text-2xl text-gray-500 hover:text-gray-700`}
                   />
                 </Row>
@@ -181,11 +178,6 @@ const HeaderLinksNav: React.FC<HeaderLinksNavProps> = ({
   )
 }
 
-HeaderLinksNav.defaultProps = {
-  onSearch: null,
-  placeholder: "Search...",
-  search: "",
-  crumbs: [],
-}
+
 
 export default HeaderLinksNav

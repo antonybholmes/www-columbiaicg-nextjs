@@ -1,7 +1,8 @@
-import React, { useState, useRef, useEffect } from "react"
+import  { useState, useRef, useEffect } from "react"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import Row from "../row"
 import { gsap } from "gsap"
+import { faSearch } from "@fortawesome/free-solid-svg-icons"
 
 const SiteSearchBar = ({
   handleInputChange,
@@ -90,7 +91,7 @@ const SiteSearchBar = ({
       </div>
       <div>
         <FontAwesomeIcon
-          icon="search"
+          icon={faSearch}
           className={`cursor-pointer ${
             expanded ? "text-blue-500" : hover ? "text-white" : "text-white-60"
           } trans-ani ml-2 text-lg`}

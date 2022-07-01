@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import Row from "../row"
 import BlueButton from "../buttons/bluebutton"
+import { faSearch } from "@fortawesome/free-solid-svg-icons"
 
 const H = "h-12"
 
@@ -25,7 +26,7 @@ type ClearButtonProps = {
   onClick: any
 }
 
-const ClearButton: React.FC<ClearButtonProps> = ({ onClick }) => {
+const ClearButton = ({ onClick } : ClearButtonProps) => {
   const [hover, setHover] = useState(false)
 
   const onMouseEnter = (e: any) => {
@@ -55,12 +56,12 @@ type SearchBarProps = {
   onSearch?: any
 }
 
-const SearchBar5: React.FC<SearchBarProps> = ({
-  text,
-  placeholder,
+const SearchBar5 = ({
+  text = "",
+  placeholder = "Search items...",
   className,
   onSearch,
-}) => {
+}:SearchBarProps) => {
   const [hover, setHover] = useState(false)
   const [value, setValue] = useState("")
 
@@ -118,7 +119,7 @@ const SearchBar5: React.FC<SearchBarProps> = ({
     >
       <button onClick={handleOnClick}>
         <FontAwesomeIcon
-          icon="search"
+          icon={faSearch}
           className={`text-lg trans-ani ${
             hover || value !== "" ? "text-gray-700" : "text-gray-500"
           }`}
@@ -141,10 +142,6 @@ const SearchBar5: React.FC<SearchBarProps> = ({
   )
 }
 
-SearchBar5.defaultProps = {
-  placeholder: "Search items...",
-  text: "",
-  onSearch: null,
-}
+
 
 export default SearchBar5

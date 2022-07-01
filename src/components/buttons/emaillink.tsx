@@ -1,6 +1,6 @@
-import React from "react"
 import IconLink from "./iconlink"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { faEnvelope } from "@fortawesome/free-regular-svg-icons"
 
 type EmailLinkProps = {
   name?: string
@@ -11,19 +11,19 @@ type EmailLinkProps = {
   iconSize?: string
 }
 
-const EmailLink: React.FC<EmailLinkProps> = ({
-  name,
+const EmailLink = ({
   to,
-  color,
-  hoverColor,
-  size,
-  iconSize,
-}) => (
+  name = "Email Address",
+  color = "text-gray-500",
+  hoverColor = "text-blue-500",
+  size = "text-xl",
+  iconSize = "text-xl",
+} :EmailLinkProps) => (
   <IconLink
     name={name}
     to={`mailto:${to}`}
     icon={
-      <FontAwesomeIcon icon={["far", "envelope"]} className={`${iconSize}`} />
+      <FontAwesomeIcon icon={faEnvelope} className={iconSize} />
     }
     content={to}
     color={color}
@@ -31,12 +31,6 @@ const EmailLink: React.FC<EmailLinkProps> = ({
   />
 )
 
-EmailLink.defaultProps = {
-  name: "Email Address",
-  color: "text-gray-500",
-  hoverColor: "text-blue-500",
-  size: "text-xl",
-  iconSize: "text-xl",
-}
+
 
 export default EmailLink

@@ -1,8 +1,7 @@
-import React from "react"
-import { Link } from "gatsby"
+import BaseLink from "../buttons/baselink"
 
 const HeaderLink = (props: any) => (
-  <Link
+  <BaseLink
     className="header-link"
     activeClassName="header-link-active"
     {...props}

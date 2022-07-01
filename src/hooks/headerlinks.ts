@@ -1,5 +1,7 @@
+import links from '../../_content/headerlinks.json'
+
 const useHeaderLinks = () => {
-  return []
+  return links
 }
 
 export default useHeaderLinks

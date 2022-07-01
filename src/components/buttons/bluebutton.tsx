@@ -1,7 +1,7 @@
-import React, { ReactNode } from "react"
+import { ReactNode } from "react"
 
 export const BUTTON_CLASSES =
-  "text-white trans-ani px-5 py-3 text-sm font-medium rounded-full trans-ani"
+  "text-white trans-ani px-5 py-3 text-sm font-medium rounded trans-ani"
 
 export const BLUE_BUTTON_CLASSES = "bg-cuimc-button-blue-90 hover:bg-cuimc-blue"
 

@@ -1,0 +1,26 @@
+[
+  {
+    "name": "Faculty",
+    "link": "/research-areas/faculty"
+  },
+  {
+    "name": "Administration",
+    "link": "/administration/staff"
+  },
+  {
+    "name": "Publications",
+    "link": "/research-areas/publications"
+  },
+  {
+    "name": "Events",
+    "link": "/events"
+  },
+  {
+    "name": "News",
+    "link": "/news"
+  },
+  {
+    "name": "Jobs",
+    "link": "/jobs"
+  }
+]

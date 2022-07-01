@@ -1,0 +1,37 @@
+[
+  {
+    "name": "Faculty",
+    "link": "/research-areas/faculty",
+    "icon": ["fas", "user"]
+  },
+  {
+    "name": "Administration",
+    "link": "/administration/staff",
+    "icon": ["far", "user"]
+  },
+  {
+    "name": "Publications",
+    "link": "/research-areas/publications",
+    "icon": ["fas", "book-open"]
+  },
+  {
+    "name": "Courses",
+    "link": "/courses",
+    "icon": ["fas", "edit"]
+  },
+  {
+    "name": "Events",
+    "link": "/events",
+    "icon": ["fas", "calendar-week"]
+  },
+  {
+    "name": "News",
+    "link": "/news",
+    "icon": ["fas", "newspaper"]
+  },
+  {
+    "name": "Jobs",
+    "link": "/jobs",
+    "icon": ["fas", "briefcase"]
+  }
+]

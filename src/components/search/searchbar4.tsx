@@ -48,19 +48,19 @@ const ClearButton: React.FC<ClearButtonProps> = ({ onClick }) => {
   )
 }
 
-type SearchBarProps = {
+interface SearchBarProps {
   text?: string
   placeholder?: string
   className?: string
   onSearch?: any
 }
 
-const SearchBar4: React.FC<SearchBarProps> = ({
-  text,
-  placeholder,
+const SearchBar4 = ({
+  text = "",
+  placeholder = "Search items...",
   className,
   onSearch,
-}) => {
+} : SearchBarProps) => {
   const [hover, setHover] = useState(false)
   const [value, setValue] = useState("")
 
@@ -141,10 +141,5 @@ const SearchBar4: React.FC<SearchBarProps> = ({
   )
 }
 
-SearchBar4.defaultProps = {
-  placeholder: "Search items...",
-  text: "",
-  onSearch: null,
-}
 
 export default SearchBar4

@@ -249,7 +249,7 @@ type PubLinkProps = {
   className?: string
 }
 
-const PubLink: React.FC<PubLinkProps> = ({ name, icon, to, className }) => {
+const PubLink = ({ name, icon, to, className } : PubLinkProps) => {
   const [hover, setHover] = useState(false)
 
   const iconEl = useRef(null)
@@ -292,15 +292,11 @@ const PubLink: React.FC<PubLinkProps> = ({ name, icon, to, className }) => {
   )
 }
 
-PubLink.defaultProps = {
-  className: "",
-}
-
 type LinkProps = {
   publication: any
 }
 
-const PubMedLink: React.FC<LinkProps> = ({ publication }) => (
+const PubMedLink = ({ publication } : LinkProps) => (
   <PubLink
     name="pmid"
     icon="external-link-alt"
@@ -308,7 +304,7 @@ const PubMedLink: React.FC<LinkProps> = ({ publication }) => (
   />
 )
 
-const GoogleScholarLink: React.FC<LinkProps> = ({ publication }) => (
+const GoogleScholarLink = ({ publication } : LinkProps) => (
   <PubLink
     name="Google Scholar"
     icon="external-link-alt"
@@ -326,14 +322,14 @@ type BasePublicationProps = {
   showDOI?: boolean
 }
 
-const BasePublication: React.FC<BasePublicationProps> = ({
+const BasePublication = ({
   publication,
-  index,
-  showAbstract,
-  showUrl,
-  showDOI,
+  index = -1,
+  showAbstract = true,
+  showUrl = false,
+  showDOI = true,
   onPubClick,
-}) => {
+} : BasePublicationProps) => {
   const _handlePubClick = (journal: string) => {
     if (onPubClick !== null) {
       onPubClick(journal)
@@ -476,12 +472,6 @@ const BasePublication: React.FC<BasePublicationProps> = ({
   )
 }
 
-BasePublication.defaultProps = {
-  index: -1,
-  onPubClick: null,
-  showAbstract: true,
-  showUrl: false,
-  showDOI: true,
-}
+
 
 export default BasePublication

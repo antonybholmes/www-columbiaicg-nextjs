@@ -327,7 +327,7 @@ module.exports = {
         "cuimc-button-blue-80": "rgba(42, 116, 213, 0.8)",
         "cuimc-button-blue-90": "rgba(42, 116, 213, 0.9)",
         "columbia-blue": "rgb(8, 73, 163)",
-        "columbia-tertiary-blue": "rgb(0, 142, 224)",
+        "columbia-tertiary-blue": "#0077C8",
         "cuimc-footer": "rgb(65, 81, 108)",
         "cuimc-footer-80": "rgb(65, 81, 108, 0.8)",
         "cuimc-footer-90": "rgb(65, 81, 108, 0.9)",

@@ -3,6 +3,7 @@ import Row from "./row"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { gsap } from "gsap"
 import useOnClickOutside from "../hooks/onclickoutside"
+import { faChevronUp } from "@fortawesome/free-solid-svg-icons"
 
 const EMPTY_QUERY = ""
 
@@ -204,7 +205,7 @@ const DropdownMenu: React.FC<SortDropdownProps> = ({
             }`}
           >
             <div ref={arrowEl}>
-              <FontAwesomeIcon icon="chevron-up" />
+              <FontAwesomeIcon icon={faChevronUp} />
             </div>
           </Row>
         </Row>
