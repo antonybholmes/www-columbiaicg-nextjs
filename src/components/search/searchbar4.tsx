@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import Row from "../row"
 import BlueButton from "../buttons/bluebutton"
+import { faSearch } from "@fortawesome/free-solid-svg-icons"
 
 const H = "h-12"
 
@@ -118,7 +119,7 @@ const SearchBar4 = ({
     >
       <button onClick={handleOnClick}>
         <FontAwesomeIcon
-          icon="search"
+          icon={faSearch}
           className={`text-lg trans-ani ${
             hover || value !== "" ? "text-gray-700" : "text-gray-500"
           }`}

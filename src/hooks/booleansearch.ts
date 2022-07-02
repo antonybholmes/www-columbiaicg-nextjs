@@ -18,7 +18,7 @@ const useBooleanSearch = (
     return items
   }
 
-  let terms: Array<string> = []
+  let terms: string[] = []
   let s1: any
   let s2: any
   let titles: Set<any>

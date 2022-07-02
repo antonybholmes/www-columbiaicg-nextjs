@@ -53,7 +53,7 @@ const Journal: React.FC<JournalProps> = ({
 }
 
 type JournalFilterProps = {
-  journals: Array<[string, number]>
+  journals: [string, number][]
   selected: Set<number>
   onClick: any
 }

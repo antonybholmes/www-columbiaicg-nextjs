@@ -3,7 +3,7 @@ import Row from "./row"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { gsap } from "gsap"
 import useOnClickOutside from "../hooks/onclickoutside"
-import { faChevronUp } from "@fortawesome/free-solid-svg-icons"
+import { faCheck, faChevronUp } from "@fortawesome/free-solid-svg-icons"
 
 const EMPTY_QUERY = ""
 
@@ -56,7 +56,7 @@ const MenuButton: React.FC<MenuButtonProps> = ({
     >
       <Row className="w-full">
         <div className="w-10">
-          {id === selectedIndex && <FontAwesomeIcon icon="check" />}
+          {id === selectedIndex && <FontAwesomeIcon icon={faCheck} />}
         </div>
         <div>{title}</div>
       </Row>
