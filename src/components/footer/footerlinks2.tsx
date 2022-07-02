@@ -19,7 +19,7 @@ const FooterLinks2 = () => {
     )
   })
 
-  return <ul>{ret}</ul>
+  return <ul className="mb-8">{ret}</ul>
 }
 
 export default FooterLinks2

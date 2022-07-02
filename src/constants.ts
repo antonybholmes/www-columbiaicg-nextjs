@@ -1,7 +1,7 @@
 export const EXAMPLE_PATH = "blog-starter-typescript"
 export const CMS_NAME = "Markdown"
 
-export const SITE_TITLE = "Columbia ICG"
+export const SITE_TITLE = "Columbia Institute For Cancer Genetics"
 
 export const SHARED_INSTRUMENT_LINK = "https://booking.columbiaicg.org"
 

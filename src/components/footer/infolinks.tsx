@@ -1,4 +1,3 @@
-import React from "react"
 import useInfoLinks from "../../hooks/infolinks"
 import useCopyright from "../../hooks/copyright"
 import ColorLink from "../buttons/colorlink"
@@ -10,7 +9,7 @@ type InfoLinksProps = {
   title: string
 }
 
-const InfoLinks: React.FC<InfoLinksProps> = ({ title }) => {
+const InfoLinks = ({ title }: InfoLinksProps) => {
   const links = useInfoLinks()
   const copyright = useCopyright()
 
@@ -45,16 +44,13 @@ const InfoLinks: React.FC<InfoLinksProps> = ({ title }) => {
   // )
 
   return (
-    <Row wrap={true} className="justify-between">
-      <div className="w-full lg:w-1/3">
-        <ColorLink color={COLOR} to="/">
-          {copyright}
-        </ColorLink>
-      </div>
-      <div className="mt-2 lg:mt-0">
-        <ul className="sm:inline">{ret}</ul>
-      </div>
-    </Row>
+    <div className="flex flex-col lg:flex-row justify-between">
+      <ColorLink color={COLOR} to="/" className="mb-4">
+        {copyright}
+      </ColorLink>
+
+      <ul className="sm:inline">{ret}</ul>
+    </div>
   )
 }
 

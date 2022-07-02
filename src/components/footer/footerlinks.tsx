@@ -7,7 +7,7 @@ import { SHARED_INSTRUMENT_LINK } from "../../constants"
 const FooterLinks = () => {
   const links = useFooterLinks()
 
-  const ret: Array<any> = links.map((link: any, index: number) => {
+  const ret = links.map((link: any, index: number) => {
     return (
       <li className="mb-2" key={index}>
         <WhiteLink aria-label={`Goto ${link.name}`} to={link.link}>
@@ -29,7 +29,7 @@ const FooterLinks = () => {
     </li>
   )
 
-  return <ul>{ret}</ul>
+  return <ul className="mb-8">{ret}</ul>
 }
 
 export default FooterLinks

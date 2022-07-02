@@ -84,26 +84,13 @@ const Footer: React.FC<FooterProps> = ({ crumbs }) => {
             </div>
           </Row> */}
 
-          <Row
-            wrap={true}
-            isVCentered={false}
-            className="text-sm w-full justify-between"
-          >
-            <Row
-              isVCentered={false}
-              className="w-full lg:w-1/2 2xl:w-1/3 justify-between"
-            >
-              <div>
-                <FooterLinks />
-              </div>
-              <div>
-                <FooterLinks2 />
-              </div>
-            </Row>
+          <div className="text-sm grid grid-cols-1 lg:grid-cols-3">
+            <FooterLinks />
+            <FooterLinks2 />
 
-            <HideSmall size="lg" className="mt-8 lg:mt-0">
+            <div className="flex flex-row justify-end">
               <div>
-                <div className="font-medium">Copyright &copy; {SITE_TITLE}</div>
+                <div className="font-semibold">{SITE_TITLE}</div>
                 {/* <div className="text-xl font-medium">
                 Columbia University
               </div> */}
@@ -111,8 +98,9 @@ const Footer: React.FC<FooterProps> = ({ crumbs }) => {
                 <div>New York, NY 10032</div>
                 <div>United States</div>
               </div>
+            </div>
 
-              {/* <div className="w-full sm:w-2/3 lg:w-full mt-8 lg:mt-16">
+            {/* <div className="w-full sm:w-2/3 lg:w-full mt-8 lg:mt-16">
                 <Link to="https://www.cuimc.columbia.edu/">
                   <img
                     src={cuimc-whitesvg}
@@ -121,20 +109,17 @@ const Footer: React.FC<FooterProps> = ({ crumbs }) => {
                   />
                 </Link>
               </div> */}
-            </HideSmall>
-          </Row>
+          </div>
 
-          <Row className="w-full mt-8 lg:mt-16">
-            <div className="w-9/10 sm:w-7/10 md:w-1/2 2xl:w-3/10">
-              <BaseLink to="https://www.cuimc.columbia.edu/">
-                <img
-                  src={"../../../assets/images/svg/cuimc-white.svg"}
-                  className="opacity-90 hover:opacity-100 trans-ani w-full"
-                  alt="CUIMC logo"
-                />
-              </BaseLink>
-            </div>
-          </Row>
+          <div className="w-9/10 sm:w-7/10 md:w-1/2 2xl:w-3/10">
+            <BaseLink to="https://www.cuimc.columbia.edu/">
+              <img
+                src={"/assets/images/svg/cuimc-white.svg"}
+                className="opacity-90 hover:opacity-100 trans-ani w-full"
+                alt="CUIMC logo"
+              />
+            </BaseLink>
+          </div>
 
           <div className="text-xs mt-8 lg:mt-16">
             <InfoLinks title={SITE_TITLE} />
