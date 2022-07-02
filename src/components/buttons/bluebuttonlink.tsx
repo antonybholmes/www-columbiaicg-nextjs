@@ -8,11 +8,7 @@ type BlueButtonProps = {
   children?: ReactNode
 }
 
-const BlueButtonLink  = ({
-  to,
-  className,
-  children,
-}:BlueButtonProps) => (
+const BlueButtonLink = ({ to, className, children }: BlueButtonProps) => (
   <ColorLink
     to={to}
     // className="border-b-4 border-solid border-blue-600 bg-default-blue text-white hover:bg-blue-600 trans-ani px-8 py-4 rounded-md uppercase"

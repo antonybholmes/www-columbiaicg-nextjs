@@ -19,7 +19,7 @@ const MainSideCol = ({
   cls2ext,
   isVCentered = false,
   children,
-}:MainSideColProps) => {
+}: MainSideColProps) => {
   return (
     <Row wrap={true} isVCentered={isVCentered} className={className}>
       <div className={`${cls1} ${cls1ext}`}>{children[0]}</div>

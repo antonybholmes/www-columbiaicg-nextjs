@@ -16,8 +16,6 @@ type SEOProps = {
 }
 
 const SEO: React.FC<SEOProps> = ({ title, description, path, lang, index }) => {
-
-
   // const metaTitle = title !== "" ? `${title} | ${SITE_NAME}` : siteTitle
   // const metaDescription =
   //   description !== "" ? description : title == "Home" ? siteDescription : ""

@@ -124,6 +124,4 @@ const MenuSearchBar = ({
   )
 }
 
-
-
 export default MenuSearchBar

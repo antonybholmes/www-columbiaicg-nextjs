@@ -7,11 +7,7 @@ type CheckBoxProps = {
   children?: ReactNode
 }
 
-const CheckBox = ({
-  selected,
-  onChange,
-  children,
-} : CheckBoxProps) => {
+const CheckBox = ({ selected, onChange, children }: CheckBoxProps) => {
   const [hover, setHover] = useState(false)
 
   const onMouseEnter = (e: any) => {

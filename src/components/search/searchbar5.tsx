@@ -26,7 +26,7 @@ type ClearButtonProps = {
   onClick: any
 }
 
-const ClearButton = ({ onClick } : ClearButtonProps) => {
+const ClearButton = ({ onClick }: ClearButtonProps) => {
   const [hover, setHover] = useState(false)
 
   const onMouseEnter = (e: any) => {
@@ -61,7 +61,7 @@ const SearchBar5 = ({
   placeholder = "Search items...",
   className,
   onSearch,
-}:SearchBarProps) => {
+}: SearchBarProps) => {
   const [hover, setHover] = useState(false)
   const [value, setValue] = useState("")
 
@@ -141,7 +141,5 @@ const SearchBar5 = ({
     </Row>
   )
 }
-
-
 
 export default SearchBar5

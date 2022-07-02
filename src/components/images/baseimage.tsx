@@ -33,9 +33,7 @@ export const BaseImage: React.FC<ImageProps> = ({
     }
   }
 
-  return (
-    <div>image</div>
-  )
+  return <div>image</div>
 }
 
 BaseImage.defaultProps = {

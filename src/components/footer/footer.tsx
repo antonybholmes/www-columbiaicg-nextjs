@@ -36,7 +36,6 @@ type FooterProps = {
 }
 
 const Footer: React.FC<FooterProps> = ({ crumbs }) => {
-
   return (
     <footer className="text-white bg-cuimc-blue pt-16 lg:pt-32 pb-16">
       <div>

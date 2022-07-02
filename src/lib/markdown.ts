@@ -1,24 +1,24 @@
-import fs from 'fs'
-import { join } from 'path'
-import matter from 'gray-matter'
-import IFieldMap from '../types/field-map'
-import { getTags } from './tags'
+import fs from "fs"
+import { join } from "path"
+import matter from "gray-matter"
+import IFieldMap from "../types/field-map"
+import { getTags } from "./tags"
 
 export const getFields = (path: string, fields: string[] = []): IFieldMap => {
-  const fileContents = fs.readFileSync(path, 'utf8')
+  const fileContents = fs.readFileSync(path, "utf8")
   const { data, content, excerpt } = matter(fileContents, {
     excerpt: true,
-    excerpt_separator: '<!-- end -->',
+    excerpt_separator: "<!-- end -->",
   })
 
   const items: IFieldMap = {}
 
-  items['content'] = content
-  items['excerpt'] = excerpt
+  items["content"] = content
+  items["excerpt"] = excerpt
 
   for (const [key, value] of Object.entries(data)) {
     switch (key) {
-      case 'tags':
+      case "tags":
         items[key] = getTags(value)
         break
       default:
@@ -49,14 +49,18 @@ export const getFields = (path: string, fields: string[] = []): IFieldMap => {
   return items
 }
 
-export const getMDBySlug = (dir: string, slug: string, fields: string[] = []) => {
-    const realSlug = slug.replace(/\.md$/, '')
-    const fullPath = join(dir, `${realSlug}.md`)
-  
-    const post = {
-      slug: realSlug,
-      fields: getFields(fullPath, fields),
-    }
-  
-    return post
+export const getMDBySlug = (
+  dir: string,
+  slug: string,
+  fields: string[] = []
+) => {
+  const realSlug = slug.replace(/\.md$/, "")
+  const fullPath = join(dir, `${realSlug}.md`)
+
+  const post = {
+    slug: realSlug,
+    fields: getFields(fullPath, fields),
   }
+
+  return post
+}

@@ -20,15 +20,19 @@ type HeaderLinkProps = {
   index: number
 }
 
-const HeaderLink = ({ link, title, index }:HeaderLinkProps) => {
+const HeaderLink = ({ link, title, index }: HeaderLinkProps) => {
   return (
-    <li
-      key={index}
-      className={`inline`}
-    >
-      <BaseLink to={link.link} className={`relative inline-block py-2 border-t-4 border-b-4 border-solid border-transparent font-semibold px-3 lg:px-4 xl:px-6 ${
-        link.name === title ? "bg-columbia-tertiary-blue border-columbia-tertiary-blue text-white" : "hover:border-b-gray-300 hover:bg-gray-200 trans-ani"
-      }`}>{link.name}</BaseLink>
+    <li key={index} className={`inline`}>
+      <BaseLink
+        to={link.link}
+        className={`relative inline-block py-2 border-t-4 border-b-4 border-solid border-transparent font-semibold px-3 lg:px-4 xl:px-6 ${
+          link.name === title
+            ? "bg-columbia-tertiary-blue border-columbia-tertiary-blue text-white"
+            : "hover:border-b-gray-300 hover:bg-gray-200 trans-ani"
+        }`}
+      >
+        {link.name}
+      </BaseLink>
     </li>
   )
 }
@@ -49,7 +53,7 @@ const HeaderLinksNav = ({
   placeholder = "Search...",
   showLogo = true,
   crumbs = [],
-} : HeaderLinksNavProps) => {
+}: HeaderLinksNavProps) => {
   const [showSearch, setShowSearch] = useState(false)
   const menuEl = useRef(null)
   const links = useHeaderLinks()
@@ -119,7 +123,7 @@ const HeaderLinksNav = ({
                 </ul>
               </Row>
 
-              {onSearch  && (
+              {onSearch && (
                 <HideSmall size="xl" className="row justify-end w-8 ml-8">
                   <button
                     onClick={() => setShowSearch(!showSearch)}
@@ -177,7 +181,5 @@ const HeaderLinksNav = ({
     </nav>
   )
 }
-
-
 
 export default HeaderLinksNav

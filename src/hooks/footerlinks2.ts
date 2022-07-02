@@ -1,4 +1,4 @@
-import links from '../../_content/footerlinks2.json'
+import links from "../../_content/footerlinks2.json"
 
 const useFooterLinks2 = () => {
   return links

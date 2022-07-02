@@ -370,7 +370,7 @@ const Header = ({
   showLogo = true,
   crumbs = [],
   menuVisible = false,
-} : HeaderProps) => {
+}: HeaderProps) => {
   return (
     <div className="relative">
       <AltView size="lg" className="w-full z-10">
@@ -397,11 +397,11 @@ const Header = ({
             <Container>
               <Row className="items-center justify-between my-2">
                 <BaseLink to="/" className="mr-8">
-                <img
-              src={"/assets/images/svg/icg.svg"}
-              className="w-80"
-              alt="Institute for Cancer Genetics logo"
-            />
+                  <img
+                    src={"/assets/images/svg/icg.svg"}
+                    className="w-80"
+                    alt="Institute for Cancer Genetics logo"
+                  />
                 </BaseLink>
 
                 {content !== null && content}
@@ -424,7 +424,6 @@ const Header = ({
             <Container className="ml-16 ">
               <Row className="">
                 <HeaderLinks location={location} />
-
               </Row>
             </Container>
           )}
@@ -434,7 +433,5 @@ const Header = ({
     </div>
   )
 }
-
-
 
 export default Header

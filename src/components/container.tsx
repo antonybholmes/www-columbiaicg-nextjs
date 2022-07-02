@@ -12,11 +12,7 @@ type ContainerProps = {
   children?: ReactNode
 }
 
-const Container = ({
-  className,
-  style,
-  children,
-}:ContainerProps) => (
+const Container = ({ className, style, children }: ContainerProps) => (
   // <div className={`container px-4 mx-auto ${className}`} style={style}>
   //   {children}
   // </div>

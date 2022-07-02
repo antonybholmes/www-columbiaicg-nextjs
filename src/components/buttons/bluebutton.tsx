@@ -11,11 +11,7 @@ type ButtonProps = {
   children?: ReactNode
 }
 
-const BlueButton = ({
-  onClick,
-  className,
-  children,
-}:ButtonProps) => (
+const BlueButton = ({ onClick, className, children }: ButtonProps) => (
   <button
     onClick={onClick}
     // className="border-b-4 border-solid border-blue-600 bg-default-blue text-white hover:bg-blue-600 trans-ani px-8 py-4 rounded-md uppercase"

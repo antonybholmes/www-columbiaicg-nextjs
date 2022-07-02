@@ -5,7 +5,7 @@ type MainCard = {
   children?: ReactNode
 }
 
-const MainCard = ({ className, children }:MainCard) => (
+const MainCard = ({ className, children }: MainCard) => (
   <div className={`bg-gray-100 p-8 rounded ${className}`}>{children}</div>
 )
 

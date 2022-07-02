@@ -15,7 +15,6 @@ type LinkProps = {
   children?: ReactNode
 }
 
-
 const ColorLink = ({
   to,
   color = "",
@@ -28,7 +27,7 @@ const ColorLink = ({
   className,
   activeClassName,
   children,
-} : LinkProps) => {
+}: LinkProps) => {
   if (color2 === "") {
     color2 = color
   }
@@ -135,7 +134,5 @@ const ColorLink = ({
     </BaseLink>
   )
 }
-
-
 
 export default ColorLink

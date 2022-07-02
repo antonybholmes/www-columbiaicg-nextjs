@@ -1,4 +1,4 @@
-import links from '../../_content/infolinks.json'
+import links from "../../_content/infolinks.json"
 
 const useInfoLinks = () => {
   return links

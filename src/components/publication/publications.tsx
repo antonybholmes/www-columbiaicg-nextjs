@@ -38,7 +38,6 @@ const Publications: React.FC<PublicationsProps> = ({
   onPubClick,
   onShowMoreClick,
 }) => {
-
   return (
     <>
       {publications.length > 0 && showCount && (

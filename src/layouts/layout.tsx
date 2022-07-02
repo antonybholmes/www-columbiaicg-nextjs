@@ -5,70 +5,76 @@
  * See: https://www.gatsbyjs.org/docs/use-static-query/
  */
 
- import React, { ReactNode, useState } from "react"
- import CookieConsent from "react-cookie-consent"
- import WhiteLink from "../components/buttons/whitelink"
- import Header from "../components/header/header"
- import SlideMenu from "../components/slidemenu/slidemenu"
- import Footer from "../components/footer/footer"
+import React, { ReactNode, useState } from "react"
+import CookieConsent from "react-cookie-consent"
+import WhiteLink from "../components/buttons/whitelink"
+import Header from "../components/header/header"
+import SlideMenu from "../components/slidemenu/slidemenu"
+import Footer from "../components/footer/footer"
 import SEO from "../components/seo"
- 
+
 //  if (typeof window !== "undefined") {
 //    require("smooth-scroll")('a[href*="#"]', { speed: 500 })
 //  }
- 
- // export const ACTION_MENU_VISIBLE = 'MENU_VISIBLE'
- 
- // export const menuVisibleAction = (visible) => {
- //   return { type: ACTION_MENU_VISIBLE, visible }
- // }
- 
- // const INITIAL_STATE = {
- //   menuVisible: false
- // }
- 
- // const updateState = (state = INITIAL_STATE, action) => {
- //   switch (action.type) {
- //     case ACTION_MENU_VISIBLE:
- //       return Object.assign({}, state, {
- //         menuVisible: action.visible
- //       })
- //     default:
- //       return state
- //   }
- // }
- 
- // const store = createStore(updateState)
- 
- // Log the initial state
- 
- type LayoutProps = {
+
+// export const ACTION_MENU_VISIBLE = 'MENU_VISIBLE'
+
+// export const menuVisibleAction = (visible) => {
+//   return { type: ACTION_MENU_VISIBLE, visible }
+// }
+
+// const INITIAL_STATE = {
+//   menuVisible: false
+// }
+
+// const updateState = (state = INITIAL_STATE, action) => {
+//   switch (action.type) {
+//     case ACTION_MENU_VISIBLE:
+//       return Object.assign({}, state, {
+//         menuVisible: action.visible
+//       })
+//     default:
+//       return state
+//   }
+// }
+
+// const store = createStore(updateState)
+
+// Log the initial state
+
+type LayoutProps = {
   title: string
   path?: string
   index?: boolean
-   location?: any
-   children?: ReactNode
- }
- 
- const Layout = ({ title, path, index = true, location, children } : LayoutProps) => {
-   const [menuVisible, setMenuVisible] = useState(false)
- 
-   const handleMenuButtonClick = (e: any) => {
-     setMenuVisible(true)
-   }
- 
-   const handleSlideMenuClick = (e: any) => {
-     setMenuVisible(false)
-   }
- 
-   return (
-    <>
-    {/* <SEO title={title} path={path} index={index} /> */}
+  location?: any
+  children?: ReactNode
+}
 
-     <div className="relative">
-       {/* <p>Path is {location.pathname}</p> */}
- 
-       {/* <CookieConsent
+const Layout = ({
+  title,
+  path,
+  index = true,
+  location,
+  children,
+}: LayoutProps) => {
+  const [menuVisible, setMenuVisible] = useState(false)
+
+  const handleMenuButtonClick = (e: any) => {
+    setMenuVisible(true)
+  }
+
+  const handleSlideMenuClick = (e: any) => {
+    setMenuVisible(false)
+  }
+
+  return (
+    <>
+      {/* <SEO title={title} path={path} index={index} /> */}
+
+      <div className="relative">
+        {/* <p>Path is {location.pathname}</p> */}
+
+        {/* <CookieConsent
          location="bottom"
          buttonText="Accept"
          declineButtonText="Decline"
@@ -104,21 +110,20 @@ import SEO from "../components/seo"
          visible={menuVisible}
          onSlideMenuClick={handleSlideMenuClick}
        /> */}
- 
-       <Header
-        title={title}
-         location={location}
-         onMenuButtonClick={handleMenuButtonClick}
-         menuVisible={menuVisible}
-       />
 
-       <main>{children}</main>
- 
-       <Footer />
-     </div>
-     </>
-   )
- }
- 
- export default Layout
- 
+        <Header
+          title={title}
+          location={location}
+          onMenuButtonClick={handleMenuButtonClick}
+          menuVisible={menuVisible}
+        />
+
+        <main>{children}</main>
+
+        <Footer />
+      </div>
+    </>
+  )
+}
+
+export default Layout

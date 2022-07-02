@@ -10,7 +10,7 @@ type TabsProps = {
   children?: ReactElement[]
 }
 
-const VertTabs = ({ tab = 0, className, children = []}:TabsProps) => {
+const VertTabs = ({ tab = 0, className, children = [] }: TabsProps) => {
   let tabListRef = useRef(null)
 
   const [activeTab, setActiveTab] = useState(tab)
@@ -88,7 +88,5 @@ const VertTabs = ({ tab = 0, className, children = []}:TabsProps) => {
     </AltView>
   )
 }
-
-
 
 export default VertTabs

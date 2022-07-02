@@ -1,33 +1,33 @@
-import Container from '../container'
-import { PUBLICATIONS_PATH, TEXT_SHOW_MORE } from '../../constants'
-import useTopJournals from '../../hooks/topjournals'
-import { ReactNode, useEffect, useState } from 'react'
-import useBooleanSearch from '../../hooks/booleansearch'
-import { SideContactCard } from '../side-contact-card'
-import useInstitutePublications from '../../hooks/institutepublications'
-import useFirstAuthorPublications from '../../hooks/firstauthorpublications'
-import useJournalPublications from '../../hooks/journalpublications'
-import useSortPublications from '../../hooks/sortpublications'
-import useTopPubs from '../../hooks/toppubs'
-import PageLayout from '../../layouts/pagelayout'
-import FlHdDiv from '../flhddiv'
-import SearchBar5 from '../search/searchbar5'
-import Row from '../row'
-import ShowSmall from '../showsmall'
-import MainSideCol from '../mainsidecol'
-import SortOrderDropdown from '../publication/sortbydropdown'
-import BlueButton from '../buttons/bluebutton'
-import PubMedLink from '../buttons/pubmedlink'
+import Container from "../container"
+import { PUBLICATIONS_PATH, TEXT_SHOW_MORE } from "../../constants"
+import useTopJournals from "../../hooks/topjournals"
+import { ReactNode, useEffect, useState } from "react"
+import useBooleanSearch from "../../hooks/booleansearch"
+import { SideContactCard } from "../side-contact-card"
+import useInstitutePublications from "../../hooks/institutepublications"
+import useFirstAuthorPublications from "../../hooks/firstauthorpublications"
+import useJournalPublications from "../../hooks/journalpublications"
+import useSortPublications from "../../hooks/sortpublications"
+import useTopPubs from "../../hooks/toppubs"
+import PageLayout from "../../layouts/pagelayout"
+import FlHdDiv from "../flhddiv"
+import SearchBar5 from "../search/searchbar5"
+import Row from "../row"
+import ShowSmall from "../showsmall"
+import MainSideCol from "../mainsidecol"
+import SortOrderDropdown from "../publication/sortbydropdown"
+import BlueButton from "../buttons/bluebutton"
+import PubMedLink from "../buttons/pubmedlink"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import JournalFilter from '../publication/journalfilter'
-import CheckBox from '../buttons/checkbox'
+import JournalFilter from "../publication/journalfilter"
+import CheckBox from "../buttons/checkbox"
 import SortOrder from "../publication/sortby"
 
 import {
   faArrowDownShortWide,
-  faArrowUpShortWide
+  faArrowUpShortWide,
 } from "@fortawesome/free-solid-svg-icons"
-import Publications from '../publication/publications'
+import Publications from "../publication/publications"
 
 const EMPTY_QUERY = ""
 
@@ -179,11 +179,7 @@ type SidePanelProps = {
   children?: ReactNode
 }
 
-const SidePanel = ({
-  title = "",
-  className,
-  children,
-}:SidePanelProps) => (
+const SidePanel = ({ title = "", className, children }: SidePanelProps) => (
   <SideContactCard title={title} className={`mb-12 ${className}`}>
     {children}
   </SideContactCard>
@@ -193,8 +189,7 @@ interface Props {
   publications: any[]
 }
 
-const PublicationsPage = ({publications = []}:Props) => {
-
+const PublicationsPage = ({ publications = [] }: Props) => {
   const person = null
 
   const [query, setQuery] = useState<string>(EMPTY_QUERY)
@@ -209,7 +204,7 @@ const PublicationsPage = ({publications = []}:Props) => {
   const [instituteOnly, setInstituteOnly] = useState(true)
   const [firstAuthorOnly, setFirstAuthorOnly] = useState(true) //id === "all")
   const [descending, setDescending] = useState(true)
-  
+
   const [filteredPublications, setFilteredPublications] = useState<Array<any>>(
     []
   )
@@ -221,7 +216,6 @@ const PublicationsPage = ({publications = []}:Props) => {
   const [recordsPerPageIndex, setRecordsPerPageIndex] = useState(0)
 
   const [recordsPerPage, setRecordsPerPage] = useState(0)
-
 
   useEffect(() => {
     setJournals(useTopJournals(publications))

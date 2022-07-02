@@ -5,7 +5,7 @@
  * See: https://www.gatsbyjs.org/docs/use-static-query/
  */
 
-import  { ReactNode } from "react"
+import { ReactNode } from "react"
 import Breadcrumb from "../components/breadcrumb"
 import Container from "../components/container"
 import HideSmall from "../components/hidesmall"
@@ -21,20 +21,17 @@ type LayoutProps = {
   children?: ReactNode
 }
 
-
-const PageLayout  = ({
+const PageLayout = ({
   title,
   path,
-  nav="",
+  nav = "",
   crumbs = [],
   crumbLocation = "top",
   index = true,
   children,
-} : LayoutProps) => {
+}: LayoutProps) => {
   return (
     <Layout title={title} path={path} index={index}>
-    
-
       {crumbLocation === "top" && crumbs !== null && crumbs.length > 0 && (
         <HideSmall>
           <Container className="py-4">
@@ -61,7 +58,5 @@ const PageLayout  = ({
     </Layout>
   )
 }
-
-
 
 export default PageLayout

@@ -249,7 +249,7 @@ type PubLinkProps = {
   className?: string
 }
 
-const PubLink = ({ name, icon, to, className } : PubLinkProps) => {
+const PubLink = ({ name, icon, to, className }: PubLinkProps) => {
   const [hover, setHover] = useState(false)
 
   const iconEl = useRef(null)
@@ -296,7 +296,7 @@ type LinkProps = {
   publication: any
 }
 
-const PubMedLink = ({ publication } : LinkProps) => (
+const PubMedLink = ({ publication }: LinkProps) => (
   <PubLink
     name="pmid"
     icon="external-link-alt"
@@ -304,7 +304,7 @@ const PubMedLink = ({ publication } : LinkProps) => (
   />
 )
 
-const GoogleScholarLink = ({ publication } : LinkProps) => (
+const GoogleScholarLink = ({ publication }: LinkProps) => (
   <PubLink
     name="Google Scholar"
     icon="external-link-alt"
@@ -329,7 +329,7 @@ const BasePublication = ({
   showUrl = false,
   showDOI = true,
   onPubClick,
-} : BasePublicationProps) => {
+}: BasePublicationProps) => {
   const _handlePubClick = (journal: string) => {
     if (onPubClick !== null) {
       onPubClick(journal)
@@ -471,7 +471,5 @@ const BasePublication = ({
     </Row>
   )
 }
-
-
 
 export default BasePublication

@@ -17,7 +17,7 @@ const BaseLink = ({
   onClick,
   className,
   children,
-} :LinkProps) => {
+}: LinkProps) => {
   if (to === null || to === undefined) {
     to = ""
   }
@@ -40,17 +40,11 @@ const BaseLink = ({
     )
   } else {
     return (
-      <a
-        href={to}
-        aria-label={aria}
-        className={className}
-        onClick={onClick}
-      >
+      <a href={to} aria-label={aria} className={className} onClick={onClick}>
         {children}
       </a>
     )
   }
 }
-
 
 export default BaseLink

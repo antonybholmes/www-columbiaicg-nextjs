@@ -1,4 +1,4 @@
-import links from '../../_content/faculty.json'
+import links from "../../_content/faculty.json"
 
 const getFaculty = () => {
   return links

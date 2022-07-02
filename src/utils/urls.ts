@@ -1,4 +1,3 @@
-
 export const personUrl = (person: any): string => {
   return `/people/${person.frontmatter.personId}`
 }

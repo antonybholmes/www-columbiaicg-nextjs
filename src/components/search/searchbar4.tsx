@@ -61,7 +61,7 @@ const SearchBar4 = ({
   placeholder = "Search items...",
   className,
   onSearch,
-} : SearchBarProps) => {
+}: SearchBarProps) => {
   const [hover, setHover] = useState(false)
   const [value, setValue] = useState("")
 
@@ -141,6 +141,5 @@ const SearchBar4 = ({
     </Row>
   )
 }
-
 
 export default SearchBar4

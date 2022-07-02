@@ -7,7 +7,12 @@ import useContextName from "../../hooks/contextname"
 import FlHdDiv from "../../components/flhddiv"
 import Row from "../../components/row"
 import useBreakpoints from "../../hooks/breakpoints"
-import { FACULTY_PATH, GROUPS, TEXT_LAB_PUBS, TEXT_LAB_WEBSITE } from "../../constants"
+import {
+  FACULTY_PATH,
+  GROUPS,
+  TEXT_LAB_PUBS,
+  TEXT_LAB_WEBSITE,
+} from "../../constants"
 import useBooleanSearch from "../../hooks/booleansearch"
 import BWImage from "../../components/images/bwimage"
 import PersonHeader from "../../components/people/personheader"
@@ -32,7 +37,6 @@ import ExpandButton from "../../components/buttons/expandbutton"
 import PageLayout from "../../layouts/pagelayout"
 import BaseLink from "../../components/buttons/baselink"
 import getFaculty from "../../lib/faculty"
-
 
 const EMPTY_QUERY = ""
 
@@ -544,7 +548,7 @@ export const booleanSearchAnd = (s1: any, s2: any): any => {
   const faculty: any[] = []
 
   for (let group of s1) {
-    const g: { name: string; people: any[]} = {
+    const g: { name: string; people: any[] } = {
       name: group.name,
       people: [],
     }
@@ -860,9 +864,7 @@ interface PageProps {
   allFaculty: any[]
 }
 
-const Page = ({
-  allFaculty
-}: PageProps) => {
+const Page = ({ allFaculty }: PageProps) => {
   const handleSearch = (text: string, clicked: boolean) => {
     setQuery(text)
   }
@@ -892,7 +894,7 @@ const Page = ({
   const facultyMember: any = null
 
   const headerImageCredit: string = ""
-    //data.faculty !== null ? facultyMember.frontmatter.headerImageCredit : ""
+  //data.faculty !== null ? facultyMember.frontmatter.headerImageCredit : ""
 
   //const [page, setPage] = useState(1)
   //const [recordsPerPage, setRecordsPerPage] = useState(20)
@@ -900,9 +902,9 @@ const Page = ({
   const imageMap = {} //useImageMap(data)
 
   const selectedPublications: any[] = []
-    //data.selectedPublications.edges.length > 0
-    //  ? data.selectedPublications.edges[0].node.publications
-    //  : []
+  //data.selectedPublications.edges.length > 0
+  //  ? data.selectedPublications.edges[0].node.publications
+  //  : []
 
   useEffect(() => {
     if (query !== "") {

@@ -15,13 +15,13 @@ export const TEXT_LAB_WEBSITE = "Lab website"
 export const TEXT_LAB_PUBS = "Lab publications"
 
 export const GROUPS = [
-    "Directors",
-    "Director",
-    "Faculty",
-    "Members",
-    "Research Staff",
-    "Students",
-    "Administrator",
-    "Administrative Staff",
-    "Web Site",
-  ]
+  "Directors",
+  "Director",
+  "Faculty",
+  "Members",
+  "Research Staff",
+  "Students",
+  "Administrator",
+  "Administrative Staff",
+  "Web Site",
+]

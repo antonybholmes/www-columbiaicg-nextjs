@@ -58,11 +58,7 @@ type JournalFilterProps = {
   onClick: any
 }
 
-const JournalFilter = ({
-  journals,
-  selected,
-  onClick,
-}:JournalFilterProps) => {
+const JournalFilter = ({ journals, selected, onClick }: JournalFilterProps) => {
   const [isExpanded, setExpanded] = useState(false)
   const { getCollapseProps, getToggleProps } = useCollapse({
     isExpanded,

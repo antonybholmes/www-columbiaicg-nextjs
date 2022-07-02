@@ -2,9 +2,7 @@ import React from "react"
 import Row from "../row"
 import TickSvg from "../../../public/assets/images/svg/white-tick.svg"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import {
-  faCheck,
-} from "@fortawesome/free-solid-svg-icons"
+import { faCheck } from "@fortawesome/free-solid-svg-icons"
 
 type CheckMarkProps = {
   selected: boolean
@@ -12,11 +10,7 @@ type CheckMarkProps = {
   className?: string
 }
 
-const CheckMark = ({
-  selected,
-  hover,
-  className,
-}:CheckMarkProps) => {
+const CheckMark = ({ selected, hover, className }: CheckMarkProps) => {
   return (
     <Row
       isCentered={true}

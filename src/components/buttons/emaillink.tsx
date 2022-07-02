@@ -18,19 +18,15 @@ const EmailLink = ({
   hoverColor = "text-blue-500",
   size = "text-xl",
   iconSize = "text-xl",
-} :EmailLinkProps) => (
+}: EmailLinkProps) => (
   <IconLink
     name={name}
     to={`mailto:${to}`}
-    icon={
-      <FontAwesomeIcon icon={faEnvelope} className={iconSize} />
-    }
+    icon={<FontAwesomeIcon icon={faEnvelope} className={iconSize} />}
     content={to}
     color={color}
     hoverColor={hoverColor}
   />
 )
-
-
 
 export default EmailLink

@@ -4,11 +4,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { gsap } from "gsap"
 import Row from "../row"
 
-
-import {
-  faChevronRight
-} from "@fortawesome/free-solid-svg-icons"
-
+import { faChevronRight } from "@fortawesome/free-solid-svg-icons"
 
 type LinkProps = {
   to: string
@@ -18,13 +14,7 @@ type LinkProps = {
   children?: ReactNode
 }
 
-const IndexLink  = ({
-  to,
-  color,
-  onClick,
-  className,
-  children,
-}: LinkProps) => {
+const IndexLink = ({ to, color, onClick, className, children }: LinkProps) => {
   const [hover, setHover] = useState(false)
 
   const iconEl = useRef(null)

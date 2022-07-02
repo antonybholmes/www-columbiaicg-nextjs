@@ -8,12 +8,12 @@ type IndexLinkProps = {
   children?: ReactNode
 }
 
-const BlueIndexLink  = ({
+const BlueIndexLink = ({
   to,
   className,
   onClick,
   children,
-} : IndexLinkProps) => (
+}: IndexLinkProps) => (
   <IndexLink color="blue" to={to} className={className} onClick={onClick}>
     {children}
   </IndexLink>

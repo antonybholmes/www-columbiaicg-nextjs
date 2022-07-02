@@ -15,7 +15,7 @@ const BlueLink = ({
   className,
   activeClassName,
   children,
-}:LinkProps) => (
+}: LinkProps) => (
   <ColorLink
     color="blue"
     to={to}

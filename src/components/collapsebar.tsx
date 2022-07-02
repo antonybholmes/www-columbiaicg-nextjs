@@ -9,13 +9,13 @@ type CollapseBarProps = {
   className?: string
 }
 
-const CollapseBar  = ({
+const CollapseBar = ({
   title = "",
   isExpanded,
   onClick,
   isSmall = false,
   className,
-}:CollapseBarProps) => {
+}: CollapseBarProps) => {
   const [hover, setHover] = useState(false)
 
   const onMouseEnter = (e: any) => {

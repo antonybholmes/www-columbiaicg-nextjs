@@ -5,7 +5,7 @@ type FullDivProps = {
   children?: ReactNode
 }
 
-const FullDiv = ({ className, children }:FullDivProps) => (
+const FullDiv = ({ className, children }: FullDivProps) => (
   <div className={`w-full ${className}`}>{children}</div>
 )
 

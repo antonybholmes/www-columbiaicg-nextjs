@@ -4,7 +4,6 @@ const API = "https://api.columbiaicg.org/v3/publications" //"https://up7cqny9jj.
 
 const URL = `/data/publications`
 
-
 // const updatePublications = (
 //   publications: Array<any>,
 //   setPublications: any,
@@ -37,17 +36,15 @@ const usePublications = (
 
   //console.log(url)
 
-
-    axios
-      .get(url)
-      .then(res => {
-        setPublications(res.data.publications)
-      })
-      .catch(function (error) {
-        // handle error
-        //console.log(error);
-      })
-  
+  axios
+    .get(url)
+    .then(res => {
+      setPublications(res.data.publications)
+    })
+    .catch(function (error) {
+      // handle error
+      //console.log(error);
+    })
 }
 
 export default usePublications
