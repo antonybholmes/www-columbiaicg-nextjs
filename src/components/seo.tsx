@@ -1,146 +1,55 @@
-/**
- * SEO component that queries for data with
- *  Gatsby's useStaticQuery React hook
- *
- * See: https://www.gatsbyjs.org/docs/use-static-query/
- */
+import Head from "next/head"
+import { useRouter } from "next/router"
+import { SITE_TITLE, SITE_URL } from "../constants"
 
-import React from "react"
-
-type SEOProps = {
-  title?: string
+interface IProps {
+  title: string
   description?: string
-  path?: string
-  lang?: string
-  index?: boolean
+  url?: string
+  isIndexed?: boolean
 }
 
-const SEO: React.FC<SEOProps> = ({ title, description, path, lang, index }) => {
-  // const metaTitle = title !== "" ? `${title} | ${SITE_NAME}` : siteTitle
-  // const metaDescription =
-  //   description !== "" ? description : title == "Home" ? siteDescription : ""
-  // const url = `${siteUrl}${path}`
+const SEO = ({ title, description, url, isIndexed = true }: IProps) => {
+  const router = useRouter()
+
+  const titleTemplate = `${title} - ${SITE_TITLE}`
+
+  if (!url) {
+    url = router.asPath
+  }
+
+  url = `${SITE_URL}${url}`
+
+  // if (!description) {
+  //   description = SITE_DESCRIPTION
+  // }
 
   return (
-    <></>
-    // <GatsbySeo
-    //   title={metaTitle}
-    //   description={metaDescription}
-    //   canonical={url}
-    //   noindex={!index}
-    //   nofollow={!index}
-    //   language="en_US"
-    //   metaTags={[
-    //     {
-    //       name: "keywords",
-    //       content: keywords.join(", "),
-    //     },
-    //   ]}
-    //   openGraph={{
-    //     url: url,
-    //     title: metaTitle,
-    //     description: metaDescription,
-    //     locale: "en_US",
-    //     site_name: siteTitle,
-    //     type: "website",
-    //   }}
-    // />
+    <Head>
+      <title>{titleTemplate}</title>
 
-    /*
-    <Helmet
-      htmlAttributes={{
-        lang,
-      }}
-      title={metaTitle}
-      meta={[
-        {
-          property: `og:site_title`,
-          content: siteTitle,
-        },
-        {
-          name: `description`,
-          content: metaDescription,
-        },
-        {
-          name: `author`,
-          content: author,
-        },
-        {
-          name: "keywords",
-          content: keywords.join(", "),
-        },
-        {
-          name: "robots",
-          content: "all, index, follow",
-        },
-        {
-          property: `og:title`,
-          content: metaTitle,
-        },
-        {
-          property: `og:description`,
-          content: metaDescription,
-        },
-        {
-          property: `og:url`,
-          content: url,
-        },
-        {
-          property: `og:email`,
-          content: email,
-        },
-        {
-          property: `og:type`,
-          content: `website`,
-        },
-        {
-          property: `og:locale`,
-          content: `en_US`,
-        },
-        {
-          name: `og:locality`,
-          content: `New York City`,
-        },
-        {
-          name: `og:region`,
-          content: `NY`,
-        },
-        {
-          name: `og:postal-code`,
-          content: `10032`,
-        },
-        {
-          name: `og:country-name`,
-          content: `USA`,
-        },
-        // {
-        //   name: `twitter:card`,
-        //   content: `summary`,
-        // },
-        // {
-        //   name: `twitter:creator`,
-        //   content: author,
-        // },
-        // {
-        //   name: `twitter:title`,
-        //   content: title,
-        // },
-        // {
-        //   name: `twitter:description`,
-        //   content: metaDescription,
-        // },
-      ]}
-    />
-    */
+      <meta name="description" content={description} />
+      {/* <meta name="image" content={seo.image} /> */}
+      {url && <meta property="og:url" content={url} />}
+      {/* {(article ? true : null) && <meta property="og:type" content="article" />} */}
+      {title && <meta property="og:title" content={title} />}
+      {description && <meta property="og:description" content={description} />}
+      {/* {seo.image && <meta property="og:image" content={seo.image} />} */}
+      {/* <meta name="twitter:card" content="summary_large_image" /> */}
+      {/* <meta name="twitter:creator" content={TWITTER} /> */}
+      {title && <meta name="twitter:title" content={title} />}
+      {description && <meta name="twitter:description" content={description} />}
+      {/* {seo.image && <meta name="twitter:image" content={seo.image} />} */}
+
+      {/* if page is not indexed, we add tags to tell robots to ignore */}
+      {!isIndexed && (
+        <>
+          <meta name="robots" content="noindex,nofollow" />
+          <meta name="googlebot" content="noindex,nofollow" />
+        </>
+      )}
+    </Head>
   )
-}
-
-SEO.defaultProps = {
-  lang: "en",
-  title: "",
-  description: "",
-  path: "",
-  index: true,
 }
 
 export default SEO

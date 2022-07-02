@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import { useState } from "react"
 import ContactInfo from "./contactinfo"
 import FacultyLink from "../faculty/facultylink"
 import PersonLink from "./personlink"
@@ -19,7 +19,7 @@ import Circle from "../circle"
 //         <PersonLink person={person} />
 //       </h3>
 
-//       <h4>{person.frontmatter.title}</h4>
+//       <h4>{person.fields.title}</h4>
 //     </div>
 //     {!smallView && (
 //       <div className="mt-4">
@@ -31,14 +31,14 @@ import Circle from "../circle"
 
 // const PersonCard = ({ person, smallView }) => (
 //   <div
-//     className={`w-full trans-ani border-t-4 border-b-4 border-solid border-gray-400 hover:border-cuimc-blue bg-white mb-12 py-4 overflow-hidden`}
+//     className={`w-full trans-ani border-t-4 border-b-4 border-solid border-slate-400 hover:border-cuimc-blue bg-white mb-12 py-4 overflow-hidden`}
 //   >
 //     <div>
 //       <h3>
 //         <PersonLink person={person} />
 //       </h3>
 
-//       <h4>{person.frontmatter.title}</h4>
+//       <h4>{person.fields.title}</h4>
 //     </div>
 //     {!smallView && (
 //       <div className="mt-4">
@@ -50,14 +50,14 @@ import Circle from "../circle"
 
 // const PersonCard = ({ person, smallView }) => (
 //   <div
-//     className={`w-full trans-ani border border-solid border-gray-300 hover:shadow rounded-md bg-white mb-12 px-8 py-6 overflow-hidden`}
+//     className={`w-full trans-ani border border-solid border-slate-300 hover:shadow rounded-md bg-white mb-12 px-8 py-6 overflow-hidden`}
 //   >
 //     <div>
 //       <h3>
 //         <PersonLink person={person} />
 //       </h3>
 
-//       <h4>{person.frontmatter.title}</h4>
+//       <h4>{person.fields.title}</h4>
 //     </div>
 //     {!smallView && (
 //       <div className="mt-4">
@@ -79,16 +79,16 @@ type PersonCardProps = {
   showPhone?: boolean
 }
 
-const PersonCard: React.FC<PersonCardProps> = ({
+const PersonCard = ({
   person,
   imageMap,
   smallView,
   context,
-  showUrl,
-  photoMode,
-  showLetters,
-  showPhone,
-}) => {
+  showUrl = true,
+  photoMode = "show,generic",
+  showLetters = false,
+  showPhone = false,
+}: PersonCardProps) => {
   const [hover, setHover] = useState(false)
 
   const onMouseEnter = (e: any) => {
@@ -101,22 +101,22 @@ const PersonCard: React.FC<PersonCardProps> = ({
 
   let link
 
-  const isFaculty = person.frontmatter.groups.includes("Faculty")
+  const isFaculty = person.fields.groups.includes("Faculty")
 
   if (isFaculty) {
     link = <FacultyLink person={person} />
   } else {
-    if (showUrl || person.frontmatter.tagList.includes("personal-page::true")) {
+    if (showUrl || person.fields.tagList.includes("personal-page::true")) {
       link = <PersonLink person={person} />
     } else {
-      // link = `${person.frontmatter.name}${
-      //   person.frontmatter.postNominalLetters !== ""
-      //     ? `, ${person.frontmatter.postNominalLetters}`
+      // link = `${person.fields.name}${
+      //   person.fields.postNominalLetters !== ""
+      //     ? `, ${person.fields.postNominalLetters}`
       //     : ""
       // }`
-      link = `${person.frontmatter.name}${
-        showLetters && person.frontmatter.postNominalLetters !== ""
-          ? `, ${person.frontmatter.postNominalLetters}`
+      link = `${person.fields.firstName} ${person.fields.lastName}${
+        showLetters && person.fields.postNominalLetters !== ""
+          ? `, ${person.fields.postNominalLetters}`
           : ""
       }`
     }
@@ -126,8 +126,8 @@ const PersonCard: React.FC<PersonCardProps> = ({
 
   if (photoMode.includes("show")) {
     fluid =
-      person.frontmatter.personId in imageMap
-        ? imageMap[person.frontmatter.personId]
+      person.fields.personId in imageMap
+        ? imageMap[person.fields.personId]
         : imageMap["generic"]
   }
 
@@ -147,14 +147,14 @@ const PersonCard: React.FC<PersonCardProps> = ({
               <BWImage
                 image={fluid}
                 extZoom={hover}
-                alt={person.frontmatter.name}
+                alt={person.fields.name}
                 className={`w-64 mb-4`}
               />
               {/* </Circle> */}
               {/* <BWImage2
                   src={usePersonImageURL(person)}
                   extZoom={hover}
-                  alt={person.frontmatter.name}
+                  alt={person.fields.name}
                 /> */}
             </Row>
           )}
@@ -186,7 +186,7 @@ const PersonCard: React.FC<PersonCardProps> = ({
               <BWImage
                 image={fluid}
                 extZoom={hover}
-                alt={person.frontmatter.name}
+                alt={person.fields.name}
                 className={`w-64 mb-4`}
               />
             </Row>
@@ -212,18 +212,10 @@ const PersonCard: React.FC<PersonCardProps> = ({
   )
 }
 
-PersonCard.defaultProps = {
-  context: "",
-  showUrl: true,
-  photoMode: "show,generic",
-  showLetters: false,
-  showPhone: false,
-}
-
 type PeopleGridProps = {
   name: string
   imageMap?: any
-  people: Array<any>
+  people: any[]
   colWidth?: string
   smallView?: boolean
   faculty?: any
@@ -239,38 +231,43 @@ type PeopleGridProps = {
   className?: string
 }
 
-const PeopleGrid: React.FC<PeopleGridProps> = ({
+// PeopleGrid.defaultProps = {
+//   colWidth: "w-full sm:w-1/3 md:w-1/4 xl:w-1/5 3xl:w-16/100", //"w-full md:w-3/10 3xl:w-1/5",
+//   className: "",
+//   smallView: false,
+//   faculty: null,
+//   photoMode: "show,generic",
+//   showHeadings: true,
+//   showUrl: false,
+//   headingColor: "text-slate-700 md:text-slate-500",
+//   context: "",
+//   gridBg: "",
+//   showLetters: false,
+//   showPhone: false,
+// }
+
+const PeopleGrid = ({
   name,
   imageMap,
   people,
-  colWidth,
-  smallView,
-  faculty,
-  photoMode,
-  showHeadings,
-  showUrl,
-  outline,
-  showLetters,
-  showPhone,
+  smallView = false,
+  faculty = null,
+  photoMode = "show,generic",
+  showHeadings = true,
+  showUrl = false,
+  showLetters = false,
+  showPhone = false,
   context,
   className,
-}) => {
+}: PeopleGridProps) => {
   let found = false
 
-  const ret: Array<any> = []
+  const ret: any[] = []
 
   people.map((person: any, index: number) => {
-    if (
-      faculty === null ||
-      faculty.frontmatter.id !== person.frontmatter.personId
-    ) {
+    if (faculty === null || faculty.fields.id !== person.fields.personId) {
       ret.push(
-        <li
-          className={`block ${colWidth} border border-solid ${
-            outline ? "border-gray-200" : "border-transparent"
-          } rounded-md mx-4 mb-8`}
-          key={`person-${index}`}
-        >
+        <li key={`person-${index}`}>
           <PersonCard
             person={person}
             imageMap={imageMap}
@@ -310,29 +307,15 @@ const PeopleGrid: React.FC<PeopleGridProps> = ({
           </>
         )}
 
-        <ul className={`flex flex-row flex-wrap -mx-4 ${className}`}>{ret}</ul>
+        <ul className={`grid grid-cols-1 lg:grid-cols-5 ${className}`}>
+          {ret}
+        </ul>
       </>
       // </Card>
     )
   } else {
     return <></>
   }
-}
-
-PeopleGrid.defaultProps = {
-  colWidth: "w-full sm:w-1/3 md:w-1/4 xl:w-1/5 3xl:w-16/100", //"w-full md:w-3/10 3xl:w-1/5",
-  className: "",
-  smallView: false,
-  faculty: null,
-  photoMode: "show,generic",
-  showHeadings: true,
-  showUrl: false,
-  headingColor: "text-gray-700 md:text-gray-500",
-  context: "",
-  gridBg: "",
-  showLetters: false,
-  showPhone: false,
-  outline: false,
 }
 
 export default PeopleGrid

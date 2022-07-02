@@ -31,7 +31,7 @@ const ToggleSwitch: React.FC<CheckBoxProps> = ({
 
       <div
         className={`relative rounded-full trans-ani ${
-          selected ? "bg-cuimc-button-blue-80" : "bg-gray-300"
+          selected ? "bg-cuimc-button-blue-80" : "bg-slate-300"
         } `}
         style={{ width: "2.6rem", height: "1.8rem" }}
       >

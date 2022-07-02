@@ -32,7 +32,7 @@ const PhoneLink: React.FC<PhoneLinkProps> = ({
 
 PhoneLink.defaultProps = {
   name: "Phone",
-  color: "text-gray-500",
+  color: "text-slate-500",
   hoverColor: "text-blue-500",
   size: "text-xl",
   iconSize: "text-xl",

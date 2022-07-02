@@ -245,7 +245,7 @@ const CrumbLayout: React.FC<CrumbLayoutProps> = ({
         >
           {crumbLocation === "top" && crumbs !== null && crumbs.length > 0 && (
             <HideSmall>
-              <Container className="border-t border-solid border-gray-200 py-4">
+              <Container className="border-t border-solid border-slate-200 py-4">
                 <Breadcrumb
                   crumbs={crumbs}
                   content={crumbContent}
@@ -268,7 +268,7 @@ const CrumbLayout: React.FC<CrumbLayoutProps> = ({
               <Breadcrumb
                 crumbs={crumbs}
                 content={crumbContent}
-                className="border-t border-solid border-gray-200 py-5"
+                className="border-t border-solid border-slate-200 py-5"
               />
             </Container>
           )}

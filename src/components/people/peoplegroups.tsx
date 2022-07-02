@@ -78,7 +78,7 @@ PeopleGroups.defaultProps = {
   showHeadings: true,
   showUrl: false,
   colWidth: "w-full sm:w-9/20 lg:w-3/10 xl:w-22/100 2xl:w-18/100",
-  headingColor: "text-gray-700 md:text-gray-600",
+  headingColor: "text-slate-700 md:text-slate-600",
   context: "",
   gridBg: "bg-white",
   outline: false,

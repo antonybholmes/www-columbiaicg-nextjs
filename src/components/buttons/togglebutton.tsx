@@ -28,7 +28,7 @@ const ToggleButton: React.FC<CheckBoxProps> = ({
       className={`cursor-pointer trans-ani px-4 py-2 rounded-full border border-solid ${
         selected
           ? "bg-cuimc-button-blue-20 border-transparent"
-          : "border-gray-200 hover:bg-gray-100"
+          : "border-slate-200 hover:bg-slate-100"
       }`}
     >
       {children}

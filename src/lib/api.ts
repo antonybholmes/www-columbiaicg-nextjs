@@ -1,5 +1,6 @@
 import fs from "fs"
 import { join } from "path"
+import IFieldMap from "../types/field-map"
 import { getFields, getMDBySlug } from "./markdown"
 
 export const POSTS_DIRECTORY = join(process.cwd(), "_content", "posts")
@@ -10,6 +11,33 @@ export const PUBLICATIONS_DIRECTORY = join(
   "_content",
   "publications"
 )
+
+const toContextMap = (items: string[]): IFieldMap => {
+  const contextMap: IFieldMap = {}
+
+  for (let i = 0; i < items.length; ++i) {
+    let item = items[i]
+    const tokens = item.split("::")
+    let context = "default"
+    let name = ""
+    if (tokens.length > 1) {
+      context = tokens[0]
+      name = tokens[1]
+    } else {
+      name = tokens[0]
+    }
+
+    // The first item we encounter is always added in the default
+    // context
+    if (i === 0) {
+      contextMap["default"] = name
+    }
+
+    contextMap[context] = name
+  }
+
+  return contextMap
+}
 
 export const getSlugs = (dir: string) => {
   return fs.readdirSync(dir)
@@ -39,7 +67,9 @@ export const getPeopleSlugs = () => {
 }
 
 export const getPersonBySlug = (slug: string, fields: string[] = []) => {
-  return getMDBySlug(PEOPLE_DIRECTORY, slug, fields)
+  const ret = getMDBySlug(PEOPLE_DIRECTORY, slug, fields)
+  ret.titleMap = toContextMap(ret.fields.titles)
+  return ret
 }
 
 export const getAllPeople = (fields: string[] = []) => {
@@ -55,6 +85,16 @@ export const getAllPeople = (fields: string[] = []) => {
         : 1
     )
   return posts
+}
+
+export const getPeopleMap = (people: any[]): IFieldMap => {
+  const ret: IFieldMap = {}
+
+  people.forEach((person: any) => {
+    ret[person.fields.personId] = person
+  })
+
+  return ret
 }
 
 export const getLabSlugs = () => {

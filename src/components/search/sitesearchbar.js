@@ -64,8 +64,8 @@ const SiteSearchBar = ({
     setHover(false)
   }
 
-  //"bg-white border-gray-300"
-  // "bg-gray-200 border-gray-200"
+  //"bg-white border-slate-300"
+  // "bg-slate-200 border-slate-200"
 
   return (
     <Row

@@ -21,63 +21,63 @@ type ContactInfoProps = {
   twitter?: string
 }
 
-const ContactInfo: React.FC<ContactInfoProps> = ({
+const ContactInfo = ({
   person,
-  color,
-  hoverColor,
+  color = "text-slate-500",
+  hoverColor = "text-blue-500",
   className,
-  showIcons,
-  showUrl,
-  showRoom,
-  showPhone,
-  isCentered,
+  showIcons = false,
+  showUrl = true,
+  showRoom = false,
+  showPhone = true,
+  isCentered = false,
   size,
   twitter,
-}) => {
+}: ContactInfoProps) => {
   if (showIcons) {
     return (
       <ul className={`h-full ${className}`}>
-        {person.frontmatter.email !== "" && (
+        {person.fields.email && (
           <li>
             <EmailLink
-              to={person.frontmatter.email}
+              to={person.fields.email}
               color={color}
               hoverColor={hoverColor}
               size={size}
             />
           </li>
         )}
-        {showPhone && person.frontmatter.phone !== "" && (
+        {showPhone && person.fields.phone && (
           <li>
             <PhoneLink
-              phone={person.frontmatter.phone}
+              phone={person.fields.phone}
               color={color}
               hoverColor={hoverColor}
               size={size}
             />
           </li>
         )}
-        {showRoom && person.frontmatter.room !== "" && (
+        {showRoom && person.fields.room && (
           <li>
             <RoomLink
-              room={person.frontmatter.room}
+              room={person.fields.room}
               color={color}
               hoverColor={hoverColor}
               size={size}
             />
           </li>
         )}
-        {showUrl && person.frontmatter.url !== null && (
+        {showUrl && person.fields.url && (
           <li>
             <URLLink
-              url={person.frontmatter.url}
+              url={person.fields.url}
               color={color}
               hoverColor={hoverColor}
               size={size}
             />
           </li>
         )}
-        {twitter !== null && (
+        {twitter && (
           <li>
             <TwitterLink
               twitter={twitter}
@@ -87,10 +87,10 @@ const ContactInfo: React.FC<ContactInfoProps> = ({
             />
           </li>
         )}
-        {person.frontmatter.github !== null && (
+        {person.fields.github && (
           <li>
             <GitHubLink
-              github={person.frontmatter.github}
+              github={person.fields.github}
               color={color}
               hoverColor={hoverColor}
               size={size}
@@ -102,52 +102,39 @@ const ContactInfo: React.FC<ContactInfoProps> = ({
   } else {
     return (
       <div className={`h-full ${isCentered ? "text-center" : ""} ${className}`}>
-        {person.frontmatter.email !== "" && (
+        {person.fields.email !== "" && (
           <div className="mt-1">
             <ColorLink
               color="default"
               color2="blue"
-              to={`mailto:${person.frontmatter.email}`}
+              to={`mailto:${person.fields.email}`}
             >
-              {person.frontmatter.email}
+              {person.fields.email}
             </ColorLink>
           </div>
         )}
-        {showPhone && person.frontmatter.phone !== "" && (
+        {showPhone && person.fields.phone !== "" && (
           <div className="mt-1">
             <ColorLink
               color="default"
               color2="blue"
-              to={`tel:${person.frontmatter.phone}`}
+              to={`tel:${person.fields.phone}`}
             >
-              {person.frontmatter.phone}
+              {person.fields.phone}
             </ColorLink>
           </div>
         )}
-        {showRoom && person.frontmatter.room !== "" && (
+        {showRoom && person.fields.room !== "" && (
           <div className={`${color} hover:${hoverColor} trans-ani`}>
-            Room {person.frontmatter.room}
+            Room {person.fields.room}
           </div>
         )}
-        {showUrl && person.frontmatter.url !== null && (
-          <div className="mt-4">{useUrlLink(person.frontmatter.url)}</div>
+        {showUrl && person.fields.url && (
+          <div className="mt-4">{useUrlLink(person.fields.url)}</div>
         )}
       </div>
     )
   }
-}
-
-ContactInfo.defaultProps = {
-  className: "",
-  color: "text-gray-500",
-  hoverColor: "text-blue-500",
-  size: "text-base",
-  showIcons: false,
-  showUrl: true,
-  showRoom: false,
-  showPhone: true,
-  isCentered: false,
-  twitter: null,
 }
 
 export default ContactInfo

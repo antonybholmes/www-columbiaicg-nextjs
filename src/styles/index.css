@@ -60,7 +60,7 @@ html {
   }
   
   .gray-border {
-    @apply border-gray-600;
+    @apply border-slate-600;
   }
   
   a {
@@ -96,7 +96,7 @@ html {
   }
   
   .text-link:hover {
-    @apply underline-link-hover border-b border-solid border-gray-800;
+    @apply underline-link-hover border-b border-solid border-slate-800;
   }
   
   .blue-link {
@@ -128,19 +128,19 @@ html {
   }
   
   .gray-link {
-    @apply underline-link text-gray-600;
+    @apply underline-link text-slate-600;
   }
   
   .gray-link:hover {
-    @apply underline-link-hover text-gray-600 border-gray-600;
+    @apply underline-link-hover text-slate-600 border-slate-600;
   }
   
   .text-link {
-    @apply underline-link text-gray-700;
+    @apply underline-link text-slate-700;
   }
   
   .text-link:hover {
-    @apply underline-link-hover text-gray-700 border-gray-700;
+    @apply underline-link-hover text-slate-700 border-slate-700;
   }
   
   
@@ -174,7 +174,7 @@ html {
   
   
   .header-link:after {
-    @apply absolute trans-ani border-b-3 border-solid border-gray-700 left-0 -bottom-2 w-full;
+    @apply absolute trans-ani border-b-3 border-solid border-slate-700 left-0 -bottom-2 w-full;
     height: 3px;
     content: '';
     transform: scaleX(0.0001);
@@ -197,7 +197,7 @@ html {
   
   
   .pagination-block {
-    @apply row w-8 h-8 border border-solid border-gray-500 rounded justify-center items-center text-center m-2;
+    @apply row w-8 h-8 border border-solid border-slate-500 rounded justify-center items-center text-center m-2;
   }
   
   .pagination-link {
@@ -319,7 +319,7 @@ html {
     left: 15px;
     width: 18px;
     height: 1px;
-    @apply bg-gray-700;
+    @apply bg-slate-700;
     transform: rotate(0);
     transition: all 0.25s;
   }

@@ -33,7 +33,7 @@ const Collapsible2 = ({ title, children }: CollapsibleProps) => {
       onMouseLeave={onMouseLeave}
     >
       {/* <Row
-        className={`py-4 border-t border-solid border-gray-200 text-gray-400 cursor-pointer w-full justify-between`}
+        className={`py-4 border-t border-solid border-slate-200 text-slate-400 cursor-pointer w-full justify-between`}
         onClick={toggle}
         aria-label={`Collapse ${title}`}
       >
@@ -68,7 +68,7 @@ const Collapsible2 = ({ title, children }: CollapsibleProps) => {
         <FontAwesomeIcon
           icon={_height === "0" ? "chevron-down" : "chevron-up"}
           size="sm"
-          className="text-gray-400 cursor-pointer trans-ani hover:text-black"
+          className="text-slate-400 cursor-pointer trans-ani hover:text-black"
           onClick={toggle}
         />
       </Row> */}

@@ -42,13 +42,13 @@ const CollapseBar = ({
       {/* <FontAwesomeIcon
               icon={_height === "0" ? "plus" : "minus"}
               size="sm"
-              className="text-gray-300"
+              className="text-slate-300"
             /> */}
 
       {/* <FontAwesomeIcon
             icon={_height === "0" ? "chevron-down" : "chevron-up"}
             size="sm"
-            className="text-gray-300 cursor-pointer trans-ani hover:text-black"
+            className="text-slate-300 cursor-pointer trans-ani hover:text-black"
             onClick={toggle}
           /> */}
 

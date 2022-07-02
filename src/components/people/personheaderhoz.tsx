@@ -99,7 +99,7 @@ const PersonHeaderHoz: React.FC<PersonHeaderProps> = ({
         <div className="pb-4">
           {titles.map((title: string, index: number) => {
             return (
-              <h4 className="m-0 font-light text-gray-600" key={index}>
+              <h4 className="m-0 font-light text-slate-600" key={index}>
                 {title}
               </h4>
             )

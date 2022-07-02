@@ -39,7 +39,7 @@ const RadioButton: React.FC<RadioButtonProps> = ({
           className={`w-5 h-5 min-w-5 min-h-5 mr-4 bg-white rounded-full overflow-hidden border-2 border-solid trans-ani ${
             selected
               ? "border-cuimc-button-blue-70"
-              : `border-gray-200 ${hover ? "border-cuimc-button-blue-70" : ""}`
+              : `border-slate-200 ${hover ? "border-cuimc-button-blue-70" : ""}`
           }`}
         >
           {selected && (
@@ -66,7 +66,7 @@ const RadioButton: React.FC<RadioButtonProps> = ({
         </div>  */}
 
         {/* <div
-          className={`text-white w-full h-full rounded-full trans-ani border border-solid ${selected ? "border-transparent" : "border-gray-300"}`} 
+          className={`text-white w-full h-full rounded-full trans-ani border border-solid ${selected ? "border-transparent" : "border-slate-300"}`} 
         /> */}
       </button>
     </li>

@@ -32,12 +32,12 @@ const SiteSearchResult = ({ text, to, selected }) => {
     <Link ref={linkEl} to={to} className="p-0 m-0">
       <div
         className={`px-4 py-2 cursor-pointer ${
-          selected ? "bg-gray-200" : "hover:bg-gray-200"
+          selected ? "bg-slate-200" : "hover:bg-slate-200"
         } trans-ani`}
       >
         {text}
       </div>
-      {/* <Row className="px-4 py-2 cursor-pointer hover:bg-gray-200 trans-ani">
+      {/* <Row className="px-4 py-2 cursor-pointer hover:bg-slate-200 trans-ani">
         <Row w="7" className="mr-4">
           <div>{text}</div>
         </Row>
@@ -54,7 +54,9 @@ SiteSearchResult.defaultProps = {
 }
 
 export const Heading = ({ name }) => (
-  <div className="px-4 pt-4 mb-2 text-gray-500 text-sm font-medium">{name}</div>
+  <div className="px-4 pt-4 mb-2 text-slate-500 text-sm font-medium">
+    {name}
+  </div>
 )
 
 /**
@@ -76,7 +78,7 @@ const SiteSearchMenuPane = ({ showMenu, handleClickEvent }) => {
 const SiteSearchMenu = ({ showMenu, selectedIndex, children }) => {
   return (
     <div
-      className={`absolute z-100 bg-white p-0 m-0 outline-none shadow-md rounded-md overflow-hidden border border-solid border-gray-200 w-full ${
+      className={`absolute z-100 bg-white p-0 m-0 outline-none shadow-md rounded-md overflow-hidden border border-solid border-slate-200 w-full ${
         showMenu ? "block" : "hidden"
       }`}
     >

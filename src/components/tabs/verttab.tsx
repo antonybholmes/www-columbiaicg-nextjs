@@ -18,7 +18,7 @@ class VertTab extends Component<
     const className = `block cursor-pointer px-3 h-10 text-sm font-medium trans-ani w-full text-left ${
       activeTab
         ? "text-cuimc-button-blue"
-        : "border-transparent text-gray-400 hover:text-default-color"
+        : "border-transparent text-slate-400 hover:text-default-color"
     }`
 
     return (

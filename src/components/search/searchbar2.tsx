@@ -41,10 +41,12 @@ const ClearButton: React.FC<ClearButtonProps> = ({ onClick }) => {
     <button
       onMouseEnter={onMouseEnter}
       onMouseLeave={onMouseLeave}
-      className={`mx-2 trans-ani ${hover ? "text-gray-700" : "text-gray-500"}`}
+      className={`mx-2 trans-ani ${
+        hover ? "text-slate-700" : "text-slate-500"
+      }`}
       onClick={onClick}
     >
-      {/* <Row isCentered={true}><div className="rounded-full w-6 h-6 bg-gray-500 text-white-95"><FontAwesomeIcon icon="times"/></div></Row> */}
+      {/* <Row isCentered={true}><div className="rounded-full w-6 h-6 bg-slate-500 text-white-95"><FontAwesomeIcon icon="times"/></div></Row> */}
       Clear
     </button>
   )
@@ -131,7 +133,7 @@ const SearchBar2: React.FC<SearchBarProps> = ({
         className={`w-full px-4 h-full py-2 rounded-full trans-ani bg-cuimc-light-gray`}
       >
         <div className="cursor-pointer mr-2" onClick={handleOnClick}>
-          <FontAwesomeIcon icon={faSearch} className={`text-gray-500`} />
+          <FontAwesomeIcon icon={faSearch} className={`text-slate-500`} />
         </div>
         <div className="w-full ">
           <input

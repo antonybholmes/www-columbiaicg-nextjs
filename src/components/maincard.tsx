@@ -6,7 +6,7 @@ type MainCard = {
 }
 
 const MainCard = ({ className, children }: MainCard) => (
-  <div className={`bg-gray-100 p-8 rounded ${className}`}>{children}</div>
+  <div className={`bg-slate-100 p-8 rounded ${className}`}>{children}</div>
 )
 
 export default MainCard

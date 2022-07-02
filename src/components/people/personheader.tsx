@@ -101,7 +101,7 @@ const PersonHeader: React.FC<PersonHeaderProps> = ({
           {titles.map((title: string, index: number) => {
             return (
               <h4
-                className="text-center m-0 font-light text-gray-600"
+                className="text-center m-0 font-light text-slate-600"
                 key={index}
               >
                 {title}
@@ -109,7 +109,7 @@ const PersonHeader: React.FC<PersonHeaderProps> = ({
             )
           })}
         </div>
-        {/* <div className="mt-4 border border-solid border-gray-400 w-3/10 h-0 mx-auto"/> */}
+        {/* <div className="mt-4 border border-solid border-slate-400 w-3/10 h-0 mx-auto"/> */}
       </div>
     </FullDiv>
   )

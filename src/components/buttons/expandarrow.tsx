@@ -48,7 +48,7 @@ const ExpandArrow: React.FC<ButtonProps> = ({ isExpanded, hover }) => {
         <FontAwesomeIcon
           icon={faChevronDown} //{isExpanded ? "chevron-up" : "chevron-down"}
           className={`trans-ani text-sm ${
-            hover || _hover ? "text-black" : "text-gray-300"
+            hover || _hover ? "text-black" : "text-slate-300"
           }`}
         />
       </div>

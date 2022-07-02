@@ -17,7 +17,7 @@ type SiteSearchResultProps = {
 const SiteSearchResult: React.FC<SiteSearchResultProps> = ({ to, text }) => {
   return (
     <BaseLink to={to}>
-      <Row className="px-4 py-2 cursor-pointer hover:bg-gray-200 trans-ani">
+      <Row className="px-4 py-2 cursor-pointer hover:bg-slate-200 trans-ani">
         <div>{text}</div>
       </Row>
     </BaseLink>
@@ -44,8 +44,8 @@ const MenuItem: React.FC<MenuItemProps> = ({ link, onClick }) => {
     <li className="inline-block w-1/2">
       <BaseLink to={link.link} onClick={onClick}>
         <Row
-          className={`py-3 px-6 font-semibold trans-ani text-gray-500 ${
-            hover ? "text-gray-900" : ""
+          className={`py-3 px-6 font-semibold trans-ani text-slate-500 ${
+            hover ? "text-slate-900" : ""
           }`}
           onMouseEnter={onMouseEnter}
           onMouseLeave={onMouseLeave}

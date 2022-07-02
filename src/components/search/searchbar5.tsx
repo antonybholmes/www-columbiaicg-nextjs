@@ -41,7 +41,7 @@ const ClearButton = ({ onClick }: ClearButtonProps) => {
     <button
       onMouseEnter={onMouseEnter}
       onMouseLeave={onMouseLeave}
-      className={`trans-ani ${hover ? "text-gray-700" : "text-gray-500"}`}
+      className={`trans-ani ${hover ? "text-slate-700" : "text-slate-500"}`}
       onClick={onClick}
     >
       Clear
@@ -121,7 +121,7 @@ const SearchBar5 = ({
         <FontAwesomeIcon
           icon={faSearch}
           className={`text-lg trans-ani ${
-            hover || value !== "" ? "text-gray-700" : "text-gray-500"
+            hover || value !== "" ? "text-slate-700" : "text-slate-400"
           }`}
         />
       </button>

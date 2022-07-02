@@ -32,7 +32,7 @@ export const SideContactCard = ({
 
     // <FlatCard className={className}>{children}</FlatCard>
     <div
-      className={`border-t-3 border-solid border-cuimc-orange-40 pt-4 ${className}`}
+      className={`border-t-4 border-solid border-columbia-blue pt-4 ${className}`}
     >
       {title !== "" && <h3 className={`mb-4`}>{title}</h3>}
 

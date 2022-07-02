@@ -27,8 +27,8 @@ const RoomLink: React.FC<RoomLinkProps> = ({
 )
 
 RoomLink.defaultProps = {
-  color: "text-gray-500",
-  hoverColor: "text-gray-500",
+  color: "text-slate-500",
+  hoverColor: "text-slate-500",
   size: "text-xl",
   iconSize: "text-xl",
 }

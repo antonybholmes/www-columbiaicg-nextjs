@@ -112,7 +112,7 @@ const IconLink: React.FC<IconLinkProps> = ({
 IconLink.defaultProps = {
   name: "",
   to: "",
-  color: "text-gray-400",
+  color: "text-slate-400",
   hoverColor: "text-blue-900",
 }
 

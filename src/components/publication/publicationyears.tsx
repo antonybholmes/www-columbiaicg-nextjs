@@ -97,7 +97,7 @@ const YearMarker: React.FC<YearMarkerProps> = ({ year, onClick }) => {
         onMouseEnter={mouseEnterHandler}
         onMouseLeave={mouseLeaveHandler}
         onClick={() => _handleClick(year)}
-        className="text-gray-500 hover:text-default-blue trans-ani cursor-pointer"
+        className="text-slate-500 hover:text-default-blue trans-ani cursor-pointer"
       >
         <h5>{year}</h5>
       </div>
@@ -143,7 +143,7 @@ const PublicationYears: React.FC<PublicationYearsProps> = ({
         .map((year, index) => {
           return (
             <Row
-              className="mb-8 border-b border-solid border-gray-300"
+              className="mb-8 border-b border-solid border-slate-300"
               key={index}
               size="lg"
             >
@@ -176,7 +176,7 @@ const PublicationYears: React.FC<PublicationYearsProps> = ({
               </div>
             </Row>
             // <div className="mb-8">
-            //   <h3 className={`text-gray-700 mb-2`} key={`header-${year}`}>
+            //   <h3 className={`text-slate-700 mb-2`} key={`header-${year}`}>
             //     {year}
             //   </h3>
             //   <Card className="p-4 md:p-8">

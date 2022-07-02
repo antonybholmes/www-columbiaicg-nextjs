@@ -42,7 +42,7 @@ const URLLink: React.FC<URLLinkProps> = ({ url, color, hoverColor, size }) => {
 }
 
 URLLink.defaultProps = {
-  color: "text-gray-500",
+  color: "text-slate-500",
   hoverColor: "text-blue-500",
   size: "text-xl",
 }

@@ -40,7 +40,7 @@ const CheckBox = ({ selected, onChange, children }: CheckBoxProps) => {
         className={`w-6 h-6 border border-solid rounded-full trans-ani ${
           selected
             ? "bg-cuimc-button-blue-80 border-transparent text-white"
-            : "border-gray-300 bg-white"
+            : "border-slate-300 bg-white"
         }`}
       >
         {selected && (

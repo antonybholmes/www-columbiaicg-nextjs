@@ -37,6 +37,8 @@ import ExpandButton from "../../components/buttons/expandbutton"
 import PageLayout from "../../layouts/pagelayout"
 import BaseLink from "../../components/buttons/baselink"
 import getFaculty from "../../lib/faculty"
+import { getAllPeople, getPeopleMap } from "../../lib/api"
+import IFieldMap from "../../types/field-map"
 
 const EMPTY_QUERY = ""
 
@@ -112,7 +114,7 @@ export const FacultyCard = ({ person, imageMap }: FacultyCardProps) => {
 
   const titles = useContextName("", person.titleMap).split(";")
 
-  const fluid = imageMap[person.frontmatter.personId]
+  const fluid = imageMap[person.fields.personId]
   // let generic = false
 
   // if (person.frontmatter.personId in imageMap) {
@@ -124,7 +126,7 @@ export const FacultyCard = ({ person, imageMap }: FacultyCardProps) => {
 
   return (
     <BaseLink
-      to={`${FACULTY_PATH}/${person.frontmatter.personId}`}
+      to={`${FACULTY_PATH}/${person.fields.personId}`}
       className={`block w-full h-full trans-ani ${
         hover ? "text-cuimc-button-blue" : ""
       }`}
@@ -136,7 +138,7 @@ export const FacultyCard = ({ person, imageMap }: FacultyCardProps) => {
             <BWImage
               image={fluid}
               extZoom={hover}
-              alt={person.frontmatter.name}
+              alt={`${person.fields.firstName} ${person.fields.lastName}`}
               className={`w-64`}
               onMouseEnter={handleMouseEnter}
               onMouseLeave={handleMouseLeave}
@@ -151,7 +153,7 @@ export const FacultyCard = ({ person, imageMap }: FacultyCardProps) => {
           <Row isCentered={true}>
             <div className={`w-full h-full py-4 text-center`}>
               {/* <h3 className="m-0">{`${person.frontmatter.name}, ${person.frontmatter.postNominalLetters}`}</h3> */}
-              <h4 className="m-0 font-medium">{`${person.frontmatter.name}`}</h4>
+              <h4 className="m-0 font-medium">{`${person.fields.firstName} ${person.fields.lastName}`}</h4>
               <div>{titles[0]}</div>
             </div>
           </Row>
@@ -164,7 +166,7 @@ export const FacultyCard = ({ person, imageMap }: FacultyCardProps) => {
               image={fluid}
               extZoom={hover}
               className={`w-64`}
-              alt={person.frontmatter.name}
+              alt={`${person.fields.firstName} ${person.fields.lastName}`}
               onMouseEnter={handleMouseEnter}
               onMouseLeave={handleMouseLeave}
             />
@@ -179,7 +181,7 @@ export const FacultyCard = ({ person, imageMap }: FacultyCardProps) => {
 
           <div className={`w-full h-full py-4`}>
             {/* <h4 className="m-0">{`${person.frontmatter.name}, ${person.frontmatter.postNominalLetters}`}</h4> */}
-            <h5 className="m-0 font-medium">{`${person.frontmatter.name}`}</h5>
+            <h5 className="m-0 font-medium">{`${person.fields.firstName} ${person.fields.lastName}`}</h5>
             <div className={`text-sm`}>{titles[0]}</div>
           </div>
         </div>
@@ -190,27 +192,20 @@ export const FacultyCard = ({ person, imageMap }: FacultyCardProps) => {
 
 interface StaffGridProps {
   people: any[]
-  imageMap?: any
-  colWidth?: string
+  imageMap?: IFieldMap
 }
 
-export const StaffGrid = ({
-  people,
-  imageMap = {},
-  colWidth = "w-full sm:w-1/3 md:w-1/4 xl:w-1/5 3xl:w-16/100",
-}: StaffGridProps) => {
-  const ret: any[] = []
-
-  people.map((person: any, index: number) => {
-    ret.push(
-      <li className={`block ${colWidth} mx-4 mb-4`} key={`person-${index}`}>
-        <FacultyCard person={person.person} imageMap={imageMap} />
-      </li>
-    )
-  })
-
-  return <ul className="flex flex-row flex-wrap -mx-4">{ret}</ul>
-}
+export const StaffGrid = ({ people, imageMap = {} }: StaffGridProps) => (
+  <ul className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-8">
+    {people.map((person: any, index: number) => {
+      return (
+        <li key={`person-${index}`}>
+          <FacultyCard person={person} imageMap={imageMap} />
+        </li>
+      )
+    })}
+  </ul>
+)
 
 interface TeamProps {
   labGroupMap: any
@@ -224,7 +219,7 @@ export const Team = ({
   imageMap = {},
 }: TeamProps) => (
   <SectionCard name="Meet The Team" className="mt-16">
-    {/* <div className="border border-solid border-gray-200 rounded-lg p-4"> */}
+    {/* <div className="border border-solid border-slate-200 rounded-lg p-4"> */}
 
     <PeopleGroups
       groupMap={labGroupMap}
@@ -313,7 +308,7 @@ export const About = ({ data }: AboutProps) => {
 //   cols: 4,
 //   colWidth: "w-full sm:w-9/20 lg:w-3/10 xl:w-22/100 2xl:w-18/100 3xl:w-3/20",
 //   imageSize: 60,
-//   headingColor: "text-gray-700 md:text-gray-600",
+//   headingColor: "text-slate-700 md:text-slate-600",
 // }
 
 // export const staff = (
@@ -497,7 +492,7 @@ export const AdminTitles = ({ titles }: AdminTitlesProps) => (
             <Row>
               <FontAwesomeIcon
                 icon="circle"
-                className="mr-4 text-gray-300 text-xxs"
+                className="mr-4 text-slate-300 text-xxs"
               />
               <div>{title}</div>
             </Row>
@@ -835,7 +830,7 @@ export const HeaderSection = ({
   // if (data.header !== null) {
   return (
     <HideSmall
-      className={`relative border-b border-solid border-gray-200`}
+      className={`relative border-b border-solid border-slate-200`}
       ref={bgEl}
       size="lg"
     >
@@ -922,7 +917,7 @@ const Page = ({ allFaculty }: PageProps) => {
     }
   }, [query])
 
-  const faculty: Array<any> = query !== "" ? filteredFaculty : allFaculty
+  const faculty: any[] = query !== "" ? filteredFaculty : allFaculty
 
   const person: any = null
 
@@ -930,11 +925,13 @@ const Page = ({ allFaculty }: PageProps) => {
     person !== null ? useContextName("admin", person.titleMap, true) : ""
   const adminTitles = titles !== "" ? titles.split(";") : []
 
+  console.log(faculty)
+
   return (
     <PageLayout
       path={"/research-areas/faculty"}
       crumbs={[["Publications", FACULTY_PATH]]}
-      title={"Facuty"}
+      title={"Faculty"}
       nav="Faculty"
       //crumbLocation="none"
       // titleContent={
@@ -973,7 +970,7 @@ const Page = ({ allFaculty }: PageProps) => {
                 <AltView size="xl">
                   <>
                     <PersonHeader person={person} imageMap={imageMap} />
-                    <div className="mt-8 bg-gray-100 p-8">
+                    <div className="mt-8 bg-slate-100 p-8">
                       {/* <Abstract h="h-48"> */}
                       <About data={data} />
                       {/* </Abstract> */}
@@ -1124,11 +1121,19 @@ type Params = {
 }
 
 export async function getStaticProps({ params }: Params) {
-  const faculty = getFaculty()
+  const allFaculty = getFaculty()
+  const people = getAllPeople()
+  const peopleMap = getPeopleMap(people)
+
+  allFaculty.forEach((faculty: any) => {
+    faculty.people = faculty.peopleList.map(
+      (person: any) => peopleMap[person.person]
+    )
+  })
 
   return {
     props: {
-      allFaculty: faculty,
+      allFaculty: allFaculty,
     },
   }
 }

@@ -41,7 +41,9 @@ const ClearButton: React.FC<ClearButtonProps> = ({ onClick }) => {
     <button
       onMouseEnter={onMouseEnter}
       onMouseLeave={onMouseLeave}
-      className={`mr-4 trans-ani ${hover ? "text-gray-700" : "text-gray-500"}`}
+      className={`mr-4 trans-ani ${
+        hover ? "text-slate-700" : "text-slate-500"
+      }`}
       onClick={onClick}
     >
       Clear
@@ -118,7 +120,7 @@ const SearchBar3: React.FC<SearchBarProps> = ({
       onMouseLeave={onMouseLeave}
     >
       <button className="mx-2" onClick={handleOnClick}>
-        <FontAwesomeIcon icon={faSearch} className={`text-lg text-gray-600`} />
+        <FontAwesomeIcon icon={faSearch} className={`text-lg text-slate-600`} />
       </button>
       <div className="w-full mr-2">
         <input

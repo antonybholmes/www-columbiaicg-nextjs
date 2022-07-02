@@ -12,7 +12,7 @@ const SlideMenuLink: React.FC<SlideMenuLinkProps> = ({
   children,
 }) => (
   <Link to={to}>
-    <div className="py-3 px-6 hover:bg-gray-300">
+    <div className="py-3 px-6 hover:bg-slate-300">
       {children}
       {/* {!active && (
         <div>

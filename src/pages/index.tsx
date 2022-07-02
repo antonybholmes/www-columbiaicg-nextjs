@@ -46,11 +46,7 @@ const Index = ({ allPosts }: Props) => {
 export default Index
 
 export const getStaticProps = async () => {
-  console.log("df", LABS_DIRECTORY)
-
   const allLabs = getAllLabs()
-
-  console.log(allLabs)
 
   const allPosts = getAllPosts([
     "title",

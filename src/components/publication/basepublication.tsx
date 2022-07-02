@@ -39,7 +39,7 @@ export const FriendlyUrl: React.FC<FriendlyUrlProps> = ({ url }) => {
     ret.push(
       <div
         className={`trans-ani ${
-          hover ? "text-blue-500" : index > 0 ? "text-gray-500" : ""
+          hover ? "text-blue-500" : index > 0 ? "text-slate-500" : ""
         }`}
         key={index}
       >
@@ -52,7 +52,7 @@ export const FriendlyUrl: React.FC<FriendlyUrlProps> = ({ url }) => {
         <FontAwesomeIcon
           icon="angle-right"
           className={`mx-1 trans-ani ${
-            hover ? "text-blue-500" : "text-gray-500"
+            hover ? "text-blue-500" : "text-slate-500"
           }`}
           key={`sep-${index}`}
         />
@@ -119,7 +119,7 @@ const Abstract: React.FC<AbstractProps> = ({ publication, maxWords }) => {
 
       {/* <RightDiv className="text-sm mt-1">
         <button
-          className="text-gray-500 hover:text-default-blue trans-ani"
+          className="text-slate-500 hover:text-default-blue trans-ani"
           onClick={() => setExpanded(!expanded)}
         >{`Read ${expanded ? "less" : "more"}`}</button>
       </RightDiv> */}
@@ -280,7 +280,7 @@ const PubLink = ({ name, icon, to, className }: PubLinkProps) => {
         onMouseEnter={onMouseEnter}
         onMouseLeave={onMouseLeave}
         className={`trans-ani ${
-          hover ? "text-default-blue" : "text-gray-400"
+          hover ? "text-default-blue" : "text-slate-400"
         } ${className}`}
       >
         <div className="mr-1">{name}</div>

@@ -79,8 +79,8 @@ const SimpleCard = React.forwardRef<SimpleCardProps, any>(
                 hoverBg !== "" ? `md:hover:${hoverBg}` : ""
               } md:${padding} ${
                 showShadow
-                  ? `md:hover:border-gray-200 md:hover:shadow-card ${
-                      alwaysOn ? "border-gray-200 shadow-card" : ""
+                  ? `md:hover:border-slate-200 md:hover:shadow-card ${
+                      alwaysOn ? "border-slate-200 shadow-card" : ""
                     }`
                   : ""
               }`
@@ -88,8 +88,8 @@ const SimpleCard = React.forwardRef<SimpleCardProps, any>(
                 hoverBg !== "" ? `md:hover:${hoverBg}` : ""
               } ${padding} ${
                 showShadow
-                  ? `hover:border-gray-200 hover:shadow-card ${
-                      alwaysOn ? "border-gray-200 shadow-card" : ""
+                  ? `hover:border-slate-200 hover:shadow-card ${
+                      alwaysOn ? "border-slate-200 shadow-card" : ""
                     }`
                   : ""
               }`

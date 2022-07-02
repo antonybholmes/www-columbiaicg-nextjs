@@ -1,31 +1,30 @@
-import React from "react"
 import { FACULTY_PATH } from "../../constants"
 import BlueLink from "../buttons/bluelink"
 import WhiteLink from "../buttons/whitelink"
 //import WhiteLink from "../whitelink"
 
-type LinkProps = {
+interface LinkProps {
   person: any
   color?: string
 }
 
-const FacultyLink: React.FC<LinkProps> = ({ person, color = "blue" }) => {
-  const name = `${person.frontmatter.name}${
-    person.frontmatter.postNominalLetters !== ""
-      ? `, ${person.frontmatter.postNominalLetters}`
+const FacultyLink = ({ person, color = "blue" }: LinkProps) => {
+  const name = `${person.fields.firstName} ${person.fields.lastName}${
+    person.fields.postNominalLetters !== ""
+      ? `, ${person.fields.postNominalLetters}`
       : ""
   }`
 
   switch (color) {
     case "white":
       return (
-        <WhiteLink to={`${FACULTY_PATH}/${person.frontmatter.personId}`}>
+        <WhiteLink to={`${FACULTY_PATH}/${person.fields.personId}`}>
           {name}
         </WhiteLink>
       )
     default:
       return (
-        <BlueLink to={`${FACULTY_PATH}/${person.frontmatter.personId}`}>
+        <BlueLink to={`${FACULTY_PATH}/${person.fields.personId}`}>
           {name}
         </BlueLink>
       )

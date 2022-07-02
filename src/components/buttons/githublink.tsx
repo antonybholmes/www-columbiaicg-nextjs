@@ -30,7 +30,7 @@ const GitHubLink: React.FC<LinkProps> = ({
 )
 
 GitHubLink.defaultProps = {
-  color: "text-gray-500",
+  color: "text-slate-500",
   hoverColor: "text-blue-500",
   size: "text-xl",
   iconSize: "text-xl",

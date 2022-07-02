@@ -87,7 +87,7 @@ const FlatCard = React.forwardRef<CardProps, any>(
       }
 
       if (showBorder && bg === "bg-white") {
-        cls.append(` border border-solid border-gray-200`)
+        cls.append(` border border-solid border-slate-200`)
       }
     } else {
       if (rounded) {
@@ -99,7 +99,7 @@ const FlatCard = React.forwardRef<CardProps, any>(
       }
 
       if (showBorder && bg === "bg-white") {
-        cls.append(` border border-solid border-gray-200`)
+        cls.append(` border border-solid border-slate-200`)
       }
     }
 

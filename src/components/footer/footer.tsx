@@ -127,7 +127,7 @@ const Footer: React.FC<FooterProps> = ({ crumbs }) => {
         </Container>
       </div>
       {/* 
-      <InfoDiv className="text-xs font-medium py-8 bg-gray-100">
+      <InfoDiv className="text-xs font-medium py-8 bg-slate-100">
         <Container>
           <Row className="md:justify-end">
             <div>

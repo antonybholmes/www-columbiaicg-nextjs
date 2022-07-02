@@ -41,7 +41,7 @@ Divider.defaultProps = {
   opacity: 1,
 }
 
-type BreadcrumbProps = {
+interface BreadcrumbProps {
   crumbs?: [string, string][]
   color?: string
   color2?: string
@@ -51,14 +51,14 @@ type BreadcrumbProps = {
   className?: string
 }
 
-const Breadcrumb: React.FC<BreadcrumbProps> = ({
+const Breadcrumb = ({
   crumbs = [],
-  color,
-  color2,
+  color = "white",
+  color2 = "white",
   content,
-  fontSize,
+  fontSize = "text-sm",
   className,
-}) => {
+}: BreadcrumbProps) => {
   if (crumbs !== null && crumbs.length > 0) {
     const ret = []
 
@@ -75,7 +75,7 @@ const Breadcrumb: React.FC<BreadcrumbProps> = ({
         cls = `${cls} text-cuimc-blue hover:text-cuimc-button-blue`
         break
       case "gray":
-        cls = `${cls} text-default-gray hover:text-cuimc-button-blue`
+        cls = `${cls} text-slate-400 hover:text-cuimc-button-blue`
         break
       case "white":
         cls = `${cls} text-white-70 hover:text-white`
@@ -128,16 +128,6 @@ const Breadcrumb: React.FC<BreadcrumbProps> = ({
   } else {
     return <></>
   }
-}
-
-Breadcrumb.defaultProps = {
-  crumbs: [],
-  className: "",
-  fontSize: "text-sm",
-  content: null,
-  color: "white",
-  color2: "white",
-  opacity: 70,
 }
 
 export default Breadcrumb

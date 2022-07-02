@@ -10,8 +10,8 @@ import SelectItem from "../filter/selectitem"
 
 const AllType = ({ text, onClick, selected, children, className }) => (
   <SelectItem
-    className={`font-medium text-sm px-5 py-2 text-center hover:bg-gray-200 trans-ani ${className}`}
-    selectedClassName="bg-gray-300"
+    className={`font-medium text-sm px-5 py-2 text-center hover:bg-slate-200 trans-ani ${className}`}
+    selectedClassName="bg-slate-300"
     onClick={onClick}
     text={text}
     selected={selected}
@@ -22,7 +22,7 @@ const AllType = ({ text, onClick, selected, children, className }) => (
 
 const SelectType = ({ text, onClick, selected, children }) => (
   <AllType
-    className="border-l border-solid border-gray-400"
+    className="border-l border-solid border-slate-400"
     onClick={onClick}
     text={text}
     selected={selected}
@@ -42,7 +42,7 @@ const TypeSelector = ({ onClick }) => {
   }
 
   return (
-    <div className="row items-center rounded-md border border-solid border-gray-400 cursor-pointer overflow-hidden">
+    <div className="row items-center rounded-md border border-solid border-slate-400 cursor-pointer overflow-hidden">
       <AllType
         onClick={_handleClick}
         text="All"

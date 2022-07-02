@@ -26,7 +26,7 @@ const SlideMenuCloseButton: React.FC<SlideMenuCloseButtonProps> = ({
       onClick={onClick}
       onMouseEnter={onMouseEnter}
       onMouseLeave={onMouseLeave}
-      className={`p-2 trans-ani ${hover ? "text-gray-800" : "text-gray-400"}`}
+      className={`p-2 trans-ani ${hover ? "text-slate-800" : "text-slate-400"}`}
     >
       <Row isCentered={true}>
         <FontAwesomeIcon icon={faTimes} size="lg" />

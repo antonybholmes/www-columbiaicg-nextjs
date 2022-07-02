@@ -21,7 +21,7 @@ const TopPub: React.FC<TopPubProps> = ({ journal, onClick }) => {
       className={`justify-between text-sm  cursor-pointer trans-ani mb-1 border border-solid rounded-full px-3 py-1 ${
         hover
           ? " border-cuimc-button-blue bg-cuimc-button-blue-5"
-          : "border-gray-200 "
+          : "border-slate-200 "
       }`}
       onClick={onClick}
       onMouseEnter={mouseEnterHandler}

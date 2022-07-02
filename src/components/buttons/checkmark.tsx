@@ -17,7 +17,7 @@ const CheckMark = ({ selected, hover, className }: CheckMarkProps) => {
       className={`w-5 h-5 min-w-5 min-h-5 rounded  ${
         selected
           ? "bg-cuimc-button-blue-70 text-white"
-          : `trans-ani border-2 border-solid border-gray-200 bg-white ${
+          : `trans-ani border-2 border-solid border-slate-200 bg-white ${
               hover ? "border-cuimc-button-blue-70" : ""
             }`
       } ${className}`}

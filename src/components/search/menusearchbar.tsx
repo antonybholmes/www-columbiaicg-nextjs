@@ -108,7 +108,7 @@ const MenuSearchBar = ({
         <FontAwesomeIcon
           icon={faSearch}
           className={`cursor-pointer ${
-            expanded || hover ? "text-blue-500" : "text-gray-400"
+            expanded || hover ? "text-blue-500" : "text-slate-400"
           } trans-ani mx-2 text-lg`}
           onClick={onClick}
         />
