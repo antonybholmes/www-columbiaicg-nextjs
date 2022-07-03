@@ -1,27 +1,66 @@
-import { useState, useEffect, ReactNode } from "react"
-import Container from "../../components/container"
-import useContextName from "../../hooks/contextname"
-import Row from "../../components/row"
-import { FACULTY_PATH, GROUPS } from "../../constants"
-import useBooleanSearch from "../../hooks/booleansearch"
-import BWImage from "../../components/images/bwimage"
-import BlueLink from "../../components/buttons/bluelink"
-import AltView from "../../components/altview"
-import RecentPublications from "../../components/publication/recentpublications"
-import useSortPublications from "../../hooks/sortpublications"
-import PubMedLink from "../../components/buttons/pubmedlink"
+import { useState, useEffect, useRef, ReactNode } from "react"
+import Container from "../../../components/container"
+import ShowSmall from "../../../components/showsmall"
+import HideSmall from "../../../components/hidesmall"
+import useImageMap from "../../../hooks/imagemap"
+import useContextName from "../../../hooks/contextname"
+import FlHdDiv from "../../../components/flhddiv"
+import Row from "../../../components/row"
+import useBreakpoints from "../../../hooks/breakpoints"
+import {
+  FACULTY_PATH,
+  GROUPS,
+  TEXT_LAB_PUBS,
+  TEXT_LAB_WEBSITE,
+  TEXT_MY_PUBS,
+} from "../../../constants"
+import useBooleanSearch from "../../../hooks/booleansearch"
+import BWImage from "../../../components/images/bwimage"
+import PersonHeader from "../../../components/people/personheader"
+import ContactCard from "../../../components/people/contactcard"
+import PersonHeaderHoz from "../../../components/people/personheaderhoz"
+import BlueLink from "../../../components/buttons/bluelink"
+import AltView from "../../../components/altview"
+import MainSideCol from "../../../components/mainsidecol"
+import BlueButtonLink from "../../../components/buttons/bluebuttonlink"
+import RecentPublications from "../../../components/publication/recentpublications"
+import useSortPublications from "../../../hooks/sortpublications"
+import PubMedLink from "../../../components/buttons/pubmedlink"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { gsap } from "gsap"
-import HTMLDiv from "../../components/htmldiv"
-import VertTabs from "../../components/tabs/verttabs"
-import Collapsible2 from "../../components/collapsible2"
-import PeopleGroups from "../../components/people/peoplegroups"
-import PageLayout from "../../layouts/pagelayout"
-import BaseLink from "../../components/buttons/baselink"
-import getFaculty from "../../lib/faculty"
-import { getAllPeople, getPeopleMap } from "../../lib/api"
-import IFieldMap from "../../types/field-map"
-import { getPersonName } from "../../lib/people"
+import MainCard from "../../../components/maincard"
+import HTMLDiv from "../../../components/htmldiv"
+import VertTabs from "../../../components/tabs/verttabs"
+import Collapsible2 from "../../../components/collapsible2"
+import PeopleGroups from "../../../components/people/peoplegroups"
+import BaseImage from "../../../components/images/base-image"
+import ExpandButton from "../../../components/buttons/expandbutton"
+import PageLayout from "../../../layouts/pagelayout"
+import BaseLink from "../../../components/buttons/baselink"
+import getFaculty from "../../../lib/faculty"
+import {
+  getAllLabs,
+  getAllPeople,
+  getLabMap,
+  getPeopleMap,
+  getSlugs,
+  LABS_DIRECTORY,
+} from "../../../lib/api"
+import IFieldMap from "../../../types/field-map"
+import { getPersonName, toLabPeopleMap } from "../../../lib/people"
+import getFacultyLabs from "../../../lib/faculty-labs"
+import {
+  faChevronDown,
+  faChevronRight,
+  faChevronUp,
+} from "@fortawesome/free-solid-svg-icons"
+import { join } from "path"
+import fs from "fs"
+import usePublications from "../../../hooks/publications"
+import useSelectedPublications from "../../../hooks/selected-publications"
+import { SideContactCard } from "../../../components/side-contact-card"
+import ICrumb from "../../../types/crumb"
+import PublicationsPage from "../../../components/pages/publications-page"
 
 const EMPTY_QUERY = ""
 
@@ -509,8 +548,6 @@ export const booleanSearchAnd = (s1: any, s2: any): any => {
 }
 
 export const booleanSearchOr = (s1: any, s2: any): any => {
-  const names: Set<any> = new Set()
-
   const peopleMap: any = {}
 
   for (let group of s1) {
@@ -702,7 +739,7 @@ const HeaderExpandButton = ({ onClick, expanded }: HeaderExpandButtonProps) => {
           className="flex flex-col justify-center absolute top-0 right-0 h-full mr-2"
         >
           <FontAwesomeIcon
-            icon={expanded ? "chevron-up" : "chevron-down"}
+            icon={expanded ? faChevronUp : faChevronDown}
             className={`text-xl`}
           />
         </div>
@@ -711,11 +748,98 @@ const HeaderExpandButton = ({ onClick, expanded }: HeaderExpandButtonProps) => {
   )
 }
 
-interface PageProps {
-  allFaculty: any[]
+interface HeaderSectionProps {
+  expanded: boolean
+  person: any
+  breakpoint?: string
+  children?: ReactNode
 }
 
-const Page = ({ allFaculty }: PageProps) => {
+export const HeaderSection = ({
+  person,
+  expanded,
+  breakpoint = "3xl",
+  children,
+}: HeaderSectionProps) => {
+  //const [expanded, setExpanded] = useState(false)
+
+  let bgEl = useRef(null)
+
+  useEffect(() => {
+    let tl = gsap.timeline()
+
+    let h
+
+    switch (breakpoint) {
+      case "sm":
+        h = "14rem"
+        break
+      case "md":
+        h = "16rem"
+        break
+      case "lg":
+        h = "22rem"
+        break
+      case "xl":
+        h = "24rem"
+        break
+      case "2xl":
+        h = "26rem"
+        break
+      default:
+        h = "28rem"
+        break
+    }
+
+    tl.to(
+      bgEl.current,
+      0.5,
+      { height: expanded ? "70rem" : h, ease: "power3.inOut" },
+      0
+    )
+  }, [expanded, breakpoint])
+
+  // const _handleClick = (e: any) => {
+  //   const ret = !expanded
+  //   setExpanded(ret)
+
+  //   if (onExpand !== null) {
+  //     onExpand(ret)
+  //   }
+  // }
+
+  // if (data.header !== null) {
+  return (
+    <HideSmall
+      className={`relative border-b border-solid border-slate-200`}
+      ref={bgEl}
+      size="lg"
+    >
+      <BaseImage
+        alt="Heading"
+        src={`faculty/header/${person.fields.personId}.jpg`}
+        size={[1600, 900]}
+        className="w-full h-full object-cover"
+      />
+
+      {children}
+
+      {/* <Row className="absolute bottom-0 justify-end w-full">
+        <HeaderExpandButton onClick={_handleClick} expanded={expanded} />
+      </Row> */}
+    </HideSmall>
+  )
+  // } else {
+  //   return <></>
+  // }
+}
+
+interface FacultyPageProps {
+  person: any
+  lab: any
+}
+
+const FacultyPage = ({ person, lab }: FacultyPageProps) => {
   const handleSearch = (text: string, clicked: boolean) => {
     setQuery(text)
   }
@@ -727,36 +851,172 @@ const Page = ({ allFaculty }: PageProps) => {
   const [expanded, setExpanded] = useState(false)
   const [query, setQuery] = useState(EMPTY_QUERY)
   const [filteredFaculty, setFilteredFaculty] = useState<Array<any>>([])
+  const breakpoint = useBreakpoints()
+
+  //const [allPublications, setAllPublications] = useState<Array<any>>([])
+
+  // const [selectedPublications, setSelectedPublications] = useState<Array<any>>(
+  //   []
+  // )
+
+  const [pubHtml, setPubHtml] = useState(null)
+
+  // const allPublications =
+  //   data.allPublications.edges.length > 0
+  //     ? data.allPublications.edges[0].node.publications
+  //     : []
+
+  const facultyMember: any = null
+
+  const headerImageCredit: string = ""
+  //data.faculty !== null ? facultyMember.fields.headerImageCredit : ""
+
+  //const [page, setPage] = useState(1)
+  //const [recordsPerPage, setRecordsPerPage] = useState(20)
+
+  const [selectedPublications, setSelectedPublications] = useState<any[]>([])
 
   useEffect(() => {
-    if (query !== "") {
-      setFilteredFaculty(
-        useBooleanSearch(
-          query,
-          faculty,
-          search,
-          booleanSearchAnd,
-          booleanSearchOr
-        )
-      )
-    } else {
-      setFilteredFaculty([])
-    }
-  }, [query])
+    useSelectedPublications(setSelectedPublications, person.fields.personId)
+  }, [])
 
-  const faculty: any[] = query !== "" ? filteredFaculty : allFaculty
-
-  const person: any = null
-
-  const titles =
-    person !== null ? useContextName("admin", person.titleMap, true) : ""
+  const titles = person ? useContextName("admin", person.titleMap, true) : ""
 
   const adminTitles = titles !== "" ? titles.split(";") : []
 
+  const data = {}
+
+  const path = `/research-areas/faculty/${person.fields.personId}`
+
+  return (
+    <>
+      <HeaderSection
+        person={person}
+        breakpoint={breakpoint}
+        expanded={expanded}
+      >
+        <Container className="hidden md:block absolute bottom-0 right-0 text-sm text-white-80 mb-6">
+          {headerImageCredit}
+        </Container>
+      </HeaderSection>
+
+      <Row className="justify-end px-4 py-2">
+        <ExpandButton onClick={handleExpandHeaderClick} isExpanded={expanded} />
+      </Row>
+
+      <Container>
+        <MainSideCol className={`mt-8 mb-16`}>
+          <div>
+            <AltView size="xl">
+              <>
+                <PersonHeader person={person} />
+                <div className="mt-8 bg-slate-100 p-8">
+                  {/* <Abstract h="h-48"> */}
+                  <About data={data} />
+                  {/* </Abstract> */}
+                </div>
+              </>
+              <MainCard>
+                <PersonHeaderHoz person={person} faculty={facultyMember} />
+                <div className="mt-4">
+                  <About data={data} />
+                </div>
+              </MainCard>
+            </AltView>
+
+            {adminTitles.length > 0 && <AdminTitles titles={adminTitles} />}
+
+            <ShowSmall size="xl" className="mt-8">
+              <SectionCard name="Contact" className="mt-8">
+                <ContactCard faculty={facultyMember} person={person} />
+
+                {facultyMember && facultyMember.fields.url !== null && (
+                  <Row className="my-4">
+                    <BlueButtonLink
+                      to={facultyMember.fields.url}
+                      className="w-full lg:w-auto text-center"
+                    >
+                      {TEXT_LAB_WEBSITE}
+                    </BlueButtonLink>
+                  </Row>
+                )}
+              </SectionCard>
+            </ShowSmall>
+
+            {Object.keys(lab.groupMap).length > 0 && (
+              <Team labGroupMap={lab.groupMap} faculty={facultyMember} />
+            )}
+
+            <Publications
+              person={person}
+              allPublications={selectedPublications}
+              showAbstract={false}
+              showMoreButton={false}
+            />
+          </div>
+          <div className="md:ml-10">
+            <SideContactCard title="Contact">
+              <ContactCard faculty={facultyMember} person={person} />
+
+              {facultyMember !== null && facultyMember.fields.url !== null && (
+                <Row className="mt-8">
+                  <BlueButtonLink
+                    to={facultyMember.fields.url}
+                    className="text-center"
+                  >
+                    {TEXT_LAB_WEBSITE}{" "}
+                    <FontAwesomeIcon icon={faChevronRight} className="ml-1" />
+                  </BlueButtonLink>
+
+                  {/* <BlueIndexLink
+                            to={facultyMember.fields.url}
+                            className="w-full lg:w-auto text-center"
+                          >
+                            {strings.labWebSite}
+                          </BlueIndexLink> */}
+                </Row>
+              )}
+
+              <h3 className="mt-24 mb-2">Links</h3>
+              <BlueLink to={`${path}/publications`}>{TEXT_MY_PUBS}</BlueLink>
+            </SideContactCard>
+          </div>
+        </MainSideCol>
+      </Container>
+    </>
+  )
+}
+
+const PubPage = ({ person }: any) => {
+  const [publications, setPublications] = useState<any[]>([])
+
+  useEffect(() => {
+    usePublications(setPublications, person.fields.personId)
+  }, [])
+
+  return <PublicationsPage publications={publications} />
+}
+
+interface PageProps extends FacultyPageProps {
+  slug: string
+  crumbs: ICrumb[]
+}
+
+const Page = ({ slug, person, lab, crumbs }: PageProps) => {
+  let ret = null
+  let path = `/research-areas/faculty/${person.fields.personId}`
+
+  if (slug.includes("publication")) {
+    path = `${path}/publications`
+    ret = <PubPage person={person} />
+  } else {
+    ret = <FacultyPage person={person} lab={lab} />
+  }
+
   return (
     <PageLayout
-      path={"/research-areas/faculty"}
-      crumbs={[["Faculty", FACULTY_PATH]]}
+      path={path}
+      crumbs={crumbs}
       title={"Faculty"}
       nav="Faculty"
       //crumbLocation="none"
@@ -764,54 +1024,7 @@ const Page = ({ allFaculty }: PageProps) => {
       //   <SearchSummary count={groups.length} single="Lab" plural="Labs" />
       // }
     >
-      {/* <SearchBar
-        handleInputChange={handleInputChange}
-        placeholder="Search labs"
-        text={query}
-        className="my-4"
-      /> */}
-
-      <Container>
-        <VertTabs>
-          <div id="Institute">
-            {faculty
-              .filter((g: any) => {
-                return g.name.includes("Director") || g.name === "Members"
-              })
-              .map((g: any) => {
-                return (
-                  <div key={`header-${g.name}`} className="mb-8">
-                    <AltView className="mb-8" size="lg">
-                      <h2 className={`text-center mb-8`}>{g.name}</h2>
-                      <h2 className={``}>{g.name}</h2>
-                    </AltView>
-
-                    <StaffGrid people={g.people} key={g.name} />
-                  </div>
-                )
-              })}
-          </div>
-
-          <div id="Associate Members">
-            {faculty
-              .filter((g: any) => {
-                return g.name.includes("Associate")
-              })
-              .map((g: any) => {
-                return (
-                  <div key={`header-${g.name}`}>
-                    <AltView className="mb-8" size="lg">
-                      <h2 className={`text-center`}>{g.name}</h2>
-                      <h2 className={``}>{g.name}</h2>
-                    </AltView>
-
-                    <StaffGrid people={g.people} key={g.name} />
-                  </div>
-                )
-              })}
-          </div>
-        </VertTabs>
-      </Container>
+      {ret}
     </PageLayout>
   )
 }
@@ -820,25 +1033,80 @@ export default Page
 
 type Params = {
   params: {
-    slug: string
+    slug: string[]
+    crumbs: ICrumb[]
   }
 }
 
 export async function getStaticProps({ params }: Params) {
-  const allFaculty = getFaculty()
+  const pid = params.slug[0]
+  const slug = params.slug.join("/")
+
+  // const allFaculty = getFaculty()
   const people = getAllPeople()
   const peopleMap = getPeopleMap(people)
 
-  allFaculty.forEach((faculty: any) => {
-    faculty.people = faculty.peopleList.map(
-      (person: any) => peopleMap[person.person]
-    )
-  })
+  const person = peopleMap[pid]
+
+  const facultyLabs = getFacultyLabs()
+
+  const labId = facultyLabs[person.fields.personId]
+
+  const lab = JSON.parse(
+    fs.readFileSync(join(LABS_DIRECTORY, `${labId}.json`)).toString()
+  )
+
+  lab.groupMap = toLabPeopleMap(lab, peopleMap)
+
+  let crumbs: ICrumb[]
+
+  if (slug.includes("publication")) {
+    crumbs = [
+      ["Faculty", FACULTY_PATH],
+      [getPersonName(person), `${FACULTY_PATH}/${person.fields.personId}`],
+      [
+        "Publications",
+        `${FACULTY_PATH}/${person.fields.personId}/publications`,
+      ],
+    ]
+  } else {
+    crumbs = [
+      ["Faculty", FACULTY_PATH],
+      [getPersonName(person), `${FACULTY_PATH}/${person.fields.personId}`],
+    ]
+  }
+
+  // allFaculty.forEach((faculty: any) => {
+  //   faculty.people = faculty.peopleList.map(
+  //     (person: any) => peopleMap[person.person]
+  //   )
+  // })
 
   return {
     props: {
-      allFaculty: allFaculty,
+      slug: slug,
+      person: person,
+      lab: lab,
+      crumbs: crumbs,
     },
+  }
+}
+
+export async function getStaticPaths() {
+  const allFaculty = getFaculty()
+
+  const paths: any[] = []
+
+  allFaculty.forEach((faculty: any) => {
+    faculty.people = faculty.peopleList.forEach((person: any) => {
+      paths.push({ params: { slug: [person.person] } })
+      paths.push({ params: { slug: [person.person, "publications"] } })
+    })
+  })
+
+  return {
+    paths,
+    fallback: true, // false or 'blocking'
   }
 }
 
@@ -875,10 +1143,10 @@ export async function getStaticProps({ params }: Params) {
 
 //     faculty: markdownRemark(
 //       fileAbsolutePath: { regex: "/faculty/" }
-//       frontmatter: { id: { eq: $personId } }
+//       fields: { id: { eq: $personId } }
 //     ) {
 //       id
-//       frontmatter {
+//       fields {
 //         id
 //         headerImageCredit
 //         url

@@ -58,12 +58,12 @@ export const ContactCard: React.FC<ContactCardProps> = ({
           hoverColor={hover ? "text-columbia-secondary-blue" : "text"}
           color="text"
           size="text-sm xl:text-base"
-          twitter={faculty !== null ? faculty.frontmatter.twitter : null}
+          twitter={faculty !== null ? faculty.fields.twitter : null}
         />
       </div>
-      {/* {faculty !== null && faculty.frontmatter.url !== "" && (
+      {/* {faculty !== null && faculty.fields.url !== "" && (
         <div className="mt-12 mb-4 lg:mb-0">
-          <BlueButtonLink to={faculty.frontmatter.url} className="px-6 py-3">
+          <BlueButtonLink to={faculty.fields.url} className="px-6 py-3">
             {strings.labWebSite}
           </BlueButtonLink>
         </div>

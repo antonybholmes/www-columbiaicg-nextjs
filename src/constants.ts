@@ -1,5 +1,4 @@
-export const EXAMPLE_PATH = "blog-starter-typescript"
-export const CMS_NAME = "Markdown"
+export const IMAGEKIT_URL = "https://ik.imagekit.io/gojvn3appa/columbia-icg"
 
 export const SITE_URL = "https://www.columbiaicg.org"
 
@@ -17,6 +16,7 @@ export const PEOPLE_PATH = "/people"
 export const TEXT_SHOW_MORE = "Show more"
 export const TEXT_LAB_WEBSITE = "Lab website"
 export const TEXT_LAB_PUBS = "Lab publications"
+export const TEXT_MY_PUBS = "My Publications"
 
 export const GROUPS = [
   "Directors",

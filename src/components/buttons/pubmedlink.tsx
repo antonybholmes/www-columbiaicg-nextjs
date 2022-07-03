@@ -1,18 +1,18 @@
-import React, { useRef, useState } from "react"
+import { useRef, useState } from "react"
+import BaseImage from "../images/base-image"
 import Row from "../row"
-import pubmedsvg from "../../../public/assets/images/svg/pubmed.svg"
 import BaseLink from "./baselink"
 
-// `https://pubmed.ncbi.nlm.nih.gov/?term=${person.frontmatter.lastName}+${person.frontmatter.firstName}%5BAuthor%5D&sort=pubdate`
+// `https://pubmed.ncbi.nlm.nih.gov/?term=${person.fields.lastName}+${person.fields.firstName}%5BAuthor%5D&sort=pubdate`
 
 const getLink = (person: any): string =>
-  `https://pubmed.ncbi.nlm.nih.gov/?term=(${person.frontmatter.lastName}+${person.frontmatter.firstName[0]}[Author])+AND+(Columbia+University[Affiliation])&sort=pubdate`
+  `https://pubmed.ncbi.nlm.nih.gov/?term=(${person.fields.lastName}+${person.fields.firstName[0]}[Author])+AND+(Columbia+University[Affiliation])&sort=pubdate`
 
 type PubMedLinkProps = {
   person: any
 }
 
-const PubMedLink: React.FC<PubMedLinkProps> = ({ person }) => {
+const PubMedLink = ({ person }: PubMedLinkProps) => {
   const [hover, setHover] = useState(false)
   const imgEl = useRef(null)
 
@@ -26,8 +26,8 @@ const PubMedLink: React.FC<PubMedLinkProps> = ({ person }) => {
 
   let url: string
 
-  if (person.frontmatter.pubmed !== null) {
-    url = person.frontmatter.pubmed
+  if (person.fields.pubmed !== null) {
+    url = person.fields.pubmed
   } else {
     url = getLink(person)
   }
@@ -37,11 +37,10 @@ const PubMedLink: React.FC<PubMedLinkProps> = ({ person }) => {
       <div className="mr-4 my-2">See more on</div>
       <div>
         <BaseLink to={url}>
-          <img
+          <BaseImage
             alt="PubMed logo"
-            src={pubmedsvg}
+            src="/svg/pubmed.svg"
             className="w-32 ani-t"
-            ref={imgEl}
             onMouseEnter={onMouseEnter}
             onMouseLeave={onMouseLeave}
             style={{

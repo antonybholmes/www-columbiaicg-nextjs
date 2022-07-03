@@ -24,7 +24,7 @@ export const search = (query: any, admin: any): any => {
     const people = []
 
     for (const person of admin[g]) {
-      if (person.frontmatter.name.toLowerCase().includes(ql)) {
+      if (person.fields.name.toLowerCase().includes(ql)) {
         people.push(person)
       }
     }
@@ -42,7 +42,7 @@ export const booleanSearchAnd = (s1: any, s2: any): any => {
 
   for (let g of Object.keys(s2)) {
     for (let person of s2[g]) {
-      names.add(person.frontmatter.name)
+      names.add(person.fields.name)
     }
   }
 
@@ -51,7 +51,7 @@ export const booleanSearchAnd = (s1: any, s2: any): any => {
   for (let g of Object.keys(s1)) {
     const people = []
     for (let person of s1[g]) {
-      if (names.has(person.frontmatter.name)) {
+      if (names.has(person.fields.name)) {
         people.push(person)
       }
     }
@@ -75,19 +75,12 @@ export const booleanSearchOr = (s1: any, s2: any): any => {
     }
 
     for (let person of s1[g]) {
-      if (!(person.frontmatter.lastName in peopleMap[g])) {
-        peopleMap[g][person.frontmatter.lastName] = {}
+      if (!(person.fields.lastName in peopleMap[g])) {
+        peopleMap[g][person.fields.lastName] = {}
       }
 
-      if (
-        !(
-          person.frontmatter.firstName in
-          peopleMap[g][person.frontmatter.lastName]
-        )
-      ) {
-        peopleMap[g][person.frontmatter.lastName][
-          person.frontmatter.firstName
-        ] = person
+      if (!(person.fields.firstName in peopleMap[g][person.fields.lastName])) {
+        peopleMap[g][person.fields.lastName][person.fields.firstName] = person
       }
     }
   }
@@ -98,19 +91,12 @@ export const booleanSearchOr = (s1: any, s2: any): any => {
     }
 
     for (let person of s2[g]) {
-      if (!(person.frontmatter.lastName in peopleMap[g])) {
-        peopleMap[g][person.frontmatter.lastName] = {}
+      if (!(person.fields.lastName in peopleMap[g])) {
+        peopleMap[g][person.fields.lastName] = {}
       }
 
-      if (
-        !(
-          person.frontmatter.firstName in
-          peopleMap[g][person.frontmatter.lastName]
-        )
-      ) {
-        peopleMap[g][person.frontmatter.lastName][
-          person.frontmatter.firstName
-        ] = person
+      if (!(person.fields.firstName in peopleMap[g][person.fields.lastName])) {
+        peopleMap[g][person.fields.lastName][person.fields.firstName] = person
       }
     }
   }
@@ -154,7 +140,7 @@ const Page = ({ allGroupMap }: PageProps) => {
       //   const people = []
       //   if (g in admin.groupMap) {
       //     for (const person of admin.groupMap[g]) {
-      //       if (person.frontmatter.name.toLowerCase().includes(query)) {
+      //       if (person.fields.name.toLowerCase().includes(query)) {
       //         people.push(person)
       //       }
       //     }

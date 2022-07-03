@@ -1,24 +1,22 @@
-import React, { useRef } from "react"
+import { useRef } from "react"
 import useContextName from "../../hooks/contextname"
 import HeadShot from "./headshot"
 import Row from "../row"
-import usePersonName from "../../hooks/personname"
+import usePersonNameTitle from "../../hooks/person-title"
 
-type PersonHeaderProps = {
+interface PersonHeaderProps {
   person: any
   faculty?: any
-  imageMap: any
   showImage?: boolean
   style?: any
 }
 
-const PersonHeaderHoz: React.FC<PersonHeaderProps> = ({
+const PersonHeaderHoz = ({
   person,
   faculty,
-  imageMap,
   style,
-  showImage,
-}) => {
+  showImage = true,
+}: PersonHeaderProps) => {
   const picEl = useRef(null)
   const cardEl = useRef(null)
 
@@ -70,9 +68,9 @@ const PersonHeaderHoz: React.FC<PersonHeaderProps> = ({
   //     )}
   //     <div>
   //       <div ref={cardEl} className="text-center md:text-left">
-  //         <h2 className="font-medium">{`${person.frontmatter.name}${
-  //           person.frontmatter.postNominalLetters !== ""
-  //             ? `, ${person.frontmatter.postNominalLetters}`
+  //         <h2 className="font-medium">{`${person.fields.name}${
+  //           person.fields.postNominalLetters !== ""
+  //             ? `, ${person.fields.postNominalLetters}`
   //             : ""
   //         }`}</h2>
   //         <div className="text-xl">
@@ -89,12 +87,12 @@ const PersonHeaderHoz: React.FC<PersonHeaderProps> = ({
     <Row className="w-full">
       {showImage && (
         <div className="mb-4 mr-8" ref={picEl}>
-          <HeadShot person={person} imageMap={imageMap} className="w-72 h-72" />
+          <HeadShot person={person} className="w-72 h-72" />
         </div>
       )}
       <div>
         <div ref={cardEl}>
-          <h1 className="m-0">{usePersonName(person)}</h1>
+          <h1 className="m-0">{usePersonNameTitle(person)}</h1>
         </div>
         <div className="pb-4">
           {titles.map((title: string, index: number) => {
@@ -109,10 +107,10 @@ const PersonHeaderHoz: React.FC<PersonHeaderProps> = ({
           <ContactCard faculty={faculty} person={person} />
         </HideSmall> */}
 
-        {/* {faculty.frontmatter.url !== "" && (
+        {/* {faculty.fields.url !== "" && (
           <div className="mt-4">
             <BlueButtonLink
-              to={faculty.frontmatter.url}
+              to={faculty.fields.url}
               className="px-6 py-3"
             >
               {strings.labWebSite}
@@ -122,13 +120,6 @@ const PersonHeaderHoz: React.FC<PersonHeaderProps> = ({
       </div>
     </Row>
   )
-}
-
-PersonHeaderHoz.defaultProps = {
-  faculty: null,
-  showImage: true,
-  style: {},
-  imageMap: {},
 }
 
 export default PersonHeaderHoz

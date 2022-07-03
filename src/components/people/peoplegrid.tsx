@@ -8,7 +8,7 @@ import HideSmall from "../hidesmall"
 import Row from "../row"
 import BWImage from "../images/bwimage"
 import AltView from "../altview"
-import Circle from "../circle"
+import { getPersonName } from "../../lib/people"
 
 // const PersonCard = ({ person, smallView }) => (
 //   <div
@@ -114,7 +114,7 @@ const PersonCard = ({
       //     ? `, ${person.fields.postNominalLetters}`
       //     : ""
       // }`
-      link = `${person.fields.firstName} ${person.fields.lastName}${
+      link = `${getPersonName(person)}${
         showLetters && person.fields.postNominalLetters !== ""
           ? `, ${person.fields.postNominalLetters}`
           : ""
@@ -122,13 +122,10 @@ const PersonCard = ({
     }
   }
 
-  let fluid = null
+  let fluid = ""
 
   if (photoMode.includes("show")) {
-    fluid =
-      person.fields.personId in imageMap
-        ? imageMap[person.fields.personId]
-        : imageMap["generic"]
+    fluid = `people/${person.fields.personId}.jpg`
   }
 
   const titles = useContextName(context, person.titleMap).split(";")
@@ -144,12 +141,14 @@ const PersonCard = ({
           {photoMode.includes("generic") && (
             <Row isCentered={true}>
               {/* <Circle className="border border-solid border-cuimc-gray"> */}
-              <BWImage
-                image={fluid}
-                extZoom={hover}
-                alt={person.fields.name}
-                className={`w-64 mb-4`}
-              />
+              {fluid !== "" && (
+                <BWImage
+                  src={fluid}
+                  extZoom={hover}
+                  alt={person.fields.name}
+                  className={`w-64 mb-4 rounded-full`}
+                />
+              )}
               {/* </Circle> */}
               {/* <BWImage2
                   src={usePersonImageURL(person)}
@@ -181,13 +180,13 @@ const PersonCard = ({
         </div>
 
         <div>
-          {photoMode.includes("generic") && (
+          {photoMode.includes("generic") && fluid !== "" && (
             <Row isCentered={true}>
               <BWImage
-                image={fluid}
+                src={fluid}
                 extZoom={hover}
                 alt={person.fields.name}
-                className={`w-64 mb-4`}
+                className={`w-64 mb-4  rounded-full`}
               />
             </Row>
           )}
@@ -307,7 +306,7 @@ const PeopleGrid = ({
           </>
         )}
 
-        <ul className={`grid grid-cols-1 lg:grid-cols-5 ${className}`}>
+        <ul className={`grid grid-cols-1 lg:grid-cols-5 gap-8 ${className}`}>
           {ret}
         </ul>
       </>

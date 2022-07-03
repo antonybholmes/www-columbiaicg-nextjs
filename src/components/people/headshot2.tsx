@@ -38,7 +38,7 @@ const HeadShot2: React.FC<HeadShotProps> = ({
     >
       <ZoomImage2
         src={usePersonImageURL(person)}
-        alt={person.frontmatter.name}
+        alt={person.fields.name}
         extZoom={hover}
       />
     </div>

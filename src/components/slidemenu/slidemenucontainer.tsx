@@ -1,11 +1,9 @@
-import React, { useState, useEffect, useRef } from "react"
-import flattenEdges from "../../utils/flattenedge"
+import { useState, useEffect, useRef } from "react"
 import SlideMenuCloseButton from "./slidemenuclosebutton"
 import { gsap } from "gsap"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import Row from "../row"
 import BlueIndexLink from "../buttons/blueindexlink"
-import WhiteIndexLink from "../buttons/whiteindexlink"
 import BaseLink from "../buttons/baselink"
 import { SHARED_INSTRUMENT_LINK } from "../../constants"
 
@@ -14,7 +12,7 @@ type SiteSearchResultProps = {
   text: any
 }
 
-const SiteSearchResult: React.FC<SiteSearchResultProps> = ({ to, text }) => {
+const SiteSearchResult = ({ to, text }: SiteSearchResultProps) => {
   return (
     <BaseLink to={to}>
       <Row className="px-4 py-2 cursor-pointer hover:bg-slate-200 trans-ani">

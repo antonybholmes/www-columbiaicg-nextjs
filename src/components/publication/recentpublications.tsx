@@ -5,7 +5,7 @@
  * See: https://www.gatsbyjs.org/docs/use-static-query/
  */
 
-import React, { useEffect, useState } from "react"
+import { useEffect, useState } from "react"
 //import Button from "../../components/button"
 //import PublicationYears from "./publicationyears"
 import BasePublicationList from "./basepublicationlist"
@@ -13,9 +13,10 @@ import Row from "../row"
 import PublicationList from "./publicationlist"
 import NoResults from "../noresults"
 import BlueButton from "../buttons/bluebutton"
+import { TEXT_SHOW_MORE } from "../../constants"
 
-type RecentPublicationsProps = {
-  publications: Array<any>
+interface RecentPublicationsProps {
+  publications: any[]
   showAbstract?: boolean
   top?: number
   showCount?: boolean
@@ -28,24 +29,20 @@ type RecentPublicationsProps = {
   recordsPerPage?: any
 }
 
-const RecentPublications: React.FC<RecentPublicationsProps> = ({
+const RecentPublications = ({
   publications,
-  showAbstract,
-  top,
-  showCount,
-  showMoreButton,
-  showIndices,
-  baseMode,
+  showAbstract = true,
+  top = 15,
+  showCount = true,
+  showMoreButton = false,
+  showIndices = false,
+  baseMode = true,
   className,
   onPubClick,
   onShowMoreClick,
-}) => {
-  const [filteredPublications, setFilteredPublications] = useState<Array<any>>(
-    []
-  )
+}: RecentPublicationsProps) => {
+  const [filteredPublications, setFilteredPublications] = useState<any[]>([])
   const [recordsPerPage, setRecordsPerPage] = useState(-1)
-
-  const { strings } = useSiteMetadata()
 
   useEffect(() => {
     updatePublications()
@@ -115,25 +112,12 @@ const RecentPublications: React.FC<RecentPublicationsProps> = ({
       {(recordsPerPage < publications.length || showMoreButton) && (
         <Row isCentered={true} className="mt-8">
           <div>
-            <BlueButton onClick={onShowMoreClick}>
-              {strings.showMore}
-            </BlueButton>
+            <BlueButton onClick={onShowMoreClick}>{TEXT_SHOW_MORE}</BlueButton>
           </div>
         </Row>
       )}
     </>
   )
-}
-
-RecentPublications.defaultProps = {
-  top: 15,
-  showCount: true,
-  className: "",
-  showAbstract: true,
-  showMoreButton: false,
-  showIndices: false,
-  onPubClick: null,
-  baseMode: true,
 }
 
 export default RecentPublications

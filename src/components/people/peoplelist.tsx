@@ -25,8 +25,8 @@ const PeopleList: React.FC<PeopleListProps> = ({
         key={index}
         person={person}
         image={
-          person.frontmatter.personId in imageMap
-            ? imageMap[person.frontmatter.personId]
+          person.fields.personId in imageMap
+            ? imageMap[person.fields.personId]
             : null
         }
         generic={imageMap["generic"]}

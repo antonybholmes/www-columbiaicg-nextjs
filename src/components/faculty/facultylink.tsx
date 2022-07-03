@@ -1,4 +1,5 @@
 import { FACULTY_PATH } from "../../constants"
+import { getPersonName } from "../../lib/people"
 import BlueLink from "../buttons/bluelink"
 import WhiteLink from "../buttons/whitelink"
 //import WhiteLink from "../whitelink"
@@ -9,7 +10,7 @@ interface LinkProps {
 }
 
 const FacultyLink = ({ person, color = "blue" }: LinkProps) => {
-  const name = `${person.fields.firstName} ${person.fields.lastName}${
+  const name = `${getPersonName(person)}${
     person.fields.postNominalLetters !== ""
       ? `, ${person.fields.postNominalLetters}`
       : ""

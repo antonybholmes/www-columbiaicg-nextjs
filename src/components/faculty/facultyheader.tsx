@@ -22,11 +22,11 @@ const FacultyHeader: React.FC<FacultyHeaderProps> = ({
   headshot,
 }) => {
   if (heading === null) {
-    heading = `${person.frontmatter.name}, ${person.frontmatter.postNominalLetters}`
+    heading = `${person.fields.name}, ${person.fields.postNominalLetters}`
   }
 
   if (subHeading === null) {
-    subHeading = useContextName("people", person.titleMap) //`${person.frontmatter.title}`
+    subHeading = useContextName("people", person.titleMap) //`${person.fields.title}`
   }
 
   return (

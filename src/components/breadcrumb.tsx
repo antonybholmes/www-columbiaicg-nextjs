@@ -6,6 +6,7 @@ import Row from "./row"
 import ColorLink from "./buttons/colorlink"
 import BaseLink from "./buttons/baselink"
 import { faHome } from "@fortawesome/free-solid-svg-icons"
+import ICrumb from "../types/crumb"
 
 type DividerProps = {
   color?: string
@@ -42,7 +43,7 @@ Divider.defaultProps = {
 }
 
 interface BreadcrumbProps {
-  crumbs?: [string, string][]
+  crumbs?: ICrumb[]
   color?: string
   color2?: string
   opacity?: number
@@ -93,11 +94,9 @@ const Breadcrumb = ({
       </li>
     )
 
-    for (let i = 0; i < crumbs.length; ++i) {
-      const crumb = crumbs[i]
-
+    crumbs.forEach((crumb, index: number) => {
       ret.push(
-        <li key={`divider-${i}`}>
+        <li key={`divider-${index}`}>
           <Divider color={`rgba(0, 0, 0, 0.5)`} />
         </li>
       )
@@ -114,14 +113,14 @@ const Breadcrumb = ({
           </ColorLink>
         </li>
       )
-    }
+    })
 
     return (
       <HideSmall className={className} size="md">
         <Row className="justify-between">
           <ul className={`flex flex-row items-center ${fontSize}`}>{ret}</ul>
 
-          <div>{content !== null && content}</div>
+          {content && <div>{content}</div>}
         </Row>
       </HideSmall>
     )

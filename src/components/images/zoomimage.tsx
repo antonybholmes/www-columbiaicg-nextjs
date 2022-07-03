@@ -1,21 +1,21 @@
-import React, { useState, useRef } from "react"
-import BaseImage from "./baseimage"
+import { useState, useRef } from "react"
+import BaseImage from "./base-image"
 
 type ZoomImageProps = {
-  image: any
+  src: string
   extZoom?: any
   zoom?: number
   alt: string
   className?: string
 }
 
-export const ZoomImage: React.FC<ZoomImageProps> = ({
-  image,
+export const ZoomImage = ({
+  src,
   extZoom,
   zoom,
   alt,
   className,
-}) => {
+}: ZoomImageProps) => {
   const [hover, setHover] = useState(false)
 
   const photoEl = useRef(null)
@@ -47,7 +47,7 @@ export const ZoomImage: React.FC<ZoomImageProps> = ({
 
   return (
     <div
-      className={`overflow-hidden trans-ani transform w-full h-full ${
+      className={`overflow-hidden relative trans-ani transform w-full h-full ${
         extZoom ? "scale-105" : "scale-100"
       } ${className}`}
       onMouseEnter={onMouseEnter}
@@ -55,8 +55,8 @@ export const ZoomImage: React.FC<ZoomImageProps> = ({
       ref={photoEl}
     >
       <BaseImage
-        image={image}
-        className={`block overflow-hidden trans-ani`}
+        src={src}
+        className={`absolute w-full h-full overflow-hidden trans-ani`}
         alt={alt}
       />
     </div>

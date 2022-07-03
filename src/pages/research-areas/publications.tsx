@@ -2,6 +2,8 @@ import { useEffect, useState } from "react"
 
 import usePublications from "../../hooks/publications"
 import PublicationsPage from "../../components/pages/publications-page"
+import PageLayout from "../../layouts/pagelayout"
+import { PUBLICATIONS_PATH } from "../../constants"
 
 const Page = () => {
   const [publications, setPublications] = useState<any[]>([])
@@ -10,7 +12,17 @@ const Page = () => {
     usePublications(setPublications)
   }, [])
 
-  return <PublicationsPage publications={publications} />
+  return (
+  
+  <PageLayout
+      title={"Publications"}
+      path={"/research-areas/publications"}
+      crumbs={[["Publications", PUBLICATIONS_PATH]]}
+      nav={"Publications"}
+    >
+  
+  <PublicationsPage publications={publications} />
+  </PageLayout>
 }
 
 export default Page

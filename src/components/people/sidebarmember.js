@@ -9,7 +9,7 @@ const SideBarMember = ({ person }) => (
     <div>
       <BlueLink to={personUrl(person)}>{personName(person)}</BlueLink>
     </div>
-    <div className="gray">{person.frontmatter.title}</div>
+    <div className="gray">{person.fields.title}</div>
   </div>
 )
 

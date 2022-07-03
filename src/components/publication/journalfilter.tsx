@@ -1,21 +1,16 @@
-import React, { useState } from "react"
+import { useState } from "react"
 import useCollapse from "react-collapsed"
 import CheckMark from "../buttons/checkmark"
 import CollapseBar from "../collapsebar"
 
-type JournalProps = {
+interface JournalProps {
   index: number
   journal: [string, number]
   selected: boolean
   onClick: any
 }
 
-const Journal: React.FC<JournalProps> = ({
-  index,
-  journal,
-  selected,
-  onClick,
-}) => {
+const Journal = ({ index, journal, selected, onClick }: JournalProps) => {
   const [hover, setHover] = useState(false)
 
   const mouseEnterHandler = (e: any) => {
@@ -30,7 +25,7 @@ const Journal: React.FC<JournalProps> = ({
     <li>
       <button
         className={`flex flex-row items-center justify-start text-sm w-full py-1`}
-        onClick={() => onClick(index, !selected)}
+        onClick={() => onClick(journal, !selected)}
         onMouseEnter={mouseEnterHandler}
         onMouseLeave={mouseLeaveHandler}
       >
@@ -54,7 +49,7 @@ const Journal: React.FC<JournalProps> = ({
 
 type JournalFilterProps = {
   journals: [string, number][]
-  selected: Set<number>
+  selected: Set<string>
   onClick: any
 }
 
@@ -76,12 +71,12 @@ const JournalFilter = ({ journals, selected, onClick }: JournalFilterProps) => {
       />
       <div className="relative">
         <ul {...getCollapseProps()}>
-          {journals.map((journal: any, index: number) => {
+          {journals.map((journal: [string, number], index: number) => {
             return (
               <Journal
                 index={index}
                 journal={journal}
-                selected={selected.has(index)}
+                selected={selected.has(journal[0])}
                 key={index}
                 onClick={onClick}
               />

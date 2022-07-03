@@ -3,7 +3,7 @@ import useContextName from "../../hooks/contextname"
 import HeadShot from "./headshot"
 import FullDiv from "../fulldiv"
 import Row from "../row"
-import usePersonName from "../../hooks/personname"
+import usePersonNameTitle from "../../hooks/person-title"
 
 type PersonHeaderProps = {
   person: any
@@ -12,12 +12,12 @@ type PersonHeaderProps = {
   style?: any
 }
 
-const PersonHeader: React.FC<PersonHeaderProps> = ({
+const PersonHeader = ({
   person,
   imageMap,
   style,
   showImage,
-}) => {
+}: PersonHeaderProps) => {
   const picEl = useRef(null)
   const cardEl = useRef(null)
 
@@ -69,9 +69,9 @@ const PersonHeader: React.FC<PersonHeaderProps> = ({
   //     )}
   //     <div>
   //       <div ref={cardEl} className="text-center md:text-left">
-  //         <h2 className="font-medium">{`${person.frontmatter.name}${
-  //           person.frontmatter.postNominalLetters !== ""
-  //             ? `, ${person.frontmatter.postNominalLetters}`
+  //         <h2 className="font-medium">{`${person.fields.name}${
+  //           person.fields.postNominalLetters !== ""
+  //             ? `, ${person.fields.postNominalLetters}`
   //             : ""
   //         }`}</h2>
   //         <div className="text-xl">
@@ -94,7 +94,7 @@ const PersonHeader: React.FC<PersonHeaderProps> = ({
       <div className="w-full">
         <Row isCentered={true} className="w-full">
           <div ref={cardEl}>
-            <h1 className="m-0">{usePersonName(person)}</h1>
+            <h1 className="m-0">{usePersonNameTitle(person)}</h1>
           </div>
         </Row>
         <div className="w-full pb-4">

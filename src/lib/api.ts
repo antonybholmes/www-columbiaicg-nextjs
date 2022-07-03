@@ -1,7 +1,7 @@
 import fs from "fs"
 import { join } from "path"
 import IFieldMap from "../types/field-map"
-import { getFields, getMDBySlug } from "./markdown"
+import { getMDBySlug } from "./markdown"
 
 export const POSTS_DIRECTORY = join(process.cwd(), "_content", "posts")
 export const PEOPLE_DIRECTORY = join(process.cwd(), "_content", "people")
@@ -118,6 +118,16 @@ export const getAllLabs = () => {
   //   // sort posts by date in descending order
   //   .sort((lab1, lab2) => (lab1.name > lab2.name ? -1 : 1))
   return labs
+}
+
+export const getLabMap = (labs: any[]): IFieldMap => {
+  const ret: IFieldMap = {}
+
+  labs.forEach((lab: any) => {
+    ret[lab.labId] = lab
+  })
+
+  return ret
 }
 
 export const getPublicationSlugs = () => {

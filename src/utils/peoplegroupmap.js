@@ -2,7 +2,7 @@ const toPeopleGroupMap = people => {
   const ret = {}
 
   for (let person of people) {
-    const g = person.frontmatter.group
+    const g = person.fields.group
 
     if (!(g in ret)) {
       ret[g] = []

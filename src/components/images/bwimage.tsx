@@ -1,8 +1,8 @@
-import React, { useState } from "react"
-import BaseImage from "./baseimage"
+import { useState } from "react"
+import BaseImage from "./base-image"
 
 type ImageProps = {
-  image: any
+  src: string
   extZoom?: any
   alt: string
   className?: string
@@ -11,15 +11,14 @@ type ImageProps = {
   onMouseLeave?: any
 }
 
-export const BWImage: React.FC<ImageProps> = ({
-  image,
+export const BWImage = ({
+  src,
   extZoom,
   alt,
   className,
-  isCircle,
   onMouseEnter,
   onMouseLeave,
-}) => {
+}: ImageProps) => {
   const [hover, setHover] = useState(false)
 
   //const photoEl = useRef(null)
@@ -47,7 +46,7 @@ export const BWImage: React.FC<ImageProps> = ({
   const handleMouseEnter = (e: any) => {
     setHover(true)
 
-    if (onMouseEnter !== null) {
+    if (onMouseEnter) {
       onMouseEnter(e)
     }
   }
@@ -55,33 +54,24 @@ export const BWImage: React.FC<ImageProps> = ({
   const handleMouseLeave = (e: any) => {
     setHover(false)
 
-    if (onMouseLeave !== null) {
+    if (onMouseLeave) {
       onMouseLeave(e)
     }
   }
 
   return (
     <BaseImage
-      image={image}
+      src={src}
       style={{
         filter: `grayscale(${extZoom || hover ? "0" : "1"})`,
         transition: "all 0.4s ease-in-out",
       }}
       className={className}
       alt={alt}
-      isCircle={isCircle}
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
     />
   )
-}
-
-BWImage.defaultProps = {
-  className: "",
-  extZoom: null,
-  isCircle: false,
-  onMouseEnter: null,
-  onMouseLeave: null,
 }
 
 export default BWImage

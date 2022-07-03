@@ -7,7 +7,7 @@ const usePersonPubsUrl = (person: any): string => {
 
   const { api } = useSiteMetadata()
 
-  return `${api.publications}/${person.frontmatter.personId}`
+  return `${api.publications}/${person.fields.personId}`
 }
 
 export default usePersonPubsUrl

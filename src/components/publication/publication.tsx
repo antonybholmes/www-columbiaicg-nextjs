@@ -64,7 +64,7 @@ const Publication: React.FC<PublicationProps> = ({
   // let groups = []
 
   // for (let group of publication.groups) {
-  //   groups.push([group.frontmatter.id, group.frontmatter.name])
+  //   groups.push([group.fields.id, group.fields.name])
   // }
 
   const _handleJournalClick = (journal: string) => {

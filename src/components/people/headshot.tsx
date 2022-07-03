@@ -1,22 +1,14 @@
-import React, { useState } from "react"
-import Circle from "../circle"
-import BaseImage from "../images/baseimage"
+import { useState } from "react"
+import cn from "../../lib/class-names"
+import { getPersonName } from "../../lib/people"
+import BaseImage from "../images/base-image"
 
 type HeadShotProps = {
   person: any
-  imageMap: any
-  size?: number
-  rounded?: boolean
   className?: string
 }
 
-const HeadShot: React.FC<HeadShotProps> = ({
-  person,
-  imageMap,
-  size,
-  rounded,
-  className,
-}) => {
+const HeadShot = ({ person, className = "w-80 h-80" }: HeadShotProps) => {
   const [hover, setHover] = useState(false)
 
   const onMouseEnter = (e: React.MouseEvent<HTMLDivElement, MouseEvent>) => {
@@ -27,28 +19,17 @@ const HeadShot: React.FC<HeadShotProps> = ({
     setHover(false)
   }
 
-  const fluid =
-    person.frontmatter.personId in imageMap
-      ? imageMap[person.frontmatter.personId]
-      : imageMap["generic"]
-
   return (
     // <Circle
     //   className={`${rounded ? "border border-solid border-cuimc-gray" : ""}`}
     // >
     <BaseImage
-      image={fluid}
-      alt={person.frontmatter.name}
-      className={className}
+      src={`people/${person.fields.personId}.jpg`}
+      alt={getPersonName(person)}
+      className={cn("rounded-full", className)}
     />
     // </Circle>
   )
-}
-
-HeadShot.defaultProps = {
-  size: 80,
-  rounded: true,
-  className: "w-80 h-80",
 }
 
 export default HeadShot

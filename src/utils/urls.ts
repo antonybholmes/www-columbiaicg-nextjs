@@ -1,23 +1,23 @@
 export const personUrl = (person: any): string => {
-  return `/people/${person.frontmatter.personId}`
+  return `/people/${person.fields.personId}`
 }
 
 export const labUrl = (group: any): string => {
-  return `/research-areas/labs/${group.frontmatter.id}`
+  return `/research-areas/labs/${group.fields.id}`
 }
 
 export const labMembersUrl = (group: any): string => {
-  return `/research-areas/labs/${group.frontmatter.id}/members`
+  return `/research-areas/labs/${group.fields.id}/members`
 }
 
 export const eventUrl = (event: any): string => {
   return `${paths.eventsPath}/${
-    event.frontmatter.start.split("T")[0]
-  }-${event.frontmatter.title.toLowerCase().replace(/ /g, "-")}`
+    event.fields.start.split("T")[0]
+  }-${event.fields.title.toLowerCase().replace(/ /g, "-")}`
 }
 
 export const useJobUrl = (job: any): string => {
-  return `${paths.jobsPath}/${
-    job.frontmatter.start.split("T")[0]
-  }-${job.frontmatter.title.toLowerCase().replace(/ /g, "-")}`
+  return `${paths.jobsPath}/${job.fields.start.split("T")[0]}-${job.fields.title
+    .toLowerCase()
+    .replace(/ /g, "-")}`
 }

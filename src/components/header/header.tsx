@@ -399,12 +399,12 @@ const Header = ({
                 <BaseLink to="/" className="mr-8">
                   <img
                     src={"/assets/images/svg/icg.svg"}
-                    className="w-80"
+                    className="w-96"
                     alt="Institute for Cancer Genetics logo"
                   />
                 </BaseLink>
 
-                {content !== null && content}
+                {content && content}
               </Row>
             </Container>
           )}

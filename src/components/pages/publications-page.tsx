@@ -320,150 +320,142 @@ const PublicationsPage = ({ publications = [] }: Props) => {
     )
   }
 
-  const handleJournalClick = (journal: string, selected: boolean) => {
+  const handleJournalClick = (journal: [string, number], selected: boolean) => {
     let sj = new Set(selectedJournals)
 
     if (selected) {
-      sj.add(journal)
+      sj.add(journal[0])
     } else {
-      sj.delete(journal)
+      sj.delete(journal[0])
     }
 
     setSelectedJournals(sj)
   }
 
   return (
-    <PageLayout
-      title={"Publications"}
-      path={"/research-areas/publications"}
-      crumbs={[["Publications", PUBLICATIONS_PATH]]}
-      nav={"Publications"}
-    >
-      <Container>
-        <MainSideCol>
-          <div>
-            <SearchBar5
-              onSearch={handleSearch}
-              placeholder="Search publications..."
-              text={query}
-            />
+    <Container>
+      <MainSideCol>
+        <div>
+          <SearchBar5
+            onSearch={handleSearch}
+            placeholder="Search publications..."
+            text={query}
+          />
 
-            <ShowSmall size="xl" className="mt-4">
-              {/* <FlatCard autoHide={false}> */}
-              {pagePublications.length > 0 && (
-                <Row className="justify-between">
-                  <Row isVCentered={true} className="mr-4">
-                    <div className="mr-4">Sort by:</div>
-                    <div>
-                      <SortOrderDropdown
-                        onChange={handleSortChange}
-                        sortBy={sortOrder}
-                      />
-                    </div>
-                  </Row>
+          <ShowSmall size="xl" className="mt-4">
+            {/* <FlatCard autoHide={false}> */}
+            {pagePublications.length > 0 && (
+              <Row className="justify-between">
+                <Row isVCentered={true} className="mr-4">
+                  <div className="mr-4">Sort by:</div>
+                  <div>
+                    <SortOrderDropdown
+                      onChange={handleSortChange}
+                      sortBy={sortOrder}
+                    />
+                  </div>
+                </Row>
 
-                  {/* <div>{`${filteredPublications.length} ${
+                {/* <div>{`${filteredPublications.length} ${
                   filteredPublications.length !== 1 ? "results" : "result"
                 }`}</div> */}
-                </Row>
-              )}
-            </ShowSmall>
-
-            <p className="text-slate-400 my-8">
-              {`${filteredPublications.length} ${
-                filteredPublications.length !== 1 ? "results" : "result"
-              }`}
-            </p>
-
-            <Publications
-              publications={pagePublications}
-              showAbstract={showAbstract}
-              onPubClick={handleJournalClick}
-              showCount={false}
-              baseMode={true}
-              showMoreButton={false}
-            />
-
-            {filteredPublications.length > recordsPerPage && (
-              <Row isCentered={true} className="mt-8 mb-8 md:mb-0">
-                <BlueButton onClick={handleShowMoreClick}>
-                  {TEXT_SHOW_MORE}
-                </BlueButton>
               </Row>
             )}
+          </ShowSmall>
 
-            {person !== null && <PubMedLink person={person} />}
-          </div>
+          <p className="text-slate-400 my-8">
+            {`${filteredPublications.length} ${
+              filteredPublications.length !== 1 ? "results" : "result"
+            }`}
+          </p>
 
-          <div className="ml-10">
-            <SidePanel>
-              <h5 className={`mb-2`}>Sort</h5>
-              <SortOrder onChange={handleSortChange} selected={sortOrder} />
+          <Publications
+            publications={pagePublications}
+            showAbstract={showAbstract}
+            showCount={false}
+            baseMode={true}
+            showMoreButton={false}
+          />
 
-              <Row className="mt-4">
-                <button
-                  onClick={() => setDescending(true)}
-                  className={`w-8 h-8 rounded trans-ani ${
-                    descending
-                      ? "bg-cuimc-button-blue-70 text-white"
-                      : "border border-solid border-transparent hover:border-cuimc-button-blue-70"
-                  }`}
+          {filteredPublications.length > recordsPerPage && (
+            <Row isCentered={true} className="mt-8 mb-8 md:mb-0">
+              <BlueButton onClick={handleShowMoreClick}>
+                {TEXT_SHOW_MORE}
+              </BlueButton>
+            </Row>
+          )}
+
+          {person !== null && <PubMedLink person={person} />}
+        </div>
+
+        <div className="ml-10">
+          <SidePanel>
+            <h5 className={`mb-2`}>Sort</h5>
+            <SortOrder onChange={handleSortChange} selected={sortOrder} />
+
+            <Row className="mt-4">
+              <button
+                onClick={() => setDescending(true)}
+                className={`w-8 h-8 rounded trans-ani ${
+                  descending
+                    ? "bg-cuimc-button-blue-70 text-white"
+                    : "border border-solid border-transparent hover:border-cuimc-button-blue-70"
+                }`}
+              >
+                <FontAwesomeIcon icon={faArrowDownShortWide} />
+              </button>
+
+              <button
+                onClick={() => setDescending(false)}
+                className={`w-8 h-8 rounded trans-ani ${
+                  !descending
+                    ? "bg-cuimc-button-blue-70 text-white"
+                    : "border border-solid border-transparent hover:border-cuimc-button-blue-70"
+                }`}
+              >
+                <FontAwesomeIcon icon={faArrowUpShortWide} />
+              </button>
+            </Row>
+
+            {/* <TopPubs topPubs={topPubs} onPubClick={handlePubClick} /> */}
+            <JournalFilter
+              journals={journals}
+              selected={selectedJournals}
+              onClick={handleJournalClick}
+            />
+
+            {/* </div> */}
+
+            <ul className="block text-sm border-t border-solid border-slate-200 pt-4 mt-8">
+              <li>
+                <CheckBox
+                  selected={instituteOnly}
+                  onChange={handleInstituteOnlyChange}
                 >
-                  <FontAwesomeIcon icon={faArrowDownShortWide} />
-                </button>
-
-                <button
-                  onClick={() => setDescending(false)}
-                  className={`w-8 h-8 rounded trans-ani ${
-                    !descending
-                      ? "bg-cuimc-button-blue-70 text-white"
-                      : "border border-solid border-transparent hover:border-cuimc-button-blue-70"
-                  }`}
+                  Institute only
+                </CheckBox>
+              </li>
+              <li>
+                <CheckBox
+                  selected={firstAuthorOnly}
+                  onChange={handleFirstAuthorOnlyChange}
                 >
-                  <FontAwesomeIcon icon={faArrowUpShortWide} />
-                </button>
-              </Row>
-
-              {/* <TopPubs topPubs={topPubs} onPubClick={handlePubClick} /> */}
-              <JournalFilter
-                journals={journals}
-                selected={selectedJournals}
-                onClick={handleJournalClick}
-              />
-
-              {/* </div> */}
-
-              <ul className="block text-sm border-t border-solid border-slate-200 pt-4 mt-8">
-                <li>
-                  <CheckBox
-                    selected={instituteOnly}
-                    onChange={handleInstituteOnlyChange}
-                  >
-                    Institute only
-                  </CheckBox>
-                </li>
-                <li>
-                  <CheckBox
-                    selected={firstAuthorOnly}
-                    onChange={handleFirstAuthorOnlyChange}
-                  >
-                    First authors only
-                  </CheckBox>
-                </li>
-                <li>
-                  <CheckBox
-                    selected={showAbstract}
-                    onChange={handleShowAbstractsChange}
-                  >
-                    Show abstracts
-                  </CheckBox>
-                </li>
-              </ul>
-            </SidePanel>
-          </div>
-        </MainSideCol>
-      </Container>
-    </PageLayout>
+                  First authors only
+                </CheckBox>
+              </li>
+              <li>
+                <CheckBox
+                  selected={showAbstract}
+                  onChange={handleShowAbstractsChange}
+                >
+                  Show abstracts
+                </CheckBox>
+              </li>
+            </ul>
+          </SidePanel>
+        </div>
+      </MainSideCol>
+    </Container>
   )
 }
 

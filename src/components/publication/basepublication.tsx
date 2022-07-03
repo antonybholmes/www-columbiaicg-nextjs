@@ -449,9 +449,9 @@ const BasePublication = ({
         {publication.groups.length > 0 && showLabLink && (
           <div className="md:text-right">
             <BlueLink
-              to={`/research-areas/labs/${publication.groups[0].frontmatter.id}`}
+              to={`/research-areas/labs/${publication.groups[0].fields.id}`}
             >
-              {publication.groups[0].frontmatter.name}
+              {publication.groups[0].fields.name}
             </BlueLink>
           </div>
         )}
