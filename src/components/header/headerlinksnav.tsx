@@ -27,7 +27,7 @@ const HeaderLink = ({ link, title, index }: HeaderLinkProps) => {
         to={link.link}
         className={`relative inline-block py-2 border-t-3 border-b-3 border-solid border-transparent font-semibold px-3 lg:px-4 ${
           link.name === title
-            ? " border-b-columbia-tertiary-blue text-columbia-tertiary-blue"
+            ? " border-b-columbia-tertiary-blue bg-columbia-tertiary-blue text-white"
             : "hover:border-b-slate-400 trans-ani"
         }`}
       >

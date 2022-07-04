@@ -3,19 +3,11 @@ import BaseImage from "./base-image"
 
 type ZoomImageProps = {
   src: string
-  extZoom?: any
-  zoom?: number
   alt: string
   className?: string
 }
 
-export const ZoomImage = ({
-  src,
-  extZoom,
-  zoom,
-  alt,
-  className,
-}: ZoomImageProps) => {
+export const ZoomImage = ({ src, alt, className }: ZoomImageProps) => {
   const [hover, setHover] = useState(false)
 
   const photoEl = useRef(null)
@@ -47,26 +39,19 @@ export const ZoomImage = ({
 
   return (
     <div
-      className={`overflow-hidden relative trans-ani transform w-full h-full ${
-        extZoom ? "scale-105" : "scale-100"
-      } ${className}`}
+      className={`overflow-hidden relative trans-ani transform w-full h-full 
+       ${className}`}
       onMouseEnter={onMouseEnter}
       onMouseLeave={onMouseLeave}
       ref={photoEl}
     >
       <BaseImage
         src={src}
-        className={`absolute w-full h-full overflow-hidden trans-ani`}
+        className={`trans-ani hover:scale-110 scale-100"}`}
         alt={alt}
       />
     </div>
   )
-}
-
-ZoomImage.defaultProps = {
-  className: "",
-  extZoom: null,
-  zoom: 1.05,
 }
 
 export default ZoomImage

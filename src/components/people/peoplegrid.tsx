@@ -69,7 +69,6 @@ import { getPersonName } from "../../lib/people"
 
 type PersonCardProps = {
   person: any
-  imageMap?: any
   smallView?: boolean
   context?: string
   isFaculty?: boolean
@@ -81,7 +80,6 @@ type PersonCardProps = {
 
 const PersonCard = ({
   person,
-  imageMap,
   smallView,
   context,
   showUrl = true,
@@ -142,12 +140,14 @@ const PersonCard = ({
             <Row isCentered={true}>
               {/* <Circle className="border border-solid border-cuimc-gray"> */}
               {fluid !== "" && (
-                <BWImage
-                  src={fluid}
-                  extZoom={hover}
-                  alt={person.fields.name}
-                  className={`w-64 mb-4 rounded-full`}
-                />
+                <div className={`relative w-48 h-48`}>
+                  <BWImage
+                    src={fluid}
+                    extZoom={hover}
+                    alt={person.fields.name}
+                    className={`w-64 mb-4 rounded-full`}
+                  />
+                </div>
               )}
               {/* </Circle> */}
               {/* <BWImage2
@@ -182,12 +182,14 @@ const PersonCard = ({
         <div>
           {photoMode.includes("generic") && fluid !== "" && (
             <Row isCentered={true}>
-              <BWImage
-                src={fluid}
-                extZoom={hover}
-                alt={person.fields.name}
-                className={`w-64 mb-4  rounded-full`}
-              />
+              <div className={`relative w-48 h-48`}>
+                <BWImage
+                  src={fluid}
+                  extZoom={hover}
+                  alt={person.fields.name}
+                  className={`w-64 mb-4  rounded-full`}
+                />
+              </div>
             </Row>
           )}
 
@@ -213,7 +215,6 @@ const PersonCard = ({
 
 type PeopleGridProps = {
   name: string
-  imageMap?: any
   people: any[]
   colWidth?: string
   smallView?: boolean
@@ -247,7 +248,6 @@ type PeopleGridProps = {
 
 const PeopleGrid = ({
   name,
-  imageMap,
   people,
   smallView = false,
   faculty = null,
@@ -269,7 +269,6 @@ const PeopleGrid = ({
         <li key={`person-${index}`}>
           <PersonCard
             person={person}
-            imageMap={imageMap}
             smallView={smallView}
             context={context}
             showUrl={showUrl}

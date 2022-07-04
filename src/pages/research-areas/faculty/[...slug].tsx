@@ -53,6 +53,7 @@ import {
   faChevronDown,
   faChevronRight,
   faChevronUp,
+  faCircle,
 } from "@fortawesome/free-solid-svg-icons"
 import { join } from "path"
 import fs from "fs"
@@ -474,7 +475,7 @@ export const AdminTitles = ({ titles }: AdminTitlesProps) => (
           <li className="text-lg font-light mb-2" key={index}>
             <Row>
               <FontAwesomeIcon
-                icon="circle"
+                icon={faCircle}
                 className="mr-4 text-slate-300 text-xxs"
               />
               <div>{title}</div>
@@ -917,7 +918,7 @@ const FacultyPage = ({ person, lab }: FacultyPageProps) => {
                 </div>
               </>
               <MainCard>
-                <PersonHeaderHoz person={person} faculty={facultyMember} />
+                <PersonHeaderHoz person={person} />
                 <div className="mt-4">
                   <About data={data} />
                 </div>

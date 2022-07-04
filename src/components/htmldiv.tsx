@@ -3,6 +3,7 @@ import React from "react"
 interface HTMLDivProps {
   o: any
   excerpt?: boolean
+  className?: string
 }
 
 /**
@@ -10,12 +11,22 @@ interface HTMLDivProps {
  *
  * @param {any} o   An ojbect with either html or body members.
  */
-const HTMLDiv = ({ o, excerpt = false }: HTMLDivProps) => {
-  if (o !== undefined && o !== null) {
+const HTMLDiv = ({ o, excerpt = false, className }: HTMLDivProps) => {
+  if (o) {
     if (excerpt) {
-      return <div dangerouslySetInnerHTML={{ __html: o.excerpt }} />
+      return (
+        <div
+          dangerouslySetInnerHTML={{ __html: o.excerpt }}
+          className={className}
+        />
+      )
     } else {
-      return <div dangerouslySetInnerHTML={{ __html: o.html }} />
+      return (
+        <div
+          dangerouslySetInnerHTML={{ __html: o.content }}
+          className={className}
+        />
+      )
     }
   } else {
     return <></>

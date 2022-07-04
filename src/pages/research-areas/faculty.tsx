@@ -22,15 +22,15 @@ import getFaculty from "../../lib/faculty"
 import { getAllPeople, getPeopleMap } from "../../lib/api"
 import IFieldMap from "../../types/field-map"
 import { getPersonName } from "../../lib/people"
+import { faCircle } from "@fortawesome/free-solid-svg-icons"
 
 const EMPTY_QUERY = ""
 
 interface FacultyCardProps {
   person: any
-  imageMap: any
 }
 
-export const FacultyCard = ({ person, imageMap }: FacultyCardProps) => {
+export const FacultyCard = ({ person }: FacultyCardProps) => {
   const [hover, setHover] = useState(false)
 
   //let photoEl = useRef(null)
@@ -78,15 +78,15 @@ export const FacultyCard = ({ person, imageMap }: FacultyCardProps) => {
       <AltView size="md">
         <div>
           <Row isCentered={true}>
-            {/* <Circle className="border border-solid border-cuimc-gray"> */}
-            <BWImage
-              src={src}
-              extZoom={hover}
-              alt={`${getPersonName(person)}`}
-              className={`w-64`}
-              onMouseEnter={handleMouseEnter}
-              onMouseLeave={handleMouseLeave}
-            />
+            <div className={`relative w-48 h-48`}>
+              <BWImage
+                src={src}
+                extZoom={hover}
+                alt={`${getPersonName(person)}`}
+                onMouseEnter={handleMouseEnter}
+                onMouseLeave={handleMouseLeave}
+              />
+            </div>
             {/* </Circle> */}
             {/* <BWImage2
                   src={usePersonImageURL(person)}
@@ -105,22 +105,16 @@ export const FacultyCard = ({ person, imageMap }: FacultyCardProps) => {
 
         <div>
           <Row isCentered={true}>
-            {/* <Circle className="border border-solid border-cuimc-gray"> */}
-            <BWImage
-              src={src}
-              extZoom={hover}
-              className={`w-64 rounded-full`}
-              alt={`${getPersonName(person)}`}
-              onMouseEnter={handleMouseEnter}
-              onMouseLeave={handleMouseLeave}
-            />
-            {/* </Circle> */}
-
-            {/* <BWImage2
-                  src={usePersonImageURL(person)}
-                  extZoom={hover}
-                  alt={person.fields.name}
-                /> */}
+            <div className={`relative w-48 h-48`}>
+              <BWImage
+                src={src}
+                extZoom={hover}
+                className={`rounded-full`}
+                alt={`${getPersonName(person)}`}
+                onMouseEnter={handleMouseEnter}
+                onMouseLeave={handleMouseLeave}
+              />
+            </div>
           </Row>
 
           <div className={`w-full h-full py-4`}>
@@ -136,15 +130,14 @@ export const FacultyCard = ({ person, imageMap }: FacultyCardProps) => {
 
 interface StaffGridProps {
   people: any[]
-  imageMap?: IFieldMap
 }
 
-export const StaffGrid = ({ people, imageMap = {} }: StaffGridProps) => (
+export const StaffGrid = ({ people }: StaffGridProps) => (
   <ul className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-8">
     {people.map((person: any, index: number) => {
       return (
         <li key={`person-${index}`}>
-          <FacultyCard person={person} imageMap={imageMap} />
+          <FacultyCard person={person} />
         </li>
       )
     })}
@@ -435,7 +428,7 @@ export const AdminTitles = ({ titles }: AdminTitlesProps) => (
           <li className="text-lg font-light mb-2" key={index}>
             <Row>
               <FontAwesomeIcon
-                icon="circle"
+                icon={faCircle}
                 className="mr-4 text-slate-300 text-xxs"
               />
               <div>{title}</div>
@@ -818,13 +811,7 @@ const Page = ({ allFaculty }: PageProps) => {
 
 export default Page
 
-type Params = {
-  params: {
-    slug: string
-  }
-}
-
-export async function getStaticProps({ params }: Params) {
+export async function getStaticProps() {
   const allFaculty = getFaculty()
   const people = getAllPeople()
   const peopleMap = getPeopleMap(people)

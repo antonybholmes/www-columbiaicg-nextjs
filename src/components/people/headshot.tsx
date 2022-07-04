@@ -8,7 +8,7 @@ type HeadShotProps = {
   className?: string
 }
 
-const HeadShot = ({ person, className = "w-80 h-80" }: HeadShotProps) => {
+const HeadShot = ({ person, className }: HeadShotProps) => {
   const [hover, setHover] = useState(false)
 
   const onMouseEnter = (e: React.MouseEvent<HTMLDivElement, MouseEvent>) => {

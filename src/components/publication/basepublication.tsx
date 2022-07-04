@@ -69,12 +69,12 @@ export const FriendlyUrl: React.FC<FriendlyUrlProps> = ({ url }) => {
   )
 }
 
-type AbstractProps = {
+interface AbstractProps {
   publication: any
   maxWords?: number
 }
 
-const Abstract: React.FC<AbstractProps> = ({ publication, maxWords }) => {
+const Abstract = ({ publication, maxWords = 32 }: AbstractProps) => {
   const [expanded, setExpanded] = useState(false)
   const [words, setWords] = useState(publication.abstract.split(" "))
 
@@ -127,10 +127,6 @@ const Abstract: React.FC<AbstractProps> = ({ publication, maxWords }) => {
   )
 }
 
-Abstract.defaultProps = {
-  maxWords: 32,
-}
-
 /**
  * Format author list into string.
  *
@@ -161,19 +157,14 @@ const authorString = (authors: Array<any>, maxAuthors: number = 10) => {
   return ret
 }
 
-type PubDataProps = {
+interface PubDataProps {
   text: string
   data: string
   onClick: any
   className?: string
 }
 
-const PubData: React.FC<PubDataProps> = ({
-  text,
-  data,
-  onClick,
-  className,
-}) => (
+const PubData = ({ text, data, onClick, className }: PubDataProps) => (
   <li className="block">
     <button
       className={`cursor-pointer font-light hover:text-cuimc-button-blue trans-ani ${className}`}
@@ -184,16 +175,12 @@ const PubData: React.FC<PubDataProps> = ({
   </li>
 )
 
-PubData.defaultProps = {
-  className: "",
-}
-
 const useAuthors = (
   authors: Array<any>,
   maxAuthors: number = 10,
   onClick: any
 ) => {
-  const ret: Array<any> = []
+  const ret: any[] = []
 
   authors.map((author: string, index: number) => {
     ret.push(
@@ -335,8 +322,6 @@ const BasePublication = ({
       onPubClick(journal)
     }
   }
-
-  //console.log(publication)
 
   let url
 

@@ -6,17 +6,10 @@ import usePersonNameTitle from "../../hooks/person-title"
 
 interface PersonHeaderProps {
   person: any
-  faculty?: any
   showImage?: boolean
-  style?: any
 }
 
-const PersonHeaderHoz = ({
-  person,
-  faculty,
-  style,
-  showImage = true,
-}: PersonHeaderProps) => {
+const PersonHeaderHoz = ({ person, showImage = true }: PersonHeaderProps) => {
   const picEl = useRef(null)
   const cardEl = useRef(null)
 
@@ -84,12 +77,16 @@ const PersonHeaderHoz = ({
   const titles = useContextName("", person.titleMap).split(";")
 
   return (
-    <Row className="w-full">
+    <Row isVCentered={true}>
       {showImage && (
-        <div className="mb-4 mr-8" ref={picEl}>
-          <HeadShot person={person} className="w-72 h-72" />
+        <div
+          className="relative mb-4 mr-8 min-w-72 w-72 h-72 overflow-hidden"
+          ref={picEl}
+        >
+          <HeadShot person={person} />
         </div>
       )}
+
       <div>
         <div ref={cardEl}>
           <h1 className="m-0">{usePersonNameTitle(person)}</h1>
@@ -103,20 +100,6 @@ const PersonHeaderHoz = ({
             )
           })}
         </div>
-        {/* <HideSmall size="2xl" className="pb-4">
-          <ContactCard faculty={faculty} person={person} />
-        </HideSmall> */}
-
-        {/* {faculty.fields.url !== "" && (
-          <div className="mt-4">
-            <BlueButtonLink
-              to={faculty.fields.url}
-              className="px-6 py-3"
-            >
-              {strings.labWebSite}
-            </BlueButtonLink>
-          </div>
-        )} */}
       </div>
     </Row>
   )

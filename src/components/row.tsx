@@ -33,9 +33,11 @@ const Row = React.forwardRef<RowProps, any>(
     },
     ref?: any
   ) => {
-    const baseClass = `flex flex-row ${w !== "" ? `w-full ${size}:${w}` : ""} ${
-      isCentered ? "justify-center" : ""
-    } ${isVCentered ? "items-center" : ""} ${wrap ? "flex-wrap" : ""}`
+    const baseClass = `flex flex-row relative ${
+      w !== "" ? `w-full ${size}:${w}` : ""
+    } ${isCentered ? "justify-center" : ""} ${
+      isVCentered ? "items-center" : ""
+    } ${wrap ? "flex-wrap" : ""}`
 
     return (
       <div

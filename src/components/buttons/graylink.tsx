@@ -1,18 +1,14 @@
-import React from "react"
+import { ReactNode } from "react"
 import ColorLink from "./colorlink"
 
 type LinkProps = {
   to: string
   className?: string
   activeClassName?: string
+  children?: ReactNode
 }
 
-const GrayLink: React.FC<LinkProps> = ({
-  to,
-  children,
-  className,
-  activeClassName,
-}) => (
+const GrayLink = ({ to, children, className, activeClassName }: LinkProps) => (
   <ColorLink
     color="gray"
     to={to}
@@ -22,10 +18,5 @@ const GrayLink: React.FC<LinkProps> = ({
     {children}
   </ColorLink>
 )
-
-GrayLink.defaultProps = {
-  className: "",
-  activeClassName: "",
-}
 
 export default GrayLink

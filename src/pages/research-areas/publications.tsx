@@ -13,16 +13,15 @@ const Page = () => {
   }, [])
 
   return (
-  
-  <PageLayout
+    <PageLayout
       title={"Publications"}
       path={"/research-areas/publications"}
       crumbs={[["Publications", PUBLICATIONS_PATH]]}
       nav={"Publications"}
     >
-  
-  <PublicationsPage publications={publications} />
-  </PageLayout>
+      <PublicationsPage publications={publications} />
+    </PageLayout>
+  )
 }
 
 export default Page

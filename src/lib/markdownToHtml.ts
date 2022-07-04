@@ -1,7 +1,26 @@
-import { remark } from "remark"
-import html from "remark-html"
+// import { remark } from "remark"
+// import html from "remark-html"
 
-export default async function markdownToHtml(markdown: string) {
-  const result = await remark().use(html).process(markdown)
+// export default async function markdownToHtml(markdown: string) {
+//   const result = await remark().use(html).process(markdown)
+//   return result.toString()
+// }
+
+import { unified } from "unified"
+import remarkParse from "remark-parse"
+//import remarkPrism from 'remark-prism'
+import remarkRehype from "remark-rehype"
+import rehypeStringify from "rehype-stringify"
+
+export const markdownHtml = async (markdown: string) => {
+  //const result = await remark().use(html).use(prism).process(markdown)
+  const result = await unified()
+    .use(remarkParse)
+    //.use(remarkPrism)
+    .use(remarkRehype, { allowDangerousHtml: true })
+    .use(rehypeStringify, { allowDangerousHtml: true })
+    .process(markdown)
   return result.toString()
 }
+
+export default markdownHtml

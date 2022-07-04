@@ -6,6 +6,8 @@ import { getMDBySlug } from "./markdown"
 export const POSTS_DIRECTORY = join(process.cwd(), "_content", "posts")
 export const PEOPLE_DIRECTORY = join(process.cwd(), "_content", "people")
 export const LABS_DIRECTORY = join(process.cwd(), "_content", "labs")
+export const NEWS_DIRECTORY = join(process.cwd(), "_content", "news")
+export const JOBS_DIRECTORY = join(process.cwd(), "_content", "jobs")
 export const PUBLICATIONS_DIRECTORY = join(
   process.cwd(),
   "_content",
@@ -67,7 +69,7 @@ export const getPeopleSlugs = () => {
 }
 
 export const getPersonBySlug = (slug: string, fields: string[] = []) => {
-  const ret = getMDBySlug(PEOPLE_DIRECTORY, slug, fields)
+  const ret: any = getMDBySlug(PEOPLE_DIRECTORY, slug, fields)
   ret.titleMap = toContextMap(ret.fields.titles)
   return ret
 }
@@ -144,4 +146,42 @@ export const getAllPublications = () => {
   const slugs = getPublicationSlugs()
   const labs = slugs.map(slug => getPublicationsBySlug(slug))
   return labs
+}
+
+export const getNewsSlugs = () => {
+  return getSlugs(NEWS_DIRECTORY)
+}
+
+export const getNewsBySlug = (slug: string, fields: string[] = []) => {
+  return getMDBySlug(NEWS_DIRECTORY, slug, fields)
+}
+
+export const getNewsPosts = (fields: string[] = []) => {
+  const slugs = getNewsSlugs()
+  const posts = slugs
+    .map(slug => getNewsBySlug(slug, fields))
+    // sort posts by date in descending order
+    .sort((post1, post2) =>
+      new Date(post1.fields.date) > new Date(post2.fields.date) ? -1 : 1
+    )
+  return posts
+}
+
+export const getJobsSlugs = () => {
+  return getSlugs(JOBS_DIRECTORY)
+}
+
+export const getJobBySlug = (slug: string, fields: string[] = []) => {
+  return getMDBySlug(JOBS_DIRECTORY, slug, fields)
+}
+
+export const getJobPosts = (fields: string[] = []) => {
+  const slugs = getJobsSlugs()
+  const posts = slugs
+    .map(slug => getJobBySlug(slug, fields))
+    // sort posts by date in descending order
+    .sort((post1, post2) =>
+      new Date(post1.fields.date) > new Date(post2.fields.date) ? -1 : 1
+    )
+  return posts
 }
