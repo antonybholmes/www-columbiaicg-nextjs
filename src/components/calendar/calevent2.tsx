@@ -7,7 +7,7 @@ import useCalEventType from "../../hooks/caleventype"
 import { eventUrl } from "../../utils/urls"
 import IndexLink from "../buttons/indexlink"
 import dayjs from "dayjs"
-import useCalEventTypeUrl from "./caleventtypeurl"
+import getCalEventTypeUrl from "./caleventtypeurl"
 import HTMLDiv from "../htmldiv"
 import { EventImage } from "./caleventdetails"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
@@ -121,7 +121,7 @@ const CalEvent2 = ({ event }: CalEventProps) => {
                     }`}
                     key={index}
                   >
-                    <BaseLink to={useCalEventTypeUrl(EVENTS_PATH, t)}>
+                    <BaseLink to={getCalEventTypeUrl(EVENTS_PATH, t)}>
                       {t}
                     </BaseLink>
                   </li>

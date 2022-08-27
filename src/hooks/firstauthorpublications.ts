@@ -1,4 +1,4 @@
-const useFirstAuthorPublications = (publications: Array<any>) => {
+const getFirstAuthorPublications = (publications: any[]) => {
   return publications.filter((pub: any) => {
     return (
       pub.tagList.includes("first-author") ||
@@ -8,4 +8,4 @@ const useFirstAuthorPublications = (publications: Array<any>) => {
   })
 }
 
-export default useFirstAuthorPublications
+export default getFirstAuthorPublications

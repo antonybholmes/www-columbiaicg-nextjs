@@ -1,7 +1,7 @@
 import Stack from "../utils/stack"
 import StringBuffer from "../utils/stringbuffer"
 
-const useSearchStack = (q: string): Array<any> => {
+const useSearchStack = (q: string): any[] => {
   const text = q
     .replace(/ /g, " OR ")
     .replace(/( OR)+/g, " OR")

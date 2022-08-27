@@ -13,6 +13,7 @@ export const LABS_PATH = `${RESEARCH_AREA_PATH}/labs`
 export const PUBLICATIONS_PATH = `${RESEARCH_AREA_PATH}/publications`
 export const PEOPLE_PATH = "/people"
 export const EVENTS_PATH = "/events"
+export const JOBS_PATH = "/jobs"
 export const NEWS_PATH = "/news"
 
 export const TEXT_SHOW_MORE = "Show more"
@@ -21,6 +22,7 @@ export const TEXT_LAB_PUBS = "Lab publications"
 export const TEXT_MY_PUBS = "My Publications"
 
 export const ICAL_API = `https://api2.columbiaicg.org/v1/events/ical`
+export const COURSES_API = `/api/v1/courses`
 
 export const GROUPS = [
   "Directors",

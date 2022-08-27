@@ -1,4 +1,4 @@
-import React from "react"
+import { ReactNode } from "react"
 import { BUTTON_CLASSES } from "./bluebutton"
 
 export const TEAL_BUTTON_CLASSES = "bg-teal-500 hover:bg-teal-600"
@@ -6,13 +6,10 @@ export const TEAL_BUTTON_CLASSES = "bg-teal-500 hover:bg-teal-600"
 type ButtonProps = {
   onClick: any
   className?: string
+  children?: ReactNode
 }
 
-const TealButton: React.FC<ButtonProps> = ({
-  onClick,
-  className,
-  children,
-}) => (
+const TealButton = ({ onClick, className, children }: ButtonProps) => (
   <button
     onClick={onClick}
     // className="border-b-4 border-solid border-blue-600 bg-default-blue text-white hover:bg-blue-600 trans-ani px-8 py-4 rounded-md uppercase"
@@ -21,10 +18,6 @@ const TealButton: React.FC<ButtonProps> = ({
     {children}
   </button>
 )
-
-TealButton.defaultProps = {
-  className: "",
-}
 
 export default TealButton
 

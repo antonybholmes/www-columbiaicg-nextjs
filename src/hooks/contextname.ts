@@ -1,4 +1,4 @@
-const useContextName = (
+const getContextName = (
   context: string = "",
   contextMap: any,
   strictMode: boolean = false
@@ -16,4 +16,4 @@ const useContextName = (
   return ret
 }
 
-export default useContextName
+export default getContextName

@@ -1,37 +1,9 @@
-import React from "react"
 import BlueLink from "../buttons/bluelink"
 
 import HTMLDiv from "../htmldiv"
 
 import FullDiv from "../fulldiv"
-import ZoomImage from "../images/zoomimage"
 import dayjs from "dayjs"
-
-type JobImageProps = {
-  name: string
-  imageMap?: any
-  hover?: boolean
-}
-
-export const JobImage: React.FC<JobImageProps> = ({
-  name,
-  imageMap,
-  hover,
-}) => (
-  <div className="w-48 h-48">
-    {name !== null && name in imageMap && (
-      <ZoomImage
-        image={imageMap[name]}
-        className="w-full h-full"
-        extZoom={hover}
-      />
-    )}
-  </div>
-)
-
-JobImage.defaultProps = {
-  hover: false,
-}
 
 const title = (newsitem: any, date: any, paths: any, showLink: boolean) => (
   <>

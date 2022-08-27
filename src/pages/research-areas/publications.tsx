@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react"
 
-import usePublications from "../../hooks/publications"
+import getPublications from "../../hooks/publications"
 import PublicationsPage from "../../components/pages/publications-page"
 import PageLayout from "../../layouts/pagelayout"
 import { PUBLICATIONS_PATH } from "../../constants"
@@ -9,7 +9,7 @@ const Page = () => {
   const [publications, setPublications] = useState<any[]>([])
 
   useEffect(() => {
-    usePublications(setPublications)
+    getPublications(setPublications)
   }, [])
 
   return (

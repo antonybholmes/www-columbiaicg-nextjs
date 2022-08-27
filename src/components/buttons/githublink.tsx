@@ -1,39 +1,28 @@
-import React from "react"
 import IconLink from "./iconlink"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { faGithub } from "@fortawesome/free-brands-svg-icons"
 
 type LinkProps = {
   github?: string
   color?: string
   hoverColor?: string
-  size?: string
   iconSize?: string
 }
 
-const GitHubLink: React.FC<LinkProps> = ({
+const GitHubLink = ({
   github,
-  color,
-  hoverColor,
-  size,
-  iconSize,
-}) => (
+  color = "text-slate-500",
+  hoverColor = "text-blue-500",
+  iconSize = "text-xl",
+}: LinkProps) => (
   <IconLink
-    name="GitHub"
     to={`https://github.com/${github}`}
-    icon={
-      <FontAwesomeIcon icon={["fab", "github"]} className={`${iconSize}`} />
-    }
-    content={github}
+    icon={<FontAwesomeIcon icon={faGithub} className={`${iconSize}`} />}
     color={color}
     hoverColor={hoverColor}
-  />
+  >
+    {github}
+  </IconLink>
 )
-
-GitHubLink.defaultProps = {
-  color: "text-slate-500",
-  hoverColor: "text-blue-500",
-  size: "text-xl",
-  iconSize: "text-xl",
-}
 
 export default GitHubLink

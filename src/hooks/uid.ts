@@ -1,6 +1,3 @@
-import useCurrentBuild from "./currentbuild"
-import getUuid from "uuid-by-string"
-
 const useUid = () => {
   // const uid = (
   //   "000000000000000" + useCurrentBuild().valueOf().toString(16)

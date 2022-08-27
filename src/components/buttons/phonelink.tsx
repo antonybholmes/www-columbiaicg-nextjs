@@ -4,38 +4,26 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faPhone } from "@fortawesome/free-solid-svg-icons"
 
 type PhoneLinkProps = {
-  name?: string
   phone: string
   color?: string
   hoverColor?: string
-  size?: string
   iconSize?: string
 }
 
-const PhoneLink: React.FC<PhoneLinkProps> = ({
-  name,
+const PhoneLink = ({
   phone,
-  color,
-  hoverColor,
-  size,
-  iconSize,
-}) => (
+  color = "text-slate-500",
+  hoverColor = "text-blue-500",
+  iconSize = "text-xl",
+}: PhoneLinkProps) => (
   <IconLink
-    name={name}
     to={`tel:${phone}`}
     icon={<FontAwesomeIcon icon={faPhone} className={`${iconSize}`} />}
-    content={phone}
     color={color}
     hoverColor={hoverColor}
-  />
+  >
+    {phone}/
+  </IconLink>
 )
-
-PhoneLink.defaultProps = {
-  name: "Phone",
-  color: "text-slate-500",
-  hoverColor: "text-blue-500",
-  size: "text-xl",
-  iconSize: "text-xl",
-}
 
 export default PhoneLink

@@ -1,4 +1,4 @@
-import React, { ReactElement, useEffect, useRef, useState } from "react"
+import { ReactElement, useEffect, useRef, useState } from "react"
 import Row from "../row"
 import AltView from "../altview"
 import VertTab from "./verttab"

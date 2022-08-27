@@ -1,7 +1,7 @@
+/* eslint-disable @next/next/no-img-element */
 import React, { useRef, useState } from "react"
 import Container from "../container"
 import SlideMenuButton from "../slidemenu/slidemenubutton"
-import Logo from "./logo"
 import HeaderLinksNav from "./headerlinksnav"
 import AltView from "../altview"
 import Row from "../row"
@@ -304,9 +304,9 @@ const HeaderLinks = ({ location }: HeaderLinksProps) => {
   //   //tl.to("#tab-highlight", {duration: 0.5, height: 0, ease: "none"}, "+=0.1")
   // }
 
-  links.map((link: any, i: number) => {
-    linkRefMap[link.link] = useRef(null)
-  })
+  // links.map((link: any, i: number) => {
+  //   linkRefMap[link.link] = useRef(null)
+  // })
 
   return (
     <nav
@@ -346,7 +346,6 @@ const HeaderLinks = ({ location }: HeaderLinksProps) => {
 
 type HeaderProps = {
   title: string
-  location: any
   content?: any
   onSearch?: any
   search?: string
@@ -360,7 +359,6 @@ type HeaderProps = {
 
 const Header = ({
   title,
-  location,
   content,
   onSearch,
   search,
@@ -433,5 +431,7 @@ const Header = ({
     </div>
   )
 }
+
+HeaderLink.displayName = "HeaderLink"
 
 export default Header

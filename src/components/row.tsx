@@ -1,4 +1,4 @@
-import React, { Ref } from "react"
+import React, { ReactNode, Ref } from "react"
 
 interface RowProps {
   w?: string
@@ -13,6 +13,7 @@ interface RowProps {
   onMouseEnter?: any
   onMouseLeave?: any
   id?: string
+  children?: ReactNode
 }
 
 const Row = React.forwardRef<RowProps, any>(
@@ -55,18 +56,6 @@ const Row = React.forwardRef<RowProps, any>(
   }
 )
 
-Row.defaultProps = {
-  id: "",
-  w: "",
-  size: "md",
-  className: "",
-  style: null,
-  isMobile: false,
-  isCentered: false,
-  isVCentered: true,
-  wrap: false,
-  onMouseEnter: null,
-  onMouseLeave: null,
-}
+Row.displayName = "Row"
 
 export default Row

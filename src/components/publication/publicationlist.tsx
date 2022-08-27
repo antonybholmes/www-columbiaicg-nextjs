@@ -9,7 +9,7 @@ import React from "react"
 import Publication from "./publication"
 
 type PublicationListProps = {
-  publications: Array<any>
+  publications: any[]
   showIndices?: boolean
   showLabLink?: boolean
   showAbstract?: boolean

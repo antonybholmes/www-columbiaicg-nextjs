@@ -1,11 +1,12 @@
-import React from "react"
+import { ReactNode } from "react"
 import IndexLink from "./indexlink"
 
-type IndexLinkProps = {
+type LinkProps = {
   to: string
+  children?: ReactNode
 }
 
-const TextIndexLink: React.FC<IndexLinkProps> = ({ to, children }) => (
+const TextIndexLink = ({ to, children }: LinkProps) => (
   <IndexLink color="text" to={to}>
     {children}
   </IndexLink>

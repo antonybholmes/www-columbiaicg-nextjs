@@ -1,7 +1,7 @@
 import Stack from "../utils/stack"
 import useSearchStack from "./searchstack"
 
-const useBooleanSearch = (
+const getBooleanSearch = (
   query: string,
   items: any,
   search = (token: any, items: any): any => {
@@ -70,4 +70,4 @@ const useBooleanSearch = (
   return opStack.pop()
 }
 
-export default useBooleanSearch
+export default getBooleanSearch

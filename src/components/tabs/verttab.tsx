@@ -1,4 +1,4 @@
-import React, { Component } from "react"
+import { Component } from "react"
 
 class VertTab extends Component<
   { id: string; activeTab: boolean; index: number; n: number; onClick: any },
@@ -23,7 +23,7 @@ class VertTab extends Component<
 
     return (
       <li>
-        <button id={id} index={index} className={className} onClick={_onClick}>
+        <button id={id} className={className} onClick={_onClick}>
           {id}
         </button>
       </li>

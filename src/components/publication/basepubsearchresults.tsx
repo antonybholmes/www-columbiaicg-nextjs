@@ -4,8 +4,8 @@ import BasePublicationList from "./basepublicationlist"
 //import SideBar from "../sidebar/sidebar"
 
 type PubSearchResultsProps = {
-  publications: Array<any>
-  pagedPublications: Array<any>
+  publications: any[]
+  pagedPublications: any[]
   page: number
   recordsPerPage: number
   onPageChanged?: any
@@ -53,11 +53,8 @@ const BasePubSearchResults: React.FC<PubSearchResultsProps> = ({
 
           <BasePublicationList
             publications={pagedPublications}
-            showLabLink={showLabLink}
             onPubClick={onPubClick}
             showIndices={false}
-            breakpoint={breakpoint}
-            showAbstract={showAbstract}
           />
 
           {/* <Pagination
@@ -73,13 +70,6 @@ const BasePubSearchResults: React.FC<PubSearchResultsProps> = ({
       )}
     </div>
   )
-}
-
-BasePubSearchResults.defaultProps = {
-  showLabLink: false,
-  showAbstract: false,
-  onPageChanged: null,
-  onPubClick: null,
 }
 
 export default BasePubSearchResults

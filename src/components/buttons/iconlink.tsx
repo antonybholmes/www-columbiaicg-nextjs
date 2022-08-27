@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from "react"
+import React, { ReactNode, useEffect, useRef, useState } from "react"
 import Row from "../row"
 import { gsap } from "gsap"
 import ColorLink from "./colorlink"
@@ -6,24 +6,15 @@ import BlueLink from "./bluelink"
 import HideSmall from "../hidesmall"
 
 type IconLinkBodyProps = {
-  name?: string
-  to?: string
+  to: string
   icon: any
-  content: any
   color?: string
   hoverColor?: string
   className?: string
+  children?: ReactNode
 }
 
-const IconLinkBody: React.FC<IconLinkBodyProps> = ({
-  name,
-  to,
-  icon,
-  content,
-  color,
-  hoverColor,
-  className,
-}) => {
+const IconLinkBody = ({ to, icon, children }: IconLinkBodyProps) => {
   const [hover, setHover] = useState(false)
 
   let iconEl = useRef(null)
@@ -66,54 +57,32 @@ const IconLinkBody: React.FC<IconLinkBodyProps> = ({
           {icon}
         </div>
 
-        {to !== "" ? (
-          <div>
-            <BlueLink to={to}>{content}</BlueLink>
-          </div>
-        ) : (
-          <div className="text-cuimc-button-blue">{content}</div>
-        )}
+        <div>
+          <BlueLink to={to}>{children}</BlueLink>
+        </div>
       </Row>
     </>
   )
 }
 
-IconLinkBody.defaultProps = {
-  className: "",
-}
-
-type IconLinkProps = {
-  name?: string
-  to?: string
+interface LinkProps {
+  to: string
   icon: any
-  content: string
   color?: string
   hoverColor?: string
+  children?: ReactNode
 }
 
-const IconLink: React.FC<IconLinkProps> = ({
-  name,
+const IconLink = ({
   to,
   icon,
-  content,
-  color,
-  hoverColor,
-}) => (
-  <IconLinkBody
-    to={to}
-    name={name}
-    icon={icon}
-    content={content}
-    color={color}
-    hoverColor={hoverColor}
-  />
+  color = "text-slate-400",
+  hoverColor = "text-blue-900",
+  children,
+}: LinkProps) => (
+  <IconLinkBody to={to} icon={icon} color={color} hoverColor={hoverColor}>
+    {children}
+  </IconLinkBody>
 )
-
-IconLink.defaultProps = {
-  name: "",
-  to: "",
-  color: "text-slate-400",
-  hoverColor: "text-blue-900",
-}
 
 export default IconLink

@@ -1,9 +1,10 @@
-import React from "react"
-import { Link } from "gatsby"
+import React, { ReactNode } from "react"
+import BaseLink from "../buttons/baselink"
 
 type SlideMenuLinkProps = {
   to: string
   active: boolean
+  children?: ReactNode
 }
 
 const SlideMenuLink: React.FC<SlideMenuLinkProps> = ({
@@ -11,7 +12,7 @@ const SlideMenuLink: React.FC<SlideMenuLinkProps> = ({
   active,
   children,
 }) => (
-  <Link to={to}>
+  <BaseLink to={to}>
     <div className="py-3 px-6 hover:bg-slate-300">
       {children}
       {/* {!active && (
@@ -20,7 +21,7 @@ const SlideMenuLink: React.FC<SlideMenuLinkProps> = ({
         </div>
       )} */}
     </div>
-  </Link>
+  </BaseLink>
 )
 
 export default SlideMenuLink

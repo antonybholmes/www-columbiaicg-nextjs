@@ -1,23 +1,16 @@
 import React, { useState } from "react"
 
-import FullDiv from "../fulldiv"
-import Row from "../row"
-import HideSmall from "../hidesmall"
-import useSiteMetadata from "../../hooks/sitemetadata"
 import useCalEventType from "../../hooks/caleventype"
-import { Link } from "gatsby"
 import { eventUrl } from "../../utils/urls"
 import IndexLink from "../buttons/indexlink"
 import dayjs from "dayjs"
-import useCalEventTypeUrl from "./caleventtypeurl"
 import HTMLDiv from "../htmldiv"
-import { EventImage } from "./caleventdetails"
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import BaseLink from "../buttons/baselink"
 
 export const useImageName = (event: any): string => {
   let imageName: string = ""
 
-  for (let tag of event.frontmatter.tagList) {
+  for (let tag of event.fields.tagList) {
     if (tag.startsWith("image::")) {
       const tokens = tag.split("::")
       imageName = tokens[1]
@@ -44,8 +37,6 @@ type CalEventProps = {
 }
 
 const CalEventSmall: React.FC<CalEventProps> = ({ event }) => {
-  const { paths } = useSiteMetadata()
-
   const eventType = useCalEventType(event)
 
   const [hover, setHover] = useState(false)
@@ -65,9 +56,9 @@ const CalEventSmall: React.FC<CalEventProps> = ({ event }) => {
     case "Public Talk":
     case "Guest Speaker":
       eventLink = (
-        <Link to={eventUrl(event)}>
-          <div className="text-red-400">{event.frontmatter.title}</div>
-        </Link>
+        <BaseLink to={eventUrl(event)}>
+          <div className="text-red-400">{event.fields.title}</div>
+        </BaseLink>
       )
 
       addLink = (
@@ -78,11 +69,11 @@ const CalEventSmall: React.FC<CalEventProps> = ({ event }) => {
       break
     default:
       eventLink = (
-        <Link to={eventUrl(event)}>
+        <BaseLink to={eventUrl(event)}>
           <div className="text-columbia-secondary-blue">
-            {event.frontmatter.title}
+            {event.fields.title}
           </div>
-        </Link>
+        </BaseLink>
       )
 
       addLink = (
@@ -96,8 +87,8 @@ const CalEventSmall: React.FC<CalEventProps> = ({ event }) => {
   // See if we should include an image
   const imageName = useImageName(event)
 
-  const start = dayjs(event.frontmatter.start)
-  const end = dayjs(event.frontmatter.end)
+  const start = dayjs(event.fields.start)
+  const end = dayjs(event.fields.end)
 
   return (
     <>
@@ -109,7 +100,7 @@ const CalEventSmall: React.FC<CalEventProps> = ({ event }) => {
         <HTMLDiv o={event} />
       </div>
       <div className="mt-4 text-sm text-gray-600 font-light">
-        {event.frontmatter.location}
+        {event.fields.location}
       </div>
     </>
   )

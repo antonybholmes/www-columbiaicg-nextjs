@@ -2,7 +2,7 @@ import { useState } from "react"
 import ContactInfo from "./contactinfo"
 import FacultyLink from "../faculty/facultylink"
 import PersonLink from "./personlink"
-import useContextName from "../../hooks/contextname"
+import getContextName from "../../hooks/contextname"
 import ShowSmall from "../showsmall"
 import HideSmall from "../hidesmall"
 import Row from "../row"
@@ -126,7 +126,7 @@ const PersonCard = ({
     fluid = `people/${person.fields.personId}.jpg`
   }
 
-  const titles = useContextName(context, person.titleMap).split(";")
+  const titles = getContextName(context, person.titleMap).split(";")
 
   return (
     <div

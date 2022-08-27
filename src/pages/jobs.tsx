@@ -5,7 +5,7 @@ import Container from "../components/container"
 import FullDiv from "../components/fulldiv"
 import FlHdDiv from "../components/flhddiv"
 import HTMLDiv from "../components/htmldiv"
-import useBooleanSearch from "../hooks/booleansearch"
+import getBooleanSearch from "../hooks/booleansearch"
 import MainSideCol from "../components/mainsidecol"
 import PageLayout from "../layouts/pagelayout"
 import dayjs from "dayjs"
@@ -159,7 +159,7 @@ const Page = ({ allJobs = [] }: PageProps) => {
   useEffect(() => {
     if (query !== "") {
       setFilteredJobs(
-        useBooleanSearch(
+        getBooleanSearch(
           query,
           allJobs,
           search,
@@ -173,20 +173,11 @@ const Page = ({ allJobs = [] }: PageProps) => {
     setPage(1)
   }, [query])
 
-  const handleDayClick = (day: any, { selected }) => {
-    // const { selectedDays } = this.state;
-    // if (selected) {
-    //   const selectedIndex = selectedDays.findIndex(selectedDay =>
-    //     DateUtils.isSameDay(selectedDay, day)
-    //   );
-    //   selectedDays.splice(selectedIndex, 1);
-    // } else {
-    //   selectedDays.push(day);
-    // }
-    setQuery("")
-    setSelectedDays(selected ? [] : [day])
-    setPage(1)
-  }
+  // const handleDayClick = (day: any, { selected }) => {
+  //   setQuery("")
+  //   setSelectedDays(selected ? [] : [day])
+  //   setPage(1)
+  // }
 
   const handleSearch = (text: string, clicked: boolean) => {
     // update state according to the latest query and results

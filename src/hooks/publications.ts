@@ -5,7 +5,7 @@ const API = "https://api.columbiaicg.org/v3/publications" //"https://up7cqny9jj.
 const URL = `/data/publications`
 
 // const updatePublications = (
-//   publications: Array<any>,
+//   publications: any[],
 //   setPublications: any,
 //   n: number,
 //   format: string
@@ -21,7 +21,7 @@ const URL = `/data/publications`
 //   }
 // }
 
-const usePublications = (
+const getPublications = (
   setPublications: any,
   id: string = "all",
   format: string = "json"
@@ -47,4 +47,4 @@ const usePublications = (
     })
 }
 
-export default usePublications
+export default getPublications

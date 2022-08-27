@@ -1,10 +1,9 @@
-import React from "react"
 import CalEventLocation from "./caleventlocation"
 import { eventUrl } from "../../utils/urls"
 
 import HTMLDiv from "../htmldiv"
 import useCalEventType from "../../hooks/caleventype"
-import useCalEventTypeUrl from "./caleventtypeurl"
+import getCalEventTypeUrl from "./caleventtypeurl"
 
 import FullDiv from "../fulldiv"
 import HideSmall from "../hidesmall"
@@ -39,7 +38,6 @@ export const EventImage = ({ name, hover = false }: EventImageProps) => (
       src={`${IMAGEKIT_URL}/events/${name}.jpg`}
       alt={name}
       className="w-full h-full"
-      extZoom={hover}
     />
   </div>
 )
@@ -109,8 +107,9 @@ const CalEventDetails = ({
                   className={`text-sm font-medium bg-cuimc-gray rounded px-3 py-1 mt-2 inline ${
                     index > 0 ? "ml-3" : ""
                   }`}
+                  key={index}
                 >
-                  <BaseLink to={useCalEventTypeUrl(EVENTS_PATH, t)}>
+                  <BaseLink to={getCalEventTypeUrl(EVENTS_PATH, t)}>
                     {t}
                   </BaseLink>
                 </li>
@@ -130,7 +129,7 @@ const CalEventDetails = ({
         <div className="text-sm mt-4">{addLink}</div>
       </FullDiv>
       <HideSmall size="lg" className="pt-2 md:pt-0 min-w-56 overflow-hidden">
-        <EventImage name={imageName} imageMap={imageMap} hover={hover} />
+        <EventImage name={imageName} hover={hover} />
       </HideSmall>
     </Row>
   )

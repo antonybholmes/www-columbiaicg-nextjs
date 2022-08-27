@@ -1,15 +1,13 @@
 import Container from "../container"
-import { PUBLICATIONS_PATH, TEXT_SHOW_MORE } from "../../constants"
-import useTopJournals from "../../hooks/topjournals"
+import getTopJournals from "../../hooks/topjournals"
 import { ReactNode, useEffect, useState } from "react"
-import useBooleanSearch from "../../hooks/booleansearch"
+import getBooleanSearch from "../../hooks/booleansearch"
 import { SideContactCard } from "../side-contact-card"
-import useInstitutePublications from "../../hooks/institutepublications"
-import useFirstAuthorPublications from "../../hooks/firstauthorpublications"
-import useJournalPublications from "../../hooks/journalpublications"
-import useSortPublications from "../../hooks/sortpublications"
-import useTopPubs from "../../hooks/toppubs"
-import PageLayout from "../../layouts/pagelayout"
+import getInstitutePublications from "../../hooks/institutepublications"
+import getFirstAuthorPublications from "../../hooks/firstauthorpublications"
+import getJournalPublications from "../../hooks/journalpublications"
+import getSortPublications from "../../hooks/sortpublications"
+import getTopPubs from "../../hooks/toppubs"
 import SearchBar5 from "../search/searchbar5"
 import Row from "../row"
 import ShowSmall from "../showsmall"
@@ -27,6 +25,7 @@ import {
   faArrowUpShortWide,
 } from "@fortawesome/free-solid-svg-icons"
 import Publications from "../publication/publications"
+import { TEXT_SHOW_MORE } from "../../constants"
 
 const EMPTY_QUERY = ""
 
@@ -44,7 +43,7 @@ const searchAuthors = (q: string, publication: any) => {
   return false
 }
 
-export const search = (query: any, publications: Array<any>): Array<any> => {
+export const search = (query: any, publications: any[]): any[] => {
   let ret: any = []
 
   let ql = query.text.toLowerCase()
@@ -189,7 +188,7 @@ interface Props {
 }
 
 const PublicationsPage = ({ publications = [] }: Props) => {
-  const person = null
+  const person: any = null
 
   const [query, setQuery] = useState<string>(EMPTY_QUERY)
   const [sortOrder, setSortOrder] = useState<string>("Publication date")
@@ -204,11 +203,9 @@ const PublicationsPage = ({ publications = [] }: Props) => {
   const [firstAuthorOnly, setFirstAuthorOnly] = useState(true) //id === "all")
   const [descending, setDescending] = useState(true)
 
-  const [filteredPublications, setFilteredPublications] = useState<Array<any>>(
-    []
-  )
+  const [filteredPublications, setFilteredPublications] = useState<any[]>([])
 
-  const [pagePublications, setPagePublications] = useState<Array<any>>([])
+  const [pagePublications, setPagePublications] = useState<any[]>([])
 
   const [page, setPage] = useState<number>(1)
 
@@ -217,7 +214,7 @@ const PublicationsPage = ({ publications = [] }: Props) => {
   const [recordsPerPage, setRecordsPerPage] = useState(0)
 
   useEffect(() => {
-    setJournals(useTopJournals(publications))
+    setJournals(getTopJournals(publications))
   }, [publications])
 
   useEffect(() => {
@@ -227,7 +224,7 @@ const PublicationsPage = ({ publications = [] }: Props) => {
   useEffect(() => {
     if (query !== "") {
       updateFilteredPublications(
-        useBooleanSearch(
+        getBooleanSearch(
           query,
           publications,
           search,
@@ -258,24 +255,24 @@ const PublicationsPage = ({ publications = [] }: Props) => {
     let pubs = publications
 
     if (instituteOnly) {
-      pubs = useInstitutePublications(pubs)
+      pubs = getInstitutePublications(pubs)
     }
 
     if (firstAuthorOnly) {
-      pubs = useFirstAuthorPublications(pubs)
+      pubs = getFirstAuthorPublications(pubs)
     }
 
     if (selectedJournals.size > 0) {
-      pubs = useJournalPublications(pubs, selectedJournals)
+      pubs = getJournalPublications(pubs, selectedJournals)
     }
 
-    pubs = useSortPublications(pubs, sortOrder, descending)
+    pubs = getSortPublications(pubs, sortOrder, descending)
 
     setFilteredPublications(pubs)
 
     setPagePublications(pubs.slice(0, recordsPerPage))
 
-    setTopPubs(useTopPubs(pubs, TOP_PUBS))
+    setTopPubs(getTopPubs(pubs, TOP_PUBS))
   }
 
   const handleSearch = (text: string, clicked: boolean) => {

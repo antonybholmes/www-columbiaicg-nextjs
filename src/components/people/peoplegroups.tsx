@@ -1,10 +1,8 @@
-import React from "react"
 import { GROUPS } from "../../constants"
 import PeopleGrid from "./peoplegrid"
 
-type PeopleGroupsProps = {
+interface PeopleGroupsProps {
   groupMap: any
-  imageMap?: any
   colWidth?: string
   smallView?: boolean
   showHeadings?: boolean
@@ -19,22 +17,20 @@ type PeopleGroupsProps = {
   className?: string
 }
 
-const PeopleGroups: React.FC<PeopleGroupsProps> = ({
+const PeopleGroups = ({
   groupMap,
-  imageMap,
-  colWidth,
-  smallView,
-  showHeadings,
-  faculty,
-  headingColor,
-  photoMode,
-  showLetters,
-  showUrl,
-  outline,
-  context,
-  gridBg,
+  colWidth = "w-full sm:w-9/20 lg:w-3/10 xl:w-22/100 2xl:w-18/100",
+  smallView = false,
+  showHeadings = true,
+  faculty = null,
+  headingColor = "text-slate-700 md:text-slate-600",
+  photoMode = "show,generic",
+  showLetters = false,
+  showUrl = false,
+  outline = false,
+  context = "",
   className,
-}) => {
+}: PeopleGroupsProps) => {
   const ret = []
 
   for (const g of GROUPS) {
@@ -47,7 +43,6 @@ const PeopleGroups: React.FC<PeopleGroupsProps> = ({
           <PeopleGrid
             key={g}
             name={g}
-            imageMap={imageMap}
             people={people}
             faculty={faculty}
             colWidth={colWidth}
@@ -57,7 +52,6 @@ const PeopleGroups: React.FC<PeopleGroupsProps> = ({
             context={context}
             showHeadings={showHeadings}
             showUrl={showUrl}
-            gridBg={gridBg}
             outline={outline}
             showLetters={showLetters}
             className={className}
@@ -67,23 +61,7 @@ const PeopleGroups: React.FC<PeopleGroupsProps> = ({
     }
   }
 
-  return ret
-}
-
-PeopleGroups.defaultProps = {
-  faculty: null,
-  imageMap: {},
-  photoMode: "show,generic",
-  smallView: false,
-  showHeadings: true,
-  showUrl: false,
-  colWidth: "w-full sm:w-9/20 lg:w-3/10 xl:w-22/100 2xl:w-18/100",
-  headingColor: "text-slate-700 md:text-slate-600",
-  context: "",
-  gridBg: "bg-white",
-  outline: false,
-  showLetters: false,
-  className: "",
+  return <div>{ret}</div>
 }
 
 export default PeopleGroups

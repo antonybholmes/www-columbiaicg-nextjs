@@ -1,10 +1,11 @@
-import React, { useEffect, useRef } from "react"
+import React, { ReactNode, useEffect, useRef } from "react"
 import Row from "../row"
 import { gsap } from "gsap"
 
 type CheckBoxProps = {
   selected: boolean
   onChange: any
+  children?: ReactNode
 }
 
 const ToggleSwitch: React.FC<CheckBoxProps> = ({
@@ -48,11 +49,6 @@ const ToggleSwitch: React.FC<CheckBoxProps> = ({
       </div>
     </Row>
   )
-}
-
-ToggleSwitch.defaultProps = {
-  onChange: null,
-  selected: false,
 }
 
 export default ToggleSwitch

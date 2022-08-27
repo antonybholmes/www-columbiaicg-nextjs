@@ -1,7 +1,6 @@
-import React from "react"
 import EmailLink from "../buttons/emaillink"
 import PhoneLink from "../buttons/phonelink"
-import URLLink, { useUrlLink } from "../buttons/urllink"
+import URLLink, { getUrlLink } from "../buttons/urllink"
 import RoomLink from "../buttons/roomlink"
 import TwitterLink from "../buttons/twitterlink"
 import ColorLink from "../buttons/colorlink"
@@ -53,7 +52,6 @@ const ContactInfo = ({
               phone={person.fields.phone}
               color={color}
               hoverColor={hoverColor}
-              size={size}
             />
           </li>
         )}
@@ -83,7 +81,6 @@ const ContactInfo = ({
               twitter={twitter}
               color={color}
               hoverColor={hoverColor}
-              size={size}
             />
           </li>
         )}
@@ -93,7 +90,6 @@ const ContactInfo = ({
               github={person.fields.github}
               color={color}
               hoverColor={hoverColor}
-              size={size}
             />
           </li>
         )}
@@ -130,7 +126,7 @@ const ContactInfo = ({
           </div>
         )}
         {showUrl && person.fields.url && (
-          <div className="mt-4">{useUrlLink(person.fields.url)}</div>
+          <div className="mt-4">{getUrlLink(person.fields.url)}</div>
         )}
       </div>
     )

@@ -59,8 +59,8 @@ type SearchBarProps = {
 }
 
 const SearchBar3: React.FC<SearchBarProps> = ({
-  text,
-  placeholder,
+  text = "",
+  placeholder = "Search items...",
   className,
   onSearch,
 }) => {
@@ -137,12 +137,6 @@ const SearchBar3: React.FC<SearchBarProps> = ({
       <SearchButton globalHover={hover} onClick={handleOnClick} />
     </Row>
   )
-}
-
-SearchBar3.defaultProps = {
-  placeholder: "Search items...",
-  text: "",
-  onSearch: null,
 }
 
 export default SearchBar3

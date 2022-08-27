@@ -5,7 +5,7 @@
  * See: https://www.gatsbyjs.org/docs/use-static-query/
  */
 
-import React, { useState } from "react"
+import React, { ReactNode, useState } from "react"
 import Breadcrumb from "../components/breadcrumb"
 import HideSmall from "../components/hidesmall"
 import HeaderLayout from "./headerlayout"
@@ -14,17 +14,18 @@ import MenuLayout from "./menulayout"
 import Container from "../components/container"
 import HeaderLinksNav from "../components/header/headerlinksnav"
 import NavLayout from "./navlayout"
-import Content from "../components/content"
+import ICrumb from "../types/crumb"
 
 type FloatingHeaderProps = {
-  title?: string
-  crumbs?: Array<[string, string]>
+  title: string
+  crumbs?: ICrumb[]
   headerContent?: any
   onSearch?: any
   search?: string
   placeholder?: string
   onMenuButtonClick?: any
   animateHeader?: boolean
+  children?: ReactNode
 }
 
 export const FloatingHeader: React.FC<FloatingHeaderProps> = ({
@@ -55,18 +56,11 @@ export const FloatingHeader: React.FC<FloatingHeaderProps> = ({
   </div>
 )
 
-FloatingHeader.defaultProps = {
-  crumbs: [],
-  headerContent: null,
-  animateHeader: false,
-  onMenuButtonClick: null,
-}
-
 type CrumbLayoutProps = {
   title: string
   path?: string
   nav?: string
-  crumbs?: Array<any>
+  crumbs?: ICrumb[]
   crumbLocation?: string
   headerContent?: any
   onSearch?: any
@@ -79,13 +73,14 @@ type CrumbLayoutProps = {
   animateHeader?: boolean
   bgColorClass?: string
   index?: boolean
+  children?: ReactNode
 }
 
 const CrumbLayout: React.FC<CrumbLayoutProps> = ({
   title,
   path,
   nav,
-  crumbs,
+  crumbs = [],
   crumbLocation,
   headerContent,
   onSearch,
@@ -122,7 +117,7 @@ const CrumbLayout: React.FC<CrumbLayoutProps> = ({
           index={index}
         >
           <FloatingHeader
-            title={nav !== "" ? nav : title}
+            title={title}
             crumbs={crumbs}
             headerContent={headerContent}
             onSearch={onSearch}
@@ -161,6 +156,7 @@ const CrumbLayout: React.FC<CrumbLayoutProps> = ({
           index={index}
         >
           <Header
+            title={title}
             content={headerContent}
             onSearch={onSearch}
             search={search}

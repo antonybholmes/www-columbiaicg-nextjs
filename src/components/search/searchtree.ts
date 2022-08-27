@@ -62,8 +62,8 @@ export const searchTree = (root: any, q: string) => {
   }
 
   let terms: Array<string> = []
-  let s1: Array<any>
-  let s2: Array<any>
+  let s1: any[]
+  let s2: any[]
 
   for (let token of outputStack.values()) {
     switch (token) {
@@ -96,7 +96,7 @@ export const searchTree = (root: any, q: string) => {
         if (token !== EMPTY_TOKEN) {
           const word = token.toLowerCase()
 
-          const items: Array<any> = []
+          const items: any[] = []
 
           node = root
 

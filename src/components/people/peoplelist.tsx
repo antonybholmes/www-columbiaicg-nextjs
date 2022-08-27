@@ -6,38 +6,23 @@
  */
 
 import React from "react"
+import { IMAGEKIT_URL } from "../../constants"
 import Person from "./person"
 
 type PeopleListProps = {
-  peopleList: Array<any>
-  showLabLink?: boolean
-  imageMap?: any
+  peopleList: any[]
 }
 
-const PeopleList: React.FC<PeopleListProps> = ({
-  peopleList,
-  showLabLink,
-  imageMap,
-}) => (
+const PeopleList: React.FC<PeopleListProps> = ({ peopleList }) => (
   <>
     {peopleList.map((person, index) => (
       <Person
         key={index}
         person={person}
-        image={
-          person.fields.personId in imageMap
-            ? imageMap[person.fields.personId]
-            : null
-        }
-        generic={imageMap["generic"]}
+        src={`${IMAGEKIT_URL}/people/${person.fields.personId}`}
       />
     ))}
   </>
 )
-
-PeopleList.defaultProps = {
-  showLabLink: true,
-  imageMap: {},
-}
 
 export default PeopleList

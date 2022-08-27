@@ -1,5 +1,5 @@
 class Stack {
-  data: Array<any>
+  data: any[]
   top: number
 
   constructor() {
@@ -32,7 +32,7 @@ class Stack {
     }
   }
 
-  values(): Array<any> {
+  values(): any[] {
     return this.data //.reverse()
   }
 
@@ -40,11 +40,11 @@ class Stack {
     return this.reverse().toString()
   }
 
-  reverse(): Array<any> {
+  reverse(): any[] {
     return this._reverse(this.top)
   }
 
-  _reverse(index: number): Array<any> {
+  _reverse(index: number): any[] {
     return this.data.slice(0, index).reverse()
   }
 }

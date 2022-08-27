@@ -1,4 +1,4 @@
-const useInstitutePublications = (publications: Array<any>) => {
+const getInstitutePublications = (publications: any[]) => {
   return publications.filter((pub: any) => {
     return (
       pub.tagList.includes("icg") ||
@@ -8,4 +8,4 @@ const useInstitutePublications = (publications: Array<any>) => {
   })
 }
 
-export default useInstitutePublications
+export default getInstitutePublications

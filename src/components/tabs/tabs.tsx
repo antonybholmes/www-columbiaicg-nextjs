@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React, { ReactElement, useState } from "react"
 import Tab from "./tab"
 import Row from "../row"
 
@@ -6,9 +6,10 @@ import AltView from "../altview"
 
 type TabsProps = {
   tab?: string
+  children?: ReactElement[]
 }
 
-const Tabs: React.FC<TabsProps> = ({ tab, children }) => {
+const Tabs: React.FC<TabsProps> = ({ tab = "", children = [<></>] }) => {
   const [activeTab, setActiveTab] = useState(
     tab !== "" ? tab : children[0].props.id
   )
@@ -57,10 +58,6 @@ const Tabs: React.FC<TabsProps> = ({ tab, children }) => {
       </div>
     </AltView>
   )
-}
-
-Tabs.defaultProps = {
-  tab: "",
 }
 
 export default Tabs

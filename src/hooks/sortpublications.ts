@@ -1,7 +1,13 @@
+;`/api/v1/courses`
+
+export const getMapValue = (map: Map<any, any>, key: any) => {
+  return map.get(key) || new Map()
+}
+
 export const useSortByDate = (
-  publications: Array<any>,
+  publications: any[],
   descending: boolean = true
-): Array<any> => {
+): any[] => {
   const pubMap = new Map<number, Map<number, Map<number, Map<string, any>>>>()
 
   publications.map((publication: any) => {
@@ -12,17 +18,19 @@ export const useSortByDate = (
       )
     }
 
-    if (!pubMap.get(publication.year).has(publication.month)) {
-      pubMap
-        .get(publication.year)
-        .set(publication.month, new Map<number, Map<string, any>>())
+    if (!getMapValue(pubMap, publication.year).has(publication.month)) {
+      getMapValue(pubMap, publication.year).set(
+        publication.month,
+        new Map<number, Map<string, any>>()
+      )
     }
 
     if (
-      !pubMap.get(publication.year).get(publication.month).has(publication.day)
+      !getMapValue(pubMap, publication.year)
+        .get(publication.month)
+        .has(publication.day)
     ) {
-      pubMap
-        .get(publication.year)
+      getMapValue(pubMap, publication.year)
         .get(publication.month)
         .set(publication.day, new Map<string, any>())
     }
@@ -34,7 +42,7 @@ export const useSortByDate = (
       .set(publication.title, publication)
   })
 
-  const ret: Array<any> = []
+  const ret: any[] = []
 
   if (descending) {
     Array.from(pubMap.keys())
@@ -81,9 +89,9 @@ export const useSortByDate = (
 }
 
 const useSortByJournal = (
-  publications: Array<any>,
+  publications: any[],
   descending: boolean = true
-): Array<any> => {
+): any[] => {
   const pubMap: any = {}
 
   publications.map((publication: any) => {
@@ -98,7 +106,7 @@ const useSortByJournal = (
     pubMap[publication.journal][publication.title].push(publication)
   })
 
-  let ret: Array<any> = []
+  let ret: any[] = []
 
   if (descending) {
     for (let journal of Object.keys(pubMap).sort()) {
@@ -118,9 +126,9 @@ const useSortByJournal = (
 }
 
 const useSortByTitle = (
-  publications: Array<any>,
+  publications: any[],
   descending: boolean = true
-): Array<any> => {
+): any[] => {
   const pubMap: any = {}
 
   publications.map((publication: any) => {
@@ -131,7 +139,7 @@ const useSortByTitle = (
     pubMap[publication.title].push(publication)
   })
 
-  let ret: Array<any> = []
+  let ret: any[] = []
 
   if (descending) {
     for (let title of Object.keys(pubMap).sort()) {
@@ -147,9 +155,9 @@ const useSortByTitle = (
 }
 
 const useSortByFirstAuthor = (
-  publications: Array<any>,
+  publications: any[],
   descending: boolean = true
-): Array<any> => {
+): any[] => {
   const pubMap: any = {}
 
   publications.map((publication: any) => {
@@ -182,7 +190,7 @@ const useSortByFirstAuthor = (
     }
   })
 
-  const ret: Array<any> = []
+  const ret: any[] = []
 
   if (descending) {
     for (let author of Object.keys(pubMap).sort()) {
@@ -209,8 +217,8 @@ const useSortByFirstAuthor = (
   return ret
 }
 
-const useSortPublications = (
-  publications: Array<any>,
+const getSortPublications = (
+  publications: any[],
   sortOrder: string = "Publication date",
   descending: boolean = true
 ) => {
@@ -230,4 +238,4 @@ const useSortPublications = (
   }
 }
 
-export default useSortPublications
+export default getSortPublications

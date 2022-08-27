@@ -1,9 +1,10 @@
-import React from "react"
+import React, { ReactNode } from "react"
 
 type AltViewProps = {
   size?: string
   className?: string
   style?: any
+  children?: ReactNode
 }
 
 const AltView = React.forwardRef<AltViewProps, any>(
@@ -39,10 +40,6 @@ const AltView = React.forwardRef<AltViewProps, any>(
   }
 )
 
-AltView.defaultProps = {
-  className: "",
-  style: {},
-  size: "sm",
-}
+AltView.displayName = "AltView"
 
 export default AltView

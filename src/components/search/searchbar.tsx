@@ -76,13 +76,13 @@ type SearchBarProps = {
   focus?: boolean
 }
 
-const SearchBar: React.FC<SearchBarProps> = ({
-  text,
-  placeholder,
+const SearchBar = ({
+  text = "",
+  placeholder = "Search items...",
   className,
   onSearch,
   focus,
-}) => {
+}: SearchBarProps) => {
   const [hover, setHover] = useState(false)
   const [value, setValue] = useState("")
   const inputEl = useRef(null)
@@ -95,11 +95,11 @@ const SearchBar: React.FC<SearchBarProps> = ({
     setValue(text)
   }, [text])
 
-  useEffect(() => {
-    if (focus) {
-      inputEl.current.focus()
-    }
-  }, [focus])
+  // useEffect(() => {
+  //   if (focus && inputEl && inputEl.current) {
+  //     inputEl.current.focus()
+  //   }
+  // }, [focus])
 
   const onMouseEnter = (e: any) => {
     setHover(true)
@@ -168,13 +168,6 @@ const SearchBar: React.FC<SearchBarProps> = ({
       </div>
     </Row>
   )
-}
-
-SearchBar.defaultProps = {
-  placeholder: "Search items...",
-  text: "",
-  onSearch: null,
-  focus: false,
 }
 
 export default SearchBar

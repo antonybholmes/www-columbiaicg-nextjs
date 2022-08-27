@@ -26,6 +26,7 @@ type PaginationBlockDivProps = {
   onClick?: any
   onMouseEnter?: any
   onMouseLeave?: any
+  children?: ReactNode
 }
 
 const PaginationBlockDiv = React.forwardRef<PaginationBlockDivProps, any>(
@@ -42,9 +43,7 @@ const PaginationBlockDiv = React.forwardRef<PaginationBlockDivProps, any>(
   )
 )
 
-PaginationBlockDiv.defaultProps = {
-  className: "",
-}
+PaginationBlockDiv.displayName = "PaginationBlockDiv"
 
 type NumberPaginationBlockDivProps = {
   page: number
@@ -174,7 +173,7 @@ const Pagination: React.FC<PaginationProps> = ({
       const startPage = Math.max(2, currentPage - pageNeighbors)
       const endPage = Math.min(totalPages - 1, currentPage + pageNeighbors)
 
-      let pages: Array<any> = range(startPage, endPage)
+      let pages: any[] = range(startPage, endPage)
 
       /**
        * hasLeftSpill: has hidden pages to the left

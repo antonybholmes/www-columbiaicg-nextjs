@@ -1,5 +1,5 @@
 import { useRef } from "react"
-import useContextName from "../../hooks/contextname"
+import getContextName from "../../hooks/contextname"
 import HeadShot from "./headshot"
 import Row from "../row"
 import usePersonNameTitle from "../../hooks/person-title"
@@ -67,14 +67,14 @@ const PersonHeaderHoz = ({ person, showImage = true }: PersonHeaderProps) => {
   //             : ""
   //         }`}</h2>
   //         <div className="text-xl">
-  //           {useContextName("people", person.titleMap)}
+  //           {getContextName("people", person.titleMap)}
   //         </div>
   //       </div>
   //     </div>
   //   </Row>
   // )
 
-  const titles = useContextName("", person.titleMap).split(";")
+  const titles = getContextName("", person.titleMap).split(";")
 
   return (
     <Row isVCentered={true}>

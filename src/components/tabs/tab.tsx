@@ -1,4 +1,4 @@
-import React, { Component } from "react"
+import { Component } from "react"
 
 class Tab extends Component<
   { id: string; activeTab: string; index: number; n: number; onClick: any },

@@ -1,24 +1,13 @@
-/**
- * SEO component that queries for data with
- *  Gatsby's useStaticQuery React hook
- *
- * See: https://www.gatsbyjs.org/docs/use-static-query/
- */
-
-import React, { useEffect, useState } from "react"
-//import Button from "../../components/button"
-//import PublicationYears from "./publicationyears"
 import BasePublicationList from "./basepublicationlist"
 import Row from "../row"
 import PublicationList from "./publicationlist"
-import NoResults from "../noresults"
 import BlueButton from "../buttons/bluebutton"
-import FlatCard from "../flatcard"
+import { TEXT_SHOW_MORE } from "../../constants"
 
 const RECORDS_PER_PAGE = 25
 
 type PublicationsProps = {
-  publications: Array<any>
+  publications: any[]
   showAbstract?: boolean
   showCount?: boolean
   showMoreButton?: boolean
@@ -28,16 +17,16 @@ type PublicationsProps = {
   onShowMoreClick?: any
 }
 
-const Publications: React.FC<PublicationsProps> = ({
+const Publications = ({
   publications,
-  showAbstract,
-  showCount,
-  showMoreButton,
-  baseMode,
+  showAbstract = true,
+  showCount = true,
+  showMoreButton = false,
+  baseMode = true,
   className,
   onPubClick,
   onShowMoreClick,
-}) => {
+}: PublicationsProps) => {
   return (
     <>
       {publications.length > 0 && showCount && (
@@ -75,23 +64,12 @@ const Publications: React.FC<PublicationsProps> = ({
       {showMoreButton && (
         <Row isCentered={true} className="mt-8">
           <div>
-            <BlueButton onClick={onShowMoreClick}>
-              {strings.showMore}
-            </BlueButton>
+            <BlueButton onClick={onShowMoreClick}>{TEXT_SHOW_MORE}</BlueButton>
           </div>
         </Row>
       )}
     </>
   )
-}
-
-Publications.defaultProps = {
-  showCount: true,
-  className: "",
-  showAbstract: true,
-  showMoreButton: false,
-  onPubClick: null,
-  baseMode: true,
 }
 
 export default Publications

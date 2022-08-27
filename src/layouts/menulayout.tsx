@@ -5,18 +5,20 @@
  * See: https://www.gatsbyjs.org/docs/use-static-query/
  */
 
-import React from "react"
+import React, { ReactNode } from "react"
 import Layout from "./layout"
 import SlideMenu from "../components/slidemenu/slidemenu"
+import ICrumb from "../types/crumb"
 
 type MenuLayoutProps = {
   title: string
   path?: string
-  crumbs?: Array<[string, string]>
+  crumbs?: ICrumb[]
   menuVisible?: boolean
   onSlideMenuClick?: any
   bgColorClass?: string
   index?: boolean
+  children?: ReactNode
 }
 
 const MenuLayout: React.FC<MenuLayoutProps> = ({
@@ -29,7 +31,7 @@ const MenuLayout: React.FC<MenuLayoutProps> = ({
   index,
   children,
 }) => (
-  <Layout title={title} path={path} crumbs={crumbs} index={index}>
+  <Layout title={title} path={path} index={index}>
     <SlideMenu visible={menuVisible} onSlideMenuClick={onSlideMenuClick} />
 
     <main className={`relative ${bgColorClass}`}>{children}</main>

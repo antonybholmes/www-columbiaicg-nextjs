@@ -2,7 +2,7 @@ import React from "react"
 import BaseCalEvent from "./basecalevent"
 
 type CalEventsProps = {
-  calEvents: Array<any>
+  calEvents: any[]
   imageMap?: object
 }
 

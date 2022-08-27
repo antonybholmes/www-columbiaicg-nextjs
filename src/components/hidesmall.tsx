@@ -1,10 +1,11 @@
-import React from "react"
+import React, { ReactNode } from "react"
 
 type HideSmallProps = {
   size?: string
   show?: boolean
   className?: string
   style?: any
+  children?: ReactNode
 }
 
 const HideSmall = React.forwardRef<HideSmallProps, any>(
@@ -67,11 +68,6 @@ const HideSmall = React.forwardRef<HideSmallProps, any>(
   }
 )
 
-HideSmall.defaultProps = {
-  className: "",
-  style: {},
-  size: "md",
-  show: false,
-}
+HideSmall.displayName = "HideSmall"
 
 export default HideSmall

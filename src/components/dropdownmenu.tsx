@@ -66,7 +66,7 @@ const MenuButton: React.FC<MenuButtonProps> = ({
 
 type SortDropdownProps = {
   title: string
-  items: Array<any>
+  items: any[]
   onChange: any
   w?: string
   menuW?: string

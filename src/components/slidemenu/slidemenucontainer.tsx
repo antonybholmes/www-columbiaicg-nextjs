@@ -75,7 +75,7 @@ const SlideMenuContainer: React.FC<SlideMenuContainerProps> = ({
   maxResults,
 }) => {
   //const [query, setQuery] = useState("")
-  //const [results, setResults] = useState<Array<any>>([])
+  //const [results, setResults] = useState<any[]>([])
   //const [showMenu, setShowMenu] = useState(false)
   //const [hover, setHover] = useState(false)
   //const [siteData, setSiteData] = useState(null)
@@ -90,7 +90,7 @@ const SlideMenuContainer: React.FC<SlideMenuContainerProps> = ({
   //   if (items.length > 0) {
   //     let c = 0
   //     let currentSection = ""
-  //     const ret: Array<any> = []
+  //     const ret: any[] = []
 
   //     for (let item of items) {
   //       const link = sd.links[item]
@@ -175,7 +175,7 @@ const SlideMenuContainer: React.FC<SlideMenuContainerProps> = ({
 
   const links: any[] = []
 
-  let display: Array<any> = links.map((link, index) => {
+  let display: any[] = links.map((link, index) => {
     return <MenuItem key={index} link={link} onClick={onClick} />
   })
 

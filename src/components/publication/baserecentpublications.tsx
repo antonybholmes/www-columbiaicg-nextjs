@@ -9,11 +9,12 @@ import React, { useEffect, useState } from "react"
 import BasePublicationList from "./basepublicationlist"
 import Row from "../row"
 import TealButton from "../buttons/tealbutton"
+import { TEXT_SHOW_MORE } from "../../constants"
 
 const RECORDS_PER_PAGE = 25
 
 type RecentPublicationsProps = {
-  publications: Array<any>
+  publications: any[]
   showAbstract: boolean
   top?: number
   showCount?: boolean
@@ -24,17 +25,13 @@ type RecentPublicationsProps = {
 const BaseRecentPublications: React.FC<RecentPublicationsProps> = ({
   publications,
   showAbstract,
-  top,
+  top = 15,
   showCount,
   className,
   onPubClick,
 }) => {
-  const [filteredPublications, setFilteredPublications] = useState<Array<any>>(
-    []
-  )
+  const [filteredPublications, setFilteredPublications] = useState<any[]>([])
   const [recordsPerPage, setRecordsPerPage] = useState(-1)
-
-  const { strings } = useSiteMetadata()
 
   useEffect(() => {
     updatePublications()
@@ -91,21 +88,13 @@ const BaseRecentPublications: React.FC<RecentPublicationsProps> = ({
         <Row isCentered={true} className="mt-8">
           <div>
             <TealButton onClick={handleShowMoreClick}>
-              {strings.showMore}
+              {TEXT_SHOW_MORE}
             </TealButton>
           </div>
         </Row>
       )}
     </>
   )
-}
-
-BaseRecentPublications.defaultProps = {
-  top: 15,
-  className: "",
-  showAbstract: true,
-  showCount: true,
-  onPubClick: null,
 }
 
 export default BaseRecentPublications

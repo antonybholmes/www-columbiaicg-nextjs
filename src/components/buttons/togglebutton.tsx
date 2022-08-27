@@ -1,17 +1,13 @@
-import React, { useEffect, useRef } from "react"
-import Row from "../row"
+import { ReactNode, useEffect, useRef } from "react"
 import { gsap } from "gsap"
 
 type CheckBoxProps = {
   selected: boolean
   onChange: any
+  children?: ReactNode
 }
 
-const ToggleButton: React.FC<CheckBoxProps> = ({
-  selected,
-  onChange,
-  children,
-}) => {
+const ToggleButton = ({ selected, onChange, children }: CheckBoxProps) => {
   const buttonEl = useRef(null)
 
   useEffect(() => {

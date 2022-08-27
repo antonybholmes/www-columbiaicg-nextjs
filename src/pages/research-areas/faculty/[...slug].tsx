@@ -2,19 +2,15 @@ import { useState, useEffect, useRef, ReactNode } from "react"
 import Container from "../../../components/container"
 import ShowSmall from "../../../components/showsmall"
 import HideSmall from "../../../components/hidesmall"
-import useImageMap from "../../../hooks/imagemap"
-import useContextName from "../../../hooks/contextname"
-import FlHdDiv from "../../../components/flhddiv"
+import getContextName from "../../../hooks/contextname"
 import Row from "../../../components/row"
 import useBreakpoints from "../../../hooks/breakpoints"
 import {
   FACULTY_PATH,
   GROUPS,
-  TEXT_LAB_PUBS,
   TEXT_LAB_WEBSITE,
   TEXT_MY_PUBS,
 } from "../../../constants"
-import useBooleanSearch from "../../../hooks/booleansearch"
 import BWImage from "../../../components/images/bwimage"
 import PersonHeader from "../../../components/people/personheader"
 import ContactCard from "../../../components/people/contactcard"
@@ -24,13 +20,12 @@ import AltView from "../../../components/altview"
 import MainSideCol from "../../../components/mainsidecol"
 import BlueButtonLink from "../../../components/buttons/bluebuttonlink"
 import RecentPublications from "../../../components/publication/recentpublications"
-import useSortPublications from "../../../hooks/sortpublications"
+import getSortPublications from "../../../hooks/sortpublications"
 import PubMedLink from "../../../components/buttons/pubmedlink"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { gsap } from "gsap"
 import MainCard from "../../../components/maincard"
 import HTMLDiv from "../../../components/htmldiv"
-import VertTabs from "../../../components/tabs/verttabs"
 import Collapsible2 from "../../../components/collapsible2"
 import PeopleGroups from "../../../components/people/peoplegroups"
 import BaseImage from "../../../components/images/base-image"
@@ -38,14 +33,7 @@ import ExpandButton from "../../../components/buttons/expandbutton"
 import PageLayout from "../../../layouts/pagelayout"
 import BaseLink from "../../../components/buttons/baselink"
 import getFaculty from "../../../lib/faculty"
-import {
-  getAllLabs,
-  getAllPeople,
-  getLabMap,
-  getPeopleMap,
-  getSlugs,
-  LABS_DIRECTORY,
-} from "../../../lib/api"
+import { getAllPeople, getPeopleMap, LABS_DIRECTORY } from "../../../lib/api"
 import IFieldMap from "../../../types/field-map"
 import { getPersonName, toLabPeopleMap } from "../../../lib/people"
 import getFacultyLabs from "../../../lib/faculty-labs"
@@ -57,8 +45,8 @@ import {
 } from "@fortawesome/free-solid-svg-icons"
 import { join } from "path"
 import fs from "fs"
-import usePublications from "../../../hooks/publications"
-import useSelectedPublications from "../../../hooks/selected-publications"
+import getPublications from "../../../hooks/publications"
+import getSelectedPublications from "../../../hooks/selected-publications"
 import { SideContactCard } from "../../../components/side-contact-card"
 import ICrumb from "../../../types/crumb"
 import PublicationsPage from "../../../components/pages/publications-page"
@@ -94,7 +82,7 @@ export const FacultyCard = ({ person, imageMap }: FacultyCardProps) => {
     setHover(false)
   }
 
-  const titles = useContextName("", person.titleMap).split(";")
+  const titles = getContextName("", person.titleMap).split(";")
 
   //const fluid = imageMap[person.fields.personId]
   // let generic = false
@@ -207,7 +195,6 @@ export const Team = ({
 
     <PeopleGroups
       groupMap={labGroupMap}
-      imageMap={imageMap}
       faculty={faculty}
       colWidth="w-full lg:w-24/50 2xl:w-3/10"
       outline={false}
@@ -222,7 +209,7 @@ export const Team = ({
 )
 
 // type StaffGroupsProps = {
-//   allGroups: Array<any>
+//   allGroups: any[]
 //   imageMap?: any
 //   colWidth?: string
 // }
@@ -297,7 +284,7 @@ export const About = ({ data }: AboutProps) => {
 
 // export const staff = (
 //   breakpoint: string,
-//   faculty: Array<any>,
+//   faculty: any[],
 //   imageMap: any
 // ) => {
 //   if (faculty.length > 0) {
@@ -424,20 +411,18 @@ export const About = ({ data }: AboutProps) => {
 interface AppointmentsGridProps {
   person: any
   colWidth?: string
-  headingColor?: string
 }
 
 const Appointments = ({
   person,
   colWidth = "w-full lg:w-1/2",
-  headingColor = "text-columbia-secondary-blue",
 }: AppointmentsGridProps) => {
   if (person.fields.appointments.length > 0) {
     const ret = person.fields.appointments.map(
       (appointment: string, index: number) => {
         const [institute, title, url] = appointment.split("::")
         return (
-          <div className={`mb-4 ${colWidth}`}>
+          <div className={`mb-4 ${colWidth}`} key={index}>
             <h4 className="m-0 font-medium">
               {url !== "" ? (
                 <BlueLink to={url}>{institute}</BlueLink>
@@ -640,7 +625,7 @@ export const SectionCard = ({
 
 interface PublicationsProps {
   person: any
-  allPublications: Array<any>
+  allPublications: any[]
   showAbstract?: boolean
   showMoreButton?: boolean
 }
@@ -653,7 +638,7 @@ export const Publications = ({
 }: PublicationsProps) => (
   <SectionCard name="Selected Publications" className="mt-16">
     <RecentPublications
-      publications={useSortPublications(allPublications)}
+      publications={getSortPublications(allPublications)}
       showAbstract={showAbstract}
       showMoreButton={showMoreButton}
       showCount={false}
@@ -851,12 +836,12 @@ const FacultyPage = ({ person, lab }: FacultyPageProps) => {
 
   const [expanded, setExpanded] = useState(false)
   const [query, setQuery] = useState(EMPTY_QUERY)
-  const [filteredFaculty, setFilteredFaculty] = useState<Array<any>>([])
+  const [filteredFaculty, setFilteredFaculty] = useState<any[]>([])
   const breakpoint = useBreakpoints()
 
-  //const [allPublications, setAllPublications] = useState<Array<any>>([])
+  //const [allPublications, setAllPublications] = useState<any[]>([])
 
-  // const [selectedPublications, setSelectedPublications] = useState<Array<any>>(
+  // const [selectedPublications, setSelectedPublications] = useState<any[]>(
   //   []
   // )
 
@@ -878,10 +863,10 @@ const FacultyPage = ({ person, lab }: FacultyPageProps) => {
   const [selectedPublications, setSelectedPublications] = useState<any[]>([])
 
   useEffect(() => {
-    useSelectedPublications(setSelectedPublications, person.fields.personId)
+    getSelectedPublications(setSelectedPublications, person.fields.personId)
   }, [])
 
-  const titles = person ? useContextName("admin", person.titleMap, true) : ""
+  const titles = person ? getContextName("admin", person.titleMap, true) : ""
 
   const adminTitles = titles !== "" ? titles.split(";") : []
 
@@ -992,7 +977,7 @@ const PubPage = ({ person }: any) => {
   const [publications, setPublications] = useState<any[]>([])
 
   useEffect(() => {
-    usePublications(setPublications, person.fields.personId)
+    getPublications(setPublications, person.fields.personId)
   }, [])
 
   return <PublicationsPage publications={publications} />
@@ -1004,30 +989,36 @@ interface PageProps extends FacultyPageProps {
 }
 
 const Page = ({ slug, person, lab, crumbs }: PageProps) => {
+  if (!person) {
+    console.log("dd", slug, person)
+  }
+
+  if (!person.hasOwnProperty("fields")) {
+    console.log("sss", slug, person)
+  }
+
   let ret = null
   let path = `/research-areas/faculty/${person.fields.personId}`
 
-  if (slug.includes("publication")) {
-    path = `${path}/publications`
-    ret = <PubPage person={person} />
-  } else {
-    ret = <FacultyPage person={person} lab={lab} />
-  }
+  // if (slug.includes("publication")) {
+  //   path = `${path}/publications`
+  //   ret = <PubPage person={person} />
+  // } else {
+  //   ret = <FacultyPage person={person} lab={lab} />
+  // }
 
-  return (
-    <PageLayout
-      path={path}
-      crumbs={crumbs}
-      title={"Faculty"}
-      nav="Faculty"
-      //crumbLocation="none"
-      // titleContent={
-      //   <SearchSummary count={groups.length} single="Lab" plural="Labs" />
-      // }
-    >
-      {ret}
-    </PageLayout>
-  )
+  return <></>
+
+  // return (
+  //   <PageLayout
+  //     path={path}
+  //     crumbs={crumbs}
+  //     title={"Faculty"}
+  //     nav="Faculty"
+  //   >
+  //     {/* {ret} */}
+  //   </PageLayout>
+  // )
 }
 
 export default Page
@@ -1083,6 +1074,8 @@ export async function getStaticProps({ params }: Params) {
   //   )
   // })
 
+  console.log("sdsdsdsd", pid, person)
+
   return {
     props: {
       slug: slug,
@@ -1098,8 +1091,18 @@ export async function getStaticPaths() {
 
   const paths: any[] = []
 
-  allFaculty.forEach((faculty: any) => {
-    faculty.people = faculty.peopleList.forEach((person: any) => {
+  allFaculty.slice(0, 1).forEach((faculty: any) => {
+    faculty.peopleList.forEach((person: any) => {
+      if (!person) {
+        console.log("w", faculty)
+      }
+
+      if (!person.person) {
+        console.log("x", faculty)
+      }
+
+      console.log("hx", person.person)
+
       paths.push({ params: { slug: [person.person] } })
       paths.push({ params: { slug: [person.person, "publications"] } })
     })

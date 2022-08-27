@@ -1,8 +1,8 @@
-import useInstitutePublications from "./institutepublications"
-import useFirstAuthorPublications from "./firstauthorpublications"
+import getInstitutePublications from "./institutepublications"
+import getFirstAuthorPublications from "./firstauthorpublications"
 
-const useCorePublications = (publications: Array<any>) => {
-  return useInstitutePublications(useFirstAuthorPublications(publications))
+const useCorePublications = (publications: any[]) => {
+  return getInstitutePublications(getFirstAuthorPublications(publications))
 }
 
 export default useCorePublications

@@ -5,13 +5,13 @@
  * See: https://www.gatsbyjs.org/docs/use-static-query/
  */
 
-import React from "react"
+import React, { ReactNode } from "react"
 import CrumbLayout from "./crumblayout"
 
 type CrumbTitleLayoutProps = {
   title: string
   path?: string
-  crumbs?: Array<any>
+  crumbs?: any[]
   crumbLocation?: string
   nav?: string
   subTitle?: string
@@ -24,6 +24,7 @@ type CrumbTitleLayoutProps = {
   showLogo?: boolean
   bgColorClass?: string
   index?: boolean
+  children?: ReactNode
 }
 
 const CrumbTitleLayout: React.FC<CrumbTitleLayoutProps> = ({

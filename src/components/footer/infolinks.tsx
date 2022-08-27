@@ -13,7 +13,7 @@ const InfoLinks = ({ title }: InfoLinksProps) => {
   const links = useInfoLinks()
   const copyright = useCopyright()
 
-  let ret: Array<any> = []
+  let ret: any[] = []
 
   // ret.push(
   //   <li key={0} className="md:inline mb-2 md:mb-0">

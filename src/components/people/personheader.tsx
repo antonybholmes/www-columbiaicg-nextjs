@@ -1,5 +1,5 @@
-import React, { useRef } from "react"
-import useContextName from "../../hooks/contextname"
+import { useRef } from "react"
+import getContextName from "../../hooks/contextname"
 import HeadShot from "./headshot"
 import FullDiv from "../fulldiv"
 import Row from "../row"
@@ -7,17 +7,10 @@ import usePersonNameTitle from "../../hooks/person-title"
 
 type PersonHeaderProps = {
   person: any
-  imageMap: any
   showImage?: boolean
-  style?: any
 }
 
-const PersonHeader = ({
-  person,
-  imageMap,
-  style,
-  showImage,
-}: PersonHeaderProps) => {
+const PersonHeader = ({ person, showImage }: PersonHeaderProps) => {
   const picEl = useRef(null)
   const cardEl = useRef(null)
 
@@ -75,20 +68,20 @@ const PersonHeader = ({
   //             : ""
   //         }`}</h2>
   //         <div className="text-xl">
-  //           {useContextName("people", person.titleMap)}
+  //           {getContextName("people", person.titleMap)}
   //         </div>
   //       </div>
   //     </div>
   //   </Row>
   // )
 
-  const titles = useContextName("", person.titleMap).split(";")
+  const titles = getContextName("", person.titleMap).split(";")
 
   return (
     <FullDiv className="mb-4 text-center">
       {showImage && (
         <Row isCentered={true} className="mb-8">
-          <HeadShot person={person} imageMap={imageMap} className="w-60 h-60" />
+          <HeadShot person={person} className="w-60 h-60" />
         </Row>
       )}
       <div className="w-full">
@@ -113,12 +106,6 @@ const PersonHeader = ({
       </div>
     </FullDiv>
   )
-}
-
-PersonHeader.defaultProps = {
-  showImage: true,
-  style: {},
-  imageMap: {},
 }
 
 export default PersonHeader

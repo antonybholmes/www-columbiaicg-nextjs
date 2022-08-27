@@ -27,7 +27,7 @@ const useColumbiaPublications = (
 
   //console.log(url)
 
-  let publications: Array<any>
+  let publications: any[]
 
   if (selected) {
     axios

@@ -1,15 +1,12 @@
 import axios from "axios"
 import { useEffect, useState } from "react"
-import { decode } from "msgpack-lite"
-import useSiteMetadata from "./sitemetadata"
+import { COURSES_API } from "../constants"
 
 const useCourses = () => {
-  const [courses, setCourses] = useState<Array<any>>([])
-
-  const { api } = useSiteMetadata()
+  const [courses, setCourses] = useState<any[]>([])
 
   useEffect(() => {
-    axios.get(`${api.courses}/data.json`).then(res => {
+    axios.get(`${COURSES_API}/data.json`).then(res => {
       setCourses(res.data)
     })
   }, [])

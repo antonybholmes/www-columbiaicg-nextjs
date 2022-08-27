@@ -1,4 +1,4 @@
-import React, { ReactNode } from "react"
+import { ReactElement } from "react"
 import Row from "./row"
 
 type MainSideColProps = {
@@ -8,7 +8,7 @@ type MainSideColProps = {
   cls1ext?: string
   cls2ext?: string
   isVCentered?: boolean
-  children?: ReactNode
+  children?: ReactElement[]
 }
 
 const MainSideCol = ({
@@ -18,7 +18,7 @@ const MainSideCol = ({
   cls1ext,
   cls2ext,
   isVCentered = false,
-  children,
+  children = [<></>, <></>],
 }: MainSideColProps) => {
   return (
     <Row wrap={true} isVCentered={isVCentered} className={className}>

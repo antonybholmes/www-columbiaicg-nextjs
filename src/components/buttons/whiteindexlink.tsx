@@ -1,8 +1,9 @@
-import React from "react"
+import React, { ReactNode } from "react"
 import IndexLink from "./indexlink"
 
 type IndexLinkProps = {
   to: string
+  children?: ReactNode
 }
 
 const WhiteIndexLink: React.FC<IndexLinkProps> = ({ to, children }) => (

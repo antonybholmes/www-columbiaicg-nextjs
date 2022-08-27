@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React, { ReactNode, useState } from "react"
 
 type SimpleCardProps = {
   bg?: string
@@ -13,6 +13,7 @@ type SimpleCardProps = {
   absolute?: boolean
   className?: string
   style?: any
+  children?: ReactNode
 }
 
 const SimpleCard = React.forwardRef<SimpleCardProps, any>(
@@ -102,19 +103,6 @@ const SimpleCard = React.forwardRef<SimpleCardProps, any>(
   }
 )
 
-SimpleCard.defaultProps = {
-  className: "",
-  bg: "bg-white",
-  hoverBg: "",
-  padding: "p-8",
-  autoHide: true,
-  showShadow: true,
-  rounded: true,
-  alwaysOn: false,
-  onMouseEnter: null,
-  onMouseLeave: null,
-  absolute: false,
-  style: {},
-}
+SimpleCard.displayName = "SimpleCard"
 
 export default SimpleCard

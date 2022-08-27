@@ -1,14 +1,14 @@
 import { useState, useEffect, ReactNode } from "react"
 import Container from "../../components/container"
-import useContextName from "../../hooks/contextname"
+import getContextName from "../../hooks/contextname"
 import Row from "../../components/row"
 import { FACULTY_PATH, GROUPS } from "../../constants"
-import useBooleanSearch from "../../hooks/booleansearch"
+import getBooleanSearch from "../../hooks/booleansearch"
 import BWImage from "../../components/images/bwimage"
 import BlueLink from "../../components/buttons/bluelink"
 import AltView from "../../components/altview"
 import RecentPublications from "../../components/publication/recentpublications"
-import useSortPublications from "../../hooks/sortpublications"
+import getSortPublications from "../../hooks/sortpublications"
 import PubMedLink from "../../components/buttons/pubmedlink"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { gsap } from "gsap"
@@ -54,7 +54,7 @@ export const FacultyCard = ({ person }: FacultyCardProps) => {
     setHover(false)
   }
 
-  const titles = useContextName("", person.titleMap).split(";")
+  const titles = getContextName("", person.titleMap).split(";")
 
   //const fluid = imageMap[person.fields.personId]
   // let generic = false
@@ -160,7 +160,6 @@ export const Team = ({
 
     <PeopleGroups
       groupMap={labGroupMap}
-      imageMap={imageMap}
       faculty={faculty}
       colWidth="w-full lg:w-24/50 2xl:w-3/10"
       outline={false}
@@ -175,7 +174,7 @@ export const Team = ({
 )
 
 // type StaffGroupsProps = {
-//   allGroups: Array<any>
+//   allGroups: any[]
 //   imageMap?: any
 //   colWidth?: string
 // }
@@ -250,7 +249,7 @@ export const About = ({ data }: AboutProps) => {
 
 // export const staff = (
 //   breakpoint: string,
-//   faculty: Array<any>,
+//   faculty: any[],
 //   imageMap: any
 // ) => {
 //   if (faculty.length > 0) {
@@ -390,7 +389,7 @@ const Appointments = ({
       (appointment: string, index: number) => {
         const [institute, title, url] = appointment.split("::")
         return (
-          <div className={`mb-4 ${colWidth}`}>
+          <div className={`mb-4 ${colWidth}`} key={index}>
             <h4 className="m-0 font-medium">
               {url !== "" ? (
                 <BlueLink to={url}>{institute}</BlueLink>
@@ -595,7 +594,7 @@ export const SectionCard = ({
 
 interface PublicationsProps {
   person: any
-  allPublications: Array<any>
+  allPublications: any[]
   showAbstract?: boolean
   showMoreButton?: boolean
 }
@@ -608,7 +607,7 @@ export const Publications = ({
 }: PublicationsProps) => (
   <SectionCard name="Selected Publications" className="mt-16">
     <RecentPublications
-      publications={useSortPublications(allPublications)}
+      publications={getSortPublications(allPublications)}
       showAbstract={showAbstract}
       showMoreButton={showMoreButton}
       showCount={false}
@@ -719,12 +718,12 @@ const Page = ({ allFaculty }: PageProps) => {
 
   const [expanded, setExpanded] = useState(false)
   const [query, setQuery] = useState(EMPTY_QUERY)
-  const [filteredFaculty, setFilteredFaculty] = useState<Array<any>>([])
+  const [filteredFaculty, setFilteredFaculty] = useState<any[]>([])
 
   useEffect(() => {
     if (query !== "") {
       setFilteredFaculty(
-        useBooleanSearch(
+        getBooleanSearch(
           query,
           faculty,
           search,
@@ -742,7 +741,7 @@ const Page = ({ allFaculty }: PageProps) => {
   const person: any = null
 
   const titles =
-    person !== null ? useContextName("admin", person.titleMap, true) : ""
+    person !== null ? getContextName("admin", person.titleMap, true) : ""
 
   const adminTitles = titles !== "" ? titles.split(";") : []
 

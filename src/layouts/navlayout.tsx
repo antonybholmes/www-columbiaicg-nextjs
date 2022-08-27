@@ -5,9 +5,10 @@
  * See: https://www.gatsbyjs.org/docs/use-static-query/
  */
 
-import React, { useState } from "react"
+import React, { ReactNode, useState } from "react"
 
 import Header from "../components/header/header"
+import ICrumb from "../types/crumb"
 import MenuLayout from "./menulayout"
 
 const H = "12rem"
@@ -135,9 +136,9 @@ export const Background: React.FC<BackgroundProps> = ({ bgColorClass }) => (
 
 type NavLayoutProps = {
   nav?: string
-  title?: string
+  title: string
   path?: string
-  crumbs?: Array<[string, string]>
+  crumbs?: ICrumb[]
   headerContent?: any
   onSearch?: any
   search?: string
@@ -145,6 +146,7 @@ type NavLayoutProps = {
   showLogo?: boolean
   bgColorClass?: string
   index?: boolean
+  children?: ReactNode
 }
 
 const NavLayout: React.FC<NavLayoutProps> = ({
@@ -182,7 +184,7 @@ const NavLayout: React.FC<NavLayoutProps> = ({
     >
       <div className={`relative min-h-full`}>
         <Header
-          title={nav !== "" ? nav : title}
+          title={title}
           crumbs={crumbs}
           content={headerContent}
           onSearch={onSearch}

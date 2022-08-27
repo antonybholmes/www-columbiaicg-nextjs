@@ -1,4 +1,4 @@
-const toPeopleMap = (peopleList: Array<any>) => {
+const toPeopleMap = (people: any[]) => {
   let ret: any = {}
 
   people.forEach(person => {

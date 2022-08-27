@@ -33,7 +33,7 @@ export const FriendlyUrl: React.FC<FriendlyUrlProps> = ({ url }) => {
     .replace(/\/$/, "")
     .split("/")
 
-  const ret: Array<any> = []
+  const ret: any[] = []
 
   parts.map((part: string, index: number) => {
     ret.push(
@@ -133,7 +133,7 @@ const Abstract = ({ publication, maxWords = 32 }: AbstractProps) => {
  * @param {*} authors
  * @param {int} maxAuthors
  */
-const authorString = (authors: Array<any>, maxAuthors: number = 10) => {
+const authorString = (authors: any[], maxAuthors: number = 10) => {
   const strs = []
 
   if (authors.length <= maxAuthors || maxAuthors === -1) {
@@ -175,11 +175,7 @@ const PubData = ({ text, data, onClick, className }: PubDataProps) => (
   </li>
 )
 
-const useAuthors = (
-  authors: Array<any>,
-  maxAuthors: number = 10,
-  onClick: any
-) => {
+const getAuthors = (authors: any[], maxAuthors: number = 10, onClick: any) => {
   const ret: any[] = []
 
   authors.map((author: string, index: number) => {
@@ -360,7 +356,7 @@ const BasePublication = ({
 
         <section className="font-light text-sm m-0">
           {onPubClick !== null
-            ? useAuthors(publication.authorList, -1, _handlePubClick)
+            ? getAuthors(publication.authorList, -1, _handlePubClick)
             : publication.authors}
         </section>
 

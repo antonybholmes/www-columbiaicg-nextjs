@@ -1,13 +1,14 @@
+import { isEqual } from "date-fns"
 import React, { useState } from "react"
 //import SideBar from "../sidebar/sidebar"
-import DayPicker, { DateUtils } from "react-day-picker"
+import { DayPicker } from "react-day-picker"
 import MainSideCol from "../mainsidecol"
 import CalSearchResults from "./calsearchresults"
 
 const EMPTY_QUERY = ""
 
 type CalSearchProps = {
-  allCalEvents: Array<any>
+  allCalEvents: any[]
 }
 
 const CalSearch: React.FC<CalSearchProps> = ({ allCalEvents }) => {
@@ -41,8 +42,7 @@ const CalSearch: React.FC<CalSearchProps> = ({ allCalEvents }) => {
     // } else {
     //   selectedDays.push(day);
     // }
-
-    setSelectedDays(selected ? [] : [day])
+    //setSelectedDays(selected ? [] : [day])
   }
 
   const onPageChanged = (data: any) => {
@@ -54,7 +54,7 @@ const CalSearch: React.FC<CalSearchProps> = ({ allCalEvents }) => {
 
   if (selectedDays.length > 0) {
     dayFilteredEvents = allCalEvents.filter(e => {
-      return DateUtils.isSameDay(selectedDays[0], e.start)
+      return isEqual(selectedDays[0], e.start)
     })
   } else {
     const now = Date.now()
@@ -69,16 +69,10 @@ const CalSearch: React.FC<CalSearchProps> = ({ allCalEvents }) => {
 
   return (
     <MainSideCol>
-      <CalSearchResults
-        events={dayFilteredEvents}
-        pagedEvents={pagedEvents}
-        page={page}
-        recordsPerPage={recordsPerPage}
-        onPageChanged={onPageChanged}
-      />
+      <CalSearchResults events={dayFilteredEvents} pagedEvents={pagedEvents} />
 
       <div className="text-center">
-        <DayPicker selectedDays={selectedDays} onDayClick={handleDayClick} />
+        {/* <DayPicker selectedDays={selectedDays} onDayClick={handleDayClick} /> */}
       </div>
     </MainSideCol>
   )

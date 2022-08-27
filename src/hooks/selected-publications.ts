@@ -3,7 +3,7 @@ import axios from "axios"
 const URL = `/data/selected-publications`
 
 // const updatePublications = (
-//   publications: Array<any>,
+//   publications: any[],
 //   setPublications: any,
 //   n: number,
 //   format: string
@@ -19,7 +19,7 @@ const URL = `/data/selected-publications`
 //   }
 // }
 
-const useSelectedPublications = (
+const getSelectedPublications = (
   setPublications: any,
   id: string = "all",
   format: string = "json"
@@ -45,4 +45,4 @@ const useSelectedPublications = (
     })
 }
 
-export default useSelectedPublications
+export default getSelectedPublications

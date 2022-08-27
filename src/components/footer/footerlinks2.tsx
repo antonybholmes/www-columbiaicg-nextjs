@@ -5,7 +5,7 @@ import ColorLink from "../buttons/colorlink"
 const FooterLinks2 = () => {
   const links = useFooterLinks2()
 
-  const ret: Array<any> = links.map((link: any, index: number) => {
+  const ret: any[] = links.map((link: any, index: number) => {
     return (
       <li className="mb-2" key={index}>
         <ColorLink

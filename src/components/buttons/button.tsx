@@ -1,11 +1,12 @@
-import React from "react"
+import { ReactNode } from "react"
 import BlueButton from "./bluebutton"
 
 type ButtonProps = {
   onClick: any
+  children?: ReactNode
 }
 
-const Button: React.FC<ButtonProps> = ({ onClick, children }) => (
+const Button = ({ onClick, children }: ButtonProps) => (
   <BlueButton onClick={onClick}>{children}</BlueButton>
 )
 

@@ -19,7 +19,7 @@
 //   return ret
 // }
 
-const toGroupMap = (labList: Array<any>) => {
+const toGroupMap = (labs: any[]) => {
   let ret: any = {}
 
   for (let lab of labs) {

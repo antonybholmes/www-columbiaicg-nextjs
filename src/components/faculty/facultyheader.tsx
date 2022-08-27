@@ -1,7 +1,6 @@
-import React from "react"
 import ContactInfo from "../people/contactinfo"
 
-import useContextName from "../../hooks/contextname"
+import getContextName from "../../hooks/contextname"
 import HideSmall from "../hidesmall"
 import Row from "../row"
 import ShowSmall from "../showsmall"
@@ -14,19 +13,19 @@ type FacultyHeaderProps = {
   headshot?: any
 }
 
-const FacultyHeader: React.FC<FacultyHeaderProps> = ({
+const FacultyHeader = ({
   person,
   title,
   heading,
   subHeading,
   headshot,
-}) => {
+}: FacultyHeaderProps) => {
   if (heading === null) {
     heading = `${person.fields.name}, ${person.fields.postNominalLetters}`
   }
 
   if (subHeading === null) {
-    subHeading = useContextName("people", person.titleMap) //`${person.fields.title}`
+    subHeading = getContextName("people", person.titleMap) //`${person.fields.title}`
   }
 
   return (
@@ -79,12 +78,6 @@ const FacultyHeader: React.FC<FacultyHeaderProps> = ({
       </Row>
     </div>
   )
-}
-
-FacultyHeader.defaultProps = {
-  title: "",
-  heading: null,
-  subHeading: null,
 }
 
 export default FacultyHeader

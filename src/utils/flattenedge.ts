@@ -1,5 +1,5 @@
-const flattenEdges = (edges: Array<any>): Array<any> => {
-  let ret: Array<any> = []
+const flattenEdges = (edges: any[]): any[] => {
+  let ret: any[] = []
 
   edges.forEach(({ node }) => {
     ret.push(node)

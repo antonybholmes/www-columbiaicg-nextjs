@@ -5,12 +5,13 @@
  * See: https://www.gatsbyjs.org/docs/use-static-query/
  */
 
-import React, { useState } from "react"
+import React, { ReactNode, useState } from "react"
 import Header from "../components/header/header"
+import ICrumb from "../types/crumb"
 import MenuLayout from "./menulayout"
 
 type HeaderLayoutProps = {
-  crumbs?: Array<[string, string]>
+  crumbs?: ICrumb[]
   title: string
   path?: string
   headerContent?: any
@@ -19,6 +20,7 @@ type HeaderLayoutProps = {
   placeholder?: string
   bgColorClass?: string
   index?: boolean
+  children?: ReactNode
 }
 
 const HeaderLayout: React.FC<HeaderLayoutProps> = ({
@@ -52,6 +54,7 @@ const HeaderLayout: React.FC<HeaderLayoutProps> = ({
       index={index}
     >
       <Header
+        title={title}
         content={headerContent}
         onSearch={onSearch}
         search={search}

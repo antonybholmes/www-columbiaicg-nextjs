@@ -2,9 +2,8 @@ import { useState, useEffect } from "react"
 import PeopleGroups from "../../components/people/peoplegroups"
 import Container from "../../components/container"
 import FlHdDiv from "../../components/flhddiv"
-import useImageMap from "../../hooks/imagemap"
 import useBreakpoints from "../../hooks/breakpoints"
-import useBooleanSearch from "../../hooks/booleansearch"
+import getBooleanSearch from "../../hooks/booleansearch"
 import PeopleGrid from "../../components/people/peoplegrid"
 import useSortByTitle from "../../hooks/sortbytitle"
 import VertTabs from "../../components/tabs/verttabs"
@@ -154,7 +153,7 @@ const Page = ({ allGroupMap }: PageProps) => {
       // setFilteredGroupMap(groupMap)
 
       setFilteredGroupMap(
-        useBooleanSearch(
+        getBooleanSearch(
           query,
           allGroupMap,
           search,
@@ -257,7 +256,6 @@ const Page = ({ allGroupMap }: PageProps) => {
           <PeopleGroups
             groupMap={groupMap}
             photoMode="show,generic,all"
-            imageMap={imageMap}
             context="admin"
           />
 
@@ -265,7 +263,6 @@ const Page = ({ allGroupMap }: PageProps) => {
             <div id="Directors">
               <PeopleGrid
                 name={"Directors"}
-                imageMap={imageMap}
                 people={useSortByTitle(
                   groupMap["admin::Director"],
                   "admin",
@@ -280,7 +277,6 @@ const Page = ({ allGroupMap }: PageProps) => {
             <div id="Staff">
               <PeopleGrid
                 name={"Administrator"}
-                imageMap={imageMap}
                 people={groupMap["admin::Administrator"]}
                 context="admin"
               />
@@ -288,7 +284,6 @@ const Page = ({ allGroupMap }: PageProps) => {
               <div className="mt-8">
                 <PeopleGrid
                   name={"Administrative Staff"}
-                  imageMap={imageMap}
                   people={groupMap["admin::Administrative Staff"]}
                   context="admin"
                 />
@@ -296,7 +291,6 @@ const Page = ({ allGroupMap }: PageProps) => {
               <div className="mt-8">
                 <PeopleGrid
                   name={"Website"}
-                  imageMap={imageMap}
                   people={groupMap["admin::Web Site"]}
                   context="admin"
                   showUrl={true}
@@ -312,15 +306,8 @@ const Page = ({ allGroupMap }: PageProps) => {
 
 export default Page
 
-type Params = {
-  params: {
-    slug: string
-  }
-}
-
-export async function getStaticProps({ params }: Params) {
+export async function getStaticProps() {
   const people = getAllPeople()
-  const peopleMap = getPeopleMap(people)
 
   const allPeopleGroupMap: IFieldMap = {}
 

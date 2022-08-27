@@ -54,15 +54,10 @@ const BaseCalEvent: React.FC<CalEventProps> = ({ event, imageMap, bg }) => {
         <CalEventDate calEvent={event} />
       </HideSmall>
       <FullDiv>
-        <CalEventDetails event={event} imageMap={imageMap} hover={hover} />
+        <CalEventDetails event={event} hover={hover} />
       </FullDiv>
     </Row>
   )
-}
-
-BaseCalEvent.defaultProps = {
-  imageMap: {},
-  bg: "bg-white",
 }
 
 export default BaseCalEvent

@@ -1,8 +1,7 @@
-import React from "react"
 import IconLink from "./iconlink"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 
-export const useUrlLink = (url: string): Array<string> => {
+export const getUrlLink = (url: string): string[] => {
   const tokens = url.split("::")
 
   let text
@@ -26,25 +25,24 @@ type URLLinkProps = {
   size?: string
 }
 
-const URLLink: React.FC<URLLinkProps> = ({ url, color, hoverColor, size }) => {
-  const [text, to] = useUrlLink(url)
+const URLLink = ({
+  url,
+  color = "text-slate-500",
+  hoverColor = "text-blue-500",
+  size = "text-xl",
+}: URLLinkProps) => {
+  const [text, to] = getUrlLink(url)
 
   return (
     <IconLink
-      name="Lab Web Site"
       to={to}
       icon={<FontAwesomeIcon icon="link" className={`${size}`} />}
-      content={text}
       color={color}
       hoverColor={hoverColor}
-    />
+    >
+      {text}
+    </IconLink>
   )
-}
-
-URLLink.defaultProps = {
-  color: "text-slate-500",
-  hoverColor: "text-blue-500",
-  size: "text-xl",
 }
 
 export default URLLink

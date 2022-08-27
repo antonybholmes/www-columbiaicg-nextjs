@@ -1,16 +1,16 @@
-import useContextName from "./contextname"
+import getContextName from "./contextname"
 
 export const useSortByTitle = (
-  people: Array<any>,
+  people: any[],
   context: string = "",
   reverse: boolean = false
-): Array<any> => {
-  let ret: Array<any> = []
+): any[] => {
+  let ret: any[] = []
 
   const titleMap: any = {}
 
   for (let person of people) {
-    const title = useContextName(context, person.titleMap)
+    const title = getContextName(context, person.titleMap)
 
     if (!(title in titleMap)) {
       titleMap[title] = []

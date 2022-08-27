@@ -1,25 +1,13 @@
 import React from "react"
 import NoResults from "../noresults"
-import BaseCalEvents from "./basecalevents"
 import CalEvents from "./calevents"
 
 type ResultsProps = {
-  events: Array<any>
-  imageMap?: any
-  pagedEvents: Array<any>
-  page: number
-  recordsPerPage: number
-  onPageChanged?: any
+  events: any[]
+  pagedEvents: any[]
 }
 
-const CalSearchResults: React.FC<ResultsProps> = ({
-  events,
-  imageMap,
-  pagedEvents,
-  page,
-  recordsPerPage,
-  onPageChanged,
-}) => (
+const CalSearchResults: React.FC<ResultsProps> = ({ events, pagedEvents }) => (
   <div className="w-full">
     {/* <SearchSummary
           count={events.length}
@@ -28,7 +16,7 @@ const CalSearchResults: React.FC<ResultsProps> = ({
         /> */}
 
     {events.length > 0 ? (
-      <CalEvents calEvents={pagedEvents} imageMap={imageMap} />
+      <CalEvents calEvents={pagedEvents} />
     ) : (
       <NoResults text="No events found." />
     )}
@@ -42,10 +30,5 @@ const CalSearchResults: React.FC<ResultsProps> = ({
     /> */}
   </div>
 )
-
-CalSearchResults.defaultProps = {
-  imageMap: {},
-  recordsPerPage: 20,
-}
 
 export default CalSearchResults

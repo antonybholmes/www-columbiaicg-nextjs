@@ -3,8 +3,8 @@ import NoResults from "../noresults"
 import PublicationList from "./publicationlist"
 
 type PubSearchResultsProps = {
-  publications: Array<any>
-  pagedPublications: Array<any>
+  publications: any[]
+  pagedPublications: any[]
   page: number
   recordsPerPage: number
   onPageChanged?: any

@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React, { ReactNode, useState } from "react"
 import StringBuffer from "../utils/stringbuffer"
 
 type CardProps = {
@@ -15,6 +15,7 @@ type CardProps = {
   absolute?: boolean
   className?: string
   style?: any
+  children?: ReactNode
 }
 
 const FlatCard = React.forwardRef<CardProps, any>(
@@ -119,20 +120,6 @@ const FlatCard = React.forwardRef<CardProps, any>(
   }
 )
 
-FlatCard.defaultProps = {
-  className: "",
-  bg: "bg-white",
-  hoverBg: "",
-  padding: "p-4 md:p-8",
-  autoHide: true,
-  showShadow: false,
-  showBorder: false,
-  rounded: false,
-  rounding: "rounded-md",
-  onMouseEnter: null,
-  onMouseLeave: null,
-  absolute: false,
-  style: {},
-}
+FlatCard.displayName = "FlatCard"
 
 export default FlatCard

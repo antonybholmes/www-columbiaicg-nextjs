@@ -1,4 +1,4 @@
-const useTopPubs = (publications: Array<any>, top: number) => {
+const getTopPubs = (publications: any[], top: number) => {
   const countMap = new Map<string, number>()
 
   for (let pub of publications) {
@@ -19,7 +19,7 @@ const useTopPubs = (publications: Array<any>, top: number) => {
     pubMap.get(e[1]).push(e[0])
   }
 
-  const ret: Array<any> = []
+  const ret: any[] = []
 
   for (let c of Array.from(pubMap.keys())
     .sort((a, b) => a - b)
@@ -40,4 +40,4 @@ const useTopPubs = (publications: Array<any>, top: number) => {
   return ret
 }
 
-export default useTopPubs
+export default getTopPubs

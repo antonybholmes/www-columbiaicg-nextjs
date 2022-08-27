@@ -1,3 +1,5 @@
+import { EVENTS_PATH, JOBS_PATH } from "../constants"
+
 export const personUrl = (person: any): string => {
   return `/people/${person.fields.personId}`
 }
@@ -11,13 +13,13 @@ export const labMembersUrl = (group: any): string => {
 }
 
 export const eventUrl = (event: any): string => {
-  return `${paths.eventsPath}/${
+  return `${EVENTS_PATH}/${
     event.fields.start.split("T")[0]
   }-${event.fields.title.toLowerCase().replace(/ /g, "-")}`
 }
 
 export const useJobUrl = (job: any): string => {
-  return `${paths.jobsPath}/${job.fields.start.split("T")[0]}-${job.fields.title
+  return `${JOBS_PATH}/${job.fields.start.split("T")[0]}-${job.fields.title
     .toLowerCase()
     .replace(/ /g, "-")}`
 }

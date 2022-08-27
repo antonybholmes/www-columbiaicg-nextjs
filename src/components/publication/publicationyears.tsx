@@ -5,16 +5,11 @@
  * See: https://www.gatsbyjs.org/docs/use-static-query/
  */
 
-import React, { useRef, useState, useEffect } from "react"
+import React, { useRef, useState } from "react"
 import PublicationList from "./publicationlist"
-import SquareCard from "../squarecard"
 
 import Row from "../row"
-import FullDiv from "../fulldiv"
-import Card from "../card"
 import HideSmall from "../hidesmall"
-import ShowSmall from "../showsmall"
-import { gsap } from "gsap"
 
 type YearMarkerProps = {
   year: number
@@ -110,7 +105,7 @@ YearMarker.defaultProps = {
 }
 
 type PublicationYearsProps = {
-  publications: Array<any>
+  publications: any[]
   showLabLink?: boolean
   showIndices?: boolean
   onPubClick?: any

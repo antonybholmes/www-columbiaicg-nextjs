@@ -5,14 +5,11 @@
  * See: https://www.gatsbyjs.org/docs/use-static-query/
  */
 
-import React, { useRef, useState, useEffect } from "react"
+import React, { useRef, useState } from "react"
 import PublicationList from "./publicationlist"
 
 import Row from "../row"
-import Card from "../card"
 import HideSmall from "../hidesmall"
-import ShowSmall from "../showsmall"
-import { gsap } from "gsap"
 
 type GroupMarkerProps = {
   group: any
@@ -70,7 +67,7 @@ type GroupMarkerProps = {
 //   )
 // }
 
-const GroupMarker: React.FC<GroupMarkerProps> = ({ group, onClick }) => {
+const GroupMarker = ({ group, onClick }: GroupMarkerProps) => {
   const [hover, setHover] = useState(false)
 
   const markerEl = useRef(null)
@@ -103,26 +100,21 @@ const GroupMarker: React.FC<GroupMarkerProps> = ({ group, onClick }) => {
   )
 }
 
-GroupMarker.defaultProps = {
-  onClick: null,
-}
-
 type PublicationGroupsProps = {
-  publications: Array<any>
+  publications: any[]
   showLabLink?: boolean
   showIndices?: boolean
   reverse?: boolean
   onPubClick?: any
 }
 
-const PublicationGroups: React.FC<PublicationGroupsProps> = ({
+const PublicationGroups = ({
   publications,
-  showLabLink,
-  reverse,
-  showIndices,
+  showLabLink = false,
+  reverse = false,
   onPubClick,
-}) => {
-  let keys: Array<any> = Object.keys(publications).sort()
+}: PublicationGroupsProps) => {
+  let keys: any[] = Object.keys(publications).sort()
 
   if (reverse) {
     keys = keys.reverse()
@@ -151,7 +143,7 @@ const PublicationGroups: React.FC<PublicationGroupsProps> = ({
               </div> */}
 
             <HideSmall size="xl" className="relative lg:w-1/20 mr-8">
-              <GroupMarker year={key} onClick={onPubClick} />
+              <GroupMarker group={key} onClick={onPubClick} />
             </HideSmall>
 
             <div key={key} className="w-full lg:w-19/20 pb-4 mb-4">
@@ -180,13 +172,6 @@ const PublicationGroups: React.FC<PublicationGroupsProps> = ({
       })}
     </>
   )
-}
-
-PublicationGroups.defaultProps = {
-  showLabLink: false,
-  showIndices: false,
-  reverse: false,
-  onPubClick: null,
 }
 
 export default PublicationGroups

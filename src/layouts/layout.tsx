@@ -113,7 +113,6 @@ const Layout = ({
 
         <Header
           title={title}
-          location={location}
           onMenuButtonClick={handleMenuButtonClick}
           menuVisible={menuVisible}
         />
